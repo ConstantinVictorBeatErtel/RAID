@@ -1,5 +1,7 @@
 # RAID: Retrieval-Augmented Inverse Dynamics for Robotic Manipulation
 
+**Paper:** [RAID_Report_vf.pdf](paper/RAID_Report_vf.pdf) is attached directly in this repository. **Project page:** https://constantinvictorbeatertel.github.io/RAID/
+
 RAID studies the action-inference step for robot world models: given a current visual state and a dreamed next visual state, what 7-DOF motor command should the robot execute?
 
 We repurpose GR-1 by dropping its language/action-output role, freezing its visual encoder, and using its 384-dimensional class-token feature as the current state `f_t`. GR-1's one-step prediction head supplies the dreamed next state `f_hat_{t+1}`. RAID then decodes `(f_t, f_hat_{t+1})` into a normalized robot action by combining a direct MLP trunk with a cross-attention prior over retrieved demonstrator actions.
