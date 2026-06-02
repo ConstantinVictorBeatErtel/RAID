@@ -133,31 +133,11 @@
       text-align: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-blue);
-      margin-bottom: 24px;
-    }
-
-    .eyebrow-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent-blue);
-      box-shadow: 0 0 8px var(--accent-blue);
-    }
-
     h1 {
       font-size: clamp(2.8rem, 5.5vw, 5rem);
       font-weight: 600;
       line-height: 1.05;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
       max-width: 900px;
       margin: 0 auto 28px;
     }
@@ -237,23 +217,11 @@
       margin: 0 auto;
     }
 
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-purple);
-      margin-bottom: 16px;
-    }
-
     h2 {
       font-size: clamp(2rem, 4vw, 3.5rem);
       font-weight: 600;
       line-height: 1.1;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
       margin-bottom: 20px;
     }
 
@@ -322,18 +290,7 @@
       margin-top: 64px;
     }
 
-    .video-card {
-      background: var(--bg-card);
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform 0.3s, border-color 0.3s;
-    }
-
-    .video-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--border-strong);
-    }
+    .video-card { overflow: hidden; }
 
     .video-frame {
       position: relative;
@@ -350,7 +307,7 @@
     }
 
     .video-info {
-      padding: 28px;
+      padding: 22px 0 0;
     }
 
     .video-info h3 {
@@ -416,62 +373,16 @@
 
     .arch-diagram {
       margin-top: 64px;
-      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      box-shadow: var(--shadow);
+      background:
+        radial-gradient(ellipse 70% 55% at 50% 45%, rgba(77,171,247,0.10), transparent 70%),
+        #080b12;
     }
 
     .arch-diagram img, .arch-diagram svg {
       width: 100%;
       height: auto;
       display: block;
-    }
-
-    /* Sub-method cards */
-    .method-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 64px;
-    }
-
-    .method-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      transition: all 0.3s;
-    }
-
-    .method-card:hover {
-      background: var(--bg-card-hover);
-      border-color: var(--border-strong);
-      transform: translateY(-2px);
-    }
-
-    .method-card-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .method-card h4 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .method-card p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
     }
 
     /* Grids */
@@ -487,18 +398,7 @@
       margin-top: 64px;
     }
 
-    .grid-card {
-      background: var(--bg-card);
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform 0.3s, border-color 0.3s;
-    }
-
-    .grid-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--border-strong);
-    }
+    .grid-card { overflow: hidden; }
 
     .grid-media {
       width: 100%;
@@ -519,7 +419,7 @@
     }
 
     .grid-info {
-      padding: 28px;
+      padding: 22px 0 0;
     }
 
     .grid-info h3 {
@@ -556,9 +456,6 @@
       .grid-gallery {
         grid-template-columns: 1fr;
       }
-      .method-cards {
-        grid-template-columns: 1fr;
-      }
       .section { padding: 80px 24px; }
     }
 
@@ -586,11 +483,11 @@
     <div class="nav-links">
       <a href="paper/RAID_Report_vf.pdf">Paper</a>
       <a href="https://github.com/ConstantinVictorBeatErtel/RAID" target="_blank" rel="noopener">GitHub</a>
-      <a href="#videos">Videos</a>
+      <a href="#grids">Grids</a>
       <a href="#method">Method</a>
       <a href="#architecture">Architecture</a>
       <a href="#results">Results</a>
-      <a href="#grids">Grids</a>
+      <a href="#videos">Videos</a>
     </div>
   </nav>
 
@@ -598,10 +495,6 @@
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
     <div class="hero-content">
-      <div class="eyebrow animate">
-        <span class="eyebrow-dot"></span>
-        World Models & Embodied AI
-      </div>
       <h1 class="animate delay-1">Retrieval-Augmented Inverse Dynamics for robotic manipulation.</h1>
       <p class="hero-subtitle animate delay-2">
         RAID pairs a GR-1 world-model encoder with a retrieval-augmented action decoder, using remembered demonstrations to infer the motor command behind a dreamed latent transition.
@@ -616,39 +509,51 @@
 
   <div class="divider"></div>
 
-  <section class="section videos-section" id="videos">
+  <section class="section grids-section" id="grids">
     <div class="section-inner">
-      <div class="section-label">
-        <span class="eyebrow-dot" style="background:var(--accent-blue);box-shadow:0 0 8px var(--accent-blue);"></span>
-        Demonstrations
-      </div>
-      <h2>Video demonstrations</h2>
+      <h2>Transition grids</h2>
       <p class="section-lead">
-        Side-by-side comparison of direct visual baseline and RAID visual policy rollouts in LIBERO-Spatial.
+        Compact qualitative grids compare the current frame, GR-1's dreamed next frame, RAID actions, direct visual baseline actions, and ground truth across random seeds.
       </p>
 
-      <div class="video-grid">
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls preload="metadata" poster="assets/posters/direct_visual_poster.jpg">
-              <source src="videos/test1.mp4" type="video/mp4">
-            </video>
+      <div class="grid-gallery">
+        <article class="grid-card">
+          <div class="grid-media">
+            <img src="assets/grids/transition_grid_compact_seed0_visuals_rotated.png" alt="RAID transition grid for seed 0">
           </div>
-          <div class="video-info">
-            <h3>Direct Visual Baseline</h3>
-            <p>A representative direct visual demonstration sequence for the RAID comparison.</p>
+          <div class="grid-info">
+            <h3>Seed 0</h3>
+            <p>RAID, direct visual, and ground truth actions in the 200-demo LIBERO-Spatial setting.</p>
           </div>
         </article>
 
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls preload="metadata" poster="assets/posters/raid_visual_poster.jpg">
-              <source src="videos/test2.mp4" type="video/mp4">
-            </video>
+        <article class="grid-card">
+          <div class="grid-media">
+            <img src="assets/grids/transition_grid_compact_seed1_visuals_rotated.png" alt="RAID transition grid for seed 1">
           </div>
-          <div class="video-info">
-            <h3>RAID Visual Policy</h3>
-            <p>A representative RAID visual demonstration showing the retrieval-augmented policy behavior.</p>
+          <div class="grid-info">
+            <h3>Seed 1</h3>
+            <p>Additional sampled transitions from the same 200-demo evaluation setup.</p>
+          </div>
+        </article>
+
+        <article class="grid-card">
+          <div class="grid-media">
+            <img src="assets/grids/transition_grid_compact_seed2_visuals_rotated.png" alt="RAID transition grid for seed 2">
+          </div>
+          <div class="grid-info">
+            <h3>Seed 2</h3>
+            <p>Predicted action signs and magnitudes across sampled transitions.</p>
+          </div>
+        </article>
+
+        <article class="grid-card">
+          <div class="grid-media">
+            <img src="assets/grids/transition_grid_compact_seed3_visuals_rotated.png" alt="RAID transition grid for seed 3">
+          </div>
+          <div class="grid-info">
+            <h3>Seed 3</h3>
+            <p>A final qualitative slice showing consistency across random seeds.</p>
           </div>
         </article>
       </div>
@@ -658,64 +563,38 @@
   <section class="section" id="method">
     <div class="section-inner">
       <div class="method-intro">
-        <div class="section-label">
-          <span class="eyebrow-dot" style="background:var(--accent-green);box-shadow:0 0 8px var(--accent-green);"></span>
-          Method
-        </div>
         <h2>Dream the next state, then retrieve the action that likely caused it.</h2>
         <p class="section-lead">
-          RAID is a compositional policy: a frozen world-model encoder hallucinates the latent successor of the current observation, while a memory-augmented inverse-dynamics head decodes the implied motor command by blending parametric and retrieval-based estimates.
+          RAID uses a frozen world-model encoder to imagine the next latent state, then decodes the implied motor command with a retrieval-augmented inverse-dynamics head.
         </p>
       </div>
 
       <div class="method-content">
         <div class="method-text">
-          <p><strong>Problem statement.</strong> Let <em>f<sub>t</sub></em> denote a GR-1 vision-feature observation and <em>a<sub>t</sub></em> the action applied at step <em>t</em>. Given a memory bank <em>M = {(f<sub>i</sub>, f<sub>i+1</sub>, a<sub>i</sub>)}</em> of demonstrated transitions, the inverse-dynamics task is to predict a normalised action <em>â<sub>t</sub></em> from (<em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em>).</p>
+          <p><strong>Problem.</strong> Given GR-1 features <em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em> and a memory bank <em>M = {(f<sub>i</sub>, f<sub>i+1</sub>, a<sub>i</sub>)}</em>, RAID predicts the normalized action that caused a transition.</p>
 
-          <p>At deployment, GR-1 supplies a one-step-ahead dreamed feature <em>f̂<sub>t+1</sub></em> that stands in for the unobserved next state. For a query transition we retrieve the top-k most similar memory entries by cosine similarity in the joint (<em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em>) space and compute a pooled prior <em>â<sub>prior</sub></em> from the retrieved actions. A parametric trunk <em>d<sub>φ</sub>(f<sub>t</sub>, f<sub>t+1</sub>)</em> provides a complementary direct estimate and a per-dimension gate blends the two.</p>
+          <p>At deployment, GR-1 supplies a one-step dreamed feature <em>f̂<sub>t+1</sub></em>. RAID retrieves the nearest demonstrated transitions in the joint feature space, attends over their actions, and blends that action prior with a direct MLP estimate.</p>
 
-          <p><strong>General formulation.</strong> Our formulation mirrors DreamZero. GR-1 + RAID makes a single substitution: the parametric inverse dynamics model is replaced by a retrieval-augmented decoder that conditions on <em>k = 3</em> demonstrated transitions from <em>M</em> alongside the dreamed latent transition.</p>
-
-          <p><strong>GR-1 + Cross-Attention RAID.</strong> We freeze the GR-1 encoder and use its 384-dimensional class-token feature as both the current state <em>f<sub>t</sub></em> and (via GR-1's one-step prediction head) the dreamed next state <em>f̂<sub>t+1</sub></em>. The RAID head sits on top with three components:</p>
+          <p><strong>GR-1 + RAID.</strong> We freeze the GR-1 encoder and use its 384-dimensional class token as the state representation. The decoder conditions on <em>k = 3</em> retrieved demonstrations alongside the dreamed transition.</p>
         </div>
 
         <div class="method-text">
-          <p><strong>(i) Direct trunk.</strong> A two-hidden-layer MLP over concat(<em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em>); LayerNorm + ReLU + dropout 0.1.</p>
+          <p><strong>Direct trunk.</strong> A two-hidden-layer MLP estimates the action from concat(<em>f<sub>t</sub></em>, <em>f̂<sub>t+1</sub></em>).</p>
 
-          <p><strong>(ii) Cross-attention prior.</strong> Project concat(<em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em>) to a query <em>q ∈ ℝ<sup>d</sup></em> and each retrieved action <em>a<sub>i</sub></em> to a key <em>k<sub>i</sub> ∈ ℝ<sup>d</sup></em>:</p>
+          <p><strong>Cross-attention prior.</strong> The query transition attends over retrieved actions:</p>
 
           <div class="method-formula">
             α<sub>i</sub> = softmax(q<sup>T</sup>k<sub>i</sub> / √d) &nbsp;&nbsp;&nbsp; â<sub>prior</sub> = Σ α<sub>i</sub> · a<sub>i</sub>
           </div>
 
-          <p>The values are the actions themselves, so the prior remains in 7-D action space and stays interpretable.</p>
-
-          <p><strong>(iii) Per-dimension gate.</strong> The trunk and prior are blended dimension-wise:</p>
+          <p><strong>Per-dimension gate.</strong> The final action is a dimension-wise blend of the direct estimate and the retrieval prior:</p>
 
           <div class="method-formula">
             <code>â = g ⊙ d<sub>φ</sub>(f<sub>t</sub>, f<sub>t+1</sub>) + (1 − g) ⊙ â<sub>prior</sub></code><br>
             <code>g = σ(W concat(f<sub>t</sub>, f<sub>t+1</sub>) + b)</code>
           </div>
 
-          <p>At training time we apply dropout (<em>p = 0.5</em>) and additive Gaussian jitter (<em>σ = 0.1</em>) to the retrieved prior. Without this regularization the optimizer copies the prior unchanged; the dropout and noise force the trunk to do real work.</p>
-        </div>
-      </div>
-
-      <div class="method-cards">
-        <div class="method-card">
-          <div class="method-card-icon" style="background:rgba(81,207,102,0.15);color:var(--accent-green);">⊕</div>
-          <h4>Direct Trunk</h4>
-          <p>Two-hidden-layer MLP over concatenated features. Provides a parametric baseline that learns from all training data.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-card-icon" style="background:rgba(255,146,43,0.15);color:var(--accent-orange);">⚡</div>
-          <h4>Cross-Attention Prior</h4>
-          <p>Retrieves k=3 nearest transitions by cosine similarity and attends over their actions, producing an interpretable action template.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-card-icon" style="background:rgba(151,117,250,0.15);color:var(--accent-purple);">◫</div>
-          <h4>Per-Dimension Gate</h4>
-          <p>Sigmoid gate blends trunk and prior independently for each DOF, letting the model defer to retrieval where it helps most.</p>
+          <p>Prior dropout and Gaussian jitter keep the model from simply copying the retrieved action, forcing the trunk and retrieval prior to share the work.</p>
         </div>
       </div>
     </div>
@@ -723,13 +602,9 @@
 
   <section class="section arch-section" id="architecture">
     <div class="section-inner">
-      <div class="section-label">
-        <span class="eyebrow-dot" style="background:var(--accent-blue);box-shadow:0 0 8px var(--accent-blue);"></span>
-        Architecture
-      </div>
       <h2>The full RAID pipeline.</h2>
       <p class="section-lead">
-        A frozen GR-1 encoder dreams the next latent observation. The RAID head maps (current, dreamed) features to a 7-DOF action by combining a parametric trunk with a cross-attention prior over retrieved demonstrator transitions.
+        The paper architecture combines a frozen GR-1 encoder and prediction head with a RAID decoder that retrieves nearby transitions, attends over their actions, and gates the result into a 7-DOF command.
       </p>
 
       <div class="arch-diagram">
@@ -742,10 +617,6 @@
 
   <section class="section" id="results">
     <div class="section-inner">
-      <div class="section-label">
-        <span class="eyebrow-dot" style="background:var(--accent-purple);box-shadow:0 0 8px var(--accent-purple);"></span>
-        Results
-      </div>
       <h2>Retrieval gives the inverse-dynamics head a sharper action prior.</h2>
       <p class="section-lead">
         On LIBERO-Spatial with 25 demonstrations, cross-attention RAID over GR-1 features reaches 0.132 validation MSE versus 0.842 for the same visual head without retrieval — a 6.4× improvement.
@@ -772,79 +643,40 @@
     </div>
   </section>
 
-  <section class="section grids-section" id="grids">
+  <section class="section videos-section" id="videos">
     <div class="section-inner">
-      <div class="section-label">
-        <span class="eyebrow-dot" style="background:var(--accent-orange);box-shadow:0 0 8px var(--accent-orange);"></span>
-        Qualitative Results
-      </div>
-      <h2>Transition grids</h2>
+      <h2>Video demonstrations</h2>
       <p class="section-lead">
-        Four compact qualitative grids comparing RAID predictions with direct visual baseline and ground truth across random seeds. Observation cells have been rotated 180° for upright viewing.
+        Side-by-side LIBERO-Spatial rollouts show the direct visual baseline and the RAID visual policy under the same comparison setup.
       </p>
 
-      <div class="grid-gallery">
-        <article class="grid-card">
-          <div class="grid-media">
-            <img src="assets/grids/transition_grid_compact_seed0_visuals_rotated.png" alt="RAID transition grid for seed 0">
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls preload="metadata" poster="assets/posters/direct_visual_poster.jpg">
+              <source src="videos/test1.mp4" type="video/mp4">
+            </video>
           </div>
-          <div class="grid-info">
-            <h3>Seed 0</h3>
-            <p>Current frame, GR-1 predicted next frame, RAID action, direct visual action, and ground truth action comparisons.</p>
-            <p class="grid-meta">200-demo LIBERO-Spatial setting</p>
-          </div>
-        </article>
-
-        <article class="grid-card">
-          <div class="grid-media">
-            <img src="assets/grids/transition_grid_compact_seed1_visuals_rotated.png" alt="RAID transition grid for seed 1">
-          </div>
-          <div class="grid-info">
-            <h3>Seed 1</h3>
-            <p>Qualitative transition samples from the 200-demo LIBERO-Spatial setting.</p>
-            <p class="grid-meta">200-demo LIBERO-Spatial setting</p>
+          <div class="video-info">
+            <h3>Direct Visual Baseline</h3>
+            <p>Direct action prediction from visual features without retrieval.</p>
           </div>
         </article>
 
-        <article class="grid-card">
-          <div class="grid-media">
-            <img src="assets/grids/transition_grid_compact_seed2_visuals_rotated.png" alt="RAID transition grid for seed 2">
+        <article class="video-card">
+          <div class="video-frame">
+            <video controls preload="metadata" poster="assets/posters/raid_visual_poster.jpg">
+              <source src="videos/test2.mp4" type="video/mp4">
+            </video>
           </div>
-          <div class="grid-info">
-            <h3>Seed 2</h3>
-            <p>RAID predictions are compared with the direct baseline across sampled transitions.</p>
-            <p class="grid-meta">200-demo LIBERO-Spatial setting</p>
-          </div>
-        </article>
-
-        <article class="grid-card">
-          <div class="grid-media">
-            <img src="assets/grids/transition_grid_compact_seed3_visuals_rotated.png" alt="RAID transition grid for seed 3">
-          </div>
-          <div class="grid-info">
-            <h3>Seed 3</h3>
-            <p>A final compact grid showing the sign and relative magnitude of predicted actions.</p>
-            <p class="grid-meta">200-demo LIBERO-Spatial setting</p>
+          <div class="video-info">
+            <h3>RAID Visual Policy</h3>
+            <p>Retrieval-augmented action prediction using remembered transitions.</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <script>
-    // Simple intersection observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.animate').forEach(el => {
-      el.style.animationPlayState = 'paused';
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
