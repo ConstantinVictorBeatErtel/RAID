@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAID — Retrieval-Augmented Inverse Dynamics</title>
   <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: dark;
+      --font-sans: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+      --font-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+      --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
       --bg: #0d1117;
       --bg-elevated: rgba(18, 22, 30, 0.94);
-      --bg-card: rgba(16, 20, 28, 0.92);
-      --bg-card-hover: rgba(24, 30, 41, 0.94);
+      --panel: rgba(16, 20, 28, 0.92);
       --text: #edf1f7;
-      --text-secondary: #8a96a8;
-      --text-tertiary: #5f6c7f;
-      --accent-blue: #7eb3d9;
-      --accent-purple: #b9d7ef;
-      --accent-green: #a9c7df;
-      --accent-orange: #d4e4f1;
-      --accent-soft: rgba(126, 179, 217, 0.13);
+      --muted: #8a96a8;
       --border: rgba(237, 241, 247, 0.1);
-      --border-strong: rgba(237, 241, 247, 0.16);
+      --accent: #7eb3d9;
+      --accent-soft: rgba(126, 179, 217, 0.13);
       --shadow: 0 20px 52px rgba(0, 0, 0, 0.32);
+      --max-width: 1040px;
+      color-scheme: dark;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
       background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
     }
 
     body {
-      font-family: "Manrope", "Avenir Next", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -41,372 +44,218 @@
     }
 
     a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; display: block; }
 
-    /* Navigation */
-    .nav {
-      position: fixed;
+    .shell {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px clamp(24px, 5vw, 64px);
-      background: rgba(13, 17, 23, 0.78);
-      backdrop-filter: blur(20px) saturate(1.2);
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav-brand {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: var(--text);
-      font-family: "Newsreader", "Iowan Old Style", Georgia, serif;
-    }
-
-    .nav-links {
+    .nav-shell {
       display: flex;
-      gap: 32px;
-      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-      font-size: 0.78rem;
-      color: var(--text-secondary);
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 0.8rem 0;
     }
 
-    .nav-links a {
-      transition: color 0.2s;
-      position: relative;
+    .wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
     }
 
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--accent-blue);
-      transition: width 0.3s;
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
     }
-    .nav-links a:hover::after { width: 100%; }
+
+    .site-nav__link {
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 130ms ease;
+    }
+
+    .site-nav__link:hover { color: var(--text); }
 
     @media (max-width: 720px) {
-      .nav-links { display: none; }
-      .nav { justify-content: center; }
+      .site-nav { display: none; }
+      .nav-shell { justify-content: center; }
     }
 
     /* Hero */
     .hero {
-      position: relative;
-      min-height: 100vh;
+      padding: clamp(3.5rem, 8vw, 5.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      padding: 140px clamp(24px, 5vw, 80px) 80px;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 20% 40%, var(--accent-soft) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 50% at 80% 60%, rgba(126, 179, 217, 0.08) 0%, transparent 50%),
-        var(--bg);
-    }
-
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(237, 241, 247, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(237, 241, 247, 0.025) 1px, transparent 1px);
-      background-size: 80px 80px;
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 70%);
-      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 70%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
+      align-items: center;
       text-align: center;
+      gap: 1.5rem;
     }
 
-    h1 {
-      font-size: clamp(2.8rem, 5.5vw, 5rem);
+    .hero h1 {
+      font-family: var(--font-mono);
+      font-size: clamp(1.15rem, 2.8vw, 1.85rem);
       font-weight: 600;
-      line-height: 1.05;
-      letter-spacing: 0;
-      max-width: 900px;
-      margin: 0 auto 28px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      max-width: 28ch;
+      margin: 0 auto;
     }
 
-    .hero-subtitle {
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      color: var(--text-secondary);
-      max-width: 640px;
-      line-height: 1.5;
-      margin: 0 auto 36px;
+    .hero h1 .accent { color: var(--accent); }
+
+    .hero-lede {
+      font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+      line-height: 1.65;
+      max-width: 42rem;
+      color: color-mix(in srgb, var(--text) 82%, var(--muted));
+      margin: 0 auto;
     }
 
     .hero-actions {
       display: flex;
-      justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
     }
 
-    .hero-link {
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 12px 22px;
       border-radius: 999px;
-      border: 1px solid var(--border-strong);
-      background: var(--bg-card);
-      color: var(--text);
-      font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      padding: 0.65rem 1rem;
+      border: 1px solid transparent;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
     }
 
-    .hero-link:hover {
-      background: var(--bg-card-hover);
-      border-color: rgba(237, 241, 247, 0.28);
-      transform: translateY(-1px);
-    }
-
-    .hero-link.primary {
+    .button--primary {
       background: var(--text);
-      border-color: var(--text);
       color: var(--bg);
     }
 
-    .hero-visual {
-      margin-top: 48px;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--bg-card);
-      box-shadow: var(--shadow);
+    .button--primary:hover {
+      background: color-mix(in srgb, var(--text) 88%, var(--bg));
     }
 
-    .hero-visual img {
+    .button--secondary {
+      border-color: var(--border);
+      background: var(--panel);
+      color: var(--text);
+    }
+
+    .button--secondary:hover {
+      border-color: color-mix(in srgb, var(--text) 30%, transparent);
+    }
+
+    .hero-video-wrap {
+      width: min(100%, 820px);
+      margin-top: 0.5rem;
+    }
+
+    .hero-video {
       width: 100%;
       height: auto;
       display: block;
+      border-radius: 0;
     }
 
-    .hero-visual-caption {
-      padding: 20px 28px;
-      font-size: 0.95rem;
-      color: var(--text-secondary);
+    /* Sections */
+    .section {
+      padding: clamp(3rem, 7vw, 4.5rem) 0;
       border-top: 1px solid var(--border);
     }
 
-    /* Section base */
-    .section {
-      padding: 120px clamp(24px, 5vw, 80px);
-      position: relative;
-    }
-
-    .section-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
+    .section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 3.2vw, 2.6rem);
       font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: 0;
-      margin-bottom: 20px;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      max-width: 22ch;
     }
 
     .section-lead {
-      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-      color: var(--text-secondary);
-      line-height: 1.6;
-      max-width: 680px;
+      font-size: clamp(1rem, 1.35vw, 1.12rem);
+      line-height: 1.65;
+      max-width: 44rem;
+      color: color-mix(in srgb, var(--text) 82%, var(--muted));
     }
 
-    /* Metrics */
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-top: 64px;
-      border: 1px solid var(--border);
+    .arch-diagram {
+      margin-top: 2rem;
     }
 
-    .metric {
-      background: var(--bg-card);
-      padding: 40px 32px;
-      transition: background 0.3s;
-    }
-
-    .metric:hover { background: var(--bg-card-hover); }
-
-    .metric-value {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 600;
-      line-height: 1;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, var(--text) 0%, var(--accent-blue) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .metric-label {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-
-    /* Videos */
-    .videos-section {
-      background: var(--bg-elevated);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .videos-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(126, 179, 217, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      margin-top: 64px;
-    }
-
-    .video-card { overflow: hidden; }
-
-    .video-frame {
-      position: relative;
-      padding: 16px;
-      background: #05070b;
-    }
-
-    .video-frame video {
+    .arch-diagram img {
       width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: contain;
-      border-radius: 8px;
-      display: block;
-    }
-
-    .video-info {
-      padding: 22px 0 0;
-    }
-
-    .video-info h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .video-info p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
+      height: auto;
     }
 
     /* Method */
-    .method-intro {
-      margin-bottom: 80px;
-    }
-
     .method-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 3rem;
+      margin-top: 2.5rem;
       align-items: start;
     }
 
     .method-text {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.72;
+      color: color-mix(in srgb, var(--text) 85%, var(--muted));
     }
 
-    .method-text p {
-      margin-bottom: 20px;
-    }
-
-    .method-text strong {
-      color: var(--text);
-      font-weight: 600;
-    }
+    .method-text p { margin-bottom: 1.1rem; }
+    .method-text strong { color: var(--text); font-weight: 600; }
 
     .method-formula {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 24px;
-      font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin: 24px 0;
+      padding: 1rem 0;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--muted);
       overflow-x: auto;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin: 1.25rem 0;
     }
 
-    .method-formula code {
-      color: var(--accent-blue);
-    }
-
-    /* Architecture diagram */
-    .arch-section {
-      background: var(--bg-elevated);
-      border-top: 1px solid var(--border);
-    }
-
-    .arch-diagram {
-      margin-top: 64px;
-      overflow: hidden;
-      background:
-        radial-gradient(ellipse 70% 55% at 50% 45%, rgba(126, 179, 217, 0.12), transparent 70%),
-        var(--bg-card);
-    }
-
-    .arch-diagram img, .arch-diagram svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+    .method-formula code { color: var(--accent); }
 
     /* Grids */
-    .grids-section {
-      background: var(--bg-elevated);
-      border-top: 1px solid var(--border);
-    }
-
     .grid-gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      margin-top: 64px;
+      gap: 2rem;
+      margin-top: 2.5rem;
     }
 
-    .grid-card { overflow: hidden; }
-
     .grid-media {
-      width: 100%;
       overflow: hidden;
       background: #05070b;
     }
@@ -414,252 +263,266 @@
     .grid-media img {
       width: 100%;
       height: auto;
-      display: block;
-      transition: transform 0.5s;
       filter: invert(1) hue-rotate(180deg);
     }
 
-    .grid-card:hover .grid-media img {
-      transform: scale(1.02);
-    }
-
     .grid-info {
-      padding: 22px 0 0;
+      padding-top: 1rem;
     }
 
     .grid-info h3 {
+      font-family: var(--font-serif);
       font-size: 1.15rem;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 0.5rem;
     }
 
     .grid-info p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      margin-bottom: 4px;
+      font-size: 0.94rem;
+      color: color-mix(in srgb, var(--text) 82%, var(--muted));
+      line-height: 1.55;
     }
 
-    .grid-meta {
-      font-size: 0.85rem;
-      color: var(--text-tertiary);
-      margin-top: 12px;
+    /* Metrics */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      margin-top: 2.5rem;
     }
 
-    /* Divider */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
-      margin: 0 auto;
-      max-width: 800px;
+    .metric {
+      background: var(--panel);
+      padding: 1.75rem 1.5rem;
     }
 
-    /* Responsive */
+    .metric-value {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .metric-label {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* Demo videos */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .video-frame {
+      background: #05070b;
+    }
+
+    .video-frame video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+    }
+
+    .video-info {
+      padding-top: 1rem;
+    }
+
+    .video-info h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .video-info p {
+      font-size: 0.94rem;
+      color: color-mix(in srgb, var(--text) 82%, var(--muted));
+      line-height: 1.55;
+    }
+
     @media (max-width: 900px) {
       .method-content,
       .video-grid,
       .grid-gallery {
         grid-template-columns: 1fr;
       }
-      .section { padding: 80px 24px; }
     }
-
-    /* Animations */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .animate {
-      animation: fadeUp 0.8s ease-out forwards;
-      opacity: 0;
-    }
-
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <a class="nav-brand" href="#">RAID</a>
-    <div class="nav-links">
-      <a href="paper/RAID_Report_vf.pdf">Paper</a>
-      <a href="https://github.com/ConstantinVictorBeatErtel/RAID" target="_blank" rel="noopener">GitHub</a>
-      <a href="#grids">Grids</a>
-      <a href="#method">Method</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#results">Results</a>
-      <a href="#videos">Videos</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="wordmark" href="#">RAID</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-nav__link" href="paper/RAID_Report_vf.pdf">Paper</a>
+        <a class="site-nav__link" href="#architecture">Pipeline</a>
+        <a class="site-nav__link" href="#method">Method</a>
+        <a class="site-nav__link" href="#results">Results</a>
+        <a class="site-nav__link" href="#grids">Grids</a>
+        <a class="site-nav__link" href="#videos">Videos</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-      <h1 class="animate delay-1">Retrieval-Augmented Inverse Dynamics for robotic manipulation.</h1>
-      <p class="hero-subtitle animate delay-2">
-        RAID pairs a GR-1 world-model encoder with a retrieval-augmented action decoder, using remembered demonstrations to infer the motor command behind a dreamed latent transition.
-      </p>
-      <div class="hero-actions animate delay-3">
-        <a class="hero-link primary" href="paper/RAID_Report_vf.pdf">Read Paper</a>
-        <a class="hero-link" href="https://github.com/ConstantinVictorBeatErtel/RAID" target="_blank" rel="noopener">GitHub</a>
-      </div>
-
+  <section class="hero shell">
+    <h1>Retrieval-Augmented <span class="accent">Inverse Dynamics</span> for robotic manipulation</h1>
+    <p class="hero-lede">
+      RAID pairs a GR-1 world-model encoder with a retrieval-augmented action decoder, using remembered demonstrations to infer the motor command behind a dreamed latent transition.
+    </p>
+    <div class="hero-actions">
+      <a class="button button--primary" href="paper/RAID_Report_vf.pdf">Read Paper</a>
+      <a class="button button--secondary" href="https://github.com/ConstantinVictorBeatErtel/RAID" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section class="section grids-section" id="grids">
-    <div class="section-inner">
-      <h2>Transition grids</h2>
-      <p class="section-lead">
-        Two qualitative grids compare the current frame, GR-1's dreamed next frame, RAID actions, direct visual baseline actions, and ground truth across representative random seeds.
-      </p>
-
-      <div class="grid-gallery">
-        <article class="grid-card">
-          <div class="grid-media">
-            <img src="assets/grids/transition_grid_compact_seed0_visuals_rotated.png" alt="RAID transition grid for seed 0">
-          </div>
-          <div class="grid-info">
-            <h3>Seed 0</h3>
-            <p>RAID, direct visual, and ground truth actions in the 200-demo LIBERO-Spatial setting.</p>
-          </div>
-        </article>
-
-        <article class="grid-card">
-          <div class="grid-media">
-            <img src="assets/grids/transition_grid_compact_seed1_visuals_rotated.png" alt="RAID transition grid for seed 1">
-          </div>
-          <div class="grid-info">
-            <h3>Seed 1</h3>
-            <p>Additional sampled transitions from the same 200-demo evaluation setup.</p>
-          </div>
-        </article>
-      </div>
+    <div class="hero-video-wrap">
+      <video class="hero-video" autoplay loop muted playsinline poster="assets/posters/raid_loop_dark.jpg" aria-label="RAID architecture animation">
+        <source src="videos/raid_loop_dark.webm" type="video/webm">
+        <source src="videos/raid_loop_dark.mp4" type="video/mp4">
+      </video>
     </div>
   </section>
 
-  <section class="section" id="method">
-    <div class="section-inner">
-      <div class="method-intro">
-        <h2>Dream the next state, then retrieve the action that likely caused it.</h2>
-        <p class="section-lead">
-          RAID uses a frozen world-model encoder to imagine the next latent state, then decodes the implied motor command with a retrieval-augmented inverse-dynamics head.
-        </p>
+  <section class="section shell" id="architecture">
+    <h2>The full RAID pipeline</h2>
+    <p class="section-lead">
+      The paper architecture combines a frozen GR-1 encoder and prediction head with a RAID decoder that retrieves nearby transitions, attends over their actions, and gates the result into a 7-DOF command.
+    </p>
+    <div class="arch-diagram">
+      <img src="assets/figures/raid_architecture.svg" alt="RAID architecture diagram: GR-1 encoder, dreaming head, memory bank, and RAID head with direct trunk, cross-attention prior, and per-dimension gate">
+    </div>
+  </section>
+
+  <section class="section shell" id="method">
+    <h2>Dream the next state, then retrieve the action that likely caused it</h2>
+    <p class="section-lead">
+      RAID uses a frozen world-model encoder to imagine the next latent state, then decodes the implied motor command with a retrieval-augmented inverse-dynamics head.
+    </p>
+
+    <div class="method-content">
+      <div class="method-text">
+        <p><strong>Problem.</strong> Given GR-1 features <em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em> and a memory bank <em>M = {(f<sub>i</sub>, f<sub>i+1</sub>, a<sub>i</sub>)}</em>, RAID predicts the normalized action that caused a transition.</p>
+
+        <p>At deployment, GR-1 supplies a one-step dreamed feature <em>f̂<sub>t+1</sub></em>. RAID retrieves the nearest demonstrated transitions in the joint feature space, attends over their actions, and blends that action prior with a direct MLP estimate.</p>
+
+        <p><strong>GR-1 + RAID.</strong> We freeze the GR-1 encoder and use its 384-dimensional class token as the state representation. The decoder conditions on <em>k = 3</em> retrieved demonstrations alongside the dreamed transition.</p>
       </div>
 
-      <div class="method-content">
-        <div class="method-text">
-          <p><strong>Problem.</strong> Given GR-1 features <em>f<sub>t</sub></em>, <em>f<sub>t+1</sub></em> and a memory bank <em>M = {(f<sub>i</sub>, f<sub>i+1</sub>, a<sub>i</sub>)}</em>, RAID predicts the normalized action that caused a transition.</p>
+      <div class="method-text">
+        <p><strong>Direct trunk.</strong> A two-hidden-layer MLP estimates the action from concat(<em>f<sub>t</sub></em>, <em>f̂<sub>t+1</sub></em>).</p>
 
-          <p>At deployment, GR-1 supplies a one-step dreamed feature <em>f̂<sub>t+1</sub></em>. RAID retrieves the nearest demonstrated transitions in the joint feature space, attends over their actions, and blends that action prior with a direct MLP estimate.</p>
+        <p><strong>Cross-attention prior.</strong> The query transition attends over retrieved actions:</p>
 
-          <p><strong>GR-1 + RAID.</strong> We freeze the GR-1 encoder and use its 384-dimensional class token as the state representation. The decoder conditions on <em>k = 3</em> retrieved demonstrations alongside the dreamed transition.</p>
+        <div class="method-formula">
+          α<sub>i</sub> = softmax(q<sup>T</sup>k<sub>i</sub> / √d) &nbsp;&nbsp;&nbsp; â<sub>prior</sub> = Σ α<sub>i</sub> · a<sub>i</sub>
         </div>
 
-        <div class="method-text">
-          <p><strong>Direct trunk.</strong> A two-hidden-layer MLP estimates the action from concat(<em>f<sub>t</sub></em>, <em>f̂<sub>t+1</sub></em>).</p>
+        <p><strong>Per-dimension gate.</strong> The final action is a dimension-wise blend of the direct estimate and the retrieval prior:</p>
 
-          <p><strong>Cross-attention prior.</strong> The query transition attends over retrieved actions:</p>
-
-          <div class="method-formula">
-            α<sub>i</sub> = softmax(q<sup>T</sup>k<sub>i</sub> / √d) &nbsp;&nbsp;&nbsp; â<sub>prior</sub> = Σ α<sub>i</sub> · a<sub>i</sub>
-          </div>
-
-          <p><strong>Per-dimension gate.</strong> The final action is a dimension-wise blend of the direct estimate and the retrieval prior:</p>
-
-          <div class="method-formula">
-            <code>â = g ⊙ d<sub>φ</sub>(f<sub>t</sub>, f<sub>t+1</sub>) + (1 − g) ⊙ â<sub>prior</sub></code><br>
-            <code>g = σ(W concat(f<sub>t</sub>, f<sub>t+1</sub>) + b)</code>
-          </div>
-
-          <p>Prior dropout and Gaussian jitter keep the model from simply copying the retrieved action, forcing the trunk and retrieval prior to share the work.</p>
+        <div class="method-formula">
+          <code>â = g ⊙ d<sub>φ</sub>(f<sub>t</sub>, f<sub>t+1</sub>) + (1 − g) ⊙ â<sub>prior</sub></code><br>
+          <code>g = σ(W concat(f<sub>t</sub>, f<sub>t+1</sub>) + b)</code>
         </div>
+
+        <p>Prior dropout and Gaussian jitter keep the model from simply copying the retrieved action, forcing the trunk and retrieval prior to share the work.</p>
       </div>
     </div>
   </section>
 
-  <section class="section arch-section" id="architecture">
-    <div class="section-inner">
-      <h2>The full RAID pipeline.</h2>
-      <p class="section-lead">
-        The paper architecture combines a frozen GR-1 encoder and prediction head with a RAID decoder that retrieves nearby transitions, attends over their actions, and gates the result into a 7-DOF command.
-      </p>
+  <section class="section shell grids-section" id="grids">
+    <h2>Transition grids</h2>
+    <p class="section-lead">
+      Two qualitative grids compare the current frame, GR-1's dreamed next frame, RAID actions, direct visual baseline actions, and ground truth across representative random seeds.
+    </p>
 
-      <div class="arch-diagram">
-        <img src="assets/figures/raid_architecture.svg" alt="RAID Architecture Diagram showing GR-1 encoder, dreaming head, memory bank, and RAID head with direct trunk, cross-attention prior, and per-dimension gate">
+    <div class="grid-gallery">
+      <article class="grid-card">
+        <div class="grid-media">
+          <img src="assets/grids/transition_grid_compact_seed0_visuals_rotated.png" alt="RAID transition grid for seed 0">
+        </div>
+        <div class="grid-info">
+          <h3>Seed 0</h3>
+          <p>RAID, direct visual, and ground truth actions in the 200-demo LIBERO-Spatial setting.</p>
+        </div>
+      </article>
+
+      <article class="grid-card">
+        <div class="grid-media">
+          <img src="assets/grids/transition_grid_compact_seed1_visuals_rotated.png" alt="RAID transition grid for seed 1">
+        </div>
+        <div class="grid-info">
+          <h3>Seed 1</h3>
+          <p>Additional sampled transitions from the same 200-demo evaluation setup.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section shell" id="results">
+    <h2>Retrieval gives the inverse-dynamics head a sharper action prior</h2>
+    <p class="section-lead">
+      On LIBERO-Spatial with 25 demonstrations, cross-attention RAID over GR-1 features reaches 0.132 validation MSE versus 0.842 for the same visual head without retrieval — a 6.4× improvement.
+    </p>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-value">6.4×</div>
+        <div class="metric-label">Validation-MSE improvement at 25 demonstrations</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">0.132</div>
+        <div class="metric-label">RAID visual validation MSE in the lowest-data setting</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">k=3</div>
+        <div class="metric-label">Retrieved demonstrator actions used by the cross-attention prior</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value">7-DOF</div>
+        <div class="metric-label">Action vector decoded for LIBERO pick-and-place manipulation</div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <section class="section shell" id="videos">
+    <h2>Video demonstrations</h2>
+    <p class="section-lead">
+      Side-by-side LIBERO-Spatial rollouts show the direct visual baseline and the RAID visual policy under the same comparison setup.
+    </p>
 
-  <section class="section" id="results">
-    <div class="section-inner">
-      <h2>Retrieval gives the inverse-dynamics head a sharper action prior.</h2>
-      <p class="section-lead">
-        On LIBERO-Spatial with 25 demonstrations, cross-attention RAID over GR-1 features reaches 0.132 validation MSE versus 0.842 for the same visual head without retrieval — a 6.4× improvement.
-      </p>
-
-      <div class="metrics">
-        <div class="metric">
-          <div class="metric-value">6.4×</div>
-          <div class="metric-label">Validation-MSE improvement at 25 demonstrations</div>
+    <div class="video-grid">
+      <article class="video-card">
+        <div class="video-frame">
+          <video controls preload="metadata" poster="assets/posters/direct_visual_poster.jpg">
+            <source src="videos/test1.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="metric">
-          <div class="metric-value">0.132</div>
-          <div class="metric-label">RAID visual validation MSE in the lowest-data setting</div>
+        <div class="video-info">
+          <h3>Direct Visual Baseline</h3>
+          <p>Direct action prediction from visual features without retrieval.</p>
         </div>
-        <div class="metric">
-          <div class="metric-value">k=3</div>
-          <div class="metric-label">Retrieved demonstrator actions used by the cross-attention prior</div>
+      </article>
+
+      <article class="video-card">
+        <div class="video-frame">
+          <video controls preload="metadata" poster="assets/posters/raid_visual_poster.jpg">
+            <source src="videos/test2.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="metric">
-          <div class="metric-value">7-DOF</div>
-          <div class="metric-label">Action vector decoded for LIBERO pick-and-place manipulation</div>
+        <div class="video-info">
+          <h3>RAID Visual Policy</h3>
+          <p>Retrieval-augmented action prediction using remembered transitions.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section videos-section" id="videos">
-    <div class="section-inner">
-      <h2>Video demonstrations</h2>
-      <p class="section-lead">
-        Side-by-side LIBERO-Spatial rollouts show the direct visual baseline and the RAID visual policy under the same comparison setup.
-      </p>
-
-      <div class="video-grid">
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls preload="metadata" poster="assets/posters/direct_visual_poster.jpg">
-              <source src="videos/test1.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-info">
-            <h3>Direct Visual Baseline</h3>
-            <p>Direct action prediction from visual features without retrieval.</p>
-          </div>
-        </article>
-
-        <article class="video-card">
-          <div class="video-frame">
-            <video controls preload="metadata" poster="assets/posters/raid_visual_poster.jpg">
-              <source src="videos/test2.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="video-info">
-            <h3>RAID Visual Policy</h3>
-            <p>Retrieval-augmented action prediction using remembered transitions.</p>
-          </div>
-        </article>
-      </div>
+      </article>
     </div>
   </section>
 
