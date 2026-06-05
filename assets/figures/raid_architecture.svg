@@ -33,7 +33,7 @@
     </style>
   </defs>
 
-  <rect width="1800" height="820" fill="#080b12"/>
+  <rect width="1800" height="820" fill="none"/>
 
   <!-- Input image stacks -->
   <g transform="translate(32 112)">
