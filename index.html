@@ -296,38 +296,32 @@
       max-width: 34ch;
     }
 
-    /* Metrics */
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1px;
+    /* Figures */
+    .figure,
+    .grpo-figures {
       width: 100%;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
-      overflow: hidden;
       margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
     }
 
-    .metric {
-      background: var(--panel);
-      padding: 1.75rem 1.5rem;
-      text-align: center;
+    .figure img,
+    .grpo-figures img {
+      width: min(100%, 820px);
+      height: auto;
+      margin: 0 auto;
+      background: transparent;
     }
 
-    .metric-value {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 600;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-
-    .metric-label {
-      font-size: 0.9rem;
+    .figure-caption {
+      font-size: 0.82rem;
       color: var(--muted);
-      line-height: 1.45;
+      max-width: 40rem;
+      line-height: 1.55;
+      margin-top: 0.85rem;
+      text-align: center;
     }
 
     /* Demo videos */
@@ -385,6 +379,7 @@
         <a class="site-nav__link" href="paper/RAID_Report_vf.pdf">Paper</a>
         <a class="site-nav__link" href="#architecture">Pipeline</a>
         <a class="site-nav__link" href="#method">Method</a>
+        <a class="site-nav__link" href="#grpo">GRPO</a>
         <a class="site-nav__link" href="#grids">Grids</a>
         <a class="site-nav__link" href="#results">Results</a>
         <a class="site-nav__link" href="#videos">Videos</a>
@@ -455,6 +450,24 @@
     </div>
   </section>
 
+  <section class="section shell" id="grpo">
+    <h2>Fine-tune the policy with GRPO</h2>
+    <p class="section-lead">
+      After behavior cloning, RAID is refined online with Group Relative Policy Optimization: the BC policy rolls out in LIBERO-Spatial, rewards are grouped across parallel trajectories, and a relative advantage drives policy updates.
+    </p>
+
+    <div class="grpo-figures">
+      <figure class="figure">
+        <img src="assets/figures/grpo_pipeline.png" alt="GRPO training pipeline: BC policy rollouts in LIBERO-Spatial, grouped rewards, group advantage, and policy update">
+        <figcaption class="figure-caption">GRPO loop over the RAID visual policy in LIBERO-Spatial with MuJoCo + EGL rollouts.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="assets/figures/grpo_reward_curve.png" alt="GRPO reward curve showing mean reward, rolling mean, success-rate spikes, and best checkpoint at update 158">
+        <figcaption class="figure-caption">Training rewards across GRPO updates. Best checkpoint: reward 1.226, success rate 0.25 at update 158.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="section shell grids-section" id="grids">
     <h2>Transition grids</h2>
     <p class="section-lead">
@@ -490,24 +503,10 @@
       On LIBERO-Spatial with 25 demonstrations, cross-attention RAID over GR-1 features reaches 0.132 validation MSE versus 0.842 for the same visual head without retrieval — a 6.4× improvement.
     </p>
 
-    <div class="metrics">
-      <div class="metric">
-        <div class="metric-value">6.4×</div>
-        <div class="metric-label">Validation-MSE improvement at 25 demonstrations</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">0.132</div>
-        <div class="metric-label">RAID visual validation MSE in the lowest-data setting</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">k=3</div>
-        <div class="metric-label">Retrieved demonstrator actions used by the cross-attention prior</div>
-      </div>
-      <div class="metric">
-        <div class="metric-value">7-DOF</div>
-        <div class="metric-label">Action vector decoded for LIBERO pick-and-place manipulation</div>
-      </div>
-    </div>
+    <figure class="figure">
+      <img src="assets/figures/val_mse_comparison.png" alt="Validation MSE comparison between direct visual and RAID visual policies across 25, 50, 100, and 200 demonstrations">
+      <figcaption class="figure-caption">Validation MSE on LIBERO-Spatial: RAID visual consistently outperforms the direct visual baseline across all demonstration scales.</figcaption>
+    </figure>
   </section>
 
   <section class="section shell" id="videos">
