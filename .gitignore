@@ -29,3 +29,8 @@ grpo_*.pid
 
 # Model checkpoints (too large for git — download from releases or re-run training)
 models/*.pt
+configs/norm_stats_*.pt
+
+# Training logs
+logs/
+*.log

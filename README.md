@@ -64,8 +64,11 @@ Starting from the `N=200` behavior-cloned RAID checkpoint, GRPO improved closed-
 | `src/run_all_libero.py` | LIBERO sweep driver across demo scales |
 | `src/rollout_libero.py` | Closed-loop LIBERO rollout evaluation |
 | `src/grpo_libero.py` | GRPO online fine-tuning probe |
+| `src/cache_gr1_features.py` | Pre-compute and cache GR-1 features for the dataset |
 | `configs/results_libero.json` | Main GR-1 + RAID validation results |
 | `configs/loss_curves_*_libero.json` | Per-epoch train/validation curves for the appendix |
+| `configs/results.json` | RoboMimic Lift low-dimensional sweep metrics |
+| `RESULTS.md` | Consolidated results for both experiment tracks |
 | `paper/RAID_Report_vf.pdf` | Final project report |
 
 Earlier RoboMimic and V-JEPA/DINO/SigLIP exploration code is preserved in `src/data.py`, `src/models.py`, `src/train.py`, `src/run_all.py`, and related `configs/` files.
