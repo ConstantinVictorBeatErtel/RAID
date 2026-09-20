@@ -1,112 +1,56 @@
 # RAID: Retrieval-Augmented Inverse Dynamics for Robotic Manipulation
 
-**Paper:** [RAID_Report_vf.pdf](paper/RAID_Report_vf.pdf) is attached directly in this repository. **Project page:** https://constantinvictorbeatertel.github.io/RAID/
+RAID studies the inverse-dynamics step for robot world models: given a current visual state and a dreamed next visual state, what 7-DOF motor command should a robot execute? The current paper track freezes GR-1 visual features, retrieves similar demonstrated transitions, and decodes a normalized action with a direct trunk, cross-attention prior, and per-dimension gate.
 
-RAID studies the action-inference step for robot world models: given a current visual state and a dreamed next visual state, what 7-DOF motor command should the robot execute?
+**Paper:** [RAID project report](paper/RAID_Report_vf.pdf)
 
-We repurpose GR-1 by dropping its language/action-output role, freezing its visual encoder, and using its 384-dimensional class-token feature as the current state `f_t`. GR-1's one-step prediction head supplies the dreamed next state `f_hat_{t+1}`. RAID then decodes `(f_t, f_hat_{t+1})` into a normalized robot action by combining a direct MLP trunk with a cross-attention prior over retrieved demonstrator actions.
+**Project page:** <https://constantinvictorbeatertel.github.io/RAID/>
 
-[Project page](https://constantinvictorbeatertel.github.io/RAID/) | [Final report](paper/RAID_Report_vf.pdf)
+## Research status
 
-## Headline Result
+This repository records a completed course-project implementation and its experiment artifacts. It is being cleaned before a publication-oriented rerun. The committed results are useful evidence, but they are not yet a verified arXiv reproduction: the inspected main pipeline has unresolved split, normalization, provenance, and implementation-documentation questions. See [research status](docs/RESEARCH_STATUS.md) for the evidence and deferred work.
 
-On LIBERO-Spatial, RAID is strongest in the low-data setting: with only 25 demonstrations, it reaches `0.131` normalized validation MSE versus `0.852` for the direct visual MLP, a roughly `6.5x` improvement.
+The headline values below are the point estimates stored in `configs/results_libero.json`. They are reported as historical project results and should not be read as a claim that the publication experiment has already been rerun.
 
-| Demonstrations | Direct visual MLP | RAID visual | Improvement |
+| Demonstrations | Direct visual MLP | RAID visual | Direct/RAID ratio |
 | --- | ---: | ---: | ---: |
-| 25 | 0.852 | **0.131** | **6.5x** |
+| 25 | 0.842 | **0.132** | **6.4x** |
 | 50 | 0.637 | **0.154** | 4.1x |
 | 100 | 0.570 | **0.169** | 3.4x |
 | 200 | 0.552 | **0.171** | 3.2x |
 
-The gap narrows as demonstrations increase, which suggests RAID is primarily a sample-efficiency mechanism rather than a guaranteed asymptotic improvement. Retrieval helps most when the parametric decoder has too little data to learn reliable action mappings; at larger data scales, the direct model benefits more from coverage while RAID can inherit bias from imperfect nearest-neighbor matches.
+These are offline validation MSE values on normalized actions. They are not closed-loop task-success measurements. The later GRPO artifacts on the draft PR report a different run; both records are kept separately in [RESULTS.md](RESULTS.md).
 
-## Method
+## Current paper implementation
 
-RAID stores demonstrated transitions in a memory bank:
+The active GR-1/LIBERO path is the code imported by the LIBERO trainer and sweep:
 
-```text
-M = {(concat(f_i, f_{i+1}), a_i)}
-```
-
-At inference time, GR-1 and RAID compute:
-
-```text
-f_t            = Enc_GR1(s_t)
-f_hat_{t+1}   = g_GR1(f_t)
-R_k            = Ret(M, concat(f_t, f_hat_{t+1}))
-a_hat_t        = d_phi(f_t, f_hat_{t+1}, R_k)
-```
-
-The RAID head has three parts:
-
-| Component | Role |
+| Path | Role |
 | --- | --- |
-| Direct trunk | Two-hidden-layer MLP over `concat(f_t, f_hat_{t+1})` |
-| Cross-attention prior | Retrieves top-`k=3` similar transitions and builds an action prior from their actions |
-| Per-dimension gate | Blends the direct estimate and retrieval prior separately for each action dimension |
+| `src/gr1_encoder.py` | Frozen GR-1/MAE encoder and predicted-next-feature wrapper |
+| `src/data_libero.py` | LIBERO HDF5 loading, action normalization, and cached-feature datasets |
+| `src/memory.py` | Dense cosine retrieval over `(feat_t, feat_next, action)` transitions |
+| `src/models.py` | Direct visual baseline and cross-attention RAID visual decoder |
+| `src/train_libero.py` | Offline behavior-cloning trainer |
+| `src/run_all_libero.py` | Sweep over `direct_visual` and `raid_visual` |
+| `src/rollout_libero.py` | Closed-loop LIBERO rollout helpers using predicted next features |
+| `src/grpo_libero.py` | GRPO probe for online refinement |
+| `src/cache_gr1_features.py` | GR-1 feature-cache generation |
 
-The predicted action is normalized 7-DOF control: `(dx, dy, dz, dtheta_x, dtheta_y, dtheta_z, grip)`.
+Offline training uses encoded observed consecutive frames from demonstrations. Rollouts instead call GR-1 to predict the next feature before decoding an action; that train/inference distinction is a documented research issue, not a hidden implementation detail.
 
-## GRPO Probe
+`src/models_libero.py`, `src/memory_libero.py`, `src/vjepa_encoder.py`, and `src/autoresearch_libero.py` belong to the earlier V-JEPA exploration. Their names do not identify the active GR-1 implementation. The `v2/` subtree is a separate multi-dataset expansion covering DINOv2, Theia, RoboMimic, LIBERO, transformer, and diffusion-policy experiments; it is preserved as historical context rather than presented as the paper’s main result.
 
-Starting from the `N=200` behavior-cloned RAID checkpoint, GRPO improved closed-loop shaped reward but did not produce a stable solved policy. The run logged 195 updates, reached best mean reward `1.226` at update 158, and achieved a peak group success rate of `25%` on some updates. This shows the RAID prior can be refined through simulator interaction, but sparse manipulation success remains unreliable without more stable online training.
+## Reading guide
 
-## Repository Layout
+- [Results and provenance](RESULTS.md) — current-main metrics, later draft-PR run notes, GRPO records, and historical tracks.
+- [Research status](docs/RESEARCH_STATUS.md) — implementation/documentation discrepancies that must be resolved before a controlled publication rerun.
+- [Reproducing](docs/REPRODUCING.md) — commands and external prerequisites, with environment-specific limitations called out.
+- [History](docs/HISTORY.md) — how the low-dimensional, V-JEPA, and `v2` tracks relate.
+- [Paper directory](paper/README.md) — status of the committed PDF and missing editable source.
 
-| Path | Purpose |
-| --- | --- |
-| `src/gr1_encoder.py` | Frozen GR-1 feature encoder and one-step feature prediction wrapper |
-| `src/data_libero.py` | LIBERO HDF5 loading, action normalization, and demo-level splits |
-| `src/memory_libero.py` | Dense cosine-similarity memory bank retrieval |
-| `src/models_libero.py` | Direct visual MLP and RAID visual decoder |
-| `src/train_libero.py` | Training loop for `direct_visual` and `raid_visual` |
-| `src/run_all_libero.py` | LIBERO sweep driver across demo scales |
-| `src/rollout_libero.py` | Closed-loop LIBERO rollout evaluation |
-| `src/grpo_libero.py` | GRPO online fine-tuning probe |
-| `src/cache_gr1_features.py` | Pre-compute and cache GR-1 features for the dataset |
-| `configs/results_libero.json` | Main GR-1 + RAID validation results |
-| `configs/loss_curves_*_libero.json` | Per-epoch train/validation curves for the appendix |
-| `configs/results.json` | RoboMimic Lift low-dimensional sweep metrics |
-| `RESULTS.md` | Consolidated results for both experiment tracks |
-| `paper/RAID_Report_vf.pdf` | Final project report |
+## Historical tracks
 
-Earlier RoboMimic and V-JEPA/DINO/SigLIP exploration code is preserved in `src/data.py`, `src/models.py`, `src/train.py`, `src/run_all.py`, and related `configs/` files.
+The repository contains the original RoboMimic low-dimensional sweep, the V-JEPA/DINO/SigLIP exploration, and the later `v2` multi-dataset expansion. These artifacts explain how the GR-1/LIBERO direction was selected, but their metrics use different encoders, datasets, splits, and evaluation code. They remain available for audit and are not merged into the GR-1 result table.
 
-## Reproducing
-
-Cache GR-1 features once:
-
-```bash
-python src/cache_gr1_features.py \
-  --dataset_dir data/libero_spatial/libero_spatial \
-  --output_dir data/libero_spatial/features \
-  --device cuda
-```
-
-Run the LIBERO behavior-cloning sweep:
-
-```bash
-python src/run_all_libero.py \
-  --feature_dir data/libero_spatial/features \
-  --device cuda
-```
-
-Run the GRPO fine-tuning probe:
-
-```bash
-python src/grpo_libero.py \
-  --feature_dir data/libero_spatial/features \
-  --model_path models/raid_visual_200demos_libero_best.pt \
-  --device cuda
-```
-
-## Setup Notes
-
-- Python 3.10+
-- PyTorch with CUDA recommended
-- `h5py`, `numpy`, `tqdm`
-- LIBERO simulator package for rollout and GRPO experiments
-- Public GR-1 checkpoint and MAE ViT-base weights from [bytedance/GR-1](https://github.com/bytedance/GR-1)
-
-Large datasets, generated feature caches, and newly trained checkpoints are intentionally ignored by git; regenerate them with the scripts above.
+The MIT license is in [LICENSE](LICENSE). The cleanup intentionally leaves the website, report PDF, executable research code, raw result files, figures, notebooks, and checkpoints unchanged.

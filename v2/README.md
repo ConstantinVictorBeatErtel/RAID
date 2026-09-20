@@ -1,9 +1,15 @@
 # v2: multi-dataset image-feature inverse-dynamics expansion
 
 Additive subtree on top of the legacy `src/` package. Nothing under
-`src/`, `configs/`, or `notebooks/` is modified; the legacy autoresearch
-baseline (`python3 src/train.py --condition raid --n_demos 25` →
-`val_mse ≈ 0.397`) keeps reproducing exactly.
+`src/`, `configs/`, or `notebooks/` is modified by the `v2` code. This is a
+separate multi-dataset expansion, not the active GR-1/LIBERO implementation
+used for the paper-facing table in the root README. Its historical metrics and
+the legacy baseline require fresh verification before being used in a paper.
+
+The `v2` code was developed around resumable Drive artifacts and a broader
+matrix of datasets, encoders, and heads. It should therefore be read with its
+own artifact root and requirements, rather than as a drop-in replacement for
+the root `src/` commands.
 
 ## What's here
 

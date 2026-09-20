@@ -1,109 +1,68 @@
-# RAID — Results & experiment log
+# RAID — Results and provenance
 
-Consolidated results for both experiment tracks in this repository. Every number below comes from committed artifacts (`configs/results.json`, training logs, or the README tables) — nothing invented.
+This file separates the current-main GR-1/LIBERO artifacts from later draft-PR run notes and from the historical RoboMimic/V-JEPA tracks. Numbers are preserved as recorded; this cleanup does not rerun or scientifically revalidate them.
 
-For architecture search iteration detail on the low-dimensional track, see [`configs/autoresearch_log.md`](configs/autoresearch_log.md).
+## Track 1 — GR-1 + RAID on LIBERO-Spatial
 
----
+The paper-facing implementation freezes 384-dimensional GR-1 features and compares `direct_visual` with `raid_visual`. The committed `configs/results_libero.json` contains one point estimate per condition and nominal demonstration scale. The corresponding loss-curve files contain the same minima.
 
-## Track 1 — RoboMimic Lift (low-dimensional state)
+### Committed `main` results
 
-Controlled comparison of inverse-dynamics models on proprioceptive \((s_t, s_{t+1})\) pairs. Metric: **validation MSE** on normalized 7-DOF actions. Train/val split: **80/20 by demonstration** at scales **25 / 50 / 100 / 200** demos, seed **42**.
+| Nominal demonstration scale | `direct_visual` | `raid_visual` | Direct/RAID ratio |
+| ---: | ---: | ---: | ---: |
+| 25 | 0.842 | **0.132** | **6.4x** |
+| 50 | 0.637 | **0.154** | 4.1x |
+| 100 | 0.570 | **0.169** | 3.4x |
+| 200 | 0.552 | **0.171** | 3.2x |
 
-### Final evaluation (`configs/results.json`)
+Source: [`configs/results_libero.json`](configs/results_libero.json), with full-precision ratios calculated from that file. The exact values are 0.8419656/0.1319512, 0.6371669/0.1543217, 0.5699734/0.1687350, and 0.5522584/0.1714185. Each value matches the minimum validation loss in its committed `configs/loss_curves_*_libero.json` file.
+
+These are offline validation MSE values on normalized actions. They do not establish closed-loop task success. The implementation questions in [docs/RESEARCH_STATUS.md](docs/RESEARCH_STATUS.md) must be resolved before treating them as publication-grade evidence.
+
+### Later draft-PR run note
+
+The later run note on [PR #1’s inspected branch](https://github.com/ConstantinVictorBeatErtel/RAID/blob/b493d87fe7c8b2c78b738a9ce1167ef52dae396f/GRPO_FINAL_RUN.md) reports a separate fresh sweep:
+
+| Nominal demonstration scale | Direct visual | RAID visual |
+| ---: | ---: | ---: |
+| 25 | 0.852 | **0.131** |
+| 50 | 0.639 | **0.158** |
+| 100 | 0.580 | **0.171** |
+| 200 | 0.554 | **0.174** |
+
+These values are **reported in a run note, not independently reproduced in this cleanup**. The old README combined the later run’s 25-demo pair with the committed-main values for the other scales; the tables above keep the records separate.
+
+## Track 2 — GRPO evidence
+
+The current-main log is [`configs/grpo_libero_log.json`](configs/grpo_libero_log.json) at commit [`9cb2dd1`](https://github.com/ConstantinVictorBeatErtel/RAID/blob/9cb2dd14d40c7a4aaaa5a7a9da7e14386eb92b62/configs/grpo_libero_log.json). It has 86 logged records, best mean reward approximately `-3.153`, and zero recorded success.
+
+The later draft-PR branch preserves two additional runs and their raw artifacts:
+
+| Run | Records / updates | Best mean reward | Peak group success | Evidence |
+| --- | ---: | ---: | ---: | --- |
+| Full run | 382 | 0.925 at update 294 | 0.25 | [`GRPO_FINAL_RUN.md`](https://github.com/ConstantinVictorBeatErtel/RAID/blob/b493d87fe7c8b2c78b738a9ce1167ef52dae396f/GRPO_FINAL_RUN.md) |
+| Polish run | 195 | 1.226 at update 158 | 0.25 | [`grpo_final_summary.json`](https://github.com/ConstantinVictorBeatErtel/RAID/blob/b493d87fe7c8b2c78b738a9ce1167ef52dae396f/raid_grpo_final/grpo_final_summary.json) |
+
+The polish run’s final 25-update averages returned to zero success. Its peak is a within-group rate over four rollouts, not a stable benchmark success rate. The checkpoint and runner snapshots remain outside `main` until their provenance and compatibility changes are deliberately reconciled.
+
+## Track 3 — RoboMimic Lift (low-dimensional state)
+
+This earlier track uses normalized proprioceptive transitions and a different `src/train.py`/`src/evaluate.py` path. The committed [`configs/results.json`](configs/results.json) reports:
 
 | Condition | 25 demos | 50 demos | 100 demos | 200 demos |
-|-----------|----------|----------|-----------|-----------|
+| --- | ---: | ---: | ---: | ---: |
 | mean baseline | 0.850 | 1.069 | 1.096 | 0.919 |
-| nearest neighbor (kNN pooled) | 0.617 | 0.744 | 0.717 | 0.567 |
-| **direct_mlp** | **0.336** | **0.358** | **0.296** | **0.183** |
-| **raid** (gated decoder) | **0.397** | **0.398** | **0.340** | **0.218** |
-| raid_crossattn | 0.404 | 0.399 | 0.347 | 0.219 |
+| nearest neighbor | 0.617 | 0.744 | 0.717 | 0.567 |
+| direct MLP | **0.336** | **0.358** | **0.296** | **0.183** |
+| RAID gated decoder | 0.397 | 0.398 | 0.340 | 0.218 |
+| RAID cross-attention | 0.404 | 0.399 | 0.347 | 0.219 |
 
-Retrieval hit rate for RAID conditions: **1.0** at all scales.
+The architecture-search log is [`configs/autoresearch_log.md`](configs/autoresearch_log.md). Its historical instructions are now [docs/history/vjepa-program.md](docs/history/vjepa-program.md); that note is not the source for this low-dimensional table.
 
-### Autoresearch on the RAID decoder
+## Track 4 — V-JEPA and `v2` exploration
 
-Eight architecture iterations on `RAIDDecoder` only (`program.md`), each trained @25 demos:
+The V-JEPA/DINO/SigLIP metrics and the multi-dataset `v2` matrix remain in their original files. They use different feature encoders, datasets, splits, and runners, so they are not combined with the GR-1/LIBERO table. See [docs/HISTORY.md](docs/HISTORY.md), [`src/autoresearch_libero.py`](src/autoresearch_libero.py), and [v2/README.md](v2/README.md).
 
-| Model @25 demos | Best val MSE |
-|-----------------|--------------|
-| Direct MLP (baseline) | **0.336** |
-| RAID (original concat decoder) | ~0.444 |
-| **RAID after autoresearch** | **0.397** (0.396789) |
+## Reproduction pointers
 
-Accepted design: sigmoid gate blending a transition-only inverse branch with the pooled retrieval prior, plus prior-path dropout (p=0.5) and Gaussian prior noise (σ=0.1) during training. RAID improved materially (0.44 → 0.40) but did not surpass direct MLP at the autoresearch metric.
-
-Figures: `python3 notebooks/02_results.py` → `notebooks/figures/`.
-
----
-
-## Track 2 — LIBERO-Spatial (GR-1 visual encoder)
-
-Frozen **GR-1** (384-dim features) + cross-attention **RAIDDecoderVisual** vs a **DirectMLPVisual** baseline. LIBERO-Spatial: 10 pick-and-place tasks, 50 demonstrations each.
-
-### Stage 1 — offline behaviour cloning (validation MSE ↓)
-
-| Demo scale | `direct_visual` | `raid_visual` | Improvement |
-|------------|----------------|---------------|-------------|
-| 25 demos | 0.842 | **0.132** | **6.4×** |
-| 50 demos | 0.637 | **0.154** | 4.1× |
-| 100 demos | 0.570 | **0.169** | 3.4× |
-| 200 demos | 0.552 | **0.171** | 3.2× |
-
-Retrieval-augmented cross-attention provides a **6× MSE reduction** at 25 demos.
-
-### Stage 2 — GRPO online fine-tuning
-
-| Metric | Value |
-|--------|-------|
-| Updates completed | 86 / 100 |
-| Starting mean reward | −3.881 |
-| Best mean reward | −3.153 (update 59) |
-| Improvement | +18.8% |
-| Success rate | **0.00** |
-
-The policy learned to move the end-effector closer to the target (shaped reach reward improved 18.8%), but **never completed the task** (SR = 0 throughout).
-
-### Why GRPO stalled (SR = 0)
-
-1. **Episode horizon too short** — pick-and-place needs ~80–150 steps; osmesa CPU rendering limited rollouts to **max_steps=30** (~337 ms/step).
-2. **Weak GRPO signal** — with only shaped reach reward and no successes, there is no success/failure contrast for GRPO to exploit.
-3. **Train/inference feature mismatch** — BC used ground-truth `(feat_t, feat_next)`; rollouts use GR-1-predicted `feat_next`.
-4. **Rendering constraint** — osmesa on the training GPU cannot be fixed without EGL or a different renderer.
-
-> **TODO:** re-run GRPO with EGL rendering and `max_steps=150` on a machine where GPU-accelerated MuJoCo is available. Checkpoints are not in git — re-train with `src/run_all_libero.py` or restore from local storage.
-
----
-
-## Reproducing results
-
-**Low-dim sweep:**
-```bash
-python3 src/run_all.py
-python3 notebooks/02_results.py
-```
-
-**LIBERO visual sweep:**
-```bash
-python3 src/cache_gr1_features.py --dataset_dir data/libero_spatial/libero_spatial --output_dir data/libero_spatial/features --device cuda
-python3 src/run_all_libero.py --feature_dir data/libero_spatial/features --device cuda
-```
-
-**GRPO (needs EGL + longer horizon):**
-```bash
-python3 src/grpo_libero.py --feature_dir data/libero_spatial/features --model_path models/raid_visual_50demos_best.pt --device cuda
-```
-
----
-
-## Artifacts in git vs local
-
-| In git | Not in git (re-generable) |
-|--------|---------------------------|
-| `configs/results.json` | `models/*.pt` checkpoints |
-| `configs/autoresearch_log.md` | `configs/norm_stats_*.pt` |
-| Loss-curve JSON under `configs/` | `logs/*.log` |
-| Source under `src/`, `notebooks/` | LIBERO HDF5 under `data/` |
-
-Checkpoints and norm stats are gitignored. Re-run training or copy from your experiment machine.
+Commands and external prerequisites are documented in [docs/REPRODUCING.md](docs/REPRODUCING.md). Reading these committed files is safe; the experiment commands require datasets, pretrained weights, external checkouts, and a suitable GPU environment. Experiments were not run as part of this cleanup.
