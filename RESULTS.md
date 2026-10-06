@@ -1,4 +1,8 @@
-# RAID — Results and provenance
+# RAID results and provenance
+
+**Protocol boundary (25 September 2026):** this file records earlier GR-1/LIBERO, GRPO, RoboMimic, and V-JEPA measurements. None evaluates the active few-shot LIBERO-Goal study in [RESEARCH.md](RESEARCH.md). Do not use historical scores as evidence for LoRA adaptation on held-out tasks. No new-protocol results have been produced. Preserve every old number and provenance note as historical evidence.
+
+---
 
 This file separates the current-main GR-1/LIBERO artifacts from later draft-PR run notes and from the historical RoboMimic/V-JEPA tracks. Numbers are preserved as recorded; this cleanup does not rerun or scientifically revalidate them.
 

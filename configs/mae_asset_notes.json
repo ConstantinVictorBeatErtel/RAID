@@ -1,0 +1,61 @@
+{
+  "mae": {
+    "origin": "Official facebookresearch/mae ViT-B/16 checkpoint: https://dl.fbaipublicfiles.com/mae/pretrain/mae_pretrain_vit_base.pth",
+    "revision": "facebookresearch/mae official released pretrained checkpoint",
+    "sha256": "aec5f0b68e5f3193a00b07bc65a37440db549c15b36b8bea242606cc40c4bc5d",
+    "pretraining_exposure": "Official MAE release documents ImageNet-1K evaluation and releases this paper checkpoint; no LIBERO or robot-task pretraining is documented there. Exposure beyond documented release is unknown. See https://github.com/facebookresearch/mae and https://arxiv.org/abs/2111.06377"
+  },
+  "libero_goal": {
+    "origin": "Original LIBERO-Goal HDF5 files listed by pinned LIBERO downloader; the listed Box endpoint returned HTTP 404 during acquisition.",
+    "fallback_origin": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/tree/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal",
+    "fallback_revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "files": {
+      "put_the_wine_bottle_on_the_rack": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+        "sha256": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e"
+      },
+      "push_the_plate_to_the_front_of_the_stove": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+        "sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6"
+      },
+      "put_the_bowl_on_the_plate": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+        "sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+      },
+      "turn_on_the_stove": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/turn_on_the_stove_demo.hdf5",
+        "sha256": "387fc10747696b80dea6ed8d7f2beaa162bf92ae11750b241073cbd33aac73d5"
+      },
+      "open_the_middle_drawer_of_the_cabinet": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/open_the_middle_drawer_of_the_cabinet_demo.hdf5",
+        "sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+      },
+      "put_the_bowl_on_the_stove": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/put_the_bowl_on_the_stove_demo.hdf5",
+        "sha256": "ff77d3bf0f89a147d423840ecbd842cd63c3c55aeead91f88dbc0917be473e99"
+      },
+      "put_the_cream_cheese_in_the_bowl": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/put_the_cream_cheese_in_the_bowl_demo.hdf5",
+        "sha256": "ee58a7d72c143a71bf1448674e70940ac7781c1d1bb10a1b0c7a5c69b26abbef"
+      },
+      "open_the_top_drawer_and_put_the_bowl_inside": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/open_the_top_drawer_and_put_the_bowl_inside_demo.hdf5",
+        "sha256": "1b50d99a053a7e4547c9ae9ccd2e3cd762543d27be78f240f13440d7ae487ae8"
+      },
+      "put_the_bowl_on_top_of_the_cabinet": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/put_the_bowl_on_top_of_the_cabinet_demo.hdf5",
+        "sha256": "e14c84ebc820a13ef9a92ca82a7f04bb299f0ee96dfe9cc907bab71aeb2683b2"
+      },
+      "put_the_wine_bottle_on_top_of_the_cabinet": {
+        "path": "/Users/ConstiX/Documents/ChatGPT/RAID/raid-main/data/assets/libero/libero_goal/put_the_wine_bottle_on_top_of_the_cabinet_demo.hdf5",
+        "sha256": "7dc087a7596d5cbbe394f681b21a0be434438b0dca73ac430c293fe4c818404a"
+      }
+    },
+    "demonstration_check": "10 official tasks; 50 usable demonstrations per task; every demo has aligned actions and agentview_rgb frames."
+  },
+  "libero_source": {
+    "origin": "https://github.com/Lifelong-Robot-Learning/LIBERO.git",
+    "revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "clean_checkout": true
+  }
+}

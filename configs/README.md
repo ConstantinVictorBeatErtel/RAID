@@ -1,32 +1,14 @@
-# RAID experiment artifacts
+# Experiment configurations and artifacts
 
-This directory contains tracked configuration notes and recorded outputs. Generated datasets, feature caches, normalization tensors, checkpoints, and logs are ignored unless a small summary is explicitly committed.
+## Active research configuration
 
-## Configuration and instructions
+[`fewshot_libero_goal.yaml`](fewshot_libero_goal.yaml) records the active few-shot adaptation design: LIBERO-Goal, six source tasks, two development tasks, two final-test tasks, support budgets 2/5/10, and frozen-source/retrieval/head-fine-tuning/LoRA-plus-head conditions. Paid launch is explicitly disabled. The protocol and evidence gates are in [RESEARCH.md](../RESEARCH.md); code checks are in [docs/ADAPTATION_IMPLEMENTATION.md](../docs/ADAPTATION_IMPLEMENTATION.md).
 
-- [`v6.yaml`](v6.yaml) documents nominal hyperparameters for the original low-dimensional Lift pipeline. The Python CLI remains the executable source of truth.
-- [`../docs/history/vjepa-program.md`](../docs/history/vjepa-program.md) records the historical V-JEPA experimental program.
-- [`autoresearch_log.md`](autoresearch_log.md) records the low-dimensional RAID decoder search.
-- `autoresearch_*_models.py` are snapshots of selected architecture-search configurations.
+The protocol, source fitting, support-only adaptation, evaluation, and reporting CLI stages are implemented and have synthetic integration coverage. The real-data/checkpoint smoke, complete leakage suite, and cost gates remain open; the configuration is not proof that those gates passed.
 
-## Recorded metrics
+## Historical configurations
 
-- [`results_libero.json`](results_libero.json) contains the aggregate GR-1/LIBERO `direct_visual` and `raid_visual` validation MSE values used in [RESULTS.md](../RESULTS.md).
-- [`results.json`](results.json) contains the earlier RoboMimic low-dimensional sweep.
-- [`results_vjepa.json`](results_vjepa.json) and the `val_mse_*_vjepa.json` files contain V-JEPA-era point metrics.
-
-## Loss curves
-
-- `loss_curves_*_libero.json` are per-epoch curves for the GR-1/LIBERO visual sweep.
-- `loss_curves_*_vjepa.json` are curves from the V-JEPA exploration.
-- `loss_curves_{condition}_{n}demos.json` without the `_libero` suffix belong to the earlier low-dimensional pipeline.
-
-## GRPO logs
-
-- [`grpo_libero_log.json`](grpo_libero_log.json) is the current-main LIBERO probe log.
-- [`grpo_log.json`](grpo_log.json) is an earlier low-dimensional GRPO log.
-- The later full and polish GRPO logs are on the draft branch documented in [RESULTS.md](../RESULTS.md), not in `main`.
-
-## Generated and external artifacts
-
-The scripts may produce `norm_stats_*.pt`, model checkpoints under `models/`, feature caches under `data/`, and local logs. Those assets are not required to understand the committed metrics and must be regenerated or restored from the relevant experiment environment. See [REPRODUCING.md](../docs/REPRODUCING.md) for the current command shapes and limitations.
+- [`pilot_100.yaml`](pilot_100.yaml), [`expansion_study.yaml`](expansion_study.yaml), and [`cosmos3_edge_feasibility.yaml`](cosmos3_edge_feasibility.yaml) describe earlier or deferred experiment plans. They do not select the new LIBERO-Goal protocol.
+- [`v6.yaml`](v6.yaml), `autoresearch_*_models.py`, and [`autoresearch_log.md`](autoresearch_log.md) record the original low-dimensional decoder experiments.
+- `results_libero.json`, `results.json`, `results_vjepa.json`, the GRPO logs, and loss curves contain historical measurements. Their protocols differ; see [RESULTS.md](../RESULTS.md).
+- Generated datasets, caches, normalizers, checkpoints, and logs are not all tracked. Rebuild or restore them only using the recipe that matches their protocol and source hashes.

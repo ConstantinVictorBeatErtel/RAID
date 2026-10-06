@@ -1,0 +1,16 @@
+{
+  "status": "calibration",
+  "methods": [
+    "frozen_source",
+    "target_knn",
+    "head_ft",
+    "lora_head_ft",
+    "support_mean",
+    "transition_1nn",
+    "current_weighted_knn",
+    "source_support_knn"
+  ],
+  "query_transitions": 2132,
+  "code_snapshot_sha256": "70d3b73c7d029d57df299745e4e50d69b7a6930b9b5049f35b242a623b80e6a7",
+  "evaluation_config_sha256": "9461d8ca1b6060ce13ea5e2b7264165000fd946fb5d130ed951ae85f526c3798"
+}

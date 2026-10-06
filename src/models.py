@@ -168,13 +168,13 @@ class RAIDDecoderCrossAttn(nn.Module):
 
 
 # ---------------------------------------------------------------------------
-# Visual RAID models — use GR-1 384-dim features as state representation
+# Visual decoders for 768-dimensional recorded-frame MAE features.
 # ---------------------------------------------------------------------------
 
 class DirectMLPVisual(nn.Module):
-    """DirectMLP baseline using GR-1 384-dim visual features."""
+    """DirectMLP baseline using standalone-MAE visual features."""
 
-    def __init__(self, feat_dim: int = 384, action_dim: int = 7,
+    def __init__(self, feat_dim: int = 768, action_dim: int = 7,
                  hidden_dim: int = 512, dropout: float = 0.1):
         super().__init__()
         self.feat_dim   = feat_dim
@@ -197,18 +197,18 @@ class DirectMLPVisual(nn.Module):
 
 class RAIDDecoderVisual(nn.Module):
     """
-    Retrieval-Augmented Inverse Dynamics decoder on GR-1 visual features.
+    Retrieval-Augmented Inverse Dynamics decoder on recorded-frame features.
 
-    Architecture mirrors RAIDDecoderCrossAttn but operates in the 384-dim
-    GR-1 latent space instead of low-dimensional proprioception.
+    Architecture mirrors RAIDDecoderCrossAttn but operates in the visual
+    feature space instead of low-dimensional proprioception.
 
-    s_t and s_next are GR-1 features (384-dim each).
+    s_t and s_next are MAE features (768-dim each).
     retrieved_actions are k normalised actions (7-dim each).
     """
 
     def __init__(
         self,
-        feat_dim: int = 384,
+        feat_dim: int = 768,
         action_dim: int = 7,
         k: int = 3,
         d_attn: int = 64,

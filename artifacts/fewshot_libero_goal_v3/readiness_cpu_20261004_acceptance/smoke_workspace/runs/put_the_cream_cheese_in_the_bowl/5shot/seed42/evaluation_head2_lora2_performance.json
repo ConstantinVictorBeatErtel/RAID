@@ -1,0 +1,79 @@
+{
+  "protocol_digest": "9a2f54a8ccbdecbb7c487578e0b61aff0f4fa3748cc042712975eebbca5e597d",
+  "task": "put_the_cream_cheese_in_the_bowl",
+  "budget": 5,
+  "seed": 42,
+  "phase_seconds": {
+    "query_label_and_feature_loading": 0.381507208046969,
+    "retrieval_bank_construction": 0.3310990839963779
+  },
+  "measurements": {
+    "frozen_source": {
+      "cached_compute_ms_per_transition": 0.005612824573906708,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.0,
+      "raw_frame_encoding_seconds": null,
+      "source_retention_seconds": 0.033564999990630895
+    },
+    "target_knn": {
+      "cached_compute_ms_per_transition": 0.002990227957530468,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.0,
+      "raw_frame_encoding_seconds": null
+    },
+    "head_ft": {
+      "cached_compute_ms_per_transition": 0.0012406191371877521,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.06859302520751953,
+      "raw_frame_encoding_seconds": null,
+      "source_retention_seconds": 0.027697334007825702
+    },
+    "lora_head_ft": {
+      "cached_compute_ms_per_transition": 61.89608554174297,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 1.608597755432129,
+      "raw_frame_encoding_seconds": 130.55391068116296,
+      "source_retention_seconds": 129.9266499170335
+    },
+    "support_mean": {
+      "cached_compute_ms_per_transition": 1.6103673588281837e-05,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.0,
+      "raw_frame_encoding_seconds": null
+    },
+    "transition_1nn": {
+      "cached_compute_ms_per_transition": 0.002068382747712463,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.0,
+      "raw_frame_encoding_seconds": null
+    },
+    "current_weighted_knn": {
+      "cached_compute_ms_per_transition": 0.0016228892955331457,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.0,
+      "raw_frame_encoding_seconds": null
+    },
+    "source_support_knn": {
+      "cached_compute_ms_per_transition": 0.05538911069109931,
+      "end_to_end_latency_ms_per_transition": null,
+      "latency_note": "not comparable across methods until raw-image calibration completes",
+      "peak_memory_bytes": null,
+      "adaptation_seconds": 0.0,
+      "raw_frame_encoding_seconds": null
+    }
+  }
+}

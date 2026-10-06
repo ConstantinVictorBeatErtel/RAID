@@ -1,3 +1,5 @@
+> **Historical experiment track (25 September 2026).** The active RAID question is few-shot LoRA adaptation versus transition retrieval on LIBERO-Goal; this `v2` matrix is not part of that protocol. Retain this README as provenance and do not mix its measurements with the new study. See [RESEARCH.md](../RESEARCH.md).
+
 # v2: multi-dataset image-feature inverse-dynamics expansion
 
 Additive subtree on top of the legacy `src/` package. Nothing under

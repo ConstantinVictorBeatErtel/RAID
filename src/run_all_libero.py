@@ -11,6 +11,8 @@ Conditions:  direct_visual, raid_visual
 """
 from __future__ import annotations
 
+raise RuntimeError("This legacy simulator/pilot entry point is disabled; the active study uses recorded RGB frames.")
+
 import argparse
 import json
 import subprocess

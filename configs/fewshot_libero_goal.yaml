@@ -1,0 +1,55 @@
+# Active research study. Launch intentionally disabled.
+name: fewshot_libero_goal
+protocol: fewshot_idm_adaptation_v3
+protocol_version: 3
+benchmark: libero_goal
+libero_commit: 8f1084e3132a39270c3a13ebe37270a43ece2a01
+split_hash_seed: 20260925
+expected_demos_per_task: 50
+source_tasks: 6
+development_tasks: 2
+final_test_tasks: 2
+source_demonstrations: 40
+source_validation_demonstrations: 5
+source_retention_demonstrations: 5
+target_query_demonstrations: 20
+target_support_pool_demonstrations: 30
+support_budgets: [2, 5, 10]
+methods: [frozen_source, target_knn, head_ft, lora_head_ft]
+lookup_controls: [support_mean, transition_1nn, current_weighted_knn, source_support_knn]
+horizon: 1
+future_representation: recorded_rgb
+feature_dim: 768
+action_dim: 7
+normalizer: source_training_only
+source_training:
+  updates: 2000
+  batch_size: 64
+  microbatch_size: 8
+  head_lr: 0.0003
+  weight_decay: 0.0001
+adaptation:
+  max_updates: 1000
+  batch_size: 64
+  microbatch_size: 8
+  snapshot_updates: [200, 500, 1000]
+  head_lr: 0.0003
+  lora_lr: 0.0001
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  target_blocks: [10, 11]
+  target_projections: [qkv, proj]
+  weight_decay: 0.0001
+  grad_clip: 1.0
+retrieval:
+  k: 3
+  temperature: 0.1
+development_seed: 42
+confirmation_seeds: [42, 43, 44]
+planning_budget_usd: 250.0
+protected_reserve_usd: 25.0
+workload_margin: 0.25
+output_dir: artifacts/fewshot_libero_goal_v3
+cloud:
+  launch_enabled: false

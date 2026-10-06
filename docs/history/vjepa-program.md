@@ -1,3 +1,5 @@
+> **Historical research program (25 September 2026).** This V-JEPA program is retained for audit. The active study now compares few-shot LoRA adaptation and transition retrieval on LIBERO-Goal; its protocol is in [RESEARCH.md](../../RESEARCH.md). Do not present the measurements below as current-study evidence.
+
 # RAID Visual — Retrieval-Augmented Inverse Dynamics with V-JEPA 2
 
 ## What RAID is and why retrieval helps

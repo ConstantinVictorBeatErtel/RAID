@@ -99,13 +99,18 @@ class LiberoTransitionDataset(Dataset):
         n_demos: Optional[int] = None,
         image_size: int = 128,
         skip_last: bool = True,
+        future_horizon: int = 1,
     ):
         self.norm_stats = norm_stats
         self.image_size = image_size
+        self.future_horizon = int(future_horizon)
+        if self.future_horizon < 1:
+            raise ValueError("future_horizon must be positive")
 
         self.images_t:    list[np.ndarray] = []   # (H, W, 3) uint8
         self.images_next: list[np.ndarray] = []
         self.actions:     list[np.ndarray] = []   # (7,) float32 normalised
+        self.actions_raw: list[np.ndarray] = []
         self.languages:   list[str]        = []
 
         action_mean = norm_stats["action_mean"].numpy()
@@ -132,16 +137,18 @@ class LiberoTransitionDataset(Dataset):
                     actions = grp["actions"][:]             # (T, 7) float32
 
                     T = len(actions)
-                    end = T - 1 if skip_last else T
+                    end = T - self.future_horizon if skip_last else T
 
                     for t in range(end):
                         img_t    = images[t]
-                        img_next = images[t + 1] if t + 1 < len(images) else images[t]
+                        future_index = t + self.future_horizon
+                        img_next = images[future_index] if future_index < len(images) else images[t]
                         act      = (actions[t] - action_mean) / (action_std + 1e-8)
 
                         self.images_t.append(img_t)
                         self.images_next.append(img_next)
                         self.actions.append(act.astype(np.float32))
+                        self.actions_raw.append(actions[t].astype(np.float32))
                         self.languages.append(lang)
 
                     total_demos += 1
@@ -157,52 +164,87 @@ class LiberoTransitionDataset(Dataset):
             "image_t":    torch.from_numpy(self.images_t[idx]),     # (H, W, 3) uint8
             "image_next": torch.from_numpy(self.images_next[idx]),  # (H, W, 3) uint8
             "action":     torch.from_numpy(self.actions[idx]),      # (7,)
+            "action_raw": torch.from_numpy(self.actions_raw[idx]),
             "language":   self.languages[idx],
         }
 
 
+class LazyLiberoTransitionDataset(Dataset):
+    """HDF5 transition reader that keeps only demo/timestep indexes in RAM."""
+
+    def __init__(self, hdf5_path: str | Path, norm_stats: dict, future_horizon: int = 1,
+                 demo_ids: set[int] | list[int] | None = None, include_actions: bool = True):
+        self.path = str(hdf5_path)
+        self.future_horizon = int(future_horizon)
+        if self.future_horizon < 1:
+            raise ValueError("future_horizon must be positive")
+        self.mean = norm_stats["action_mean"].cpu().numpy().astype(np.float32)
+        self.std = norm_stats["action_std"].cpu().numpy().astype(np.float32)
+        self.include_actions = bool(include_actions)
+        allowed = None if demo_ids is None else set(map(int, demo_ids))
+        self.items: list[tuple[int, str, int]] = []
+        with h5py.File(self.path, "r") as handle:
+            for key in sorted(handle["data"].keys(), key=lambda x: int(x.replace("demo_", ""))):
+                demo = int(key.replace("demo_", "")); group = handle[f"data/{key}"]
+                if allowed is not None and demo not in allowed:
+                    continue
+                actions, obs = group["actions"], group["obs"]
+                image_key = _find_img_key(obs)
+                if obs[image_key].shape[0] < actions.shape[0]:
+                    raise ValueError(f"{self.path}:{key} has fewer images than actions")
+                transition_count = min(actions.shape[0], obs[image_key].shape[0]) - self.future_horizon
+                self.items.extend((demo, image_key, timestep) for timestep in range(transition_count))
+        self._handle = None
+        self._pid = None
+
+    def __len__(self) -> int:
+        return len(self.items)
+
+    def __getstate__(self):
+        state = dict(self.__dict__)
+        state["_handle"] = None; state["_pid"] = None
+        return state
+
+    def __getitem__(self, index: int) -> dict:
+        import os
+        if self._handle is None or self._pid != os.getpid():
+            if self._handle is not None:
+                self._handle.close()
+            self._handle = h5py.File(self.path, "r")
+            self._pid = os.getpid()
+        demo, image_key, timestep = self.items[index]
+        group = self._handle[f"data/demo_{demo}"]
+        current = np.asarray(group[f"obs/{image_key}"][timestep])
+        future = np.asarray(group[f"obs/{image_key}"][timestep + self.future_horizon])
+        result = {"image_t": torch.from_numpy(current), "image_next": torch.from_numpy(future),
+                  "demo_id": demo, "timestep": timestep}
+        if self.include_actions:
+            action = np.asarray(group["actions"][timestep], dtype=np.float32)
+            result["action"] = torch.from_numpy(((action - self.mean) / (self.std + 1e-8)).astype(np.float32))
+            result["action_raw"] = torch.from_numpy(action)
+        return result
+
+    def __del__(self):
+        handle = getattr(self, "_handle", None)
+        if handle is not None:
+            handle.close()
+
+
 # ---------------------------------------------------------------------------
-# Cached feature dataset (used after pre-computing GR-1 features)
+# Historical combined-cache loader. The active format-4 loader is in fewshot_train.
 # ---------------------------------------------------------------------------
 
 class CachedFeatureDataset(Dataset):
     """
-    Dataset that serves pre-computed GR-1 features.
+    Fail-closed compatibility stub for the removed combined-cache schema.
 
-    Expected cache file format (torch .pt dict):
-        {
-          "feat_t":    (N, 384) float32
-          "feat_next": (N, 384) float32
-          "actions":   (N, 7)   float32  normalised
-          "languages": list[str] length N
-        }
+    Active v4 inputs are per-demonstration shards validated by
+    ``raid_experiments.fewshot_train._load_cache_map``. A combined file cannot
+    establish protocol roles or sealed-query label isolation.
     """
 
     def __init__(self, cache_path: str | Path, n_demos: Optional[int] = None):
-        data = torch.load(cache_path, map_location="cpu", weights_only=False)
-        feat_t    = data["feat_t"]
-        feat_next = data["feat_next"]
-        actions   = data["actions"]
-
-        # Optionally limit to first n_demos worth of data.
-        # We store demo boundaries in the cache if available.
-        if n_demos is not None and "demo_lengths" in data:
-            lengths = data["demo_lengths"][:n_demos]
-            end_idx = int(sum(lengths))
-            feat_t    = feat_t[:end_idx]
-            feat_next = feat_next[:end_idx]
-            actions   = actions[:end_idx]
-
-        self.feat_t    = feat_t.float()
-        self.feat_next = feat_next.float()
-        self.actions   = actions.float()
-        self.feat_dim  = feat_t.shape[1]
-
-    def __len__(self) -> int:
-        return len(self.actions)
-
-    def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-        return self.feat_t[idx], self.feat_next[idx], self.actions[idx]
+        raise ValueError("combined legacy feature caches are rejected; use the protocol-bound format-4 MAE shard loader")
 
 
 # ---------------------------------------------------------------------------

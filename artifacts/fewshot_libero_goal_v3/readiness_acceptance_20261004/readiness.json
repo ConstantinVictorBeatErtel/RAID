@@ -1,0 +1,78 @@
+{
+  "cache_manifest_sha256": "f7637833bbe5295d04bca19c2afa33c8db14e1a8628c140d20da1e8e82341661",
+  "code_snapshot_sha256": "70d3b73c7d029d57df299745e4e50d69b7a6930b9b5049f35b242a623b80e6a7",
+  "evidence_sha256": {
+    "artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/dependency-resolution.log": "9fd521fd70fba5371f05edea3d4e6d9e673fe16a53eb155c540c297f72e12c19",
+    "artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/pytest-final.log": "9580a0d92ad45e6c5f6ccf156b514d57f7b726268735390af22c11652c60e2d8",
+    "artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/pytest-final.xml": "96e23437612de286c0c547dfed1f6f4e95aa43f3a25e60446a4437a68a7b8c26",
+    "artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/requirements-linux-cu118.lock": "d5234f2fcb83e7f406d693b70e783dd2ac89597471594fe16348cc31a4b4baf5",
+    "artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/verify-assets.json": "6e0b5cd0739e7a1007d2f6156441a443956770dba470c14eb95317f3e7f9e555",
+    "artifacts/fewshot_libero_goal_v3/readiness_cpu_20261004_acceptance/smoke_real.json": "b54f23aec7409f24e970d69f7f6d2a84adf003261296a5ee834db45b134163f9",
+    "artifacts/fewshot_libero_goal_v3/readiness_cpu_20261004_acceptance/smoke_workspace/runs/put_the_cream_cheese_in_the_bowl/5shot/seed42/evaluation_head2_lora2.json": "5a358094db2dd3a0c687c6a0e3e01d38a04f618244e9228ef2120036690dd2e5",
+    "requirements-pilot.txt": "43ac8917eff9b5c17107773254a0b4479f1c7d19064fcaaf97fd128da520d393"
+  },
+  "gates": {
+    "compile_and_local_suite": "passed",
+    "complete_cloud_lifecycle_review": "unexecuted",
+    "complete_cuda_calibration": "unexecuted",
+    "forecast_inventory_arithmetic": "passed",
+    "full_recovery_seed_budget_cross_product": "unexecuted",
+    "linux_cuda_dependency_resolution_only": "passed",
+    "local_production_calibration_hooks_and_schema": "passed",
+    "pinned_cuda_runtime_imports_and_smoke": "unexecuted",
+    "production_generated_positive_freeze_confirmation_report": "unexecuted",
+    "real_assets_500_shards": "passed",
+    "real_cpu_eight_methods": "passed",
+    "real_cpu_smoke": "passed",
+    "sampling_query_isolation_all_seeds_budgets": "passed",
+    "scientific_development_and_confirmation": "unexecuted",
+    "source_exact_bytes_and_canonical_root_recovery": "passed",
+    "synthetic_full_length_training_evaluation": "passed",
+    "synthetic_scheduled_recovery_seed42_five_shot": "passed",
+    "verified_pricing_and_actual_spend_forecasts": "unexecuted"
+  },
+  "launch_ready": false,
+  "limitations": [
+    "Synthetic tiny encoder is not MAE architecture evidence.",
+    "Positive structural freeze/report unit fixtures are not production-generated scientific evidence.",
+    "CUDA dependency resolution does not establish target imports or GPU execution.",
+    "Remaining sequence is specified in docs/READINESS_HANDOFF.md."
+  ],
+  "mae_checkpoint_sha256": "aec5f0b68e5f3193a00b07bc65a37440db549c15b36b8bea242606cc40c4bc5d",
+  "paid_execution": "disabled",
+  "protocol_digest": "9a2f54a8ccbdecbb7c487578e0b61aff0f4fa3748cc042712975eebbca5e597d",
+  "readiness_format": 1,
+  "real_cpu_evaluation": {
+    "evaluation_config_sha256": "9461d8ca1b6060ce13ea5e2b7264165000fd946fb5d130ed951ae85f526c3798",
+    "methods": [
+      "current_weighted_knn",
+      "frozen_source",
+      "head_ft",
+      "lora_head_ft",
+      "source_support_knn",
+      "support_mean",
+      "target_knn",
+      "transition_1nn"
+    ],
+    "query_transitions": 2132
+  },
+  "runtime": {
+    "cuda": null,
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "torch": "2.11.0"
+  },
+  "scientific_result": false,
+  "study_config_sha256": "acbc84b807392675a7d012973b09e6fb86070b10cd467f1a61dd757127804ba5",
+  "tests": {
+    "files_sha256": {
+      "tests/test_experiments.py": "4deeb9719650be8d2af68aa9723e907237c8deb31e835aac7d99b7d0db6812bc",
+      "tests/test_fewshot_acceptance.py": "08840ecc613cef66a0ebc3c32eba0869ca30b6e2e448bc8c8a46c2f8b7f13d8d",
+      "tests/test_fewshot_protocol.py": "a41d1866425600f96c557f3d43294dc972f70514bf1d63ec9d0917ac28201c1b"
+    },
+    "passed": 51,
+    "recovery_subtests_passed": 6,
+    "seconds": 211.29,
+    "warnings": 1
+  }
+}

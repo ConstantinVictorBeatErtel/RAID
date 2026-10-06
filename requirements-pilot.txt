@@ -1,0 +1,22 @@
+# Provisional lock for the pinned PyTorch 2.1.2 / CUDA 11.8 Runpod image.
+# A clean environment must resolve and import-test this file before launch.
+torch==2.1.2
+torchvision==0.16.2
+numpy==1.26.4
+h5py==3.10.0
+PyYAML==6.0.1
+tqdm==4.66.4
+runpod==1.7.0
+pillow==10.4.0
+einops==0.8.0
+timm==1.0.27
+transformers==4.44.2
+ftfy==6.2.3
+regex==2024.7.24
+opencv-python-headless==4.10.0.84
+mujoco==3.1.6
+robosuite==1.4.1
+# LIBERO is a source checkout pinned by commit in the experiment config. MAE
+# ViT-B/16 is built from the pinned timm implementation and the official weight file.
+# Cosmos 3 Edge uses a separate CUDA/runtime lock after its official package
+# requirements have been verified; it is intentionally not installed here.

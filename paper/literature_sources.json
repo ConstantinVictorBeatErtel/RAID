@@ -1,0 +1,935 @@
+[
+  {
+    "key": "fada",
+    "arxiv": "2606.28476",
+    "url": "https://arxiv.org/abs/2606.28476v1",
+    "title": [
+      "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control"
+    ],
+    "authors": [
+      "Xie, Angchen",
+      "Sobanbabu, Nikhil",
+      "Shikhare, Ishayu",
+      "Wang, Alan",
+      "Simchowitz, Max",
+      "Shi, Guanya"
+    ],
+    "date": [
+      "2026/06/26"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2606.28476"
+    ],
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "1e9f81a54703ee612628030f2f494907ab6bed42b299746cfb4a0f03ed67beda",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2606.28476v1"
+  },
+  {
+    "key": "wizard",
+    "arxiv": "2606.07217",
+    "url": "https://arxiv.org/abs/2606.07217v1",
+    "title": [
+      "Robotic Policy Adaptation via Weight-Space Meta-Learning"
+    ],
+    "authors": [
+      "Bianchi, Christian",
+      "Yousefi, Siamak",
+      "Sampieri, Alessio",
+      "Roberti, Andrea",
+      "Rigazio, Luca",
+      "Galasso, Fabio",
+      "Franco, Luca"
+    ],
+    "date": [
+      "2026/06/05"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2606.07217"
+    ],
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "8704b21454c98c826b34e22cc4f22f673deb121260299f3514e8a570e80ba4da",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2606.07217v1"
+  },
+  {
+    "key": "hand",
+    "arxiv": "2505.20455",
+    "url": "https://arxiv.org/abs/2505.20455v4",
+    "title": [
+      "HAND Me the Data: Fast Robot Adaptation via Hand Path Retrieval"
+    ],
+    "authors": [
+      "Hong, Matthew",
+      "Liang, Anthony",
+      "Kim, Kevin",
+      "Rajaprakash, Harshitha",
+      "Thomason, Jesse",
+      "Bıyık, Erdem",
+      "Zhang, Jesse"
+    ],
+    "date": [
+      "2025/05/26"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2505.20455"
+    ],
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "version": "v4",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "8bd6f39ce99ec73de8fcc771cb542dde8cc7fae8c0cedc5b453bc07942853dfc",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2505.20455v4"
+  },
+  {
+    "key": "vlapro",
+    "arxiv": "2605.29562",
+    "url": "https://arxiv.org/abs/2605.29562v1",
+    "title": [
+      "VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models"
+    ],
+    "authors": [
+      "Si, Shengyu",
+      "Lu, Yuanzhuo",
+      "Yang, Ruimeng",
+      "Ye, Ziyi",
+      "Wu, Zuxuan",
+      "Jiang, Yu-Gang"
+    ],
+    "date": [
+      "2026/05/28"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2605.29562"
+    ],
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "e56990dc6573c12ce3dff2a43d974c04616f75a84934ce07f2d6d47afee36208",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2605.29562v1"
+  },
+  {
+    "key": "regent",
+    "arxiv": "2412.04759",
+    "url": "https://arxiv.org/abs/2412.04759",
+    "title": [
+      "REGENT: A Retrieval-Augmented Generalist Agent That Can Act In-Context in New Environments"
+    ],
+    "authors": [
+      "Sridhar, Kaustubh",
+      "Dutta, Souradeep",
+      "Jayaraman, Dinesh",
+      "Lee, Insup"
+    ],
+    "date": [
+      "2024/12/06"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2412.04759"
+    ],
+    "year": "2025",
+    "venue": "International Conference on Learning Representations",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "59daa64cea28325d86bc680ed65dedfb7709edf24530cedbabdd87ba7b37c842",
+    "reviewed_fulltext_url": "https://kaustubhsridhar.github.io/regent-research/static/docs/REGENT.pdf"
+  },
+  {
+    "key": "vinn",
+    "arxiv": "2112.01511",
+    "url": "https://arxiv.org/abs/2112.01511",
+    "title": [
+      "The Surprising Effectiveness of Representation Learning for Visual Imitation"
+    ],
+    "authors": [
+      "Pari, Jyothish",
+      "Shafiullah, Nur Muhammad",
+      "Arunachalam, Sridhar Pandian",
+      "Pinto, Lerrel"
+    ],
+    "date": [
+      "2021/12/02"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2112.01511"
+    ],
+    "year": "2022",
+    "venue": "Robotics: Science and Systems",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "8c5518f66bdef368fcfcd772bbab45d73ad68225fb57a2ced7c98e2cb1c7332e",
+    "reviewed_fulltext_url": "https://www.roboticsproceedings.org/rss18/p010.pdf"
+  },
+  {
+    "key": "rtcache",
+    "arxiv": "2505.09040",
+    "url": "https://arxiv.org/abs/2505.09040v3",
+    "title": [
+      "RT-Cache: Training-Free Retrieval for Real-Time Manipulation"
+    ],
+    "authors": [
+      "Kwon, Owen",
+      "George, Abraham",
+      "Bartsch, Alison",
+      "Farimani, Amir Barati"
+    ],
+    "date": [
+      "2025/05/14"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2505.09040"
+    ],
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "version": "v3",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "a393bd6c6fecd311d4b8d8bd13ecfa916ae588fab79a25bea1f7c9ba1b9970be",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2505.09040v3"
+  },
+  {
+    "key": "openvla",
+    "arxiv": "2406.09246",
+    "url": "https://arxiv.org/abs/2406.09246v3",
+    "title": [
+      "OpenVLA: An Open-Source Vision-Language-Action Model"
+    ],
+    "authors": [
+      "Kim, Moo Jin",
+      "Pertsch, Karl",
+      "Karamcheti, Siddharth",
+      "Xiao, Ted",
+      "Balakrishna, Ashwin",
+      "Nair, Suraj",
+      "Rafailov, Rafael",
+      "Foster, Ethan",
+      "Lam, Grace",
+      "Sanketi, Pannag",
+      "Vuong, Quan",
+      "Kollar, Thomas",
+      "Burchfiel, Benjamin",
+      "Tedrake, Russ",
+      "Sadigh, Dorsa",
+      "Levine, Sergey",
+      "Liang, Percy",
+      "Finn, Chelsea"
+    ],
+    "date": [
+      "2024/06/13"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2406.09246"
+    ],
+    "year": "2024",
+    "venue": "arXiv preprint",
+    "version": "v3",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "0c3f6ac1755e09f162ee9168151e093434b2f82a9bcc91c1aa2dd54b0965abee",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2406.09246v3"
+  },
+  {
+    "key": "oft",
+    "arxiv": "2502.19645",
+    "url": "https://arxiv.org/abs/2502.19645v2",
+    "title": [
+      "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success"
+    ],
+    "authors": [
+      "Kim, Moo Jin",
+      "Finn, Chelsea",
+      "Liang, Percy"
+    ],
+    "date": [
+      "2025/02/27"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2502.19645"
+    ],
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "version": "v2",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "b7cb95cbaf5e5947efd069f552f5f79903d6066b13f232a9ea34fdbe6735f007",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2502.19645v2"
+  },
+  {
+    "key": "morin",
+    "arxiv": "2602.02762",
+    "url": "https://arxiv.org/abs/2602.02762",
+    "title": [
+      "On the Sample Efficiency of Inverse Dynamics Models for Semi-Supervised Imitation Learning"
+    ],
+    "authors": [
+      "Morin, Sacha",
+      "Byeon, Moonsub",
+      "Jolicoeur-Martineau, Alexia",
+      "Lachapelle, Sébastien"
+    ],
+    "date": [
+      "2026/02/02"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2602.02762"
+    ],
+    "year": "2026",
+    "venue": "Proceedings of the 43rd International Conference on Machine Learning",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "6e8158b64efbe955d2c83e26eb107fefa48948cab6e8dedf4bd3513c6b8e641d",
+    "reviewed_fulltext_url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/morin26a/morin26a.pdf"
+  },
+  {
+    "key": "claw",
+    "arxiv": "2606.04130",
+    "url": "https://arxiv.org/abs/2606.04130v1",
+    "title": [
+      "CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization"
+    ],
+    "authors": [
+      "Ayalew, Tewodros",
+      "Jeung, Matthew",
+      "Wheeler, Samuel",
+      "Zhang, Xiao",
+      "Arce, Andre de la Cruz",
+      "Stocking, Kaylene",
+      "Maire, Michael",
+      "Walter, Matthew R."
+    ],
+    "date": [
+      "2026/06/02"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2606.04130"
+    ],
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "461d8f96d0cc77045cfe3cdb839917c98d96ddf74e727d8f594c5d0c900705df",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2606.04130v1"
+  },
+  {
+    "key": "foca",
+    "arxiv": "2606.20867",
+    "url": "https://arxiv.org/abs/2606.20867v1",
+    "title": [
+      "FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation"
+    ],
+    "authors": [
+      "Nguyen, Duc Minh",
+      "Diep, Nghiem Tuong",
+      "Nguyen, Binh Gia",
+      "Ho, Trong-Bao",
+      "Le, Doanh",
+      "Nguyen, Tan Q.",
+      "Ha, Thien-Loc",
+      "Tran, Nhiem",
+      "Thach, Bao",
+      "Tran, Nhat X.",
+      "Tran, Tuan A.",
+      "Habuda, Artur",
+      "Møller, Philip Lund",
+      "Le, Tran Nguyen",
+      "Sonntag, Daniel",
+      "Niepert, Matthias",
+      "Doan, Khoa D.",
+      "Duong, Vu",
+      "Ngo, Hung",
+      "Vu, Minh N.",
+      "Nguyen, Duy M. H.",
+      "Le, An Thai",
+      "Vien, Ngo Anh"
+    ],
+    "date": [
+      "2026/06/18"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2606.20867"
+    ],
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "a9a0be6c590b434d22402a4b5ab66680db8fca2d44b6f61eae27c6227feb8ac6",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2606.20867v1"
+  },
+  {
+    "key": "raea",
+    "arxiv": "2404.11699",
+    "url": "https://arxiv.org/abs/2404.11699v1",
+    "title": [
+      "Retrieval-Augmented Embodied Agents"
+    ],
+    "authors": [
+      "Zhu, Yichen",
+      "Ou, Zhicai",
+      "Mou, Xiaofeng",
+      "Tang, Jian"
+    ],
+    "date": [
+      "2024/04/17"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2404.11699"
+    ],
+    "year": "2024",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "ec20ef503057198e58a61d1cdf1b156bb37a7678aa40b6f3b71ed402f92c64c6",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2404.11699v1"
+  },
+  {
+    "key": "seer",
+    "arxiv": "2412.15109",
+    "url": "https://arxiv.org/abs/2412.15109v1",
+    "title": [
+      "Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation"
+    ],
+    "authors": [
+      "Tian, Yang",
+      "Yang, Sizhe",
+      "Zeng, Jia",
+      "Wang, Ping",
+      "Lin, Dahua",
+      "Dong, Hao",
+      "Pang, Jiangmiao"
+    ],
+    "date": [
+      "2024/12/19"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2412.15109"
+    ],
+    "year": "2024",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "48339baf40132efaeb2d1e396c9ef6ee053d3687f51b46c9598e67dbb25e5558",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2412.15109v1"
+  },
+  {
+    "key": "liberomax",
+    "arxiv": "2609.36518",
+    "url": "https://arxiv.org/abs/2609.36518v1",
+    "title": [
+      "LIBERO-MAX: Do Robot Policies Adapt When the World Changes?"
+    ],
+    "authors": [
+      "Zhang, Yunbei",
+      "Jin, Zijian",
+      "Liu, Yuanzhe",
+      "Wang, Janet",
+      "Zhang, Xilun",
+      "Zhang, Yuyou",
+      "Zhang, Zhenyu",
+      "Zhang, Daoan",
+      "Niu, Shuaicheng",
+      "Li, Gen",
+      "Yang, Jianfei",
+      "Hamm, Jihun",
+      "Lourentzou, Ismini",
+      "Ye, Weirui",
+      "Liu, Bo",
+      "Stone, Peter",
+      "Pavone, Marco"
+    ],
+    "date": [
+      "2026/09/29"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2609.36518"
+    ],
+    "year": "2026",
+    "venue": "arXiv preprint",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "primary abstract/overview",
+    "priority": "screened context",
+    "included_in_draft": false,
+    "extracted_text_sha256": "a68a63338e47ae25bb1676cb85b1da26c3b0eead4c3ed8ebc7a4c26b3b6c1c4d",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2609.36518v1"
+  },
+  {
+    "key": "lora",
+    "arxiv": "2106.09685",
+    "url": "https://arxiv.org/abs/2106.09685",
+    "title": [
+      "LoRA: Low-Rank Adaptation of Large Language Models"
+    ],
+    "authors": [
+      "Hu, Edward J.",
+      "Shen, Yelong",
+      "Wallis, Phillip",
+      "Allen-Zhu, Zeyuan",
+      "Li, Yuanzhi",
+      "Wang, Shean",
+      "Wang, Lu",
+      "Chen, Weizhu"
+    ],
+    "date": [
+      "2021/06/17"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2106.09685"
+    ],
+    "year": "2022",
+    "venue": "International Conference on Learning Representations",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "1553438cc5e3a95d33a266e8072031dd72372ae215b41032411f17623f6312c1",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2106.09685"
+  },
+  {
+    "key": "mae",
+    "arxiv": "2111.06377",
+    "url": "https://arxiv.org/abs/2111.06377",
+    "title": [
+      "Masked Autoencoders Are Scalable Vision Learners"
+    ],
+    "authors": [
+      "He, Kaiming",
+      "Chen, Xinlei",
+      "Xie, Saining",
+      "Li, Yanghao",
+      "Dollár, Piotr",
+      "Girshick, Ross"
+    ],
+    "date": [
+      "2021/11/11"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2111.06377"
+    ],
+    "year": "2022",
+    "venue": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "95393a590051dcd26502a8b9240b7300d9d9e110e0106ade9dd767a6869ceaa0",
+    "reviewed_fulltext_url": "https://openaccess.thecvf.com/content/CVPR2022/papers/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.pdf"
+  },
+  {
+    "key": "r3m",
+    "arxiv": "2203.12601",
+    "url": "https://arxiv.org/abs/2203.12601v3",
+    "title": [
+      "R3M: A Universal Visual Representation for Robot Manipulation"
+    ],
+    "authors": [
+      "Nair, Suraj",
+      "Rajeswaran, Aravind",
+      "Kumar, Vikash",
+      "Finn, Chelsea",
+      "Gupta, Abhinav"
+    ],
+    "date": [
+      "2022/03/23"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2203.12601"
+    ],
+    "year": "2022",
+    "venue": "arXiv preprint",
+    "version": "v3",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "2c4d34030d8a4d3632fc8245fbc9f4a48e3cb3e9399b831be2c393f5609b3bdc",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2203.12601v3"
+  },
+  {
+    "key": "vc1",
+    "arxiv": "2303.18240",
+    "url": "https://arxiv.org/abs/2303.18240v2",
+    "title": [
+      "Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?"
+    ],
+    "authors": [
+      "Majumdar, Arjun",
+      "Yadav, Karmesh",
+      "Arnaud, Sergio",
+      "Ma, Yecheng Jason",
+      "Chen, Claire",
+      "Silwal, Sneha",
+      "Jain, Aryan",
+      "Berges, Vincent-Pierre",
+      "Abbeel, Pieter",
+      "Malik, Jitendra",
+      "Batra, Dhruv",
+      "Lin, Yixin",
+      "Maksymets, Oleksandr",
+      "Rajeswaran, Aravind",
+      "Meier, Franziska"
+    ],
+    "date": [
+      "2023/03/31"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2303.18240"
+    ],
+    "year": "2023",
+    "venue": "arXiv preprint",
+    "version": "v2",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "primary abstract/overview",
+    "priority": "screened context",
+    "included_in_draft": true
+  },
+  {
+    "key": "bco",
+    "arxiv": "1805.01954",
+    "url": "https://arxiv.org/abs/1805.01954",
+    "title": [
+      "Behavioral Cloning from Observation"
+    ],
+    "authors": [
+      "Torabi, Faraz",
+      "Warnell, Garrett",
+      "Stone, Peter"
+    ],
+    "date": [
+      "2018/05/04"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/1805.01954"
+    ],
+    "year": "2018",
+    "venue": "International Joint Conference on Artificial Intelligence",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "912d06e9b107f5bbf316020d755e936c115b0a9a49dba3943126cd65354276be",
+    "reviewed_fulltext_url": "https://www.ijcai.org/proceedings/2018/0687.pdf"
+  },
+  {
+    "key": "unipi",
+    "arxiv": "2302.00111",
+    "url": "https://arxiv.org/abs/2302.00111",
+    "title": [
+      "Learning Universal Policies via Text-Guided Video Generation"
+    ],
+    "authors": [
+      "Du, Yilun",
+      "Yang, Mengjiao",
+      "Dai, Bo",
+      "Dai, Hanjun",
+      "Nachum, Ofir",
+      "Tenenbaum, Joshua B.",
+      "Schuurmans, Dale",
+      "Abbeel, Pieter"
+    ],
+    "date": [
+      "2023/01/31"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2302.00111"
+    ],
+    "year": "2023",
+    "venue": "arXiv preprint",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "8e7a8427faa6049de61c27189183087cee8ae7f93b8fb966cc2662e67d28b32a",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2302.00111"
+  },
+  {
+    "key": "libero",
+    "arxiv": "2306.03310",
+    "url": "https://arxiv.org/abs/2306.03310",
+    "title": [
+      "LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning"
+    ],
+    "authors": [
+      "Liu, Bo",
+      "Zhu, Yifeng",
+      "Gao, Chongkai",
+      "Feng, Yihao",
+      "Liu, Qiang",
+      "Zhu, Yuke",
+      "Stone, Peter"
+    ],
+    "date": [
+      "2023/06/05"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2306.03310"
+    ],
+    "year": "2023",
+    "venue": "arXiv preprint",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "080e9953336d9ba261d22d03208ab86ffc5a3275863b26e01818fcbc3e7b3e0a",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2306.03310"
+  },
+  {
+    "key": "dreamgen",
+    "arxiv": "2505.12705",
+    "url": "https://arxiv.org/abs/2505.12705v2",
+    "title": [
+      "DreamGen: Unlocking Generalization in Robot Learning through Video World Models"
+    ],
+    "authors": [
+      "Jang, Joel",
+      "Ye, Seonghyeon",
+      "Lin, Zongyu",
+      "Xiang, Jiannan",
+      "Bjorck, Johan",
+      "Fang, Yu",
+      "Hu, Fengyuan",
+      "Huang, Spencer",
+      "Kundalia, Kaushil",
+      "Lin, Yen-Chen",
+      "Magne, Loic",
+      "Mandlekar, Ajay",
+      "Narayan, Avnish",
+      "Tan, You Liang",
+      "Wang, Guanzhi",
+      "Wang, Jing",
+      "Wang, Qi",
+      "Xu, Yinzhen",
+      "Zeng, Xiaohui",
+      "Zheng, Kaiyuan",
+      "Zheng, Ruijie",
+      "Liu, Ming-Yu",
+      "Zettlemoyer, Luke",
+      "Fox, Dieter",
+      "Kautz, Jan",
+      "Reed, Scott",
+      "Zhu, Yuke",
+      "Fan, Linxi"
+    ],
+    "date": [
+      "2025/05/19"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2505.12705"
+    ],
+    "year": "2025",
+    "venue": "arXiv preprint",
+    "version": "v2",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "c4cff0d27fbff5b4aa0a395ce6cfc553e03180ff1e4e3f9a6b5fb29de775341d",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2505.12705v2"
+  },
+  {
+    "key": "behavior",
+    "arxiv": "2304.08742",
+    "url": "https://arxiv.org/abs/2304.08742",
+    "title": [
+      "Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets"
+    ],
+    "authors": [
+      "Du, Maximilian",
+      "Nair, Suraj",
+      "Sadigh, Dorsa",
+      "Finn, Chelsea"
+    ],
+    "date": [
+      "2023/04/18"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2304.08742"
+    ],
+    "year": "2023",
+    "venue": "arXiv preprint",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "77524a31331ae88544352cb04c15aa627579ba5b8d13116e5bfbe6427888d8f1",
+    "reviewed_fulltext_url": "https://arxiv.org/pdf/2304.08742"
+  },
+  {
+    "key": "strap",
+    "arxiv": "2412.15182",
+    "url": "https://arxiv.org/abs/2412.15182",
+    "title": [
+      "STRAP: Robot Sub-Trajectory Retrieval for Augmented Policy Learning"
+    ],
+    "authors": [
+      "Memmel, Marius",
+      "Berg, Jacob",
+      "Chen, Bingqing",
+      "Gupta, Abhishek",
+      "Francis, Jonathan"
+    ],
+    "date": [
+      "2024/12/19"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2412.15182"
+    ],
+    "year": "2025",
+    "venue": "International Conference on Learning Representations",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "aeca5c222b116a21ea2e70297ef7399c0daa5adea1a3379b4c44df852cc7e234",
+    "reviewed_fulltext_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/a06e129e01e0d2ef853e9ff67b911360-Paper-Conference.pdf"
+  },
+  {
+    "key": "iwr",
+    "arxiv": "2509.01657",
+    "url": "https://arxiv.org/abs/2509.01657v1",
+    "title": [
+      "Data Retrieval with Importance Weights for Few-Shot Imitation Learning"
+    ],
+    "authors": [
+      "Xie, Amber",
+      "Chand, Rahul",
+      "Sadigh, Dorsa",
+      "Hejna, Joey"
+    ],
+    "date": [
+      "2025/09/01"
+    ],
+    "pdf_url": [
+      "https://arxiv.org/pdf/2509.01657"
+    ],
+    "year": "2025",
+    "venue": "Proceedings of The 9th Conference on Robot Learning",
+    "version": "v1",
+    "accessed": "2026-10-04",
+    "list_status": "added or promoted from background",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "supporting context",
+    "included_in_draft": true,
+    "extracted_text_sha256": "0131d6cec0c1b0ed21acea04825edb25f84316ab32b99b076b0a291a101807ce",
+    "reviewed_fulltext_url": "https://arxiv.org/html/2509.01657v1"
+  },
+  {
+    "key": "tail",
+    "title": [
+      "TAIL: Task-specific Adapters for Imitation Learning with Large Pretrained Models"
+    ],
+    "authors": [
+      "Liu, Zuxin",
+      "Zhang, Jesse",
+      "Asadi, Kavosh",
+      "Liu, Yao",
+      "Zhao, Ding",
+      "Sabach, Shoham",
+      "Fakoor, Rasool"
+    ],
+    "date": [
+      "2024"
+    ],
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html",
+    "year": "2024",
+    "venue": "International Conference on Learning Representations",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "640755c259fab38c9aa35d5e5bbbcd6c22ca17a4633f31b2dd2de053367a1906",
+    "reviewed_fulltext_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/46e2b525da536030ec1589dddea01feb-Paper-Conference.pdf"
+  },
+  {
+    "key": "flow",
+    "title": [
+      "FlowRetrieval: Flow-Guided Data Retrieval for Few-Shot Imitation Learning"
+    ],
+    "authors": [
+      "Lin, Li-Heng",
+      "Cui, Yuchen",
+      "Xie, Amber",
+      "Hua, Tianyu",
+      "Sadigh, Dorsa"
+    ],
+    "date": [
+      "2025"
+    ],
+    "url": "https://proceedings.mlr.press/v270/lin25a.html",
+    "year": "2025",
+    "venue": "Proceedings of The 8th Conference on Robot Learning",
+    "accessed": "2026-10-04",
+    "list_status": "retained",
+    "reading_depth": "focused full-text method/context review",
+    "priority": "closest comparison",
+    "included_in_draft": true,
+    "extracted_text_sha256": "1bbb3c1b2be57930112e048815f19ea80d3ae35e6a508eacd904de6e6b95ede1",
+    "reviewed_fulltext_url": "https://raw.githubusercontent.com/mlresearch/v270/main/assets/lin25a/lin25a.pdf"
+  }
+]

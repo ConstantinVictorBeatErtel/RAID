@@ -1,0 +1,8 @@
+...................................................                [100%]
+=============================== warnings summary ===============================
+v2/tests/test_smoke.py::test_transformer_idm_smoke
+  /Users/ConstiX/Documents/ChatGPT/RAID/raid-main/v2/heads/transformer.py:53: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+    self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+51 passed, 1 warning, 6 subtests passed in 211.29s (0:03:31)

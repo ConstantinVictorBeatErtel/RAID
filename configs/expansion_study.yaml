@@ -1,0 +1,20 @@
+# Configuration only. This queue is not launched by the $100 pilot command.
+name: raid_expansion_unlaunched
+budgets_per_task: [2, 5, 10, 20, 40]
+seeds: [42, 43, 44]
+conditions: [direct, raid, lora, lora_raid]
+lookup_controls: [mean_action, current_1nn, transition_1nn, transition_weighted_3nn, distance_blend]
+dataset: LIBERO-Spatial
+additional_benchmarks:
+  - name: LIBERO-Plus
+    evaluation: frozen_deterministic_subset
+  - name: RoboCasa365
+    task_group: atomic_seen
+native_policy_reference: nvidia/Cosmos-Policy-LIBERO-Predict2-2B
+split_seed: 20260920
+validation_per_task: 5
+test_per_task: 5
+notes: >-
+  Launch only after the pilot reports measured training and rollout costs and
+  a new cloud budget is approved. Training subsets are nested within each seed.
+  This legacy expansion queue is not an active protocol and remains disabled.

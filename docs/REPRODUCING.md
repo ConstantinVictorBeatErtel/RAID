@@ -1,93 +1,68 @@
-# Reproducing the recorded RAID tracks
+# Reproducing the active RAID study
 
-This document describes the current command shapes and their external requirements. It is not a verified one-command installation recipe. No experiment was run during the cleanup.
+The active study uses recorded RGB transitions and standalone MAE ViT-B/16 features under `fewshot_idm_adaptation_v3`. The CLS feature is 768-dimensional and normalized. Frames use deterministic 224×224 bicubic resizing and ImageNet normalization. This protocol does not predict future frames. Paid execution is disabled.
 
-## Read committed results without running experiments
+## Assets and fresh cache
 
-The safest review path is to read [`configs/results_libero.json`](../configs/results_libero.json), the matching `configs/loss_curves_*_libero.json` files, [`configs/grpo_libero_log.json`](../configs/grpo_libero_log.json), and [RESULTS.md](../RESULTS.md). These are static artifacts. For a syntax-checked JSON view, use `python3 -m json.tool configs/results_libero.json`.
-
-## Historical GR-1 feature extraction
-
-The current-main cache command is:
+Keep downloaded assets outside upstream checkouts. The pinned LIBERO downloader lists the original LIBERO-Goal Box URL and a Hugging Face fallback in [`download_utils.py`](https://raw.githubusercontent.com/Lifelong-Robot-Learning/LIBERO/8f1084e3132a39270c3a13ebe37270a43ece2a01/libero/libero/utils/download_utils.py). The original Box URL currently returns 404; the fallback is the same upstream-published `libero_goal` set. Keep the LIBERO checkout at commit `8f1084e3132a39270c3a13ebe37270a43ece2a01`, the official MAE ViT-B checkpoint, and an asset note recording origins, hashes, and documented pretraining exposure. Do not overwrite existing assets.
 
 ```bash
-python3 src/cache_gr1_features.py \
-  --dataset_dir data/libero_spatial/libero_spatial \
-  --output_dir data/libero_spatial/features \
-  --gr1_ckpt checkpoints/gr1/snapshot_ABCD.pt \
-  --mae_ckpt checkpoints/gr1/mae_pretrain_vit_base.pth \
-  --device cuda \
-  --batch_size 128
+python3 -m raid_experiments prepare-protocol \
+  --dataset-dir data/assets/libero/libero_goal \
+  --manifest artifacts/fewshot_libero_goal_v3/protocol.json --expected-demos 50
+python3 -m raid_experiments cache-features \
+  --manifest artifacts/fewshot_libero_goal_v3/protocol.json \
+  --dataset-dir data/assets/libero/libero_goal \
+  --feature-dir data/assets/libero/features-v4 \
+  --mae-ckpt data/assets/mae/mae_pretrain_vit_base.pth \
+  --libero-repo data/assets/libero/upstream --device cpu
+python3 -m raid_experiments verify-assets \
+  --manifest artifacts/fewshot_libero_goal_v3/protocol.json \
+  --feature-dir data/assets/libero/features-v4 \
+  --mae-ckpt data/assets/mae/mae_pretrain_vit_base.pth \
+  --libero-repo data/assets/libero/upstream \
+  --asset-notes configs/mae_asset_notes.json
 ```
 
-The parser also accepts the defaults shown in `src/cache_gr1_features.py`. The command requires:
+Cache format 4 binds source files, MAE weights and implementation, preprocessing, protocol, and pinned LIBERO code. Query shards contain no action labels. Old caches and checkpoints remain untouched and cannot be active inputs. The frozen manifest is `data/assets/libero/protocol_v3.json`; the verified cache is `data/assets/libero/features-v4`. The fresh complete cache audit passes for all 500 shards, including 80 label-free query shards. The current real CPU reference smoke is [`readiness_cpu_20261004_acceptance/smoke_real.json`](../artifacts/fewshot_libero_goal_v3/readiness_cpu_20261004_acceptance/smoke_real.json); its short runs are diagnostic and cannot satisfy scientific gates. It records code digest `70d3b73c7d029d57df299745e4e50d69b7a6930b9b5049f35b242a623b80e6a7`, config digest `acbc84b807392675a7d012973b09e6fb86070b10cd467f1a61dd757127804ba5`, and the local runtime (Python 3.13.7, PyTorch 2.11.0, timm 1.0.27). The code digest must be refreshed after any code change.
 
-- LIBERO-Spatial HDF5 files under the dataset directory;
-- the public GR-1 checkout expected by `src/gr1_encoder.py` at `/home/ubuntu/GR1`;
-- the GR-1 checkpoint and MAE ViT-base weights under `checkpoints/gr1/`;
-- PyTorch, CUDA, `h5py`, NumPy, torchvision, CLIP, and the GR-1 dependencies.
+## Local acceptance and calibration
 
-The cache writes per-task `.pt` files, `manifest.json`, and `norm_stats.pt` under ignored/generated paths. The normalization and split caveats are recorded in [research status](RESEARCH_STATUS.md).
-
-## Historical offline behavior cloning
-
-After the cache exists, the current-main sweep command is:
+Run the local checks with:
 
 ```bash
-python3 src/run_all_libero.py \
-  --feature_dir data/libero_spatial/features \
-  --device cuda \
-  --epochs 100
+python3 -m compileall -q raid_experiments src tests
+PYTHONPATH=. python3 -m pytest -q
 ```
 
-The sweep invokes `src/train_libero.py` for `direct_visual` and `raid_visual` at nominal scales 25, 50, 100, and 200. The trainer’s own options are `--condition`, `--n_demos`, `--feature_dir`, `--epochs`, `--batch_size`, `--lr`, and `--device`; its defaults are visible in the parser. It writes ignored checkpoints under `models/`, loss curves under `configs/`, and the aggregate result file under `configs/results_libero.json`.
+The complete suite passed **51 tests and 6 recovery subtests** in 211.29 seconds, with one existing Transformer warning. Logs and JUnit output are in `artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/pytest-final.*`. The coherent unequal-length HDF5 fixture calls production caching, runs 2,000 source updates and both 1,000-update adaptations, and evaluates all eight methods at 200/500/1,000. A tiny explicitly synthetic encoder keeps the regression practical; the actual production decoder, optimizer, dropout, sampling, checkpoint and evaluation routines run. Synthetic outputs remain scientifically ineligible.
 
-The active visual model and retrieval imports are from `src/models.py` and `src/memory.py`. The similarly named `*_libero.py` model/memory files belong to the V-JEPA exploration.
+Fresh-directory recovery compares weights, optimizer/RNG state, predictions and exact snapshot hashes at every scheduled step for both methods (seed 42/five-shot), with real subprocess SIGINT/SIGTERM, repeat evaluation and conflicting-evidence rejection. Completed source recovery preserves snapshot bytes and the original canonical ledger binding. Sampling parity, nested supports, unequal lengths and instrumented HDF5 query-label isolation cover all three seeds and budgets. The complete recovery cross-product and a production-generated positive freeze/confirmation/report flow remain unexecuted; see [READINESS_HANDOFF.md](READINESS_HANDOFF.md).
 
-## Current-main GRPO probe
+Production calibration hooks now measure initialization separately and run five warmup plus twenty measured updates in one session. Validation, actual checkpoint serialization/publication and per-method evaluation timing are exposed. Format-3 measurement bundles require complete finite timing/resource components, all evaluated RGB IDs/hashes, and a matching receipt. CPU/MPS cannot satisfy the CUDA gate. Forecast arithmetic tests cover both scopes, source validation, actual writes, frozen update counts, scaled storage, prior spend, 25% margin, the protected $25 and $250 ceiling.
 
-The current-main script has no `--model_path` option. It constructs `models/raid_visual_{n_demos}demos_libero_best.pt` from `--n_demos`, with a fallback to the last matching checkpoint if the exact file is absent. The actual parser options are:
+A hash lock for Linux x86-64 / Python 3.10 / CUDA 11.8 resolved 137 packages, including torch 2.1.2+cu118 and torchvision 0.16.2+cu118. It is retained at `artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/requirements-linux-cu118.lock`. This establishes resolution only: target imports, GPU MAE checks and CUDA calibration remain unexecuted. The CUDA index follows the [official PyTorch 2.1.2 installation instructions](https://docs.pytorch.org/get-started/previous-versions/#v212). The current real CPU smoke used Python 3.13.7, torch 2.11.0 and timm 1.0.27.
 
 ```bash
-MUJOCO_GL=egl python3 src/grpo_libero.py \
-  --n_demos 200 \
-  --n_updates 200 \
-  --G 4 \
-  --beta 0.04 \
-  --task_idx 0 \
-  --feature_dir data/libero_spatial/features \
-  --dataset_dir data/libero_spatial/libero_spatial \
-  --gr1_ckpt checkpoints/gr1/snapshot_ABCD.pt \
-  --mae_ckpt checkpoints/gr1/mae_pretrain_vit_base.pth \
-  --device cuda \
-  --log_every 5
+python3 -m raid_experiments smoke-real --manifest data/assets/libero/protocol_v3.json \
+  --feature-dir data/assets/libero/features-v4 --mae-ckpt data/assets/mae/mae_pretrain_vit_base.pth \
+  --libero-repo data/assets/libero/upstream --asset-notes configs/mae_asset_notes.json --device cpu
+python3 -m raid_experiments collect-calibration --manifest data/assets/libero/protocol_v3.json \
+  --feature-dir data/assets/libero/features-v4 --mae-ckpt data/assets/mae/mae_pretrain_vit_base.pth \
+  --libero-repo data/assets/libero/upstream \
+  --output-dir artifacts/fewshot_libero_goal_v3/calibration --device cuda
+python3 -m raid_experiments calibrate-study --feature-dir data/assets/libero/features-v4 \
+  --pricing-file configs/verified_pricing.json --spent-usd ACTUAL_PRIOR_SPENDING_USD
 ```
 
-This requires a working LIBERO/MuJoCo installation, EGL-capable rendering, the external GR-1 checkout, cached features, normalization statistics at `data/libero_spatial/libero_spatial/norm_stats.pt` for the command above, and a behavior-cloning checkpoint in `models/`. The rollout helper contains the hardcoded Ubuntu BDDL path `/home/ubuntu/LIBERO/libero/libero/bddl_files/libero_spatial`; this is an environment limitation, not a portable setup instruction.
+Use fresh output directories for smoke and calibration after any code or input change. Do not write estimated or unverified prices into `configs/verified_pricing.json`; the file is currently absent. A completed forecast requires the CUDA completion receipt, verified current prices, and actual prior spending. A blocked forecast does not authorize paid execution.
 
-The later 382-update full run and 195-update polish run are preserved on the draft branch [`b493d87`](https://github.com/ConstantinVictorBeatErtel/RAID/tree/b493d87fe7c8b2c78b738a9ce1167ef52dae396f), together with a GR-1 compatibility patch and runner snapshots. The branch-specific command shape was:
+Forecast and confirmation registration share one workload inventory: 24 canonical evaluation conditions for all-budget confirmation or 12 for five-shot, six development baseline bundles, 36 learned-snapshot evaluations, 42 development retention passes, and 54/18 confirmation retention passes. Arithmetic tests include prior spending, a 25% workload margin, and the protected $25 reserve under the $250 ceiling. Before selection, confirmation is budgeted conservatively at 1,000 updates. The real price-backed forecast remains blocked until successful CUDA calibration and verified pricing; a blocked forecast does not authorize a paid run.
 
-```bash
-cd ~/RAID
-MUJOCO_GL=egl python3 raid_grpo_final/grpo_libero_remote_final.py
-```
+## Study execution gates
 
-Treat that branch as historical evidence until its code and checkpoint provenance are reconciled with `main`.
+The first five-shot development run remains gated on the pinned CUDA environment, complete local acceptance, CUDA smoke and calibration, a safe price-backed forecast, and a recorded cloud lifecycle safeguard review. Paid execution stays disabled until these gates pass. Development selection still requires its complete preregistered scope: two development tasks at 2-, 5-, and 10-shot with seed 42; evaluate the six-control baseline bundle once per condition and each learned snapshot independently. Freeze selected steps before registering confirmation, then evaluate only the registered scope. See [STATUS.md](../STATUS.md), [RESEARCH.md](../RESEARCH.md), and [ADAPTATION_IMPLEMENTATION.md](ADAPTATION_IMPLEMENTATION.md) for current evidence and remaining gates.
 
-## Historical setup script and assets
+Historical pilot records remain available in [RESULTS.md](../RESULTS.md) for audit and do not count as evidence for this protocol.
 
-[`scripts/setup_and_run.sh`](../scripts/setup_and_run.sh) is an environment-specific historical script. It downloads checkpoints, installs packages, invokes system package management, checks EGL, caches features, runs the BC sweep, and generates videos. It assumes `~/RAID`, Ubuntu tools, network access, and `sudo`; it is not a verified installation recipe and should not be run as part of this cleanup.
-
-Keep these asset classes separate when reconstructing an experiment:
-
-| Asset | Current location or source |
-| --- | --- |
-| Dataset | `data/libero_spatial/libero_spatial/` (ignored, not committed) |
-| GR-1 checkout | `/home/ubuntu/GR1` in the inspected code |
-| LIBERO checkout | `/home/ubuntu/LIBERO/libero/libero` in rollout code |
-| Pretrained weights | `checkpoints/gr1/` (ignored) |
-| Cached features and normalization | `data/libero_spatial/features/`, `data/libero_spatial/libero_spatial/norm_stats.pt` (ignored) |
-| Trained BC checkpoints | `models/` (ignored) |
-| Recorded metrics | `configs/` (tracked) |
-
-For the separate V-JEPA and `v2` tracks, start with [HISTORY.md](HISTORY.md), [the historical program note](history/vjepa-program.md), and [`v2/README.md`](../v2/README.md). Their encoders, data adapters, and artifact roots are different from the paper-facing GR-1 path.
+The fresh eight-method real CPU evaluation used identical 2,132 recorded query transitions at five-shot/seed 42 with two-update calibration snapshots. Evidence and SHA-256 bindings are in [`readiness.json`](../artifacts/fewshot_libero_goal_v3/readiness_acceptance_20261004/readiness.json). It records `launch_ready=false`; the local CPU results cannot authorize CUDA or scientific execution.

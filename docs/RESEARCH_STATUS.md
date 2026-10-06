@@ -1,4 +1,18 @@
+# Implementation evidence and research status
+
+Updated 25 September 2026. This page preserves the audit of the earlier main pipeline. The active direction is the few-shot LIBERO-Goal protocol in [RESEARCH.md](../RESEARCH.md), with status in [STATUS.md](../STATUS.md) and implementation acceptance checks in [ADAPTATION_IMPLEMENTATION.md](ADAPTATION_IMPLEMENTATION.md).
+
+## New protocol status
+
+The new direction compares a frozen source inverse-dynamics head, target transition retrieval, target action-head fine-tuning, and MAE LoRA plus head adaptation. It assigns six source, two development, and two final-test LIBERO-Goal tasks, with disjoint target support and query demonstrations. The protocol-manifest preparation code is in `raid_experiments/fewshot.py`; it verifies the official task set, hashes HDF5 inputs, preserves actual demonstration IDs, and writes a digest-bound immutable manifest. This preparer is separate from the trainer.
+
+Source-head fitting, target head adaptation, retrieval controls, query evaluation artifacts, active-adapter retention metrics, and deterministic CPU continuation have synthetic HDF5/cache coverage. A full 500-shard real cache audit and a fresh real CPU MAE/LoRA reference smoke passed on 26 September 2026. The local suite now has 43 passing tests, including subprocess SIGINT/SIGTERM handling, recovery state comparisons, immutable source artifacts, candidate-baseline references, and hand-calculated bootstrap/forecast cases. This evidence does not establish the production-generated all-eight-method fixture, full-length training regression, every scheduled snapshot recovery, CUDA calibration, or scientific results; see the current acceptance matrix in [STATUS.md](../STATUS.md).
+
+---
+
 # Research status before a publication rerun
+
+This is the implementation audit from the repository cleanup. The active research direction is in [RESEARCH.md](../RESEARCH.md); progress and ordered work are tracked in [STATUS.md](../STATUS.md).
 
 This page records what the inspected `main` implementation and committed artifacts actually establish. It is an audit guide, not a correction of the experiment. Each item states the evidence, why it matters, and what is deferred.
 
@@ -25,4 +39,12 @@ This page records what the inspected `main` implementation and committed artifac
 - Rerun GRPO with a documented simulator/rendering setup and report stable success statistics separately from offline MSE.
 - Update the manuscript and website only after the evidence is reconciled, then perform the arXiv packaging and final author review.
 
-None of this deferred work is performed by the repository cleanup.
+The historical checklist above records work that was deferred at the time of the original audit. The current repair branch addresses only the subset listed as verified below; it does not claim the external rerun or publication evidence is complete.
+
+## Repair-branch status
+
+The isolated `raid_experiments` package contains repairs for stable cross-loader identities, training-only normalization, atomic checkpoints, budget-derived deadlines, and hash-manifest collection. Twenty-seven repository tests pass, including non-contiguous demonstration IDs, raw-image collation, physical gripper metrics, mocked cloud behavior, and multi-task fixtures. These are regression checks, not proof of external model, simulator, or provider correctness.
+
+The current branch also reproduced and repaired the following implementation defects: raw LoRA collation omitted transition IDs; split generation assumed contiguous demo numbering; raw and cached ordering diverged across tasks; GR-1 selected padded history; physical gripper metrics used normalized signs; and collection/deletion accepted stale or unverified artifacts. Remaining cloud, checkpoint, GR-1, simulator, Cosmos, and benchmark work is the ordered queue in [STATUS.md](../STATUS.md).
+
+The package still requires external verification of checkpoint compatibility, LIBERO expert replay, EGL, and the Cosmos 3 Edge runtime. The default Runpod configuration therefore keeps paid launch disabled. Treat `STATUS.md` as the live queue; this document remains the evidence record for historical artifacts and known limitations.

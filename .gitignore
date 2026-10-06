@@ -19,8 +19,9 @@ venv/
 *.h5
 data/**/*.hdf5
 
-# Large binary data (re-generable: run cache_gr1_features.py)
+# Large binary data (re-generable: run cache_mae_features.py)
 data/libero_spatial/
+data/assets/
 checkpoints/
 
 # Temp log files

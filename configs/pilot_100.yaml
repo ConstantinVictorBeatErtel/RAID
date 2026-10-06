@@ -1,0 +1,83 @@
+name: raid_pilot_100
+protocol: recorded_rgb_legacy_disabled
+horizon: 1
+libero_commit: 8f1084e3132a39270c3a13ebe37270a43ece2a01
+output_dir: artifacts/raid_pilot
+
+predictor:
+  profile: recorded_rgb
+  source: recorded_frames
+  checkpoint_revision: none
+  generation_fps: 20
+  generation_frames: 3
+  allow_action_conditioned_future: false
+
+benchmark:
+  name: libero_spatial
+  libero_plus_subset: disabled
+  robocasa_task_group: atomic_seen
+  control_initial_states: official_paired
+
+data:
+  dataset_dir: data/libero_spatial/libero_spatial
+  feature_dir: data/libero_spatial/features
+  split_path: artifacts/splits/libero_spatial_seed20260920.json
+  tasks: 10
+  demonstrations_per_task: 50
+  validation_per_task: 5
+  test_per_task: 5
+  train_per_task: 10
+  split_seed: 20260920
+  train_seed: 42
+  image_size: 128
+
+model:
+  feature_dim: 384
+  action_dim: 7
+  hidden_dim: 512
+  bottleneck_dim: 256
+  decoder_dropout: 0.1
+  retrieval_k: 3
+  retrieval_temperature: 0.1
+  prior_dropout: 0.4
+  prior_noise_std: 0.05
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.0
+  lora_target_blocks: [10, 11]
+  lora_targets: [qkv, proj]
+
+training:
+  updates: 2000
+  batch_size: 64
+  microbatch_size: 8
+  decoder_lr: 0.0003
+  lora_lr: 0.0001
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  validate_every: 100
+  num_workers: 4
+  device: cuda
+
+rollout:
+  smoke_episodes_per_task: 1
+  episodes_per_task: 10
+  settle_steps: 5
+  max_steps: 600
+  deterministic: true
+  use_predicted_future: true
+
+cloud:
+  provider: runpod
+  budget_usd: 100
+  max_gpu_hourly_usd: 0.80
+  preferred_gpu: A40
+  fallback_gpu: RTX 4090
+  container_disk_gb: 20
+  volume_gb: 100
+  min_vcpus: 8
+  min_host_ram_gb: 32
+  terminate_after_minutes: 180
+  max_retries: 1
+  launch_enabled: false
+  reserve_usd: 15

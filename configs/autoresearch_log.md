@@ -1,3 +1,5 @@
+> **Historical experiment log (25 September 2026).** This decoder search records an earlier low-dimensional experiment. The active study is few-shot adaptation on LIBERO-Goal; see [RESEARCH.md](../RESEARCH.md). Preserve the log, but do not treat its scores as results for the active study.
+
 # RAID autoresearch log
 
 Baseline (paper table): RAID `val_mse≈0.444` vs direct MLP `0.336` at n_demos=25. Goal: `<0.336`. Metric: `[train] best checkpoint val_mse=...`.

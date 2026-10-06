@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=26mm]{geometry}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+
+\usepackage{microtype}
+
+\usepackage{xurl}
+
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue]{hyperref}
+
+\setlength{\parindent}{0pt}
+
+\setlength{\parskip}{0.6em}
+
+\begin{document}
+
+{\small Working draft --- 4 October 2026. Related work for the recorded-RGB adaptation study.}
+
+\section*{Related Work}
+
+Learning from a small number of robot demonstrations raises a practical question: how should a model use the examples available for a new task? Prior work has addressed this question through transferable visual representations, inverse-dynamics learning, retrieval of past experience, and parameter-efficient adaptation. These approaches differ in both the information available at deployment and the component that changes when new demonstrations arrive. Our study examines these choices for visual inverse dynamics, where the input is a pair of recorded observations and the target is the action connecting them.
+
+\subsection*{Visual representations and inverse dynamics}
+
+Pretrained visual encoders provide a useful starting point when robot demonstrations are scarce. Masked autoencoders learn image representations through reconstruction of missing patches \cite{mae}, while R3M uses human video to learn a representation that can remain frozen during downstream policy learning \cite{r3m}. The broader evaluation accompanying VC-1 shows that no pretrained representation is uniformly strongest across embodied tasks and that task or domain adaptation can substantially improve performance \cite{vc1}. This evidence motivates separating the benefit of learning an action predictor from the additional benefit of changing its visual representation. We make that distinction using a shared MAE encoder and source-trained inverse-dynamics head.
+
+Inverse-dynamics models infer actions from transitions between observations. Behavioral Cloning from Observation uses an inverse model learned from an agent's interactions to supply action labels for observation-only demonstrations \cite{bco}. UniPi instead couples a video planner with a separately trained inverse model that translates generated frames into actions \cite{unipi}. Seer jointly learns visual foresight and action prediction conditioned on predicted future representations \cite{seer}, while DreamGen uses inverse or latent action models to recover supervision from synthetic videos for subsequent policy training \cite{dreamgen}. These methods establish several roles for inverse dynamics beyond direct behavioral cloning. Morin et al. analyze why inverse-model learning can require fewer action labels than policy learning, relating this advantage to differences in functional complexity and stochasticity under their semi-supervised setting \cite{morin}. Their analysis supports studying action-label efficiency, but does not determine which adaptation strategy will work best under task shift.
+
+FADA is particularly relevant to adaptation of the inverse model itself. It freezes a source-trained planner and fits LoRA updates to the inverse-dynamics module using a small amount of target-domain experience \cite{fada}. Its experiments address changes in humanoid deployment dynamics using proprioceptive histories and future observations. Our setting concerns transfer across manipulation tasks from recorded RGB transitions, with the visual encoder as an explicit adaptation target. The comparison therefore asks whether updating that representation improves prediction beyond simpler uses of the same support data; it does not introduce inverse-model adaptation as a new mechanism.
+
+\subsection*{Retrieval as prediction and as training-data selection}
+
+Retrieval provides a way to incorporate demonstrations without fitting a new action predictor. VINN decouples visual representation learning from behavior learning and predicts actions through locally weighted nearest-neighbor regression \cite{vinn}. REGENT builds on a strong retrieve-and-play baseline, combining retrieved demonstrations with a learned transformer policy to adapt to new environments without mandatory test-time fine-tuning \cite{regent}. RT-Cache retrieves and replays action snippets from a visual memory \cite{rtcache}. Closest to transition-based retrieval, CLAW learns continuous latent actions from consecutive observations and maps planned latent actions to executable controls through nearest-neighbor lookup in a labeled reference set \cite{claw}. These results make retrieval a substantive alternative to optimization. Our retrieval conditions use demonstrated image transitions to predict individual actions, with current-frame retrieval included to assess the value of the second observation.
+
+A separate line of work uses retrieval to construct the data on which a policy is trained. Behavior Retrieval selects relevant state-action examples from a larger offline collection \cite{behavior}. FlowRetrieval uses motion similarity in optical-flow representations and an auxiliary flow-prediction objective \cite{flow}, whereas STRAP retrieves sub-trajectories through visual features and temporal alignment \cite{strap}. Importance Weighted Retrieval further accounts for the relative density of target and prior data when selecting examples \cite{iwr}. HAND combines visual filtering and hand-path matching with LoRA fine-tuning of a pretrained policy \cite{hand}. Retrieval can also enter the policy directly: RAEA integrates retrieved experience through cross-attention \cite{raea}. Together, these methods show that retrieval and parameter adaptation are compatible. Our initial comparison isolates their effects by evaluating direct support-transition retrieval and supervised adaptation as separate conditions, without adding retrieved training data to the adaptation conditions.
+
+\subsection*{Parameter-efficient robot adaptation}
+
+LoRA represents a weight update with trainable low-rank factors while keeping the original weight matrix fixed \cite{lora}. TAIL evaluates this approach alongside other adapters and conventional fine-tuning in continual robot imitation, demonstrating that lightweight task-specific parameters can support effective adaptation on LIBERO \cite{tail}. OpenVLA likewise studies the performance and memory tradeoffs of efficient fine-tuning \cite{openvla}. OpenVLA-OFT shows that decoding, action chunking, action representation, and the training objective also affect adaptation outcomes and inference cost \cite{oft}. Consequently, the number of trainable parameters alone does not establish the practical efficiency of an adaptation method.
+
+Recent work also learns how to obtain or reuse adapters. WIZARD generates task-specific LoRA parameters from language and demonstration video, requiring neither target action labels nor gradient updates at deployment; its evaluation includes both held-out LIBERO suites and held-out tasks within suites \cite{wizard}. VLA-Pro retrieves and combines task-specific LoRA memories according to the current multimodal context \cite{vlapro}. FOCA addresses limited-data adaptation by adding explicit future-latent prediction and implicit alignment with future observations to VLA training \cite{foca}. These approaches use different forms of task evidence and prior training. Our comparison fixes the labeled target support demonstrations and measures the incremental effect of LoRA updates to the visual encoder over updating the same action head alone.
+
+\subsection*{Position of the present study}
+
+LIBERO was designed to study transfer across manipulation tasks with variations in spatial relationships, objects, and goals \cite{libero}. We use its Goal suite to investigate a restricted question: with the same small support set, when does visual encoder adaptation improve inverse-dynamics prediction relative to head-only fine-tuning and retrieval, and what computational cost accompanies that improvement? The planned comparison shares support and query demonstrations, source initialization for the learned models, and action normalization, while measuring adaptation time, inference latency, memory, and source-task retention. Because the next RGB frame is observed rather than predicted, the evaluation isolates action inference from planning and execution. Its conclusions concern held-out recorded transitions; establishing benefits for autonomous task completion would require a separate control evaluation.
+
+
+\clearpage
+
+\begin{thebibliography}{99}
+
+\small
+
+\bibitem{mae} He et al.. Masked Autoencoders Are Scalable Vision Learners. IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. \href{https://arxiv.org/abs/2111.06377}{arXiv:2111.06377}.
+
+\bibitem{r3m} Nair et al.. R3M: A Universal Visual Representation for Robot Manipulation. arXiv preprint, 2022. \href{https://arxiv.org/abs/2203.12601v3}{arXiv:2203.12601v3}.
+
+\bibitem{vc1} Majumdar et al.. Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence?. arXiv preprint, 2023. \href{https://arxiv.org/abs/2303.18240v2}{arXiv:2303.18240v2}.
+
+\bibitem{bco} Torabi et al.. Behavioral Cloning from Observation. International Joint Conference on Artificial Intelligence, 2018. \href{https://arxiv.org/abs/1805.01954}{arXiv:1805.01954}.
+
+\bibitem{unipi} Du et al.. Learning Universal Policies via Text-Guided Video Generation. arXiv preprint, 2023. \href{https://arxiv.org/abs/2302.00111}{arXiv:2302.00111}.
+
+\bibitem{seer} Tian et al.. Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation. arXiv preprint, 2024. \href{https://arxiv.org/abs/2412.15109v1}{arXiv:2412.15109v1}.
+
+\bibitem{dreamgen} Jang et al.. DreamGen: Unlocking Generalization in Robot Learning through Video World Models. arXiv preprint, 2025. \href{https://arxiv.org/abs/2505.12705v2}{arXiv:2505.12705v2}.
+
+\bibitem{morin} Morin et al.. On the Sample Efficiency of Inverse Dynamics Models for Semi-Supervised Imitation Learning. Proceedings of the 43rd International Conference on Machine Learning, 2026. \href{https://arxiv.org/abs/2602.02762}{arXiv:2602.02762}.
+
+\bibitem{fada} Xie et al.. FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control. arXiv preprint, 2026. \href{https://arxiv.org/abs/2606.28476v1}{arXiv:2606.28476v1}.
+
+\bibitem{vinn} Pari et al.. The Surprising Effectiveness of Representation Learning for Visual Imitation. Robotics: Science and Systems, 2022. \href{https://arxiv.org/abs/2112.01511}{arXiv:2112.01511}.
+
+\bibitem{regent} Sridhar et al.. REGENT: A Retrieval-Augmented Generalist Agent That Can Act In-Context in New Environments. International Conference on Learning Representations, 2025. \href{https://arxiv.org/abs/2412.04759}{arXiv:2412.04759}.
+
+\bibitem{rtcache} Kwon et al.. RT-Cache: Training-Free Retrieval for Real-Time Manipulation. arXiv preprint, 2025. \href{https://arxiv.org/abs/2505.09040v3}{arXiv:2505.09040v3}.
+
+\bibitem{claw} Ayalew et al.. CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization. arXiv preprint, 2026. \href{https://arxiv.org/abs/2606.04130v1}{arXiv:2606.04130v1}.
+
+\bibitem{behavior} Du et al.. Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets. arXiv preprint, 2023. \href{https://arxiv.org/abs/2304.08742}{arXiv:2304.08742}.
+
+\bibitem{flow} Lin et al.. FlowRetrieval: Flow-Guided Data Retrieval for Few-Shot Imitation Learning. Proceedings of The 8th Conference on Robot Learning, 2025. \href{https://proceedings.mlr.press/v270/lin25a.html}{Paper}.
+
+\bibitem{strap} Memmel et al.. STRAP: Robot Sub-Trajectory Retrieval for Augmented Policy Learning. International Conference on Learning Representations, 2025. \href{https://arxiv.org/abs/2412.15182}{arXiv:2412.15182}.
+
+\bibitem{iwr} Xie et al.. Data Retrieval with Importance Weights for Few-Shot Imitation Learning. Proceedings of The 9th Conference on Robot Learning, 2025. \href{https://arxiv.org/abs/2509.01657v1}{arXiv:2509.01657v1}.
+
+\bibitem{hand} Hong et al.. HAND Me the Data: Fast Robot Adaptation via Hand Path Retrieval. arXiv preprint, 2025. \href{https://arxiv.org/abs/2505.20455v4}{arXiv:2505.20455v4}.
+
+\bibitem{raea} Zhu et al.. Retrieval-Augmented Embodied Agents. arXiv preprint, 2024. \href{https://arxiv.org/abs/2404.11699v1}{arXiv:2404.11699v1}.
+
+\bibitem{lora} Hu et al.. LoRA: Low-Rank Adaptation of Large Language Models. International Conference on Learning Representations, 2022. \href{https://arxiv.org/abs/2106.09685}{arXiv:2106.09685}.
+
+\bibitem{tail} Liu et al.. TAIL: Task-specific Adapters for Imitation Learning with Large Pretrained Models. International Conference on Learning Representations, 2024. \href{https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html}{Paper}.
+
+\bibitem{openvla} Kim et al.. OpenVLA: An Open-Source Vision-Language-Action Model. arXiv preprint, 2024. \href{https://arxiv.org/abs/2406.09246v3}{arXiv:2406.09246v3}.
+
+\bibitem{oft} Kim et al.. Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success. arXiv preprint, 2025. \href{https://arxiv.org/abs/2502.19645v2}{arXiv:2502.19645v2}.
+
+\bibitem{wizard} Bianchi et al.. Robotic Policy Adaptation via Weight-Space Meta-Learning. arXiv preprint, 2026. \href{https://arxiv.org/abs/2606.07217v1}{arXiv:2606.07217v1}.
+
+\bibitem{vlapro} Si et al.. VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models. arXiv preprint, 2026. \href{https://arxiv.org/abs/2605.29562v1}{arXiv:2605.29562v1}.
+
+\bibitem{foca} Nguyen et al.. FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation. arXiv preprint, 2026. \href{https://arxiv.org/abs/2606.20867v1}{arXiv:2606.20867v1}.
+
+\bibitem{libero} Liu et al.. LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning. arXiv preprint, 2023. \href{https://arxiv.org/abs/2306.03310}{arXiv:2306.03310}.
+
+\end{thebibliography}
+
+\end{document}
