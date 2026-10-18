@@ -1,0 +1,239 @@
+{
+  "archive_bytes": 5323468800,
+  "archive_sha256": "b902338c9cf10a3f302ec08b0e55adb497773d7364f7a99f531599291d273353",
+  "file_count": 46,
+  "files": [
+    {
+      "path": "inputs/dataset/open_the_middle_drawer_of_the_cabinet_demo.hdf5",
+      "sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737",
+      "size_bytes": 702223367
+    },
+    {
+      "path": "inputs/dataset/open_the_top_drawer_and_put_the_bowl_inside_demo.hdf5",
+      "sha256": "1b50d99a053a7e4547c9ae9ccd2e3cd762543d27be78f240f13440d7ae487ae8",
+      "size_bytes": 1017886342
+    },
+    {
+      "path": "inputs/dataset/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+      "sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+      "size_bytes": 762855139
+    },
+    {
+      "path": "inputs/dataset/put_the_bowl_on_the_plate_demo.hdf5",
+      "sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "size_bytes": 468246288
+    },
+    {
+      "path": "inputs/dataset/put_the_bowl_on_the_stove_demo.hdf5",
+      "sha256": "ff77d3bf0f89a147d423840ecbd842cd63c3c55aeead91f88dbc0917be473e99",
+      "size_bytes": 509123820
+    },
+    {
+      "path": "inputs/dataset/put_the_cream_cheese_in_the_bowl_demo.hdf5",
+      "sha256": "ee58a7d72c143a71bf1448674e70940ac7781c1d1bb10a1b0c7a5c69b26abbef",
+      "size_bytes": 535715512
+    },
+    {
+      "path": "inputs/dataset/put_the_wine_bottle_on_the_rack_demo.hdf5",
+      "sha256": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e",
+      "size_bytes": 878958730
+    },
+    {
+      "path": "inputs/dataset/turn_on_the_stove_demo.hdf5",
+      "sha256": "387fc10747696b80dea6ed8d7f2beaa162bf92ae11750b241073cbd33aac73d5",
+      "size_bytes": 447509922
+    },
+    {
+      "path": "repo/bench_amendment_baselines.json",
+      "sha256": "204cb8b6d85839e2ebff7f87262c3f987b024ee4f89faf280acb8e4f02cc35f3",
+      "size_bytes": 3742
+    },
+    {
+      "path": "repo/protocol.json",
+      "sha256": "8a67f36bdcfa8f145be69fdf9182b4fddde67bf4f1eef52c0ff14aecfdb6fc3b",
+      "size_bytes": 45613
+    },
+    {
+      "path": "repo/raid_experiments/__init__.py",
+      "sha256": "7f8631dc6d6c520554786f66df5c1485e38af919d7bdc71d73cf9026a7fb3e93",
+      "size_bytes": 78
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_admission.py",
+      "sha256": "cab06a807f2d01338ab30234a601184d2cf12defa0bf7c5b942155f7d0b00a8e",
+      "size_bytes": 8397
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_analysis.py",
+      "sha256": "dc51c012271a3e6e2655e89259f344bd339b6204db224b1f5598bdf43c7b0316",
+      "size_bytes": 5193
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_baselines.py",
+      "sha256": "068f20cb6bfc24d2a9d41e1fe1f0717562424403feaab38962729f08872a3588",
+      "size_bytes": 12407
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_cli.py",
+      "sha256": "8d76461d90c6bb2226b52a79ad2f26af9c416df2ab606be0e4a66867c5f57929",
+      "size_bytes": 24914
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_collect.py",
+      "sha256": "cdbef429fdb2f5253b54dadf9fad0ca53a4b217dbc011e8ed518d9f0880bbf50",
+      "size_bytes": 15809
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_compute_bench.py",
+      "sha256": "22223410eafecfaa12b9c3b5603c602e511cabaf97d822ad1956ddd1a7f0a803",
+      "size_bytes": 23270
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_feasibility.py",
+      "sha256": "02c08cecfafe05b785255fa629635363a212f41862ca4ed15ab22400934c541e",
+      "size_bytes": 14356
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_generator_profile.py",
+      "sha256": "dabf4cbcda3f4b8567239953366724c22ca301177f3074e1b87bd53d2e8b3123",
+      "size_bytes": 7901
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_heads.py",
+      "sha256": "343a25b22df383444fb441236c9650dfa476c69c9d1430785a6d6a0427bdcc27",
+      "size_bytes": 5839
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_live_acceptance.py",
+      "sha256": "b05cca62dd683ea9103d0272e58b19fb67eb2e3d34a428cb39d5076f14a6ef89",
+      "size_bytes": 6258
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_local_checks.py",
+      "sha256": "485fc6229b36618e90eae8d2c64441acb1e15e6bbe6185ce7274232f67f8556f",
+      "size_bytes": 12271
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_panel.py",
+      "sha256": "10bb35cae85e101efb02e4d161d9af323fe9ce4bb78d05795d04f3bf821015eb",
+      "size_bytes": 32755
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_protocol.py",
+      "sha256": "9e15651c6557f9cb0b8d48114cf352739cba62f3fbe60b0575778e99ee446e33",
+      "size_bytes": 30206
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_retrieval.py",
+      "sha256": "e499560a1c539a51003a52129259a6d8db18c32c832442d96a99c22106e3e1d8",
+      "size_bytes": 9587
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_rollout.py",
+      "sha256": "437c1ffe79716a87c4f168a93c6d3c5a42f8243df3498950e2a8639bd9ecf294",
+      "size_bytes": 14778
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_runner.py",
+      "sha256": "596ea34eab8969892f2b6a17911d79c3c42b72d390292005ddad877d7ac2d08a",
+      "size_bytes": 23155
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_study.py",
+      "sha256": "1abaefbda947df1bfb631c871bddaf378ef1d9a2911a359a7a5e0e128511c242",
+      "size_bytes": 56707
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_v7.py",
+      "sha256": "129a23183c08f0cf3a4907249c5c8da91214464db105b620e3e0d01559999b3b",
+      "size_bytes": 6481
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_vpp2.py",
+      "sha256": "55f295ebd045cd9bbd7ad22877fb00802251a2d946659e97e7378d3702d4e574",
+      "size_bytes": 45637
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_vpp2_admission.py",
+      "sha256": "a56b066848aaff92223236be0c0e5e5e3f427713c0d5762320d9c9ee98b0b70f",
+      "size_bytes": 20252
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_vpp2_panel.py",
+      "sha256": "5f7d092e5ab489dbe6440806cec2b7bd47294aa38c36bbd4f3c22be54bfd5cbb",
+      "size_bytes": 27237
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_vpp2_pilot.py",
+      "sha256": "a21beb9cf91b1f9dc466c002f4a3088bea29b8dda3084dc1fc835db3225bce67",
+      "size_bytes": 37084
+    },
+    {
+      "path": "repo/raid_experiments/hybrid_vpp2_select.py",
+      "sha256": "1827961bb9f6fb4787d1fc9fe8cda65a7cc104fedb930752e667324aa3222968",
+      "size_bytes": 49767
+    },
+    {
+      "path": "repo/raid_experiments/models.py",
+      "sha256": "083987272683c76e51bf4a5d6ed394944cc5aa801742b280024d6640475f118a",
+      "size_bytes": 5851
+    },
+    {
+      "path": "repo/raid_experiments/retrieval.py",
+      "sha256": "4522407aad1992521fefa7fb48910bf69c6ef51025510ccb9fac628505bc91e0",
+      "size_bytes": 6517
+    },
+    {
+      "path": "repo/raid_experiments/source_worker.py",
+      "sha256": "1adaf29c523b8758420956479a2be91479f560f51668e3b82864c8a406ba0ba9",
+      "size_bytes": 7740
+    },
+    {
+      "path": "repo/raid_experiments/wm_heads.py",
+      "sha256": "30f565fe6734c5f3c3cbb5e78d8a1f2470284a1031534d09fc4bbbd76e9de7ab",
+      "size_bytes": 5476
+    },
+    {
+      "path": "repo/raid_experiments/wm_pod.py",
+      "sha256": "5271ed72af6b01a798cd9390d37bf243cc1331df06382034f5758c3a99ed5a06",
+      "size_bytes": 41426
+    },
+    {
+      "path": "repo/raid_experiments/wm_protocol.py",
+      "sha256": "8e15488d7d5b0a49a3ca4b784564d8ca00d7a9dc03720b4640a314b7ec018a2e",
+      "size_bytes": 19277
+    },
+    {
+      "path": "repo/raid_experiments/wm_rollout.py",
+      "sha256": "fd039d40d01d7353a22cf6d662834233560e35c59a50079529e5449aaf799f5f",
+      "size_bytes": 12037
+    },
+    {
+      "path": "repo/raid_experiments/wm_runtime.py",
+      "sha256": "6e6734667eaef75524cf42a81ef82ad93814cfb914d2a2f2f888aacfd45911b4",
+      "size_bytes": 171
+    },
+    {
+      "path": "repo/raid_experiments/world_model.py",
+      "sha256": "67844fcb787dbde2851a6c2558f186777698acaf753bdc8f9f1c7d279bae7870",
+      "size_bytes": 13498
+    },
+    {
+      "path": "repo/requirements-wm-cosmos.lock",
+      "sha256": "5ee838b7265295497b0010f2b739d8af96d5c8c265c772b61c5ee96a9dfe50fb",
+      "size_bytes": 107117
+    },
+    {
+      "path": "repo/requirements-wm-sim.lock",
+      "sha256": "92ad493650eb04e5a1bdc36563d9bba9ae91d03afdf2b61221818bb865f56de3",
+      "size_bytes": 84788
+    },
+    {
+      "path": "repo/src/mae_encoder.py",
+      "sha256": "cba3e92f3acca00bb374510e3fbdb75874cd80057458beefd850129b1287058b",
+      "size_bytes": 4437
+    }
+  ],
+  "stage": "fewshot_idm_baseline_benchmark",
+  "unpacked_bytes": 5323367149
+}

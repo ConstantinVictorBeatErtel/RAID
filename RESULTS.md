@@ -1,6 +1,37 @@
+# RAID results: current evidence boundary
+
+Updated 11 October 2026. The intended protocol is raid_hybrid_generalization_v6, testing frozen, RAID, LoRA and RAID + LoRA. No v6 implementation result, scientific measurement or hybrid advantage has been established. [STATUS.md](STATUS.md) is the current evidence summary.
+
+## Protocol v6: few-shot inverse-dynamics adaptation on held-out LIBERO-Goal tasks (18 October 2026)
+
+One frozen offline run on the 2 sealed final tasks x 3 seeds, analysis plan frozen before the data was read. Chunk MSE on normalized actions (lower is better), mean over 6 settings:
+
+| Method | No training | 25 updates | 500 updates | GPU s (500 updates) |
+|---|---|---|---|---|
+| RAID+LoRA v7 (ours) | 0.500 | 0.272 | 0.281 | 201 |
+| RAID v7 head-only (ours, exploratory) | 0.500 | 0.273 | 0.287 | 2.7 |
+| LoRA (TAIL/FADA style) | 1.055 | 0.315 | 0.283 | 189 |
+| Full fine-tuning | 1.055 | 0.313 | 0.268 | 444 |
+| Head-only fine-tuning | 1.055 | 0.320 | 0.280 | 1.1 |
+| VINN-style k-NN | 0.376 | – | – | 0 |
+
+Frozen comparisons: RAID v7 vs k-NN without training is worse (P1 failed); RAID+LoRA v7 at 25 updates is better than all 9 baselines in 6/6 settings; at 500 updates it ties with most baselines and is worse than full fine-tuning. Offline action error only, not task success; `held_out_claims_eligible=false`. Full tables, intervals and limits: [FINAL_RESULTS.md](artifacts/raid_hybrid_libero_goal_v6/compute_bench_final_20261017/FINAL_RESULTS.md); summary in [STATUS.md](STATUS.md).
+
+## Historical results and protocol notes
+
+All numbers below retain their original experiment identity. Prior “active v4” labels refer to the earlier snapshot; neither those results nor v3 implementation checks are v6 evidence.
+
+---
+
 # RAID results and provenance
 
 **Protocol boundary (25 September 2026):** this file records earlier GR-1/LIBERO, GRPO, RoboMimic, and V-JEPA measurements. None evaluates the active few-shot LIBERO-Goal study in [RESEARCH.md](RESEARCH.md). Do not use historical scores as evidence for LoRA adaptation on held-out tasks. No new-protocol results have been produced. Preserve every old number and provenance note as historical evidence.
+
+**Protocol labels (11 October 2026):** every number in this file belongs to an earlier protocol (historical tracks, or v3 implementation evidence). The active protocol is v4 (`raid_world_model_idm_v4`). **No v4 result exists.** v4 results must be recorded separately and never combined with the numbers below.
+
+## Earlier protocol v3 status — 11 October 2026
+
+No scientific development or confirmation result exists for protocol v3. The complete synthetic structural graphs, retained recovery/reporting checks, real CPU smoke and current focused cloud checks are implementation evidence, not measurements of task transfer. CUDA calibration remains unexecuted. See [STATUS.md](STATUS.md) for evidence classes and [CURSOR_HANDOFF.md](CURSOR_HANDOFF.md) for the remaining path to a run. All historical numbers below remain unchanged.
 
 ---
 

@@ -1,0 +1,7 @@
+{
+  "deleted": "bench_package.tar",
+  "reason": "Mac disk space; rebuildable",
+  "verified": "gzip -dc source_panel_package.transport.tar.gz | sha256 == archive_sha256 (0c9e0be2...)",
+  "archive_sha256": "0c9e0be2a88b3ff6aed8ec9e4d90507f624b3bdc275f60c00a4430d467b0d2db",
+  "at": "2026-10-17T20:14:15.442169+00:00"
+}

@@ -1,0 +1,225 @@
+{
+  "alarmAt": null,
+  "closed": true,
+  "computeEndedAt": 1792267801496,
+  "deployment": "0c74b367-796f-4895-935d-60d00690bfc1",
+  "events": [
+    {
+      "at": 1792263478355,
+      "detail": "{\"collectBy\":1792273677290,\"deadlineAt\":1792274277290,\"deleteStorageAt\":1792277877290}",
+      "seq": 1,
+      "type": "registered_with_immutable_deadlines"
+    },
+    {
+      "at": 1792263478694,
+      "detail": "{}",
+      "seq": 2,
+      "type": "paid_creation_intent"
+    },
+    {
+      "at": 1792263479039,
+      "detail": "{\"region\":\"EU-RO-1\",\"storageTier\":\"STANDARD\",\"checkedAt\":1792263479039}",
+      "seq": 3,
+      "type": "live_storage_placement_verified"
+    },
+    {
+      "at": 1792263479099,
+      "detail": "{}",
+      "seq": 4,
+      "type": "volume_creation_request"
+    },
+    {
+      "at": 1792263479911,
+      "detail": "{\"id\":\"d6k7teevnj\"}",
+      "seq": 5,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792263479976,
+      "detail": "{}",
+      "seq": 6,
+      "type": "pod_creation_request"
+    },
+    {
+      "at": 1792263480080,
+      "detail": "{\"id\":\"d6k7teevnj\"}",
+      "seq": 7,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792263481398,
+      "detail": "{\"id\":\"mio6xqaeppv6oe\"}",
+      "seq": 8,
+      "type": "pod_ownership_recorded"
+    },
+    {
+      "at": 1792263481398,
+      "detail": "{\"hourlyUsd\":\"1.79\",\"region\":\"EU-RO-1\",\"volumeId\":\"d6k7teevnj\"}",
+      "seq": 9,
+      "type": "provider_allocation_verified"
+    },
+    {
+      "at": 1792267799608,
+      "detail": "{}",
+      "seq": 10,
+      "type": "operator_termination_requested"
+    },
+    {
+      "at": 1792267801496,
+      "detail": "{\"method\":\"GET\",\"path\":\"/pods/mio6xqaeppv6oe\",\"status\":404,\"requestId\":\"req_a3951e31-88a2-4aa5-9844-b81c3caa5721\",\"bodySha256\":\"237a2f835ded1509dea751107b60d362b3b778fe252e80f7afca6478685e1d93\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"pod not found\\\",\\\"status\\\":404}\\n\"}",
+      "seq": 11,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792267801496,
+      "detail": "{\"id\":\"mio6xqaeppv6oe\"}",
+      "seq": 12,
+      "type": "pod_deletion_verified"
+    },
+    {
+      "at": 1792267802389,
+      "detail": "{\"sha256\":\"02336e3c6a159df70ebfed70ab967250a82488a9a9ae45077c38fd7b3449311c\"}",
+      "seq": 13,
+      "type": "post_termination_s3_recovery_verified"
+    },
+    {
+      "at": 1792267921168,
+      "detail": "{}",
+      "seq": 14,
+      "type": "local_collection_receipt"
+    },
+    {
+      "at": 1792267922748,
+      "detail": "{\"method\":\"GET\",\"path\":\"/networkvolumes/d6k7teevnj\",\"status\":404,\"requestId\":\"req_0f7f4f74-3352-4013-9d07-711c37584b2e\",\"bodySha256\":\"2dd26ac4ea80d945e072a12a8a46fbbc046c6839856926007e77b8dbd46bb042\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"network volume not found\\\",\\\"status\\\":404}\\n\"}",
+      "seq": 15,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792267922748,
+      "detail": "{\"id\":\"d6k7teevnj\"}",
+      "seq": 16,
+      "type": "volume_deletion_verified"
+    },
+    {
+      "at": 1792267923130,
+      "detail": "{}",
+      "seq": 17,
+      "type": "session_collected_and_cleaned"
+    }
+  ],
+  "eventsTotal": 17,
+  "fingerprint": "54b7a5d58efd5badeb29666de0448855677aa13054a5191590275ca8e076970b",
+  "jobs": [],
+  "launchAt": 1792263478694,
+  "podDeleted": true,
+  "podId": "mio6xqaeppv6oe",
+  "podRequested": true,
+  "receipt": {
+    "at": 1792267921168,
+    "sha256": "02336e3c6a159df70ebfed70ab967250a82488a9a9ae45077c38fd7b3449311c"
+  },
+  "recovered": {
+    "at": 1792267802389,
+    "body": "{\n  \"bench/bench_design.json\": \"5582891eacf66a139d9c8f82045b94adacf108523323cb4358562a2a5544d262\",\n  \"bench/bench_summary.json\": \"667f9f40c2e3c801b52330ce998b2a176b38fa705724c9d3d4811d4f67c5bb67\",\n  \"bench/frame_cache_cost.json\": \"e3b04593236302c7da07aa66d5afd8a758026749f9b79464db989251bd38997e\",\n  \"bench/source_cost_s42.json\": \"17ffccc2d83ff53d53dfcafc0b8b65ca410537abd2462d849512ad6a6b7e59d6\",\n  \"bench/source_cost_s43.json\": \"0654f9ce02ddf1a82d353b74c80d9c75e57ace12189a577a539beadfd5f301ef\",\n  \"bench/source_cost_s44.json\": \"0ad535adb9eb4ce0c2eecdb9fc5e830134ed298b143b0639a32c0dd09ebfd9b5\",\n  \"bench/unit_open_the_top_drawer_and_put_the_bowl_inside_s42.json\": \"848c7a0b7f2f0332add467687a5c69ee56fe24fac53c3df668c5fd47568ebe67\",\n  \"bench/unit_open_the_top_drawer_and_put_the_bowl_inside_s43.json\": \"bc56f87620f4b85ae31845d3fa4e8d57501a48ccb094dfb3dd855775df706849\",\n  \"bench/unit_open_the_top_drawer_and_put_the_bowl_inside_s44.json\": \"98e7d55874d8f1e77adc2a17afdee609f2e6866e8e210fc0e890920100852aeb\",\n  \"bench/unit_put_the_cream_cheese_in_the_bowl_s42.json\": \"c2e8bfe4f7026fa4b1267e0b82bdc751e01383f587093d2b93461cf40421bf42\",\n  \"bench/unit_put_the_cream_cheese_in_the_bowl_s43.json\": \"ccd7eab7d7d46bbf49baa69f5015eabc8711c91eb181db1675e88b0d9f7eb2e1\",\n  \"bench/unit_put_the_cream_cheese_in_the_bowl_s44.json\": \"faf486b1e92ff32c21a168294a25d4225905741f03aa5b5e190e471d5cde43ee\",\n  \"logs/archive_verify.exit.json\": \"81ec1a3cc51ca58eb1478523aec0fa10d36a3d1b0c8f51fd9b156c4a48aca72a\",\n  \"logs/archive_verify.log\": \"b9d12e2892b0a8ad756990ee7bae54a7df2c3081ee8a9c106f3d384a04ba4e03\",\n  \"logs/bench_report.exit.json\": \"171f9cf0f705aa75475e51da6bb6a317589c72f85f02f6ec5f6eef44a990e250\",\n  \"logs/bench_report.log\": \"f9adda33dff9dc422fc001f2e37de0e7b3f70e6588fd56002658509129847fd1\",\n  \"logs/bench_run.exit.json\": \"6b220766f83b55218ffcffbf9b7739d9ffa06eca8b83baaa2615b5021c3a3d0b\",\n  \"logs/bench_run.log\": \"f9adda33dff9dc422fc001f2e37de0e7b3f70e6588fd56002658509129847fd1\",\n  \"logs/bootstrap.exit.json\": \"285f223fe872d1fb21589eeed82342a3c4f536c26929a244ce4ae01ff894a7af\",\n  \"logs/bootstrap.log\": \"940070a4e140929cf9177e8951ae1337654596604c4b8219957579f85aff8cb0\",\n  \"logs/mae_download.exit.json\": \"4703675391d26969b89452216eedd68f377ef1388367b821004f01eda8b960fa\",\n  \"logs/mae_download.log\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"logs/package_preflight.exit.json\": \"a1182b30ad62eb86b351f86bf10f65eb957b9f702e72acce6d4ee8dc8c1b16d1\",\n  \"logs/package_preflight.log\": \"b75b8c2e060bbb2afefb3d96ffcc8259f411b91d760938c4666cdb899c9dbacf\",\n  \"logs/resolve_paths.exit.json\": \"a28f664f8a1c99486ae9df6e0045c6a2b23c952d45d5c8b86ad0b0576b796e9b\",\n  \"logs/resolve_paths.log\": \"d00bb7610ac6319870a3332ad18a69e883f977cdb51c343ddece097419f9df45\",\n  \"mae_download.json\": \"f2bb3337671ec24cb8ae73c8cd2450be72e2268d0124ea518da29da5cbdde10c\",\n  \"protocol_bench_pod.json\": \"6eaac251eda2692967ae4408f0c52a5150fda6c4609e67393ee7cbcc19cd3ab6\",\n  \"release_identity.json\": \"4a559bb62285333a633c30cfe8b89b6bee860e719109366604435fdfe765e14d\"\n}\n",
+    "sha256": "02336e3c6a159df70ebfed70ab967250a82488a9a9ae45077c38fd7b3449311c"
+  },
+  "registeredAt": 1792263477949,
+  "request": {
+    "acceptanceSessionId": "v6-accept-20261017T185431-4eeb01e5",
+    "bindings": {
+      "code": "aa141ccece0949a700c7e717c7731f6223a159609691f4bbfb8205a537133cb6",
+      "deployment": "0c74b367-796f-4895-935d-60d00690bfc1",
+      "protocol": "566a8218a9936fa4eb52ae176432f9c4cf73002b4e1a09431ea27d0bf24adb07",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "capUsd": "13.17",
+    "collectBy": 1792273677290,
+    "deadlineAt": 1792274277290,
+    "deleteStorageAt": 1792277877290,
+    "maxHourlyUsd": "1.79",
+    "packageSha256": "0c9e0be2a88b3ff6aed8ec9e4d90507f624b3bdc275f60c00a4430d467b0d2db",
+    "podSpec": {
+      "cloudType": "SECURE",
+      "computeType": "GPU",
+      "containerDiskInGb": 60,
+      "dataCenterIds": [
+        "EU-RO-1"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "PYTHONHASHSEED": "42",
+        "RAID_CONTAINER_IMAGE_DIGEST": "sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f"
+      },
+      "gpuCount": 1,
+      "gpuTypeIds": [
+        "NVIDIA A100 80GB PCIe"
+      ],
+      "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+      "ports": [
+        "22/tcp"
+      ],
+      "supportPublicIp": true,
+      "volumeInGb": 0,
+      "volumeMountPath": "/workspace"
+    },
+    "quoteStartAt": 1792263477290,
+    "sentinel": {
+      "key": "results/v6-source-20261017T185329-81a5b8f1/collection/outputs_sha256.json",
+      "sha256": "4a559bb62285333a633c30cfe8b89b6bee860e719109366604435fdfe765e14d"
+    },
+    "sessionId": "v6-source-20261017T185329-81a5b8f1",
+    "spendAdmission": {
+      "all_liabilities_known": true,
+      "billing_digest": "eec88397eeb6c5633927fe99da1e22c7bb61a7afef62d590436e2b10600b7e2b",
+      "billing_refreshed_at": "2026-10-17T18:57:52.429537+00:00",
+      "container_disk_gb": 60,
+      "container_disk_gb_month_usd": "0.10",
+      "currency": "USD",
+      "cutoff_service_cost_reserve_usd": "0.10",
+      "data_center_id": "EU-RO-1",
+      "gpu": "NVIDIA A100 80GB PCIe",
+      "gpu_hourly_usd": "1.79",
+      "gross_prepaid_balance_usd": "15.1655574796",
+      "inventory_refreshed_at": "2026-10-17T18:57:56.574654+00:00",
+      "network_volume_gb_month_usd": "0.07",
+      "network_volume_size_gb": 80,
+      "placement_evidence": {
+        "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+        "live_gpu_stock_checked": true,
+        "refreshed_at": "2026-10-17T18:57:56.574654+00:00",
+        "sha256": "0b5e9d54da999be3037d2801638139227323ce7eed7ab18e9aa1ccbd03cc0bbd",
+        "storage_tier": "STANDARD"
+      },
+      "prepaid_available_usd": "14.1555574796",
+      "project_ceiling_usd": "250",
+      "project_reserve_usd": "25",
+      "projected_source_cost_usd": "5.526111111111111111111111111",
+      "provider_inventory_checked": true,
+      "quote_provenance": {
+        "container_disk_billing_unit": "second",
+        "gpu": "runpodctl gpu list",
+        "monthly_hour_denominator": 720,
+        "network_volume_billing_unit": "hour, conservatively rounded up",
+        "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+        "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+      },
+      "refreshed_at": "2026-10-17T18:57:56.574654+00:00",
+      "remaining_project_allowance_usd": "104.1064149574906304016",
+      "source_cap_usd": "13.17",
+      "status": "passed",
+      "total_study_spend_usd": "120.8935850425093695984",
+      "transfer_reserve_usd": "0"
+    },
+    "stage": "source_panel",
+    "volumeSpec": {
+      "dataCenterId": "EU-RO-1",
+      "size": 80
+    }
+  },
+  "revision": 13,
+  "terminating": true,
+  "terminationReason": "operator_request",
+  "volumeDeleted": true,
+  "volumeId": "d6k7teevnj",
+  "volumeRequested": true
+}

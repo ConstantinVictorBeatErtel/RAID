@@ -1,0 +1,11 @@
+{
+  "amendment_digest": "1b42ba599a9b983d6c67befdfb27841d3dbc49aa26977410ad6acb3fd26e69bf",
+  "first_access_unix": 1792271362.1660511,
+  "freeze_sha256": "acd29d3b9824ec284cbdb98cfcbf0c61ea4984de2a90b2fb32ce063717e9a903",
+  "held_out_claims_eligible": false,
+  "rule": "one frozen run; nothing is tuned after it",
+  "tasks": [
+    "put_the_bowl_on_top_of_the_cabinet",
+    "put_the_wine_bottle_on_top_of_the_cabinet"
+  ]
+}

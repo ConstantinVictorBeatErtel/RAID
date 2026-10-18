@@ -1,0 +1,24 @@
+{
+  "amendment_digest": "b58299e723e771e57682a092f26b81a474410839f3d6619c9ca8e19b9fd8cf10",
+  "bindings": {
+    "code": "7d561d613d95b54d76075731ee2bd4fa150d759a714a98088b06e55f92412c78",
+    "protocol": "eda6f996b4d2606af0e2ba223f0c807cf153e9b041cbd859e07e4377c9b5bbd2",
+    "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+  },
+  "expected_units": 6,
+  "held_out_claims_eligible": false,
+  "package_sha256": "b902338c9cf10a3f302ec08b0e55adb497773d7364f7a99f531599291d273353",
+  "protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "scientific_result": false,
+  "session_id": "v6-source-20261017T122400-c79f4833",
+  "stage": "fewshot_idm_baseline_benchmark",
+  "stage_commands": {
+    "archive_verify": "f3a7d7e5c63ea808f3fdc9003544217e13d1b1f4c5607b3cfd41f46127f30dbd",
+    "bench_report": "b29417cdcec6f5f50375744b0d059ad29624182e01a12073f797f882fe803bc2",
+    "bench_run": "7451b1fe8983a2da2b53d6ff95afa1dbc6c0fce59ee0dacc090e6eaa3ed4bc1e",
+    "bootstrap": "1685e7939a6b15fabfdeaedc017bb5547aab7fd7aedd43137a7fd8f1dd0d3fc6",
+    "mae_download": "7f579684847ec070914798b747746ce2248d3e6147c5e756e6eb07e84222c607",
+    "package_preflight": "764d39ef5b39f910123ab866ed6c1e087e49c4427a3d969648475701df40a867",
+    "resolve_paths": "aa99aa543abb3e5374b8ea6d85a6e1ab7e61669f7f43366d0800c283e88c4ee6"
+  }
+}

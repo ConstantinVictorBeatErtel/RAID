@@ -1,0 +1,317 @@
+{
+  "final_freeze_sha256": "acd29d3b9824ec284cbdb98cfcbf0c61ea4984de2a90b2fb32ce063717e9a903",
+  "held_out_claims_eligible": false,
+  "mean_final_mse": {
+    "full_finetune": 0.2681683967985431,
+    "head_only": 0.2804612574718214,
+    "lora_mlp": 0.28251578915615877,
+    "probe_fresh": 0.2945254990734576,
+    "raid_lora_mlp": 0.33477199948303066,
+    "raid_lora_v7": 0.2809324387018913,
+    "raid_v7_head": 0.28700088188158107,
+    "scratch_lora": 0.2736458325038548,
+    "strap_style": 0.32563527313328233
+  },
+  "mean_final_r2": {
+    "full_finetune": 0.46199656239837295,
+    "head_only": 0.44921671993289725,
+    "lora_mlp": 0.4457796651171165,
+    "probe_fresh": 0.4375901528487777,
+    "raid_lora_mlp": 0.38362715070148745,
+    "raid_lora_v7": 0.44133181491133916,
+    "raid_v7_head": 0.4414721944020826,
+    "scratch_lora": 0.45971939100094283,
+    "strap_style": 0.25783927752332014
+  },
+  "mean_zero_adaptation_mse": {
+    "raid_bank_mlp": 0.535106497065575,
+    "raid_bank_v7": 0.49952463833112637,
+    "regent_blend": 0.43507103021690574,
+    "retrieve_and_play": 0.44839593785418497,
+    "source_frozen": 1.0553916407684127,
+    "support_knn_average": 0.3761848120652212
+  },
+  "mean_zero_adaptation_r2": {
+    "raid_bank_mlp": 0.15256524476678054,
+    "raid_bank_v7": -0.04078410313945279,
+    "regent_blend": 0.21205167851972717,
+    "retrieve_and_play": 0.18654054780652093,
+    "source_frozen": -1.1159213759024798,
+    "support_knn_average": 0.30021167750819194
+  },
+  "rows": [
+    {
+      "final": {
+        "full_finetune": 0.242341814461447,
+        "head_only": 0.2521054255571127,
+        "lora_mlp": 0.259265099946821,
+        "probe_fresh": 0.24390097853453105,
+        "raid_lora_mlp": 0.30074416615378496,
+        "raid_lora_v7": 0.25243590063296206,
+        "raid_v7_head": 0.2522770471707779,
+        "scratch_lora": 0.24043845117994483,
+        "strap_style": 0.2488844516002299
+      },
+      "seconds_to_match_raid_v6": {
+        "full_finetune": 16.10304999597727,
+        "head_only": 0.04311617370858844,
+        "lora_mlp": 6.551928048717387,
+        "probe_fresh": 0.12351798631622497,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 18.312495197024944,
+        "strap_style": 0.07247263570266663
+      },
+      "seconds_to_match_raid_v7": {
+        "full_finetune": 19.883973487276027,
+        "head_only": 0.05323965677983544,
+        "lora_mlp": 8.09029119600211,
+        "probe_fresh": 0.18397834317984718,
+        "raid_lora_mlp": 5.601792960866112,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 32.54680276041216,
+        "strap_style": 0.08948888361054749
+      },
+      "seed": 42,
+      "task": "put_the_bowl_on_top_of_the_cabinet",
+      "zero": {
+        "raid_bank_mlp": 0.3843302228443157,
+        "raid_bank_v7": 0.3243890295623145,
+        "regent_blend": 0.4080235285103969,
+        "retrieve_and_play": 0.42354951335215657,
+        "source_frozen": 0.6396213003971811,
+        "support_knn_average": 0.37366055244124124
+      }
+    },
+    {
+      "final": {
+        "full_finetune": 0.2298854580187096,
+        "head_only": 0.2454824306944925,
+        "lora_mlp": 0.24342817506719272,
+        "probe_fresh": 0.25376350024800276,
+        "raid_lora_mlp": 0.28004338268782514,
+        "raid_lora_v7": 0.2578021740371371,
+        "raid_v7_head": 0.2583748466117703,
+        "scratch_lora": 0.23497652385792525,
+        "strap_style": 0.25167321175699764
+      },
+      "seconds_to_match_raid_v6": {
+        "full_finetune": 16.865361100038054,
+        "head_only": 0.04512294004303924,
+        "lora_mlp": 7.035359755187718,
+        "probe_fresh": 0.12482191797287236,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 18.140685431891942,
+        "strap_style": 0.06592639860244492
+      },
+      "seconds_to_match_raid_v7": {
+        "full_finetune": 20.65385326454695,
+        "head_only": 0.055258975896565865,
+        "lora_mlp": 8.61572350482423,
+        "probe_fresh": 0.1898334845272116,
+        "raid_lora_mlp": 6.423842831553242,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 29.559378982193596,
+        "strap_style": 0.08073554754732518
+      },
+      "seed": 43,
+      "task": "put_the_bowl_on_top_of_the_cabinet",
+      "zero": {
+        "raid_bank_mlp": 0.38455035056028924,
+        "raid_bank_v7": 0.30571596274321855,
+        "regent_blend": 0.3458156631850952,
+        "retrieve_and_play": 0.3570979255016896,
+        "source_frozen": 0.7355001110193266,
+        "support_knn_average": 0.3193946968433184
+      }
+    },
+    {
+      "final": {
+        "full_finetune": 0.23973206600496305,
+        "head_only": 0.24282631242111066,
+        "lora_mlp": 0.2432978747361342,
+        "probe_fresh": 0.25024140210779255,
+        "raid_lora_mlp": 0.30266704557108653,
+        "raid_lora_v7": 0.2464437897074042,
+        "raid_v7_head": 0.24774130817634893,
+        "scratch_lora": 0.24732091736300604,
+        "strap_style": 0.2472889409017332
+      },
+      "seconds_to_match_raid_v6": {
+        "full_finetune": 17.925502130016017,
+        "head_only": 0.04434095265200307,
+        "lora_mlp": 6.988323903096543,
+        "probe_fresh": 0.17813746099199937,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 27.87023931458298,
+        "strap_style": 0.08026115262830016
+      },
+      "seconds_to_match_raid_v7": {
+        "full_finetune": 21.531109878531517,
+        "head_only": 0.053259870587970444,
+        "lora_mlp": 8.393983539930296,
+        "probe_fresh": 0.20939127205037306,
+        "raid_lora_mlp": 6.22667999700085,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 32.98433652683777,
+        "strap_style": 0.11489607712532894
+      },
+      "seed": 44,
+      "task": "put_the_bowl_on_top_of_the_cabinet",
+      "zero": {
+        "raid_bank_mlp": 0.3668184623633064,
+        "raid_bank_v7": 0.32026168141638583,
+        "regent_blend": 0.3913119978464078,
+        "retrieve_and_play": 0.4057555168635144,
+        "source_frozen": 0.5982783809787785,
+        "support_knn_average": 0.3460833533013793
+      }
+    },
+    {
+      "final": {
+        "full_finetune": 0.2831621242305223,
+        "head_only": 0.2992085256214635,
+        "lora_mlp": 0.30260032920914814,
+        "probe_fresh": 0.32140226956685003,
+        "raid_lora_mlp": 0.37759541279108577,
+        "raid_lora_v7": 0.2784245531803633,
+        "raid_v7_head": 0.30940966924463126,
+        "scratch_lora": 0.2995785985729917,
+        "strap_style": 0.390530536415533
+      },
+      "seconds_to_match_raid_v6": {
+        "full_finetune": 15.62293664113397,
+        "head_only": 0.04302944531334646,
+        "lora_mlp": 6.529034157846299,
+        "probe_fresh": 0.07617709472589765,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 1.037630818053197,
+        "raid_v7_head": 0.015237289241827675,
+        "scratch_lora": 12.521819873955792,
+        "strap_style": 0.07371368360416253
+      },
+      "seconds_to_match_raid_v7": {
+        "full_finetune": 14.714247213881665,
+        "head_only": 0.04052668908288074,
+        "lora_mlp": 6.149280693713101,
+        "probe_fresh": 0.06837118577202383,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 11.264947017816032,
+        "strap_style": 0.06942621534684633
+      },
+      "seed": 42,
+      "task": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "zero": {
+        "raid_bank_mlp": 0.6701805704112537,
+        "raid_bank_v7": 0.7158929421689344,
+        "regent_blend": 0.40602722638054567,
+        "retrieve_and_play": 0.41768118038815877,
+        "source_frozen": 1.456105294819778,
+        "support_knn_average": 0.35331172225011614
+      }
+    },
+    {
+      "final": {
+        "full_finetune": 0.31702961529838564,
+        "head_only": 0.323020992464456,
+        "lora_mlp": 0.32777902077516374,
+        "probe_fresh": 0.34015808041718576,
+        "raid_lora_mlp": 0.38117670345339477,
+        "raid_lora_v7": 0.3323170632970072,
+        "raid_v7_head": 0.32260723057692364,
+        "scratch_lora": 0.3118556068725332,
+        "strap_style": 0.3794256259462016
+      },
+      "seconds_to_match_raid_v6": {
+        "full_finetune": 15.310101309238876,
+        "head_only": 0.03789600031684734,
+        "lora_mlp": 6.407341614601993,
+        "probe_fresh": 0.07843296371862073,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 13.587457347054215,
+        "strap_style": 0.06611840929894787
+      },
+      "seconds_to_match_raid_v7": {
+        "full_finetune": 15.427686546624013,
+        "head_only": 0.038187050656959376,
+        "lora_mlp": 6.456551529647166,
+        "probe_fresh": 0.07949908987845097,
+        "raid_lora_mlp": 0.15862449740611342,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 13.783468233360857,
+        "strap_style": 0.0666262144855963
+      },
+      "seed": 43,
+      "task": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "zero": {
+        "raid_bank_mlp": 0.7200006964611408,
+        "raid_bank_v7": 0.7138477136124788,
+        "regent_blend": 0.5602340258695229,
+        "retrieve_and_play": 0.5711962998855441,
+        "source_frozen": 1.5211454052860707,
+        "support_knn_average": 0.4557182465509875
+      }
+    },
+    {
+      "final": {
+        "full_finetune": 0.2968593027772309,
+        "head_only": 0.3201238580722931,
+        "lora_mlp": 0.31872423520249293,
+        "probe_fresh": 0.35768676356638335,
+        "raid_lora_mlp": 0.3664052862410068,
+        "raid_lora_v7": 0.31817115135647367,
+        "raid_v7_head": 0.33159518950903444,
+        "scratch_lora": 0.30770489717672783,
+        "strap_style": 0.4360088721789988
+      },
+      "seconds_to_match_raid_v6": {
+        "full_finetune": 14.600927873374134,
+        "head_only": 0.044171180866732544,
+        "lora_mlp": 6.131607420700441,
+        "probe_fresh": 0.08765577711232983,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 13.618230997382561,
+        "strap_style": 0.06827183198215121
+      },
+      "seconds_to_match_raid_v7": {
+        "full_finetune": 16.019625748891478,
+        "head_only": 0.04846306977942289,
+        "lora_mlp": 6.727384517655847,
+        "probe_fresh": 0.09933660425658314,
+        "raid_lora_mlp": 1.6713216826185473,
+        "raid_lora_v7": 0.0,
+        "raid_v7_head": 0.0,
+        "scratch_lora": 15.54612740025759,
+        "strap_style": 0.07490545854552744
+      },
+      "seed": 44,
+      "task": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "zero": {
+        "raid_bank_mlp": 0.6847586797531439,
+        "raid_bank_v7": 0.6170405004834262,
+        "regent_blend": 0.499013739509466,
+        "retrieve_and_play": 0.5150951911340462,
+        "source_frozen": 1.3816993521093415,
+        "support_knn_average": 0.40894030100428463
+      }
+    }
+  ],
+  "scientific_result": false,
+  "scope": "sealed final tasks, one frozen run; recorded transitions; registered seeds 42/43/44; five-shot",
+  "units": 6
+}

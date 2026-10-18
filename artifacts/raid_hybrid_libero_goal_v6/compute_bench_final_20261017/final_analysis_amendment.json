@@ -1,0 +1,253 @@
+{
+  "authority": "user request 17 Oct 2026: freeze the final method set and analysis plan before any final-task data is read; one offline run on the 2 final tasks x 3 seeds; nothing tuned after it",
+  "compute_measures": [
+    "adaptation GPU-seconds (evaluation time excluded)",
+    "FLOPs per update",
+    "trainable parameters",
+    "decision latency (ms, batch 1), FLOPs and peak GPU memory per decision",
+    "one-time shared costs: reference feature cache and source training (reported, not charged to methods)"
+  ],
+  "data": {
+    "package": "source tasks + final tasks only (no development data)",
+    "query": "the 20 registered query demos per task, real recorded future frames; no generator, no simulator",
+    "runs": 1,
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "support": "five-shot registered support sets",
+    "tasks": "the 2 registered final_test tasks of protocol v6 (LIBERO-Goal)"
+  },
+  "date": "2026-10-17",
+  "digest": "1b42ba599a9b983d6c67befdfb27841d3dbc49aa26977410ad6acb3fd26e69bf",
+  "final_data_read_before_freeze": false,
+  "frozen_at": "2026-10-17T20:15:19.891327+00:00",
+  "held_out_claims_eligible": false,
+  "held_out_claims_note": "The final tasks were never used for design or tuning, but the VPP2 generator saw LIBERO during its training. This offline benchmark does not use VPP2 (real recorded futures); the protocol flag stays false.",
+  "inference": {
+    "decision_rule": "better if the cluster interval lies entirely below 0; worse if entirely above 0; otherwise no clear difference",
+    "difference": "ours minus baseline per (task, seed, demo); negative = ours better",
+    "multiplicity": "all P1-P2 comparisons are reported; no correction; P1 and P2 at 25 updates are the headline comparisons",
+    "primary_interval": "95% percentile bootstrap over the 6 task x seed clusters (cluster value = mean paired difference over its 20 demos), 10,000 resamples, Python random.Random(0)",
+    "secondary_interval": "95% bootstrap over individual demo pairs (optimistic; reported for continuity)",
+    "settings_won": "number of the 6 clusters with mean difference < 0"
+  },
+  "methods": {
+    "baseline_definitions": {
+      "full_encoder_lr": 1e-05,
+      "regent_L": 10.0,
+      "regent_weight": "exp(-L * retrieval distance of the nearest support transition)",
+      "strap_batches": "half support rows, half retrieved rows",
+      "strap_neighbours_per_support_chunk": 4,
+      "strap_pool": "source_train demos of every source task (frozen reference features)",
+      "trained": {
+        "full_finetune": {
+          "encoder": "full",
+          "head_init": "source",
+          "retrieved_training_data": false
+        },
+        "head_only": {
+          "encoder": "frozen",
+          "head_init": "source",
+          "retrieved_training_data": false
+        },
+        "probe_fresh": {
+          "encoder": "frozen",
+          "head_init": "fresh",
+          "retrieved_training_data": false
+        },
+        "scratch_lora": {
+          "encoder": "lora",
+          "head_init": "fresh",
+          "retrieved_training_data": false
+        },
+        "strap_style": {
+          "encoder": "frozen",
+          "head_init": "source",
+          "retrieved_training_data": true
+        }
+      },
+      "zero_training": [
+        "retrieve_and_play",
+        "regent_blend"
+      ]
+    },
+    "exploratory_included": {
+      "raid_v7_head": "defined after development results; included as a frozen method, labelled exploratory"
+    },
+    "raid_v7_head": {
+      "candidate_jitter_training": 0.05,
+      "encoder": "frozen MAE (cached reference features)",
+      "evaluation": "retrieval over the full support bank; frozen features",
+      "head_init": "source-trained v7 head (attention_gate_v7)",
+      "retrieval": "k=16 over the five-shot support bank; each training row excludes its own demo",
+      "schedule": "identical to head_only: 500 updates, batch 64, head lr 3e-4, AdamW wd 1e-4, grad clip 1.0, same sample stream (v6adapt key)",
+      "selection_loss_weight": 0.1
+    },
+    "trained": [
+      "lora_mlp",
+      "raid_lora_mlp",
+      "raid_lora_v7",
+      "head_only",
+      "probe_fresh",
+      "scratch_lora",
+      "full_finetune",
+      "strap_style",
+      "raid_v7_head"
+    ],
+    "v7": {
+      "attention_dim": 128,
+      "candidate_jitter": 0.05,
+      "gate": "per action dimension, sigmoid, forced to 1 without valid candidates",
+      "head_kind": "attention_gate_v7",
+      "k": 16,
+      "keys": "frozen reference features of each candidate (normalized) and its similarity",
+      "retrieval": {
+        "cos_weight_current": 0.5,
+        "cos_weight_future": 0.5,
+        "distance": "0.5*(1-cos(current_ref,current_bank))+0.5*(1-cos(future_ref,future_bank))+0.1*mean((q_norm-q_bank_norm)^2)",
+        "duration_match": true,
+        "episodic_bank_sizes": [
+          2,
+          5,
+          10
+        ],
+        "geometry": "frozen_reference_mae",
+        "k": 16,
+        "pooling": "similarity_sorted_slots_plus_softmax_weighted_mean_chunk",
+        "q_weight": 0.1,
+        "retrieved_fields": [
+          "normalized_action_chunk",
+          "similarity",
+          "valid_flag"
+        ],
+        "similarity": "-distance",
+        "source_bank": "episodic_same_task_m_demos_excluding_query_demo",
+        "target_bank": "target_support_set_only_excluding_query_demo_during_adaptation",
+        "temperature": 0.1
+      },
+      "selection_temperature": 1.0,
+      "selection_weight": 0.1,
+      "values": "candidate normalized action chunks"
+    },
+    "zero_training": [
+      "source_frozen",
+      "raid_bank_mlp",
+      "raid_bank_v7",
+      "support_knn_average",
+      "retrieve_and_play",
+      "regent_blend"
+    ]
+  },
+  "metrics": {
+    "mse": "chunk MSE on normalized actions, macro over the 20 query demos per task",
+    "r2": "mean over 7 action dimensions of 1 - SSE/SST over all query chunk elements",
+    "unit_of_analysis": "per (task, seed, query demo) MSE; macro over demos within a task x seed setting"
+  },
+  "model_digest": "68c5cb35bb9f6d2f0fab5f80530b9dea5ec9a1dad8d95672ac13b45f865eb341",
+  "name": "raid_fewshot_idm_final_analysis_plan",
+  "parent_amendment_digests": {
+    "baselines": "b58299e723e771e57682a092f26b81a474410839f3d6619c9ca8e19b9fd8cf10",
+    "v7head_exploratory": "1f1e9ddd7cbaca7e7d4c5ab2fe1dcdfac448b1511031f139a6beb13ab769f0f2"
+  },
+  "parent_protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "primary_comparisons": {
+    "P1": {
+      "best_training_free_baseline": "support_knn_average",
+      "development_means": {
+        "regent_blend": 0.4517934828971007,
+        "retrieve_and_play": 0.4755951323388275,
+        "support_knn_average": 0.4264137318543109
+      },
+      "rule": "lowest mean development MSE among support_knn_average, retrieve_and_play, regent_blend",
+      "what": "RAID v7 (raid_bank_v7) vs the best training-free baseline, no training"
+    },
+    "P2": {
+      "baselines": [
+        "head_only",
+        "probe_fresh",
+        "scratch_lora",
+        "full_finetune",
+        "strap_style",
+        "lora_mlp",
+        "support_knn_average",
+        "retrieve_and_play",
+        "regent_blend"
+      ],
+      "best_raid_variant": {
+        "25": "raid_lora_v7",
+        "500": "raid_lora_v7"
+      },
+      "development_means": {
+        "25": {
+          "raid_lora_mlp": 0.34155727802199576,
+          "raid_lora_v7": 0.3083703841853973,
+          "raid_v7_head": 0.31220950407939957
+        },
+        "500": {
+          "raid_lora_mlp": 0.3423137618007825,
+          "raid_lora_v7": 0.2896822540006628,
+          "raid_v7_head": 0.29969706221649545
+        }
+      },
+      "rule": "lowest mean development MSE at that update count among raid_lora_v7, raid_lora_mlp, raid_v7_head",
+      "what": "best RAID variant vs each baseline, at 25 updates and at 500 updates"
+    },
+    "P3": {
+      "error_at_budget_rule": "MSE of the last checkpoint whose adaptation seconds <= budget (training-free methods at 0 s)",
+      "fixed_budgets_gpu_seconds": [
+        0.1,
+        0.5,
+        1,
+        10,
+        100
+      ],
+      "time_to_target": "GPU-seconds to reach LoRA's 500-update final-task mean MSE (linear between checkpoints)",
+      "what": "per-GPU-second curves: mean MSE vs adaptation GPU-seconds for every method (descriptive)"
+    }
+  },
+  "rules": [
+    "one run; resume of the same run after an interruption is allowed, a second run is not",
+    "nothing is tuned, re-selected or re-run after the final run; all results are reported, including negative ones",
+    "closed-loop task success is separate secondary evidence (optional step 4, needs user approval and funds)"
+  ],
+  "scientific_result": false,
+  "secondary": [
+    "R2 for every method and checkpoint",
+    "development vs final contrast (descriptive)",
+    "all other pairs (descriptive)"
+  ],
+  "settings": {
+    "checkpoints_updates": [
+      0,
+      25,
+      50,
+      100,
+      200,
+      350,
+      500
+    ],
+    "code": "raid_experiments/hybrid_compute_bench.py suite final, stage final",
+    "cpu_threads": 16,
+    "gpu_class": "80 GB (A100)",
+    "training": {
+      "adaptation_conditions": [
+        "lora_mlp",
+        "raid_lora_mlp"
+      ],
+      "batch_size": 64,
+      "grad_clip": 1.0,
+      "head_lr": 0.0003,
+      "lora_lr": 0.0001,
+      "microbatch_size": 8,
+      "source_updates": 2000,
+      "target_updates": 500,
+      "target_updates_fixed": true,
+      "validation_every": 100,
+      "weight_decay": 0.0001
+    }
+  },
+  "stage": "narrow_final_confirmation_after_freeze",
+  "status": "frozen"
+}

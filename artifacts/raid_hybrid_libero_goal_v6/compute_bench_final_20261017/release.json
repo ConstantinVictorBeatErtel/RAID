@@ -1,0 +1,48 @@
+{
+  "archive": "/Users/ConstiX/Downloads/Documents/ChatGPT/RAID/raid-main/artifacts/raid_hybrid_libero_goal_v6/compute_bench_final_20261017/bench_package.tar",
+  "archive_sha256": "76a53c0cabd278af03268e09fd3848776283b22dc5d5b76e5c60f10104909f43",
+  "bindings": {
+    "code": "aa141ccece0949a700c7e717c7731f6223a159609691f4bbfb8205a537133cb6",
+    "protocol": "00b5978b86f99a50415f682f52b1299d5fb1f55b01ad9ba344d67881ba8ea3d8",
+    "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+  },
+  "identity_sha256": "f74858cebcf37afc15a89eae00dbc289b38e8590c23b4843d41f135bfeeec8b6",
+  "root": "/workspace/results/v6-source-20261017T201548-575c48b5",
+  "session_id": "v6-source-20261017T201548-575c48b5",
+  "stages": [
+    {
+      "command": "python3.12 - <<'PY'\nimport gzip,hashlib,pathlib,os\ndestination=pathlib.Path('/workspace/results/v6-source-20261017T201548-575c48b5/source_panel_package.tar');temporary=destination.with_suffix('.verified.tmp');digest=hashlib.sha256()\nwith gzip.open('/workspace/results/v6-source-20261017T201548-575c48b5/transport/source_panel_package.tar.gz','rb') as source,temporary.open('wb') as output:\n for block in iter(lambda:source.read(1024*1024),b''):output.write(block);digest.update(block)\n output.flush();os.fsync(output.fileno())\nif digest.hexdigest()!='76a53c0cabd278af03268e09fd3848776283b22dc5d5b76e5c60f10104909f43':\n temporary.unlink();raise RuntimeError('remote archive identity mismatch')\ntemporary.replace(destination)\nprint('verified_archive',digest.hexdigest())\n\nPY",
+      "name": "archive_verify",
+      "resume_safe": true
+    },
+    {
+      "command": "python3.12 - <<'PY'\n\nimport hashlib,json,pathlib,shutil,tarfile\nr=pathlib.Path('/workspace/results/v6-source-20261017T201548-575c48b5')\ndef sha(p):\n h=hashlib.sha256()\n with p.open('rb') as f:\n  for b in iter(lambda:f.read(1048576),b''):h.update(b)\n return h.hexdigest()\narchive=r/'source_panel_package.tar'\nassert sha(archive)=='76a53c0cabd278af03268e09fd3848776283b22dc5d5b76e5c60f10104909f43','archive changed'\nassert shutil.disk_usage(r).free>=26295209496,'insufficient volume space for package, weights and cache'\nwith tarfile.open(archive,'r:') as t:\n members=t.getmembers()\n assert all(m.isfile() and not pathlib.PurePosixPath(m.name).is_absolute() and '..' not in pathlib.PurePosixPath(m.name).parts for m in members),'unsafe archive'\n rows=json.load(t.extractfile('package_manifest.json'))['files'];expected={x['path']:x for x in rows}\n assert set(expected)|{'package_manifest.json'}=={m.name for m in members},'unexpected member'\n t.extractall(r,filter='data')\nfor x in rows:\n p=r/x['path'];assert p.stat().st_size==x['size_bytes'] and sha(p)==x['sha256'],'corrupt file: '+x['path']\nprint('PACKAGE_VERIFIED',flush=True)\narchive.unlink()\nPY\n",
+      "name": "package_preflight"
+    },
+    {
+      "command": "set -eu\npython3 --version | grep -q 'Python 3.12'\nif command -v apt-get >/dev/null 2>&1; then\n  apt-get update -qq\n  DEBIAN_FRONTEND=noninteractive apt-get install -y -qq libegl1 libgl1 libglvnd0 libglib2.0-0 rsync\nfi\n\npython3 -c 'import shutil; assert shutil.disk_usage(\"/root\").free >= 45*1024**3, \"insufficient local dependency/model-cache space\"'\ntest ! -L /root/raid-runtime-bb74c61dc783a8737fa6597c482dba15\npython3 -m venv /root/raid-runtime-bb74c61dc783a8737fa6597c482dba15\nPY=/root/raid-runtime-bb74c61dc783a8737fa6597c482dba15/bin/python\n\"$PY\" -c 'import sys; assert sys.prefix.startswith(\"/root/raid-runtime-\")'\n# Compatibility for legacy stage renderers; installation always uses local PY.\nif test -e /workspace/results/v6-source-20261017T201548-575c48b5/venv || test -L /workspace/results/v6-source-20261017T201548-575c48b5/venv; then\n  test -L /workspace/results/v6-source-20261017T201548-575c48b5/venv && test \"$(readlink /workspace/results/v6-source-20261017T201548-575c48b5/venv)\" = /root/raid-runtime-bb74c61dc783a8737fa6597c482dba15\nelse\n  ln -s /root/raid-runtime-bb74c61dc783a8737fa6597c482dba15 /workspace/results/v6-source-20261017T201548-575c48b5/venv\nfi\n\"$PY\" -m pip install --no-cache-dir --force-reinstall --require-hashes -r /workspace/results/v6-source-20261017T201548-575c48b5/repo/requirements-wm-cosmos.lock \\\n  --extra-index-url https://download.pytorch.org/whl/cu128\n\"$PY\" -m pip install --no-cache-dir --force-reinstall --require-hashes -r /workspace/results/v6-source-20261017T201548-575c48b5/repo/requirements-wm-sim.lock\n\"$PY\" -m pip check\n\"$PY\" -c 'import shutil; assert shutil.disk_usage(\"/root\").free >= 30*1024**3, \"insufficient local model-cache space\"'\ntest \"$(\"$PY\" -c 'import torch; print(torch.__version__)')\" = \"2.9.1+cu128\"\nexport PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/inputs/libero_repo:${PYTHONPATH:-}\nexport LIBERO_CONFIG_PATH=/workspace/results/v6-source-20261017T201548-575c48b5/libero-config\nexport MUJOCO_GL=egl\n\n\"$PY\" - <<'PY'\nimport mujoco\nctx = mujoco.GLContext(64, 64)\nctx.free()\nprint('egl_ok')\nPY\n\n",
+      "name": "bootstrap",
+      "resume_safe": true
+    },
+    {
+      "command": "export PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/inputs/libero_repo:${PYTHONPATH:-}\nexport LIBERO_CONFIG_PATH=/workspace/results/v6-source-20261017T201548-575c48b5/libero-config\nexport MUJOCO_GL=egl\nexport PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/repo:$PYTHONPATH\nexport HF_HOME=/root/raid-model-cache\nexport OMP_NUM_THREADS=16\nexport MKL_NUM_THREADS=16\ncd /workspace/results/v6-source-20261017T201548-575c48b5/repo\n/root/raid-runtime-bb74c61dc783a8737fa6597c482dba15/bin/python -m raid_experiments.hybrid_vpp2_panel download-mae /workspace/results/v6-source-20261017T201548-575c48b5",
+      "name": "mae_download",
+      "resume_safe": true
+    },
+    {
+      "command": "export PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/inputs/libero_repo:${PYTHONPATH:-}\nexport LIBERO_CONFIG_PATH=/workspace/results/v6-source-20261017T201548-575c48b5/libero-config\nexport MUJOCO_GL=egl\nexport PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/repo:$PYTHONPATH\nexport HF_HOME=/root/raid-model-cache\nexport OMP_NUM_THREADS=16\nexport MKL_NUM_THREADS=16\ncd /workspace/results/v6-source-20261017T201548-575c48b5/repo\n/root/raid-runtime-bb74c61dc783a8737fa6597c482dba15/bin/python -m raid_experiments.hybrid_cli --protocol /workspace/results/v6-source-20261017T201548-575c48b5/repo/protocol.json resolve-paths --data-root /workspace/results/v6-source-20261017T201548-575c48b5/inputs/dataset --stage final --freeze-file /workspace/results/v6-source-20261017T201548-575c48b5/repo/final_analysis_amendment.json --output /workspace/results/v6-source-20261017T201548-575c48b5/collection/protocol_bench_pod.json",
+      "name": "resolve_paths",
+      "resume_safe": true
+    },
+    {
+      "command": "export PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/inputs/libero_repo:${PYTHONPATH:-}\nexport LIBERO_CONFIG_PATH=/workspace/results/v6-source-20261017T201548-575c48b5/libero-config\nexport MUJOCO_GL=egl\nexport PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/repo:$PYTHONPATH\nexport HF_HOME=/root/raid-model-cache\nexport OMP_NUM_THREADS=16\nexport MKL_NUM_THREADS=16\ncd /workspace/results/v6-source-20261017T201548-575c48b5/repo\n/root/raid-runtime-bb74c61dc783a8737fa6597c482dba15/bin/python -m raid_experiments.hybrid_compute_bench run /workspace/results/v6-source-20261017T201548-575c48b5 --suite final --stage final --freeze-file /workspace/results/v6-source-20261017T201548-575c48b5/repo/final_analysis_amendment.json",
+      "name": "bench_run",
+      "resume_safe": true
+    },
+    {
+      "command": "export PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/inputs/libero_repo:${PYTHONPATH:-}\nexport LIBERO_CONFIG_PATH=/workspace/results/v6-source-20261017T201548-575c48b5/libero-config\nexport MUJOCO_GL=egl\nexport PYTHONPATH=/workspace/results/v6-source-20261017T201548-575c48b5/repo:$PYTHONPATH\nexport HF_HOME=/root/raid-model-cache\nexport OMP_NUM_THREADS=16\nexport MKL_NUM_THREADS=16\ncd /workspace/results/v6-source-20261017T201548-575c48b5/repo\n/root/raid-runtime-bb74c61dc783a8737fa6597c482dba15/bin/python -m raid_experiments.hybrid_compute_bench report /workspace/results/v6-source-20261017T201548-575c48b5",
+      "name": "bench_report",
+      "resume_safe": true
+    }
+  ]
+}

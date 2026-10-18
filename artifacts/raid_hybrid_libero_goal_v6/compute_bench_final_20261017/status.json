@@ -1,0 +1,225 @@
+{
+  "alarmAt": null,
+  "closed": true,
+  "computeEndedAt": 1792281568237,
+  "deployment": "0c74b367-796f-4895-935d-60d00690bfc1",
+  "events": [
+    {
+      "at": 1792269716539,
+      "detail": "{\"collectBy\":1792287115502,\"deadlineAt\":1792287715502,\"deleteStorageAt\":1792289515502}",
+      "seq": 1,
+      "type": "registered_with_immutable_deadlines"
+    },
+    {
+      "at": 1792269716754,
+      "detail": "{}",
+      "seq": 2,
+      "type": "paid_creation_intent"
+    },
+    {
+      "at": 1792269717039,
+      "detail": "{\"region\":\"EUR-IS-1\",\"storageTier\":\"STANDARD\",\"checkedAt\":1792269717039}",
+      "seq": 3,
+      "type": "live_storage_placement_verified"
+    },
+    {
+      "at": 1792269717094,
+      "detail": "{}",
+      "seq": 4,
+      "type": "volume_creation_request"
+    },
+    {
+      "at": 1792269718035,
+      "detail": "{\"id\":\"dx6o2jhm7e\"}",
+      "seq": 5,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792269718092,
+      "detail": "{}",
+      "seq": 6,
+      "type": "pod_creation_request"
+    },
+    {
+      "at": 1792269718114,
+      "detail": "{\"id\":\"dx6o2jhm7e\"}",
+      "seq": 7,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792269719447,
+      "detail": "{\"id\":\"6uupv29b44g4n1\"}",
+      "seq": 8,
+      "type": "pod_ownership_recorded"
+    },
+    {
+      "at": 1792269719447,
+      "detail": "{\"hourlyUsd\":\"1.79\",\"region\":\"EUR-IS-1\",\"volumeId\":\"dx6o2jhm7e\"}",
+      "seq": 9,
+      "type": "provider_allocation_verified"
+    },
+    {
+      "at": 1792281566468,
+      "detail": "{}",
+      "seq": 10,
+      "type": "operator_termination_requested"
+    },
+    {
+      "at": 1792281568237,
+      "detail": "{\"method\":\"GET\",\"path\":\"/pods/6uupv29b44g4n1\",\"status\":404,\"requestId\":\"req_77ee5574-dfcd-4298-b52f-6a01720998c7\",\"bodySha256\":\"237a2f835ded1509dea751107b60d362b3b778fe252e80f7afca6478685e1d93\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"pod not found\\\",\\\"status\\\":404}\\n\"}",
+      "seq": 11,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792281568237,
+      "detail": "{\"id\":\"6uupv29b44g4n1\"}",
+      "seq": 12,
+      "type": "pod_deletion_verified"
+    },
+    {
+      "at": 1792281568508,
+      "detail": "{\"sha256\":\"96a53489d2e0e1931e8e4fa672e6f01bc96f62d54526415d0eccb9c1b6e362d0\"}",
+      "seq": 13,
+      "type": "post_termination_s3_recovery_verified"
+    },
+    {
+      "at": 1792281688189,
+      "detail": "{}",
+      "seq": 14,
+      "type": "local_collection_receipt"
+    },
+    {
+      "at": 1792281689693,
+      "detail": "{\"method\":\"GET\",\"path\":\"/networkvolumes/dx6o2jhm7e\",\"status\":404,\"requestId\":\"req_a312fb31-8d1d-4041-9030-967c8f532a61\",\"bodySha256\":\"2dd26ac4ea80d945e072a12a8a46fbbc046c6839856926007e77b8dbd46bb042\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"network volume not found\\\",\\\"status\\\":404}\\n\"}",
+      "seq": 15,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792281689693,
+      "detail": "{\"id\":\"dx6o2jhm7e\"}",
+      "seq": 16,
+      "type": "volume_deletion_verified"
+    },
+    {
+      "at": 1792281690013,
+      "detail": "{}",
+      "seq": 17,
+      "type": "session_collected_and_cleaned"
+    }
+  ],
+  "eventsTotal": 17,
+  "fingerprint": "28669d042736d285c3e6fbdb0abc46bf8be53e3c352ee1980f1f450e02d888e6",
+  "jobs": [],
+  "launchAt": 1792269716754,
+  "podDeleted": true,
+  "podId": "6uupv29b44g4n1",
+  "podRequested": true,
+  "receipt": {
+    "at": 1792281688189,
+    "sha256": "96a53489d2e0e1931e8e4fa672e6f01bc96f62d54526415d0eccb9c1b6e362d0"
+  },
+  "recovered": {
+    "at": 1792281568508,
+    "body": "{\n  \"bench/bench_design.json\": \"468fa712768e54ab1d0aaac3218f31b694fdee15811481cad3a9987ceba97533\",\n  \"bench/bench_summary.json\": \"d75387a7b255368ee1a16a9c0296e1c61c28053fdb939a638b0415aaf9d2805a\",\n  \"bench/final_access.json\": \"4fd6e962f2078020d3dfceb338fb42faf1075b16523d51c7fed64edfd324e04a\",\n  \"bench/frame_cache_cost.json\": \"37ebbfeadd9d801ce1aee7fcac17684932ab995e8f680b0f9e2a179494a62ccc\",\n  \"bench/source_cost_s42.json\": \"8364694b80c0846c089c629bde8cebb7b8b099ae5de282460d1708bff9e36864\",\n  \"bench/source_cost_s43.json\": \"85bf8c94da9a94138ab31f61b930f66e8fb2bc17fe78cec9b59d7301305d58b7\",\n  \"bench/source_cost_s44.json\": \"849d4bfeb710a4b57cba3049da5e8dd914b442f18488c4918aa6a5a00c236240\",\n  \"bench/unit_put_the_bowl_on_top_of_the_cabinet_s42.json\": \"348cd4aa41b89c1057211c5a97ef6a6d9f70728f84ca39d7f820222267bb1ed1\",\n  \"bench/unit_put_the_bowl_on_top_of_the_cabinet_s43.json\": \"a295298852be9c02f93c421a3b282bc0e19d3f61b8f19d48c0258849bd9cf525\",\n  \"bench/unit_put_the_bowl_on_top_of_the_cabinet_s44.json\": \"635d4e50484cbb63ceef80423cb53236ac1f04e73a73214554706c952612a5ee\",\n  \"bench/unit_put_the_wine_bottle_on_top_of_the_cabinet_s42.json\": \"056984743c55c11d964d9083bf36aa21c9e69f1a39257897356b14efbbec618b\",\n  \"bench/unit_put_the_wine_bottle_on_top_of_the_cabinet_s43.json\": \"d31ecec61f1acc033bfe5fe0e1dfe8d1b5f23e1ef974479ed9562317418e500b\",\n  \"bench/unit_put_the_wine_bottle_on_top_of_the_cabinet_s44.json\": \"144e74c2f3a1388d5e3f1d186c0d9bcca2288985f9dd7e6ba63cb9bd5cbab0ce\",\n  \"logs/archive_verify.exit.json\": \"bd930f9fbd16af0812a35177f0cf3721bfcf752a90a2c489440ebc6e32661a2d\",\n  \"logs/archive_verify.log\": \"28d08b3fe5003df39052c098003304bdae20781a522ab14a43c0319977027ac1\",\n  \"logs/bench_report.exit.json\": \"355ee9d8d764a07d50c2a602b761b17bdcd89d69a2a1d1ba17e7a0f630ef5bcd\",\n  \"logs/bench_report.log\": \"f9adda33dff9dc422fc001f2e37de0e7b3f70e6588fd56002658509129847fd1\",\n  \"logs/bench_run.exit.json\": \"3e5d3afea76cc9f7026ac6542c2601583f9f4d1f794541db914e9e733430aa68\",\n  \"logs/bench_run.log\": \"f9adda33dff9dc422fc001f2e37de0e7b3f70e6588fd56002658509129847fd1\",\n  \"logs/bootstrap.exit.json\": \"5c6dc50e94daa54d1d15f62589b61e184bc9c5d4d837449c2ecbe4a45bb66a5a\",\n  \"logs/bootstrap.log\": \"efac0499e10e9324e29fe5bce9d74ab5a05cf5120df87aa68e2ee4b92fd2ae8f\",\n  \"logs/mae_download.exit.json\": \"b37785d984895c936ec8031d1e9a1783149e9af76501d8385ccccfae949f1828\",\n  \"logs/mae_download.log\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"logs/package_preflight.exit.json\": \"bb0f70634e3deec23a2422e27318be79ee2d9b3e0341de898196c1957b703455\",\n  \"logs/package_preflight.log\": \"b75b8c2e060bbb2afefb3d96ffcc8259f411b91d760938c4666cdb899c9dbacf\",\n  \"logs/resolve_paths.exit.json\": \"923696fdad1ff0a7d121ae98a74c4cfc7ee96cf63581f15a515f9b2f14ff537c\",\n  \"logs/resolve_paths.log\": \"de6a9f7d779ca40b3742f5a76f1e0143391e2a21d2eff997d287676e9d4b8c43\",\n  \"mae_download.json\": \"cc84655ae1228d41ed255fa7b8f333e15d47d22026bcef40c85763771ed49c0b\",\n  \"protocol_bench_pod.json\": \"33ae1921e6d3d8c913c43d1c4406457c8a92840119ffd45be65192b59cfa8bec\",\n  \"release_identity.json\": \"f74858cebcf37afc15a89eae00dbc289b38e8590c23b4843d41f135bfeeec8b6\"\n}\n",
+    "sha256": "96a53489d2e0e1931e8e4fa672e6f01bc96f62d54526415d0eccb9c1b6e362d0"
+  },
+  "registeredAt": 1792269716080,
+  "request": {
+    "acceptanceSessionId": "v6-accept-20261017T201640-365b3d67",
+    "bindings": {
+      "code": "aa141ccece0949a700c7e717c7731f6223a159609691f4bbfb8205a537133cb6",
+      "deployment": "0c74b367-796f-4895-935d-60d00690bfc1",
+      "protocol": "00b5978b86f99a50415f682f52b1299d5fb1f55b01ad9ba344d67881ba8ea3d8",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "capUsd": "10.96",
+    "collectBy": 1792287115502,
+    "deadlineAt": 1792287715502,
+    "deleteStorageAt": 1792289515502,
+    "maxHourlyUsd": "1.79",
+    "packageSha256": "76a53c0cabd278af03268e09fd3848776283b22dc5d5b76e5c60f10104909f43",
+    "podSpec": {
+      "cloudType": "SECURE",
+      "computeType": "GPU",
+      "containerDiskInGb": 60,
+      "dataCenterIds": [
+        "EUR-IS-1"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "PYTHONHASHSEED": "42",
+        "RAID_CONTAINER_IMAGE_DIGEST": "sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f"
+      },
+      "gpuCount": 1,
+      "gpuTypeIds": [
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+      "ports": [
+        "22/tcp"
+      ],
+      "supportPublicIp": true,
+      "volumeInGb": 0,
+      "volumeMountPath": "/workspace"
+    },
+    "quoteStartAt": 1792269715502,
+    "sentinel": {
+      "key": "results/v6-source-20261017T201548-575c48b5/collection/outputs_sha256.json",
+      "sha256": "f74858cebcf37afc15a89eae00dbc289b38e8590c23b4843d41f135bfeeec8b6"
+    },
+    "sessionId": "v6-source-20261017T201548-575c48b5",
+    "spendAdmission": {
+      "all_liabilities_known": true,
+      "billing_digest": "0c4a4d5ddbffc59ed75cf7026740fb27bca08733fef935f7e024f9c351db0fca",
+      "billing_refreshed_at": "2026-10-17T20:41:50.799848+00:00",
+      "container_disk_gb": 60,
+      "container_disk_gb_month_usd": "0.10",
+      "currency": "USD",
+      "cutoff_service_cost_reserve_usd": "0.10",
+      "data_center_id": "EUR-IS-1",
+      "gpu": "NVIDIA A100-SXM4-80GB",
+      "gpu_hourly_usd": "1.79",
+      "gross_prepaid_balance_usd": "12.902995174",
+      "inventory_refreshed_at": "2026-10-17T20:41:54.608293+00:00",
+      "network_volume_gb_month_usd": "0.07",
+      "network_volume_size_gb": 80,
+      "placement_evidence": {
+        "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+        "live_gpu_stock_checked": true,
+        "refreshed_at": "2026-10-17T20:41:54.608293+00:00",
+        "sha256": "b63bdcde12ba2c65519db9a5f4dde4fc264e0998fc64e51b16b6f369a4fa172a",
+        "storage_tier": "STANDARD"
+      },
+      "prepaid_available_usd": "11.0940213660626139814",
+      "project_ceiling_usd": "250",
+      "project_reserve_usd": "25",
+      "projected_source_cost_usd": "9.138333333333333333333333334",
+      "provider_inventory_checked": true,
+      "quote_provenance": {
+        "container_disk_billing_unit": "second",
+        "gpu": "runpodctl gpu list",
+        "monthly_hour_denominator": 720,
+        "network_volume_billing_unit": "hour, conservatively rounded up",
+        "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+        "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+      },
+      "refreshed_at": "2026-10-17T20:41:54.608293+00:00",
+      "remaining_project_allowance_usd": "101.9029951740000000000",
+      "source_cap_usd": "10.96",
+      "status": "passed",
+      "total_study_spend_usd": "123.0970048260000000000",
+      "transfer_reserve_usd": "0"
+    },
+    "stage": "source_panel",
+    "volumeSpec": {
+      "dataCenterId": "EUR-IS-1",
+      "size": 80
+    }
+  },
+  "revision": 13,
+  "terminating": true,
+  "terminationReason": "operator_request",
+  "volumeDeleted": true,
+  "volumeId": "dx6o2jhm7e",
+  "volumeRequested": true
+}

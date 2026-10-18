@@ -1,0 +1,107 @@
+{
+  "adapted": [
+    "lora_mlp",
+    "raid_lora_mlp",
+    "raid_lora_v7"
+  ],
+  "baselines": {
+    "full_encoder_lr": 1e-05,
+    "regent_L": 10.0,
+    "regent_weight": "exp(-L * retrieval distance of the nearest support transition)",
+    "strap_batches": "half support rows, half retrieved rows",
+    "strap_neighbours_per_support_chunk": 4,
+    "strap_pool": "source_train demos of every source task (frozen reference features)",
+    "trained": {
+      "full_finetune": {
+        "encoder": "full",
+        "head_init": "source",
+        "retrieved_training_data": false
+      },
+      "head_only": {
+        "encoder": "frozen",
+        "head_init": "source",
+        "retrieved_training_data": false
+      },
+      "probe_fresh": {
+        "encoder": "frozen",
+        "head_init": "fresh",
+        "retrieved_training_data": false
+      },
+      "scratch_lora": {
+        "encoder": "lora",
+        "head_init": "fresh",
+        "retrieved_training_data": false
+      },
+      "strap_style": {
+        "encoder": "frozen",
+        "head_init": "source",
+        "retrieved_training_data": true
+      }
+    },
+    "zero_training": [
+      "retrieve_and_play",
+      "regent_blend"
+    ]
+  },
+  "budget": 5,
+  "checkpoints": [
+    25,
+    50,
+    100,
+    200,
+    350,
+    500
+  ],
+  "cpu_threads": 16,
+  "extra_methods": [
+    "raid_v7_head"
+  ],
+  "final_freeze_sha256": "acd29d3b9824ec284cbdb98cfcbf0c61ea4984de2a90b2fb32ce063717e9a903",
+  "protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "final",
+  "suite": "final",
+  "tasks": [
+    "put_the_bowl_on_top_of_the_cabinet",
+    "put_the_wine_bottle_on_top_of_the_cabinet"
+  ],
+  "v7": {
+    "attention_dim": 128,
+    "candidate_jitter": 0.05,
+    "gate": "per action dimension, sigmoid, forced to 1 without valid candidates",
+    "head_kind": "attention_gate_v7",
+    "k": 16,
+    "keys": "frozen reference features of each candidate (normalized) and its similarity",
+    "retrieval": {
+      "cos_weight_current": 0.5,
+      "cos_weight_future": 0.5,
+      "distance": "0.5*(1-cos(current_ref,current_bank))+0.5*(1-cos(future_ref,future_bank))+0.1*mean((q_norm-q_bank_norm)^2)",
+      "duration_match": true,
+      "episodic_bank_sizes": [
+        2,
+        5,
+        10
+      ],
+      "geometry": "frozen_reference_mae",
+      "k": 16,
+      "pooling": "similarity_sorted_slots_plus_softmax_weighted_mean_chunk",
+      "q_weight": 0.1,
+      "retrieved_fields": [
+        "normalized_action_chunk",
+        "similarity",
+        "valid_flag"
+      ],
+      "similarity": "-distance",
+      "source_bank": "episodic_same_task_m_demos_excluding_query_demo",
+      "target_bank": "target_support_set_only_excluding_query_demo_during_adaptation",
+      "temperature": 0.1
+    },
+    "selection_temperature": 1.0,
+    "selection_weight": 0.1,
+    "values": "candidate normalized action chunks"
+  }
+}

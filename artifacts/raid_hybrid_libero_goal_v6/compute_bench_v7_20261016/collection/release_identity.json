@@ -1,0 +1,24 @@
+{
+  "amendment_digest": "b3997faaa6e3d96a21024eeafe938f7357d93fbeb438c9dc7ed4b34121ab4de6",
+  "bindings": {
+    "code": "acf8eaf08c25c5571bfa31ddb9ac042b8f433bcde9150bf709f61bc37b147ef5",
+    "protocol": "c8e91545cc15bf9168349d206e1ff35472084b11f1fbabc76bf2c4b0fe753125",
+    "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+  },
+  "expected_units": 6,
+  "held_out_claims_eligible": false,
+  "package_sha256": "36194612be67525a80fbf6893390baffe385cdf4b4b7c468145a13c5b68d39e1",
+  "protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "scientific_result": false,
+  "session_id": "v6-source-20261016T144350-1a2ef61d",
+  "stage": "v7_compute_benchmark",
+  "stage_commands": {
+    "archive_verify": "6b93beecebb4a0a05b7e9d56d98220b2b4e440dfc730f47eccb4cbc619dc0a1d",
+    "bench_report": "6c59e2f2a1dc39ea5ea618599c73f5ccb009d06f76d731922bc7490691442991",
+    "bench_run": "b14addb4642056384005af6f56347d894752b685e477a30469013b77467ec2e1",
+    "bootstrap": "979311437c0fbd8749519c26c9304fa91c76759e0faab67e3ab2baefcedb5052",
+    "mae_download": "1c0fbfb5f8bc21411931ea217a2e1b8d334d21c220ff94bdaef920665ccb6f78",
+    "package_preflight": "12c5878e3a0a00ead37c7ac609763905175b06ab551137ec388b49ed0cc1a198",
+    "resolve_paths": "f1bb5ecce7a214b3dfe95ac3d7c1fa899e07c15cd11b5380b430f8d23b5fa30e"
+  }
+}

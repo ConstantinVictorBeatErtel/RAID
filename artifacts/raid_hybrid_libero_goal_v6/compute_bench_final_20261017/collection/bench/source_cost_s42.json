@@ -1,0 +1,14 @@
+{
+  "attention_gate_v7": {
+    "best_step": 2000,
+    "best_validation_mean": 0.25431324789921445,
+    "forward_passes": 4000,
+    "training_seconds": 297.01358638331294
+  },
+  "mlp_v6": {
+    "best_step": 1900,
+    "best_validation_mean": 0.27195487171411514,
+    "forward_passes": 4000,
+    "training_seconds": 299.1396124102175
+  }
+}

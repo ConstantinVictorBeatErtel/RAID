@@ -1,0 +1,161 @@
+{
+  "final_freeze_sha256": null,
+  "held_out_claims_eligible": false,
+  "mean_final_mse": {
+    "head_only": 0.28814838038021434,
+    "raid_v7_head": 0.29969706221649545
+  },
+  "mean_final_r2": {
+    "head_only": 0.4749681010580545,
+    "raid_v7_head": 0.44836123989706034
+  },
+  "mean_zero_adaptation_mse": {
+    "raid_bank_mlp": 0.4236058841749706,
+    "raid_bank_v7": 0.4093394338079206,
+    "source_frozen": 0.7558767414179989,
+    "support_knn_average": 0.4264137318543109
+  },
+  "mean_zero_adaptation_r2": {
+    "raid_bank_mlp": 0.3283851434728928,
+    "raid_bank_v7": 0.37263117042692795,
+    "source_frozen": -0.0194664019747027,
+    "support_knn_average": 0.2889082921287991
+  },
+  "rows": [
+    {
+      "final": {
+        "head_only": 0.35800382076644616,
+        "raid_v7_head": 0.3844674973255168
+      },
+      "seconds_to_match_raid_v6": {
+        "head_only": 0.08120049410490886,
+        "raid_v7_head": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "head_only": 0.08326209895284292,
+        "raid_v7_head": 0.0
+      },
+      "seed": 42,
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "zero": {
+        "raid_bank_mlp": 0.4756464717619946,
+        "raid_bank_v7": 0.46703856959161627,
+        "source_frozen": 0.8146861815986645,
+        "support_knn_average": 0.5406072807127044
+      }
+    },
+    {
+      "final": {
+        "head_only": 0.31891742333529105,
+        "raid_v7_head": 0.33807337139984517
+      },
+      "seconds_to_match_raid_v6": {
+        "head_only": 0.04390495195624891,
+        "raid_v7_head": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "head_only": 0.04727822329802404,
+        "raid_v7_head": 0.0
+      },
+      "seed": 43,
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "zero": {
+        "raid_bank_mlp": 0.4849378071777098,
+        "raid_bank_v7": 0.44847230397228366,
+        "source_frozen": 0.9595560646737598,
+        "support_knn_average": 0.44775295725404207
+      }
+    },
+    {
+      "final": {
+        "head_only": 0.33253054462592463,
+        "raid_v7_head": 0.3363847448736285
+      },
+      "seconds_to_match_raid_v6": {
+        "head_only": 0.038807787370777995,
+        "raid_v7_head": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "head_only": 0.04372564335187715,
+        "raid_v7_head": 0.0
+      },
+      "seed": 44,
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "zero": {
+        "raid_bank_mlp": 0.5110873720031075,
+        "raid_bank_v7": 0.4654458518313131,
+        "source_frozen": 0.8712537568898393,
+        "support_knn_average": 0.4723892185393449
+      }
+    },
+    {
+      "final": {
+        "head_only": 0.24603679880012921,
+        "raid_v7_head": 0.2473238635811144
+      },
+      "seconds_to_match_raid_v6": {
+        "head_only": 0.046423827776128475,
+        "raid_v7_head": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "head_only": 0.04683501025558987,
+        "raid_v7_head": 0.0
+      },
+      "seed": 42,
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "zero": {
+        "raid_bank_mlp": 0.3568887065015921,
+        "raid_bank_v7": 0.35504561800520784,
+        "source_frozen": 0.5649793407241049,
+        "support_knn_average": 0.40958145163820364
+      }
+    },
+    {
+      "final": {
+        "head_only": 0.2474075183589878,
+        "raid_v7_head": 0.25330848825642754
+      },
+      "seconds_to_match_raid_v6": {
+        "head_only": 0.045754439036030936,
+        "raid_v7_head": 0.017588312145823706
+      },
+      "seconds_to_match_raid_v7": {
+        "head_only": 0.043981721019331003,
+        "raid_v7_head": 0.0
+      },
+      "seed": 43,
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "zero": {
+        "raid_bank_mlp": 0.3629463941473182,
+        "raid_bank_v7": 0.37583088639969586,
+        "source_frozen": 0.6954994058040019,
+        "support_knn_average": 0.35962993152868994
+      }
+    },
+    {
+      "final": {
+        "head_only": 0.22599417639450733,
+        "raid_v7_head": 0.2386244078624402
+      },
+      "seconds_to_match_raid_v6": {
+        "head_only": 0.04440194516766688,
+        "raid_v7_head": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "head_only": 0.04534438758792219,
+        "raid_v7_head": 0.0
+      },
+      "seed": 44,
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "zero": {
+        "raid_bank_mlp": 0.35012855345810123,
+        "raid_bank_v7": 0.3442033730474067,
+        "source_frozen": 0.6292856988176229,
+        "support_knn_average": 0.3285215514528807
+      }
+    }
+  ],
+  "scientific_result": false,
+  "scope": "development tasks only; recorded transitions; registered seeds 42/43/44; five-shot",
+  "units": 6
+}

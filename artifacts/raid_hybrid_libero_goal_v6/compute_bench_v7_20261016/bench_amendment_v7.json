@@ -1,0 +1,78 @@
+{
+  "authority": "user approved on 15-16 Oct 2026: v7 (16 candidates, cross-attention plus per-dimension gate, selection loss) and an offline compute benchmark modelled on fixed-budget and time-to-target reporting",
+  "benchmark": {
+    "checkpoints_updates": [
+      25,
+      50,
+      100,
+      200,
+      350,
+      500
+    ],
+    "compute": "adaptation GPU-seconds (evaluation excluded), FLOPs per update (FlopCounterMode, x8 microbatches), seconds/FLOPs/peak memory per decision (batch 1, 2-frame encode, reference encode, kNN, head), source training seconds, frame-cache seconds, bank construction seconds",
+    "conditions_adapted": [
+      "lora_mlp",
+      "raid_lora_mlp",
+      "raid_lora_v7"
+    ],
+    "conditions_zero_adaptation": [
+      "source_frozen",
+      "raid_bank_mlp",
+      "raid_bank_v7",
+      "support_knn_average (diagnostic)"
+    ],
+    "derived": "time to match RAID v6 / RAID v7 error; quality at fixed adaptation budgets",
+    "hardware": "all conditions on one pod; GPU name recorded",
+    "quality": "recorded-transition chunk MSE, macro over the 20 registered query demos (real future frames)",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "support_budget": 5,
+    "tasks": "both registered development tasks; final tasks sealed",
+    "unchanged": "v6 conditions use the registered v6 settings (k=4, LoRA r8 blocks 10-11, 500 updates, head lr 3e-4, LoRA lr 1e-4)"
+  },
+  "date": "2026-10-16",
+  "deviation_note": "3 registered support seeds (42/43/44) instead of the 5 discussed; the protocol registers 3",
+  "digest": "b3997faaa6e3d96a21024eeafe938f7357d93fbeb438c9dc7ed4b34121ab4de6",
+  "held_out_claims_eligible": false,
+  "name": "raid_v7_attention_gate_and_compute_benchmark",
+  "parent_protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "scientific_result": false,
+  "v7": {
+    "attention_dim": 128,
+    "candidate_jitter": 0.05,
+    "gate": "per action dimension, sigmoid, forced to 1 without valid candidates",
+    "head_kind": "attention_gate_v7",
+    "k": 16,
+    "keys": "frozen reference features of each candidate (normalized) and its similarity",
+    "retrieval": {
+      "cos_weight_current": 0.5,
+      "cos_weight_future": 0.5,
+      "distance": "0.5*(1-cos(current_ref,current_bank))+0.5*(1-cos(future_ref,future_bank))+0.1*mean((q_norm-q_bank_norm)^2)",
+      "duration_match": true,
+      "episodic_bank_sizes": [
+        2,
+        5,
+        10
+      ],
+      "geometry": "frozen_reference_mae",
+      "k": 16,
+      "pooling": "similarity_sorted_slots_plus_softmax_weighted_mean_chunk",
+      "q_weight": 0.1,
+      "retrieved_fields": [
+        "normalized_action_chunk",
+        "similarity",
+        "valid_flag"
+      ],
+      "similarity": "-distance",
+      "source_bank": "episodic_same_task_m_demos_excluding_query_demo",
+      "target_bank": "target_support_set_only_excluding_query_demo_during_adaptation",
+      "temperature": 0.1
+    },
+    "selection_temperature": 1.0,
+    "selection_weight": 0.1,
+    "values": "candidate normalized action chunks"
+  }
+}

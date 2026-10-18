@@ -1,0 +1,842 @@
+{
+  "dataCenters": [
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        }
+      ],
+      "id": "AP-IN-1",
+      "name": "AP-IN-1",
+      "networkVolumeTypes": [
+        "HIGH_PERFORMANCE"
+      ],
+      "region": "ASIA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        }
+      ],
+      "id": "AP-JP-1",
+      "name": "AP-JP-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "ASIA"
+    },
+    {
+      "compliance": [
+        "ISO_IEC_27001"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "MEDIUM",
+          "id": "NVIDIA A40",
+          "name": "A40"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX A5000",
+          "name": "RTX A5000"
+        }
+      ],
+      "id": "CA-MTL-1",
+      "name": "CA-MTL-1",
+      "networkVolumeTypes": [
+        "HIGH_PERFORMANCE"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100 80GB PCIe",
+          "name": "A100 PCIe"
+        }
+      ],
+      "id": "CA-MTL-3",
+      "name": "CA-MTL-3",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "id": "CA-MTL-4",
+      "name": "CA-MTL-4",
+      "networkVolumeTypes": [
+        "HIGH_PERFORMANCE",
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 3090",
+          "name": "RTX 3090"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+          "name": "RTX PRO 6000 WK"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 4090",
+          "name": "RTX 4090"
+        }
+      ],
+      "id": "EU-CZ-1",
+      "name": "EU-CZ-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": true,
+      "id": "EU-FR-1",
+      "name": "EU-FR-1",
+      "networkVolumeTypes": [
+        "HIGH_PERFORMANCE"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "ISO_14001",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA B300 SXM6 AC",
+          "name": "B300"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L40S",
+          "name": "L40S"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        }
+      ],
+      "id": "EU-NL-1",
+      "name": "EU-NL-1",
+      "networkVolumeTypes": [],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "MEDIUM",
+          "id": "NVIDIA GeForce RTX 4090",
+          "name": "RTX 4090"
+        },
+        {
+          "availability": "MEDIUM",
+          "id": "NVIDIA RTX PRO 4500 Blackwell",
+          "name": "RTX PRO 4500"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+          "name": "RTX PRO 6000 WK"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 4000 Blackwell",
+          "name": "RTX PRO 4000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX 4000 Ada Generation",
+          "name": "RTX 4000 Ada"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA B200",
+          "name": "B200"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100 80GB PCIe",
+          "name": "A100 PCIe"
+        }
+      ],
+      "id": "EU-RO-1",
+      "name": "EU-RO-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "ISO_IEC_27001"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A40",
+          "name": "A40"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX A5000",
+          "name": "RTX A5000"
+        }
+      ],
+      "id": "EU-SE-1",
+      "name": "EU-SE-1",
+      "networkVolumeTypes": [],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "ISO_14001",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100-SXM4-80GB",
+          "name": "A100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 4090",
+          "name": "RTX 4090"
+        },
+        {
+          "availability": "MEDIUM",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX 2000 Ada Generation",
+          "name": "RTX 2000 Ada"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L4",
+          "name": "L4"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA B300 SXM6 AC",
+          "name": "B300"
+        }
+      ],
+      "id": "EUR-IS-1",
+      "name": "EUR-IS-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb",
+          "name": "PRO 6000 MIG 24GB"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 4090",
+          "name": "RTX 4090"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L40S",
+          "name": "L40S"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L4",
+          "name": "L4"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+          "name": "PRO 6000 MIG 48GB"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 3090",
+          "name": "RTX 3090"
+        }
+      ],
+      "id": "EUR-IS-2",
+      "name": "EUR-IS-2",
+      "networkVolumeTypes": [],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        }
+      ],
+      "id": "EUR-IS-3",
+      "name": "EUR-IS-3",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H200",
+          "name": "H200 SXM"
+        }
+      ],
+      "id": "EUR-IS-4",
+      "name": "EUR-IS-4",
+      "networkVolumeTypes": [],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H200",
+          "name": "H200 SXM"
+        }
+      ],
+      "id": "EUR-IS-5",
+      "name": "EUR-IS-5",
+      "networkVolumeTypes": [],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 5090",
+          "name": "RTX 5090"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 4090",
+          "name": "RTX 4090"
+        }
+      ],
+      "id": "EUR-NO-1",
+      "name": "EUR-NO-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        }
+      ],
+      "id": "EUR-NO-2",
+      "name": "EUR-NO-2",
+      "networkVolumeTypes": [
+        "HIGH_PERFORMANCE"
+      ],
+      "region": "EUROPE"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L40S",
+          "name": "L40S"
+        }
+      ],
+      "id": "OC-AU-1",
+      "name": "OC-AU-1",
+      "networkVolumeTypes": [],
+      "region": "OCEANIA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H200",
+          "name": "H200 SXM"
+        }
+      ],
+      "id": "US-CA-2",
+      "name": "US-CA-2",
+      "networkVolumeTypes": [
+        "HIGH_PERFORMANCE"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H200",
+          "name": "H200 SXM"
+        }
+      ],
+      "id": "US-CO-1",
+      "name": "US-CO-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H200",
+          "name": "H200 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 NVL",
+          "name": "H100 NVL"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        }
+      ],
+      "id": "US-GA-2",
+      "name": "US-GA-2",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA GeForce RTX 4090",
+          "name": "RTX 4090"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX 6000 Ada Generation",
+          "name": "RTX 6000 Ada"
+        }
+      ],
+      "id": "US-IL-1",
+      "name": "US-IL-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 NVL",
+          "name": "H100 NVL"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100-SXM4-80GB",
+          "name": "A100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+          "name": "RTX PRO 4500 SE"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100 80GB PCIe",
+          "name": "A100 PCIe"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX 6000 Ada Generation",
+          "name": "RTX 6000 Ada"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX A6000",
+          "name": "RTX A6000"
+        }
+      ],
+      "id": "US-KS-2",
+      "name": "US-KS-2",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100-SXM4-80GB",
+          "name": "A100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        }
+      ],
+      "id": "US-MD-1",
+      "name": "US-MD-1",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        }
+      ],
+      "id": "US-MO-1",
+      "name": "US-MO-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L4",
+          "name": "L4"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        }
+      ],
+      "id": "US-MO-2",
+      "name": "US-MO-2",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H200",
+          "name": "H200 SXM"
+        }
+      ],
+      "id": "US-NC-1",
+      "name": "US-NC-1",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        }
+      ],
+      "id": "US-NC-2",
+      "name": "US-NC-2",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+          "name": "PRO 6000 MIG 48GB"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA H100 80GB HBM3",
+          "name": "H100 SXM"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb",
+          "name": "PRO 6000 MIG 24GB"
+        }
+      ],
+      "id": "US-NE-1",
+      "name": "US-NE-1",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 1g.24gb",
+          "name": "PRO 6000 MIG 24GB"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition MIG 2g.48gb",
+          "name": "PRO 6000 MIG 48GB"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "name": "RTX PRO 6000"
+        }
+      ],
+      "id": "US-PA-1",
+      "name": "US-PA-1",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "id": "US-TX-3",
+      "name": "US-TX-3",
+      "networkVolumeTypes": [
+        "STANDARD"
+      ],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA L40S",
+          "name": "L40S"
+        }
+      ],
+      "id": "US-TX-4",
+      "name": "US-TX-4",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": true,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA RTX 6000 Ada Generation",
+          "name": "RTX 6000 Ada"
+        },
+        {
+          "availability": "LOW",
+          "id": "NVIDIA A100-SXM4-80GB",
+          "name": "A100 SXM"
+        }
+      ],
+      "id": "US-WA-1",
+      "name": "US-WA-1",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    },
+    {
+      "compliance": [
+        "GDPR",
+        "ISO_IEC_27001",
+        "SOC_2_TYPE_2",
+        "HIPAA"
+      ],
+      "globalNetwork": false,
+      "gpuAvailability": [
+        {
+          "availability": "LOW",
+          "id": "NVIDIA B300 SXM6 AC MIG 1g.34gb",
+          "name": "B300 MIG 34GB"
+        }
+      ],
+      "id": "US-WA-2",
+      "name": "US-WA-2",
+      "networkVolumeTypes": [],
+      "region": "NORTH_AMERICA"
+    }
+  ]
+}

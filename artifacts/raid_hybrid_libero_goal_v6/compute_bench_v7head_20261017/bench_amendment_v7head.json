@@ -1,0 +1,52 @@
+{
+  "also_run": [
+    "source_frozen",
+    "raid_bank_mlp",
+    "raid_bank_v7",
+    "support_knn_average",
+    "head_only"
+  ],
+  "authority": "user request 17 Oct 2026: development-only exploratory variant raid_v7_head, same schedule as head_only, seeds 42/43/44, same paired analysis; label exploratory",
+  "checkpoints_updates": [
+    0,
+    25,
+    50,
+    100,
+    200,
+    350,
+    500
+  ],
+  "cpu_threads": 16,
+  "date": "2026-10-17",
+  "digest": "1f1e9ddd7cbaca7e7d4c5ab2fe1dcdfac448b1511031f139a6beb13ab769f0f2",
+  "exploratory": true,
+  "gpu_class": "80 GB (A100)",
+  "held_out_claims_eligible": false,
+  "method": {
+    "raid_v7_head": {
+      "candidate_jitter_training": 0.05,
+      "encoder": "frozen MAE (cached reference features)",
+      "evaluation": "retrieval over the full support bank; frozen features",
+      "head_init": "source-trained v7 head (attention_gate_v7)",
+      "retrieval": "k=16 over the five-shot support bank; each training row excludes its own demo",
+      "schedule": "identical to head_only: 500 updates, batch 64, head lr 3e-4, AdamW wd 1e-4, grad clip 1.0, same sample stream (v6adapt key)",
+      "selection_loss_weight": 0.1
+    }
+  },
+  "metrics": {
+    "mse": "chunk MSE on normalized actions, macro over the 20 query demos per task",
+    "r2": "mean over 7 action dimensions of 1 - SSE/SST over all query chunk elements"
+  },
+  "name": "raid_fewshot_idm_v7head_exploratory",
+  "pairing": "source controllers are bitwise identical across pods (verified: zero-adaptation per-demo errors of v7 and baseline runs differ by 0.0); head_only rerun checks this; LoRA-based baselines pair with the 2026-10-17 baseline run",
+  "parent_amendment_digest": "b58299e723e771e57682a092f26b81a474410839f3d6619c9ca8e19b9fd8cf10",
+  "parent_protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "scientific_result": false,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "stage": "development",
+  "suite": "v7head"
+}

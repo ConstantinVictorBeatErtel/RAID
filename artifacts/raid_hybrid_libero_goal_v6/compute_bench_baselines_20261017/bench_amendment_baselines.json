@@ -1,0 +1,110 @@
+{
+  "all_conditions_rerun": "the v1 conditions run again on the same pod so every method shares hardware",
+  "attribution": {
+    "lora_mlp": "TAIL / FADA style LoRA adaptation",
+    "probe_fresh": "frozen-encoder probe (arXiv 2606.07687)",
+    "retrieve_and_play/regent_blend": "REGENT (arXiv 2412.04759)",
+    "strap_style": "Behavior Retrieval / STRAP / FlowRetrieval (retrieval for training data)",
+    "support_knn_average": "VINN (arXiv 2112.01511)"
+  },
+  "authority": "user approved on 17 Oct 2026: re-implement inverse-dynamics baselines from related papers in the exact benchmark setting; report action error (MSE) and R2; task success remains a separate measure",
+  "baselines": {
+    "full_encoder_lr": 1e-05,
+    "regent_L": 10.0,
+    "regent_weight": "exp(-L * retrieval distance of the nearest support transition)",
+    "strap_batches": "half support rows, half retrieved rows",
+    "strap_neighbours_per_support_chunk": 4,
+    "strap_pool": "source_train demos of every source task (frozen reference features)",
+    "trained": {
+      "full_finetune": {
+        "encoder": "full",
+        "head_init": "source",
+        "retrieved_training_data": false
+      },
+      "head_only": {
+        "encoder": "frozen",
+        "head_init": "source",
+        "retrieved_training_data": false
+      },
+      "probe_fresh": {
+        "encoder": "frozen",
+        "head_init": "fresh",
+        "retrieved_training_data": false
+      },
+      "scratch_lora": {
+        "encoder": "lora",
+        "head_init": "fresh",
+        "retrieved_training_data": false
+      },
+      "strap_style": {
+        "encoder": "frozen",
+        "head_init": "source",
+        "retrieved_training_data": true
+      }
+    },
+    "zero_training": [
+      "retrieve_and_play",
+      "regent_blend"
+    ]
+  },
+  "checkpoints_updates": [
+    0,
+    25,
+    50,
+    100,
+    200,
+    350,
+    500
+  ],
+  "date": "2026-10-17",
+  "digest": "b58299e723e771e57682a092f26b81a474410839f3d6619c9ca8e19b9fd8cf10",
+  "held_out_claims_eligible": false,
+  "metrics": {
+    "mse": "chunk MSE on normalized actions, macro over the 20 query demos per task",
+    "r2": "mean over 7 action dimensions of 1 - SSE/SST over all query chunk elements"
+  },
+  "name": "raid_fewshot_idm_baselines",
+  "parent_amendment_digest": "b3997faaa6e3d96a21024eeafe938f7357d93fbeb438c9dc7ed4b34121ab4de6",
+  "parent_protocol_digest": "f555d02d6e32446aedfa7e0e34c1d12f2a090f04570f9719f71a48ee66c3d041",
+  "scientific_result": false,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "v7": {
+    "attention_dim": 128,
+    "candidate_jitter": 0.05,
+    "gate": "per action dimension, sigmoid, forced to 1 without valid candidates",
+    "head_kind": "attention_gate_v7",
+    "k": 16,
+    "keys": "frozen reference features of each candidate (normalized) and its similarity",
+    "retrieval": {
+      "cos_weight_current": 0.5,
+      "cos_weight_future": 0.5,
+      "distance": "0.5*(1-cos(current_ref,current_bank))+0.5*(1-cos(future_ref,future_bank))+0.1*mean((q_norm-q_bank_norm)^2)",
+      "duration_match": true,
+      "episodic_bank_sizes": [
+        2,
+        5,
+        10
+      ],
+      "geometry": "frozen_reference_mae",
+      "k": 16,
+      "pooling": "similarity_sorted_slots_plus_softmax_weighted_mean_chunk",
+      "q_weight": 0.1,
+      "retrieved_fields": [
+        "normalized_action_chunk",
+        "similarity",
+        "valid_flag"
+      ],
+      "similarity": "-distance",
+      "source_bank": "episodic_same_task_m_demos_excluding_query_demo",
+      "target_bank": "target_support_set_only_excluding_query_demo_during_adaptation",
+      "temperature": 0.1
+    },
+    "selection_temperature": 1.0,
+    "selection_weight": 0.1,
+    "values": "candidate normalized action chunks"
+  }
+}

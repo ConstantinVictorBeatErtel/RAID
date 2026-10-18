@@ -1,0 +1,169 @@
+{
+  "held_out_claims_eligible": false,
+  "mean_final_mse": {
+    "lora_mlp": 0.28188965206274436,
+    "raid_lora_mlp": 0.34236735653228223,
+    "raid_lora_v7": 0.28825797959074995
+  },
+  "mean_zero_adaptation_mse": {
+    "raid_bank_mlp": 0.4236058841749706,
+    "raid_bank_v7": 0.4093394338079206,
+    "source_frozen": 0.7558767414179989,
+    "support_knn_average": 0.4264137318543109
+  },
+  "rows": [
+    {
+      "final": {
+        "lora_mlp": 0.345689763121544,
+        "raid_lora_mlp": 0.4066909985407052,
+        "raid_lora_v7": 0.36127347257897513
+      },
+      "seconds_to_match_raid_v6": {
+        "lora_mlp": 9.167290627307622,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "lora_mlp": 9.400039590328223,
+        "raid_lora_mlp": 1.313176938239351,
+        "raid_lora_v7": 0.0
+      },
+      "seed": 42,
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "zero": {
+        "raid_bank_mlp": 0.4756464717619946,
+        "raid_bank_v7": 0.46703856959161627,
+        "source_frozen": 0.8146861815986645,
+        "support_knn_average": 0.5406072807127044
+      }
+    },
+    {
+      "final": {
+        "lora_mlp": 0.3129578484889982,
+        "raid_lora_mlp": 0.35377692366033653,
+        "raid_lora_v7": 0.31111750079532496
+      },
+      "seconds_to_match_raid_v6": {
+        "lora_mlp": 8.478867446960766,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "lora_mlp": 9.130309238721388,
+        "raid_lora_mlp": 2.7349274314849352,
+        "raid_lora_v7": 0.0
+      },
+      "seed": 43,
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "zero": {
+        "raid_bank_mlp": 0.4849378071777098,
+        "raid_bank_v7": 0.44847230397228366,
+        "source_frozen": 0.9595560646737598,
+        "support_knn_average": 0.44775295725404207
+      }
+    },
+    {
+      "final": {
+        "lora_mlp": 0.3358408811421553,
+        "raid_lora_mlp": 0.42501065575340585,
+        "raid_lora_v7": 0.3382960646048596
+      },
+      "seconds_to_match_raid_v6": {
+        "lora_mlp": 8.024207986977334,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "lora_mlp": 9.041063157443833,
+        "raid_lora_mlp": 3.889849715767859,
+        "raid_lora_v7": 0.0
+      },
+      "seed": 44,
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "zero": {
+        "raid_bank_mlp": 0.5110873720031075,
+        "raid_bank_v7": 0.4654458518313131,
+        "source_frozen": 0.8712537568898393,
+        "support_knn_average": 0.4723892185393449
+      }
+    },
+    {
+      "final": {
+        "lora_mlp": 0.22818480925497547,
+        "raid_lora_mlp": 0.2805656668879087,
+        "raid_lora_v7": 0.22643877274238
+      },
+      "seconds_to_match_raid_v6": {
+        "lora_mlp": 8.73054175882527,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "lora_mlp": 8.807869415319828,
+        "raid_lora_mlp": 0.5764660944839681,
+        "raid_lora_v7": 0.0
+      },
+      "seed": 42,
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "zero": {
+        "raid_bank_mlp": 0.3568887065015921,
+        "raid_bank_v7": 0.35504561800520784,
+        "source_frozen": 0.5649793407241049,
+        "support_knn_average": 0.40958145163820364
+      }
+    },
+    {
+      "final": {
+        "lora_mlp": 0.2457240828373312,
+        "raid_lora_mlp": 0.32220559272916754,
+        "raid_lora_v7": 0.26163533431799835
+      },
+      "seconds_to_match_raid_v6": {
+        "lora_mlp": 9.580060894902141,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 1.3816031023594013
+      },
+      "seconds_to_match_raid_v7": {
+        "lora_mlp": 9.208889334125233,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0
+      },
+      "seed": 43,
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "zero": {
+        "raid_bank_mlp": 0.3629463941473182,
+        "raid_bank_v7": 0.37583088639969586,
+        "source_frozen": 0.6954994058040019,
+        "support_knn_average": 0.35962993152868994
+      }
+    },
+    {
+      "final": {
+        "lora_mlp": 0.22294052753146182,
+        "raid_lora_mlp": 0.26595430162216976,
+        "raid_lora_v7": 0.23078673250496173
+      },
+      "seconds_to_match_raid_v6": {
+        "lora_mlp": 8.59728553291061,
+        "raid_lora_mlp": 0.0,
+        "raid_lora_v7": 0.0
+      },
+      "seconds_to_match_raid_v7": {
+        "lora_mlp": 8.77976507417094,
+        "raid_lora_mlp": 0.80319749511092,
+        "raid_lora_v7": 0.0
+      },
+      "seed": 44,
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "zero": {
+        "raid_bank_mlp": 0.35012855345810123,
+        "raid_bank_v7": 0.3442033730474067,
+        "source_frozen": 0.6292856988176229,
+        "support_knn_average": 0.3285215514528807
+      }
+    }
+  ],
+  "scientific_result": false,
+  "scope": "development tasks only; recorded transitions; registered seeds 42/43/44; five-shot",
+  "units": 6
+}
