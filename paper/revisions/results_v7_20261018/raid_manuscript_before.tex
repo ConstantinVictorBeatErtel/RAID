@@ -1,0 +1,294 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb}
+\usepackage{booktabs,tabularx,array,enumitem,xcolor,xurl}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0.25em,topsep=0.4em}
+
+
+\hypersetup{pdftitle={RAID: Retrieval and Low-Rank Adaptation for Few-Shot Generalization in World-Model-Based Robot Control}}
+
+\title{\textbf{RAID: Retrieval and Low-Rank Adaptation for Few-Shot Generalization in World-Model-Based Robot Control}}
+
+\author{}
+
+\date{Proposed protocol v6 \textbar\ 11 October 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Study abstract---results pending. We investigate whether transition retrieval and low-rank parameter adaptation provide complementary benefits for few-shot generalization of robot control. A frozen visual generator proposes futures, and a separate inverse-dynamics controller maps current observations, robot state and a proposed future to action chunks. A two-by-two design varies target retrieval and LoRA plus head adaptation, yielding frozen, retrieval-only, adaptation-only and hybrid conditions from a common source checkpoint. The hybrid is trained with demonstration-level retrieval exclusions and retains a frozen reference representation for memory lookup. The initial LIBERO-Goal development pilot uses five demonstrations per task and 40 episodes across two tasks and four conditions, conditional on a source-only generator and cost gate. Recorded-transition diagnostics, paired execution outcomes and transition coverage test the complementarity hypothesis. No improved performance, new WAM architecture or first-in-the-literature claim is established; implementation and scientific evaluation remain pending.
+
+Keywords: visual world models; inverse dynamics; retrieval; few-shot adaptation; LoRA; robot learning.
+
+\end{abstract}
+
+\section{Introduction}
+
+Visual world models make possible futures available as images or video, but a visual proposal must still be translated into executable robot actions. UniPi connects video planning with inverse dynamics \cite{ref2}. More recent systems reinforce this foundation: \(\pi\)0.7 conditions a generalist controller on visual subgoals \cite{ref30}, while OpenWAM supports composable visual prediction and inverse-dynamics components \cite{ref31}. These precedents establish the architectural setting for our study. Our question concerns how the action-inference component should acquire task-specific knowledge when the visual predictor stays fixed.
+
+With few target demonstrations, a controller can use explicit examples at prediction time, change its parameters, or do both. Retrieval may provide a relevant motion reference, while parameter adaptation may change how that reference is interpreted in the current scene. These mechanisms may complement one another, but can also be redundant or amplify overfitting. We therefore ask whether retrieval-conditioned LoRA adaptation improves few-shot generalization over either mechanism alone, and under which transition-coverage and cost conditions any improvement occurs.
+
+We propose a two-by-two design with retrieval and LoRA plus action-head adaptation as factors. The four conditions are a frozen source controller, RAID with a target transition bank, LoRA plus head adaptation without retrieval, and RAID plus LoRA with retrieval active during adaptation and inference. All conditions start from identical source encoder and head weights and share a fixed-width input interface trained with present and masked memory. Head-only fine-tuning remains a smaller recorded-data diagnostic. The hypothesis concerns complementary action-inference mechanisms, not a presumption that the hybrid must win.
+
+The pipeline generates a visual proposal from the current RGB observation and task instruction, then predicts an action chunk from that proposal, the current observation, current proprioception and the requested horizon. Cosmos3-Edge remains a candidate frozen generator \cite{ref7,ref32}. Although the foundation supports action-related modes, this experiment uses only image-to-video generation and does not consume its native actions. A source-only feasibility study must establish runtime compatibility, useful robot imagery, temporal-interface consistency and measured cost before generated-future confirmation. Matched inputs share generated clips; diverged trajectories replan from their own observations.
+
+The initial benchmark is LIBERO-Goal \cite{ref8}, retaining six source tasks, two development tasks and two sealed final tasks. The first development pilot uses five support demonstrations, one source/support repetition and five query initial states per development task: 40 episodes across four conditions. This scope is a feasibility study, not a broad generalization result. After runtime measurement and a development freeze, a separate narrow confirmation can evaluate the two final tasks with three repetitions. LIBERO-90 expansion and larger demonstration sweeps are deferred, rather than prerequisites for the starting study.
+
+The intended contribution is controlled evidence about when external transition memory and parametric adaptation complement one another in an established visual-planning pipeline. Generalization here means performance on held-out target-task episodes after receiving a few labeled support demonstrations. It does not mean zero-shot transfer or improved prediction by the frozen world model. ReCAP already uses retrieval in a WAM \cite{ref40}, and VLA-Pro retrieves LoRA memories \cite{ref28}; combining retrieval and adaptation alone is therefore not a sufficient novelty claim. The proposed contribution depends on the mechanism, fair controls, measured outcomes and their limits.
+
+\section{Related Work}
+
+\subsection{Visual world models and action inference}
+
+World--action modeling connects future prediction with action generation, with different choices about how tightly the two are coupled. DreamZero models video and actions jointly \cite{ref33}. Cosmos 3 supports multiple visual and action input--output configurations \cite{ref32}. In contrast, our experiment deliberately fixes a video generator and studies a separate inverse model. MIRA motivates inspectable visual prediction in its own game domain \cite{ref1}; it does not establish transfer to manipulation. The availability of Cosmos3-Edge likewise does not demonstrate physically valid or useful LIBERO futures \cite{ref7}.
+
+Video planning followed by action inference has substantial precedent. UniPi uses a separately trained inverse model \cite{ref2}. \(\pi\)0.7 employs visual subgoal conditioning and interprets the resulting action prediction as an inverse-dynamics-like problem; it also trains with both real and generated subgoals to reduce input mismatch \cite{ref30}. OpenWAM defines local dynamics interfaces using current observations, proprioception and a supplied future, and studies reuse of an inverse model with adapted visual predictors \cite{ref31}. RAID asks the complementary adaptation question: with the visual generator fixed, should scarce target experience update external memory or the inverse model's parameters? GE-Act 2.0 further connects visual planning and inverse dynamics, including an explicit mechanism for aligning generated futures with action supervision \cite{ref39}.
+
+Inverse dynamics supports learning from observation \cite{ref9}, predictive robot models \cite{ref10}, and policy supervision from synthetic video \cite{ref11}; its label efficiency depends on the learning setting \cite{ref12}. A generated future may depict a path different from the recorded demonstration, so it cannot automatically inherit that demonstration's action labels. OpenWAM's executed simulator branches illustrate a valid way to broaden transition supervision \cite{ref31}. Such source-data interventions are deferred here to keep the initial experiment focused and affordable; the shift from recorded to generated imagery remains an explicit limitation.
+
+\subsection{Visual representations for inverse dynamics}
+
+Pretrained encoders supply representations for inverse dynamics. MAE learns image features through masked reconstruction \cite{ref13}, R3M studies frozen representations for manipulation \cite{ref14}, and VC-1 highlights variation across embodied tasks and adaptation settings \cite{ref15}. We distinguish the controller representation from the retrieval reference representation. LoRA may change the controller's features in the adaptation-only and hybrid conditions, while memory keys, retrieval queries and coverage measurements always use the same frozen reference encoder. This prevents controller adaptation from invalidating the geometry of the retrieval bank.
+
+\subsection{Retrieval for action prediction and policy learning}
+
+VINN separates visual representation learning from behavior learning and predicts actions through locally weighted nearest-neighbor regression \cite{ref3}. REGENT combines retrieved demonstrations with a learned transformer policy to support adaptation without mandatory test-time fine-tuning \cite{ref16}. RT-Cache retrieves and replays action snippets from visual memory \cite{ref17}, while CLAW maps planned latent actions to executable controls through nearest-neighbor lookup in labeled reference data \cite{ref18}. These methods establish retrieval as a substantive action-inference mechanism. RAID's proposed bank-plus-MLP arm instead uses retrieved information as input to a learned predictor. It must therefore be distinguished from simply copying a neighbor's action or averaging retrieved actions.
+
+Retrieval can select training data or supply context during action prediction. Behavior Retrieval \cite{ref19}, FlowRetrieval \cite{ref20}, STRAP \cite{ref21} and importance-weighted retrieval \cite{ref22} explore data selection; HAND retrieves robot experience and fine-tunes a policy \cite{ref23}, while RAEA integrates experience through cross-attention \cite{ref24}. ReCAP adds trajectory retrieval to Cosmos Policy and extends task coverage by adding demonstrations while the policy stays frozen \cite{ref40}. RAID instead tests retrieval and target-time parameter adaptation jointly within a separate inverse controller. This is a narrower empirical question than introducing retrieval to WAMs.
+
+\subsection{Parameter-efficient adaptation and reusable adapters}
+
+LoRA freezes an original weight matrix and learns an additive low-rank update \cite{ref6}. TAIL evaluates LoRA and other lightweight adaptation mechanisms for continual robot imitation \cite{ref4}. OpenVLA studies efficient policy fine-tuning \cite{ref25}, and OpenVLA-OFT shows that action representation, chunking, decoding, and the training objective affect both performance and inference cost \cite{ref26}. These findings motivate reporting measured resource use in addition to trainable parameter count. Frozen base weights also do not imply that predictions remain unchanged when a target adapter is active.
+
+FADA adapts inverse dynamics behind a frozen planner \cite{ref5}. WIZARD \cite{ref27}, VLA-Pro \cite{ref28} and FOCA \cite{ref29} investigate other adaptation mechanisms. In particular, VLA-Pro retrieves and fuses task-specific LoRA adapters, whereas RAID's memory stores labeled visual transitions. RoboTTT uses test-time learning for robot context \cite{ref34}, and MEM combines short visual and long linguistic memory \cite{ref37}. Retrieval/fine-tuning hybrids also appear in LM-based world modeling \cite{ref41}, a different domain. These precedents motivate complementarity tests while ruling out broad novelty claims about combining memory and parameter updates.
+
+\subsection{Scope of the comparison}
+
+The primary experiment isolates two factors in a common action-inference pipeline: access to target transition memory and LoRA plus head updates. RoboWM-Bench \cite{ref35} and EVA \cite{ref36} motivate judging proposals through execution rather than appearance alone. Fast-WAM \cite{ref38} motivates measuring the full cost of explicit future generation. We keep unfiltered task success as the control endpoint, report the hybrid's paired differences from both individual mechanisms, and distinguish the small development pilot from any later registered confirmation. No published scores from differently trained WAMs are treated as matched baselines.
+
+\section{Problem Formulation}
+
+We specify protocol v6 as a proposed implementation target for a modular control pipeline. A two-by-two intervention varies target retrieval R and LoRA plus head adaptation A. The generator and source-data access stay fixed. The initial study is a five-shot LIBERO-Goal development pilot; generator feasibility, exact runtime cost and any final confirmation scope require validation.
+
+\begin{itemize}\item At time t, the controller observes RGB image o\textsubscript{t} and current proprioception q\textsubscript{t}. The generator receives o\textsubscript{t} and task instruction g and returns a visual proposal V. The controller receives o\textsubscript{t}, q\textsubscript{t}, a timestamped future observation from V, the requested duration, and either a retrieved transition block or its explicit null representation. Source training, target support, development queries and final evaluation have disjoint roles.\end{itemize}
+
+\begin{itemize}\item The generator W\(\psi\) is frozen. Its allowed conditioning is exactly the current RGB frame and instruction. Recorded future observations, recorded or target action trajectories, privileged object states and native generator actions are excluded from the primary generated-future pipeline. Simulator state may be used by the evaluator for reset and scoring, never as privileged policy input.\end{itemize}
+
+\begin{itemize}\item The proposed target is an eight-step chunk a\textsubscript{t},\ldots{},a\textsubscript{t}\textsubscript{+}\textsubscript{7} in the verified seven-dimensional LIBERO action convention. The starting interface assumes 20 Hz control and 20 fps video, with one chunk executed before replanning. These rates, observation/action indexing and selected frame offsets require replay and runtime checks. Nominal video timestamps do not prove physical alignment. Current proprioception is normalized using source-training statistics; its schema must be identical in stored data and live observations.\end{itemize}
+
+\begin{itemize}\item Recorded-transition evaluation conditions on the actual recorded future and uses its logged action chunk as a prediction diagnostic. Generated-future evaluation conditions on a proposal and measures executed task success. Logged actions from a different trajectory are not ground-truth labels for an arbitrary generated future. Plan-quality strata are secondary analyses of generated evaluation, not additional adaptation methods.\end{itemize}
+
+\section{Method}
+
+\subsection{Shared frozen visual world model}
+
+Cosmos3-Edge remains pinned as a candidate image-to-video generator, with fixed preprocessing, prompts, runtime, sampling and seed provenance. Before generated-future confirmation, we require a source-only panel of 30 cases across the six source tasks, valid decoded outputs and frame indices, verified expert replay, qualitative assessment of viewpoint and object/robot continuity, and measured latency, memory and storage. The proposed engineering thresholds are 30/30 technically valid clips, at least 24/30 passing the predefined plausibility rubric, and at least 27/30 successful source expert replays. These thresholds are continuation rules, not proof of executability. Feature alignment to an unrelated demonstration is retained only as a heuristic diagnostic. Identical full conditioning inputs can reuse a clip; after divergence, each condition replans from its own state. The source gate and all failures are reported.
+
+\subsection{RAID bank with an MLP action head}
+
+One source controller receives current/future MAE features, current proprioception, duration and a fixed-width retrieval block. Source training averages retrieval-present and fully masked-memory losses with equal weight, excluding the query's entire demonstration from its episodic bank. RAID keeps this controller frozen and fills a target-support bank. Memory lookup always uses frozen reference features, including when controller features are LoRA-adapted. The default distance combines current/future cosine distances and normalized proprioceptive distance, with matching duration. Four neighbor slots contain normalized action chunks, similarity and validity flags, followed by a weighted mean. Missing neighbors are masked; an empty bank yields a finite null block.
+
+\subsection{LoRA adaptation and the RAID + LoRA hybrid}
+
+Both adapted conditions reset from the same source checkpoint and update rank-8, alpha-16 LoRA in MAE blocks 10--11 qkv/proj plus the common head; all remaining base weights and the generator stay fixed. LoRA-only always receives null memory. The hybrid receives support retrieval during fitting and inference, but every fitting query excludes its entire parent demonstration, including overlapping windows, from the bank. With five demonstrations it retrieves from the other four during adaptation and from all five on held-out evaluation. Controller adaptation never changes reference retrieval features. The pilot uses a fixed 500 updates with matched support queries, optimizer settings and sampling; any later tuning is development-only and equally available to both adapted conditions.
+
+\subsection{Training and comparison controls}
+
+The four primary conditions are source\_frozen (R=0,A=0), raid\_bank\_mlp (1,0), lora\_mlp (0,1), and raid\_lora\_mlp (1,1). They share source weights, support identities, normalizers, controller interface, action horizon, losses and evaluation cases. The adaptation factor includes both encoder LoRA and head updates; head-only development diagnostics help assess attribution without adding a fifth primary rollout condition. Zero-effect adapter insertion must preserve predictions before fitting. The hybrid receives no additional labeled demonstrations. Its extra reference-encoding and adaptation costs are measured. These controls test complementarity within this implementation, not universal superiority of a memory mechanism.
+
+Table 1. Four primary conditions and one recorded-data diagnostic. The visual generator is frozen throughout.
+
+\begin{center}\small
+
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}X@{}}
+
+\toprule
+
+Condition & Target retrieval & Target updates \\
+
+\midrule
+
+Frozen baseline & No & None \\
+
+RAID & Yes & None \\
+
+LoRA + head & No & Encoder LoRA + head \\
+
+RAID + LoRA & Yes & Encoder LoRA + head \\
+
+Head-only diagnostic & No & Head only; recorded development \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{center}
+
+\section{Experimental Design}
+
+\subsection{Benchmark, splits, and demonstration budgets}
+
+Use the ten-task LIBERO-Goal suite with the existing six-source/two-development/two-final split and immutable support/query membership. Target tasks retain a 30-demo support pool and 20 query demonstrations. The initial primary budget is five support demonstrations. Hash-select five query initial states for each development task and use seed 42, producing 40 pilot episodes across the four conditions. A later narrow final scope can use seeds 42/43/44 and ten starts per final task, totaling 240 episodes, or a preregistered five-start scope totaling 120. No final outcome may determine scope. LIBERO-90 and generated 2/10-shot sweeps remain optional future extensions. Held-out study tasks are not guaranteed unseen in foundation pretraining.
+
+\subsection{Recorded-transition diagnostics}
+
+Evaluate all four primary conditions on separate recorded query transitions at five shots. Report normalized chunk MSE, physical action errors, first-step error and gripper accuracy, averaging within demonstrations before tasks. Head-only and weighted k-NN are development diagnostics. Recorded 2/10-shot analyses may be added if their controller cost is feasible, with explicit scope labels. Source retention keeps the deployed target configuration active, including both target bank and adapter for the hybrid; resetting them is a separate reference. Coverage is measured in one frozen feature space for every condition. Recorded action error does not establish successful execution of an arbitrary generated plan.
+
+\subsection{Execution of generated futures}
+
+The primary control endpoint is unfiltered official task success. Begin with the 40-episode development pilot, contingent on the source-only generator gate. Pair task, support set, source seed, initial state and generation seed across all four conditions. Use the same initial clip at identical inputs; after actions diverge, each condition replans from its own observations. The proposed interface executes eight actions before replanning, up to 300 steps. Keep generated and executed videos, timeouts, errors, saturation and all denominators. Optional quality labels for shared initial proposals must be assigned independently of controller outcomes; report unknowns and full-set success. A visually plausible proposal need not be executable, and a controller failure alone does not prove impossibility.
+
+\subsection{Resource measurements and uncertainty}
+
+Let S\_RA denote task-macro success with retrieval R and adaptation A. The co-primary hybrid contrasts are S\_11-S\_10 and S\_11-S\_01; benefit over both components requires evidence for both contrasts. The secondary interaction S\_11-S\_10-S\_01+S\_00 describes non-additivity on the success-probability scale and does not alone prove superiority to both. The single-seed development pilot supports descriptive paired counts only. A registered final analysis must preserve task, source/support and initial-state pairing, report per-task uncertainty, and address multiplicity for simultaneous claims. Two final tasks do not support broad population-level generalization. Measure all source, adaptation, retrieval, reference-encoding, generation, simulation and storage costs. At 38 plans per full episode, the pilot can request up to 1,520 clips and the 240-episode confirmation up to 9,120, before valid cache reuse. These are workload bounds, not measured runtime or approval to spend. Report cached study cost and uncached deployment latency.
+
+\subsection{Transition coverage and deferred extensions}
+
+Use frozen reference-space distances to describe coverage on recorded queries and shared initial generated plans. Any low/medium/high bin boundaries must be fixed on development data and retain sparse-bin counts. Later on-policy coverage is descriptive because trajectories differ. The hypothesis is that adaptation may help the controller use imperfect but relevant retrieved transitions; this is not an established result. Simulator-branch source training, visual perturbations, additional suites, multiple generators and broad budget sweeps are deferred. A future robustness test would freeze support and adapted weights before evaluating a specified perturbation distribution. It must not be inferred from ordinary held-out episodes or added after inspecting final outcomes.
+
+\section{Results}
+
+Section outline. Populate this section only from verified scientific artifacts. Do not insert expected wins, illustrative scores, or historical-protocol results as current evidence.
+
+\subsection{Recorded-transition action inference}
+
+Section outline. Present recorded errors for all four primary conditions at the registered support budget, with head-only and k-NN diagnostics clearly separated. Report deployed-configuration source retention and coverage counts. Separate development pilot evidence from final confirmation and keep older protocol measurements distinct.
+
+\subsection{Task execution from generated futures}
+
+Section outline. Present unfiltered success counts for frozen, RAID, LoRA and RAID + LoRA, with paired hybrid-minus-RAID and hybrid-minus-LoRA differences and uncertainty appropriate to the registered scope. Report the secondary interaction, ceilings/floors and all incomplete episodes. Show shared initial proposals and separately labeled generated and executed trajectories.
+
+\subsection{Accuracy, success, and computational cost}
+
+Section outline. Table or plot: adaptation and inference cost, memory, and storage alongside performance. Separate shared generation overhead from costs that differ between the two methods.
+
+\subsection{Failure analysis}
+
+Section outline. Examine hybrid failures and gains against frozen-reference transition coverage, support examples, ambiguous actions, generator artifacts and timing. Distinguish causal evidence from hypotheses and allow mixed or unknown causes. Include negative hybrid outcomes, with a fixed example-selection rule.
+
+\section{Discussion and Limitations}
+
+The study evaluates a small inverse controller downstream of a frozen visual generator. It cannot establish better world-model prediction or superiority to native Cosmos, ReCAP or other WAMs without matched experiments. The hybrid may overfit or rely too strongly on neighbors; a deterministic MLP may average action modes. Frozen lookup features avoid bank drift but add inference work and may miss useful task-specific similarity. Five-shot adaptation is not zero-shot transfer, and two final tasks provide narrow evidence. Recorded/generated appearance and motion mismatch remains unresolved. Plausibility labels do not prove reachability; nominal frame time does not ensure physical timing. A paused simulator and cached clips do not establish real-time deployment. Unknown upstream benchmark exposure limits novelty-of-task claims. Results may favor an individual mechanism or show no useful control; those outcomes must remain reportable.
+
+\section{Conclusion}
+
+Section outline. State whether the hybrid improves over both retrieval-only and adaptation-only under the evaluated support, task and cost conditions. Report effect sizes and uncertainty, distinguish the pilot from confirmation, and explain any negative or redundant interaction. Do not infer universal generalization, a new WAM architecture or real-world transfer.
+
+\section*{Acknowledgments and Declarations}
+
+Section outline. Add confirmed contributors, funding, conflicts of interest, and applicable ethics or data-use statements. Do not invent authors, affiliations, approvals, or funding. Describe the provenance and permitted use of benchmark data and model checkpoints.
+
+\section*{Reproducibility and Artifact Availability}
+
+Section outline. Release the v6 code and immutable scope, common source checkpoints, support/query identities, demonstration exclusions, reference/controller encoder provenance, normalizers, timing schema, generator gate records, access ledger, predictions, rollouts and reproducible reports. Preserve v3/v4 implementation evidence and the superseded v5 proposal under their original identities. This manuscript specifies intended changes; synthetic tests are not scientific results, and no v6 experiment or paid execution is established.
+
+\begin{thebibliography}{99}
+
+\bibitem{ref1}Hu et al. Multiplayer Interactive World Models with Representation Autoencoders. Technical report, 2026. arXiv:2607.05352v2. \url{https://arxiv.org/abs/2607.05352v2}
+
+\bibitem{ref2}Du et al. Learning Universal Policies via Text-Guided Video Generation. arXiv preprint, 2023. arXiv:2302.00111. \url{https://arxiv.org/abs/2302.00111}
+
+\bibitem{ref3}Pari et al. The Surprising Effectiveness of Representation Learning for Visual Imitation. Robotics: Science and Systems, 2022. arXiv:2112.01511. \url{https://arxiv.org/abs/2112.01511}
+
+\bibitem{ref4}Liu et al. TAIL: Task-specific Adapters for Imitation Learning with Large Pretrained Models. International Conference on Learning Representations, 2024. Paper. \url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html}
+
+\bibitem{ref5}Xie et al. FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control. arXiv preprint, 2026. arXiv:2606.28476v1. \url{https://arxiv.org/abs/2606.28476v1}
+
+\bibitem{ref6}Hu et al. LoRA: Low-Rank Adaptation of Large Language Models. International Conference on Learning Representations, 2022. arXiv:2106.09685. \url{https://arxiv.org/abs/2106.09685}
+
+\bibitem{ref7}NVIDIA. Cosmos3-Edge model card. 2026. Official model card. Accessed 11 October 2026. \url{https://huggingface.co/nvidia/Cosmos3-Edge}
+
+\bibitem{ref8}Liu et al. LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning. arXiv preprint, 2023. arXiv:2306.03310. \url{https://arxiv.org/abs/2306.03310}
+
+\bibitem{ref9}Torabi et al. Behavioral Cloning from Observation. International Joint Conference on Artificial Intelligence, 2018. arXiv:1805.01954. \url{https://arxiv.org/abs/1805.01954}
+
+\bibitem{ref10}Tian et al. Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation. arXiv preprint, 2024. arXiv:2412.15109v1. \url{https://arxiv.org/abs/2412.15109v1}
+
+\bibitem{ref11}Jang et al. DreamGen: Unlocking Generalization in Robot Learning through Video World Models. arXiv preprint, 2025. arXiv:2505.12705v2. \url{https://arxiv.org/abs/2505.12705v2}
+
+\bibitem{ref12}Morin et al. On the Sample Efficiency of Inverse Dynamics Models for Semi-Supervised Imitation Learning. Proceedings of the 43rd International Conference on Machine Learning, 2026. arXiv:2602.02762. \url{https://arxiv.org/abs/2602.02762}
+
+\bibitem{ref13}He et al. Masked Autoencoders Are Scalable Vision Learners. IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. arXiv:2111.06377. \url{https://arxiv.org/abs/2111.06377}
+
+\bibitem{ref14}Nair et al. R3M: A Universal Visual Representation for Robot Manipulation. arXiv preprint, 2022. arXiv:2203.12601v3. \url{https://arxiv.org/abs/2203.12601v3}
+
+\bibitem{ref15}Majumdar et al. Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence? arXiv preprint, 2023. arXiv:2303.18240v2. \url{https://arxiv.org/abs/2303.18240v2}
+
+\bibitem{ref16}Sridhar et al. REGENT: A Retrieval-Augmented Generalist Agent That Can Act In-Context in New Environments. International Conference on Learning Representations, 2025. arXiv:2412.04759. \url{https://arxiv.org/abs/2412.04759}
+
+\bibitem{ref17}Kwon et al. RT-Cache: Training-Free Retrieval for Real-Time Manipulation. arXiv preprint, 2025. arXiv:2505.09040v3. \url{https://arxiv.org/abs/2505.09040v3}
+
+\bibitem{ref18}Ayalew et al. CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization. arXiv preprint, 2026. arXiv:2606.04130v1. \url{https://arxiv.org/abs/2606.04130v1}
+
+\bibitem{ref19}Du et al. Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets. arXiv preprint, 2023. arXiv:2304.08742. \url{https://arxiv.org/abs/2304.08742}
+
+\bibitem{ref20}Lin et al. FlowRetrieval: Flow-Guided Data Retrieval for Few-Shot Imitation Learning. Proceedings of The 8th Conference on Robot Learning, 2025. Paper. \url{https://proceedings.mlr.press/v270/lin25a.html}
+
+\bibitem{ref21}Memmel et al. STRAP: Robot Sub-Trajectory Retrieval for Augmented Policy Learning. International Conference on Learning Representations, 2025. arXiv:2412.15182. \url{https://arxiv.org/abs/2412.15182}
+
+\bibitem{ref22}Xie et al. Data Retrieval with Importance Weights for Few-Shot Imitation Learning. Proceedings of The 9th Conference on Robot Learning, 2025. arXiv:2509.01657v1. \url{https://arxiv.org/abs/2509.01657v1}
+
+\bibitem{ref23}Hong et al. HAND Me the Data: Fast Robot Adaptation via Hand Path Retrieval. arXiv preprint, 2025. arXiv:2505.20455v4. \url{https://arxiv.org/abs/2505.20455v4}
+
+\bibitem{ref24}Zhu et al. Retrieval-Augmented Embodied Agents. arXiv preprint, 2024. arXiv:2404.11699v1. \url{https://arxiv.org/abs/2404.11699v1}
+
+\bibitem{ref25}Kim et al. OpenVLA: An Open-Source Vision-Language-Action Model. arXiv preprint, 2024. arXiv:2406.09246v3. \url{https://arxiv.org/abs/2406.09246v3}
+
+\bibitem{ref26}Kim et al. Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success. arXiv preprint, 2025. arXiv:2502.19645v2. \url{https://arxiv.org/abs/2502.19645v2}
+
+\bibitem{ref27}Bianchi et al. Robotic Policy Adaptation via Weight-Space Meta-Learning. arXiv preprint, 2026. arXiv:2606.07217v1. \url{https://arxiv.org/abs/2606.07217v1}
+
+\bibitem{ref28}Si et al. VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models. arXiv preprint, 2026. arXiv:2605.29562v1. \url{https://arxiv.org/abs/2605.29562v1}
+
+\bibitem{ref29}Nguyen et al. FOCA: Future-Oriented Conditioning for Data-Efficient Vision-Language-Action Adaptation. arXiv preprint, 2026. arXiv:2606.20867v1. \url{https://arxiv.org/abs/2606.20867v1}
+
+\bibitem{ref30}Physical Intelligence. \(\pi\)0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities. 2026. \url{https://arxiv.org/abs/2604.15483}
+
+\bibitem{ref31}Yu et al. OpenWAM: An Open Framework for Composable World-Action Models. 2026. \url{https://arxiv.org/abs/2610.07922}
+
+\bibitem{ref32}NVIDIA. Cosmos 3: Omnimodal World Models for Physical AI. 2026. \url{https://arxiv.org/abs/2606.02800}
+
+\bibitem{ref33}Ye et al. World Action Models are Zero-shot Policies (DreamZero). 2026. \url{https://arxiv.org/abs/2602.15922}
+
+\bibitem{ref34}Jiang et al. RoboTTT: Context Scaling for Robot Policies. 2026. \url{https://arxiv.org/abs/2607.15275}
+
+\bibitem{ref35}Jiang et al. RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation. 2026. \url{https://arxiv.org/abs/2604.19092}
+
+\bibitem{ref36}EVA: Aligning Video World Models with Executable Robot Actions via Inverse Dynamics Rewards. 2026. \url{https://arxiv.org/abs/2603.17808}
+
+\bibitem{ref37}Torne et al. MEM: Multi-Scale Embodied Memory for Vision Language Action Models. 2026. \url{https://www.pi.website/research/memory}
+
+\bibitem{ref38}Yuan et al. Fast-WAM: Do World Action Models Need Test-time Future Imagination? 2026. \url{https://arxiv.org/abs/2603.16666}
+
+\bibitem{ref39}AgiBot Research Team et al. GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation. 2026. \url{https://arxiv.org/abs/2609.05588}
+
+\bibitem{ref40}Park et al. Retrieve, Don't Retrain: Extending Vision Language Action Models to New Tasks at Test Time (ReCAP). 2026. \url{https://arxiv.org/abs/2606.15631}
+
+\bibitem{ref41}Ashok et al. How To Train Your World Model: Fine-tuning vs RAG for LM-based World Modeling. 2026. \url{https://arxiv.org/abs/2610.02542}
+
+\end{thebibliography}
+
+\appendix
+
+\section{Complete Implementation and Training Details}
+
+Section outline. Specify the common source objective, fixed-width memory/null interface, frozen lookup versus adapted controller features, whole-demo exclusion during hybrid fitting, head and LoRA settings, state/action timing, optimizer reset, support sampling and all measured computation costs.
+
+\section{Full Evaluation Protocol and Results}
+
+Section outline. Publish the existing Goal split, support/query identities, 40-episode development inventory, any independently registered 120/240-episode final inventory, access history, source gate, paired hybrid contrasts, interaction and uncertainty method. Keep expanded suites and data regimes separate and optional.
+
+\section{Visual Rollout Gallery and Failure Cases}
+
+Section outline. Provide generated-proposal and executed-rollout videos with clear labels, fixed example-selection criteria, quality rubric and annotator provenance. Include rejected, failed and unknown cases. Explain shared initial plans, own-observation replanning, and why plausible appearance or controller failure alone cannot establish physical executability.
+
+\end{document}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-18",
+  "scope": "Results rewrite of the manuscript from collected artifacts only; no experiments, no Runpod",
+  "google_document_url": "https://docs.google.com/document/d/11QDjW49qwxiZFJGYxMB5_dELf5keka6Qeh3ijXpW10s",
+  "google_doc_owner": "constantin@encord.com",
+  "google_doc_berkeley_role": "writer",
+  "google_doc_compared_before_rewrite": {
+    "method": "Drive read_file_content (includeComments) vs paper/raid_manuscript.md",
+    "result": "content identical to the 11 October sync; format-only differences (local status note, bold keywords, reference link style, empty header row in Table 1); no comments"
+  },
+  "google_doc_updated": true,
+  "latex": {
+    "generator": "paper/md_to_tex.py (pandoc 3.9.0.2)",
+    "compiled": false,
+    "reason": "no TeX installation on this Mac",
+    "checks": "44 bibitems all cited, 0 missing; braces and environments balanced; pandoc parses the TeX"
+  },
+  "figures": "paper/figures/make_figures.py from final_analysis.json and collected unit_*.json",
+  "number_check": "every decimal in the manuscript found in the result reports, final_analysis.json or DISC Table VIII",
+  "sha256": {
+    "paper/raid_manuscript.md": "17715a3cf707f57e4b06ba20419b10ccf74c92759fd26b0ad9b7ae6173beb207",
+    "paper/raid_manuscript.tex": "d6ab218f8cc579b75c0c1d41f1541a5fd62995b405676fb7a79f226e92fac8f9",
+    "paper/README.md": "4cc2dc3b8e80e29fbdb0f10b814d24dfb2f127b56a3e8efb928c28d3b9e49f3a",
+    "paper/references.bib": "7b4af3004339c1953d61c3fc3123219bc3c550f6e4a7053d63be59605a1dd9bb",
+    "paper/md_to_tex.py": "28980945254bc1b9f233ec168adf16c6ed6cbd992feb287aea338ecaf6148e43",
+    "paper/figures/make_figures.py": "9c5cabc3ebaacfce04304c896834b795fccf2b80459bd8bd00dde44baee64a0b"
+  },
+  "google_doc_update": {
+    "method": "Google Docs connector batchUpdate: whole body replaced in place (same document ID and link), 4 guarded chunks built by build_doc_requests.py from paper/raid_manuscript.md; then table column widths and 9 pt table text",
+    "revision_after": "AHj4eMR06K2b1tg469Nodlp04RA0hkyT4Za5h7JF8r1_9mB50sz7CB4RrGOQCNRGOMhBaXsZWK7yhYB7832mFzTmG1KkV8HAS4FhYDvZPE4",
+    "verification": "read_doc readback: 213/213 blocks (paragraph text, named style, bullets, all 15 tables cell by cell) equal to the Markdown source; body end 57607 as predicted",
+    "incident": "one accidental keyboard insertion ('Table 4. Chunk MSE' above the title) during a browser-pane visual check; removed with a guarded delete; full comparison re-run with 0 mismatches",
+    "not_in_doc": "figure images: placeholder lines name paper/figures/fig1..fig4 PNGs (Docs API needs a public image URL); HTML source comments; local status note",
+    "backup_before": "paper/revisions/results_v7_20261018/google_doc_before.json (also in Google Docs version history)"
+  }
+}
