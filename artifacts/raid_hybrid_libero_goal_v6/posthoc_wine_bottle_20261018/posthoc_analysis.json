@@ -1,0 +1,174 @@
+{
+  "post_hoc": true,
+  "per_task": {
+    "put_the_wine_bottle_on_top_of_the_cabinet": {
+      "source_frozen": 1.4529833507383967,
+      "raid_bank_mlp": 0.6916466488751795,
+      "raid_bank_v7": 0.6822603854216132,
+      "support_knn_average": 0.4059900899351294,
+      "retrieve_and_play": 0.501324223802583,
+      "regent_blend": 0.4884249972531782,
+      "r2_v7": -0.5119443365088674,
+      "r2_knn": 0.31475264714904777,
+      "head_only_25": 0.3574386625979034,
+      "lora_mlp_25": 0.34754749784561795,
+      "raid_lora_v7_25": 0.2869901439291537
+    },
+    "put_the_bowl_on_top_of_the_cabinet": {
+      "source_frozen": 0.6577999307984287,
+      "raid_bank_mlp": 0.37856634525597044,
+      "raid_bank_v7": 0.31678889124063964,
+      "support_knn_average": 0.346379534195313,
+      "retrieve_and_play": 0.39546765190578687,
+      "regent_blend": 0.3817170631806333,
+      "r2_v7": 0.4303761302299618,
+      "r2_knn": 0.28567070786733606,
+      "head_only_25": 0.28338648077797873,
+      "lora_mlp_25": 0.2828597582829792,
+      "raid_lora_v7_25": 0.256047293516527
+    },
+    "open_the_top_drawer_and_put_the_bowl_inside": {
+      "source_frozen": 0.8818320010540879,
+      "raid_bank_mlp": 0.4905572169809373,
+      "raid_bank_v7": 0.460318908465071,
+      "support_knn_average": 0.4869164855020304,
+      "retrieve_and_play": 0.5367470094486874,
+      "regent_blend": 0.5087424936134209,
+      "r2_v7": 0.36130481589828667,
+      "r2_knn": 0.2969141476898028,
+      "head_only_25": 0.41641732379938623,
+      "lora_mlp_25": 0.4075219926860681,
+      "raid_lora_v7_25": 0.3523489601711026
+    },
+    "put_the_cream_cheese_in_the_bowl": {
+      "source_frozen": 0.6299214817819099,
+      "raid_bank_mlp": 0.35665455136900387,
+      "raid_bank_v7": 0.3583599591507701,
+      "support_knn_average": 0.3659109782065914,
+      "retrieve_and_play": 0.4144432552289677,
+      "regent_blend": 0.3948444721807804,
+      "r2_v7": 0.3839575249555692,
+      "r2_knn": 0.2809024365677954,
+      "head_only_25": 0.3211939565174292,
+      "lora_mlp_25": 0.3172302797657858,
+      "raid_lora_v7_25": 0.26439180819969194
+    }
+  },
+  "correlations": {
+    "put_the_wine_bottle_on_top_of_the_cabinet": {
+      "n": 60,
+      "pearson_v7_frozen": 0.9683795193868784,
+      "pearson_v7_knn": 0.3142141992121017,
+      "spearman_v7_frozen": 0.9503195332036677,
+      "spearman_v7_knn": 0.25990552931369826,
+      "pearson_v6_frozen": 0.9292309935761994,
+      "share_v7_worse_than_knn": 0.9166666666666666
+    },
+    "put_the_bowl_on_top_of_the_cabinet": {
+      "n": 60,
+      "pearson_v7_frozen": 0.7019741059189364,
+      "pearson_v7_knn": 0.7717792677816008,
+      "spearman_v7_frozen": 0.7091414281744929,
+      "spearman_v7_knn": 0.7740483467629897,
+      "pearson_v6_frozen": 0.6330308657539149,
+      "share_v7_worse_than_knn": 0.38333333333333336
+    },
+    "open_the_top_drawer_and_put_the_bowl_inside": {
+      "n": 60,
+      "pearson_v7_frozen": 0.7814955865562033,
+      "pearson_v7_knn": 0.9146683489733768,
+      "spearman_v7_frozen": 0.5035287579883301,
+      "spearman_v7_knn": 0.7970547374270631,
+      "pearson_v6_frozen": 0.8149053317882129,
+      "share_v7_worse_than_knn": 0.38333333333333336
+    },
+    "put_the_cream_cheese_in_the_bowl": {
+      "n": 60,
+      "pearson_v7_frozen": 0.6187507566094229,
+      "pearson_v7_knn": 0.8393120709672451,
+      "spearman_v7_frozen": 0.5986662961933871,
+      "spearman_v7_knn": 0.7732703528757988,
+      "pearson_v6_frozen": 0.5063705990459302,
+      "share_v7_worse_than_knn": 0.5
+    }
+  },
+  "settings": [
+    {
+      "task": "put_the_bowl_on_top_of_the_cabinet",
+      "seed": 42,
+      "frozen": 0.6396213003971811,
+      "gap": -0.04927152287892672
+    },
+    {
+      "task": "put_the_bowl_on_top_of_the_cabinet",
+      "seed": 43,
+      "frozen": 0.7355001110193266,
+      "gap": -0.013678734100099843
+    },
+    {
+      "task": "put_the_bowl_on_top_of_the_cabinet",
+      "seed": 44,
+      "frozen": 0.5982783809787785,
+      "gap": -0.025821671884993458
+    },
+    {
+      "task": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "seed": 42,
+      "frozen": 1.456105294819778,
+      "gap": 0.36258121991881825
+    },
+    {
+      "task": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "seed": 43,
+      "frozen": 1.5211454052860707,
+      "gap": 0.25812946706149126
+    },
+    {
+      "task": "put_the_wine_bottle_on_top_of_the_cabinet",
+      "seed": 44,
+      "frozen": 1.3816993521093415,
+      "gap": 0.20810019947914155
+    },
+    {
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "seed": 42,
+      "frozen": 0.8146861815986645,
+      "gap": -0.07356871112108809
+    },
+    {
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "seed": 43,
+      "frozen": 0.9595560646737598,
+      "gap": 0.0007193467182415869
+    },
+    {
+      "task": "open_the_top_drawer_and_put_the_bowl_inside",
+      "seed": 44,
+      "frozen": 0.8712537568898393,
+      "gap": -0.006943366708031806
+    },
+    {
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "seed": 42,
+      "frozen": 0.5649793407241049,
+      "gap": -0.0545358336329958
+    },
+    {
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "seed": 43,
+      "frozen": 0.6954994058040019,
+      "gap": 0.016200954871005924
+    },
+    {
+      "task": "put_the_cream_cheese_in_the_bowl",
+      "seed": 44,
+      "frozen": 0.6292856988176229,
+      "gap": 0.015681821594526024
+    }
+  ],
+  "not_available": [
+    "gate values",
+    "attention weights",
+    "retrieval distances"
+  ]
+}

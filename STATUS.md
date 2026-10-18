@@ -14,7 +14,7 @@
 - P2 at 500 updates: no clear difference against head-only, LoRA, LoRA without source training and the probe. Worse than full fine-tuning (+0.013). Better than STRAP-style and the training-free baselines.
 - P3: RAID v7 head-only reaches LoRA's 500-update error after about 0.1 GPU-seconds; LoRA needs about 190 s.
 
-[Final results](artifacts/raid_hybrid_libero_goal_v6/compute_bench_final_20261017/FINAL_RESULTS.md). The final stage is used and must not run again. Runpod: 0 pods, 0 volumes; balance $6.96. Closed-loop success on the final tasks (optional step 4) is not run. `held_out_claims_eligible=false` (VPP2 saw LIBERO).
+[Final results](artifacts/raid_hybrid_libero_goal_v6/compute_bench_final_20261017/FINAL_RESULTS.md). [Post hoc wine-bottle diagnosis](artifacts/raid_hybrid_libero_goal_v6/posthoc_wine_bottle_20261018/POSTHOC_WINE_BOTTLE.md): on that task RAID v7 errors follow the source controller (per-demo r = 0.97), not k-NN (r = 0.31); gate values were not collected. The final stage is used and must not run again. Runpod: 0 pods, 0 volumes; balance $6.96. Closed-loop success on the final tasks (optional step 4) is not run. `held_out_claims_eligible=false` (VPP2 saw LIBERO).
 
 ## VPP2 selected for next phase — 13 October 2026
 
