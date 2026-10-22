@@ -152,7 +152,7 @@ def main():
     appendix = re.sub(r"(\\begin\{longtable\})", r"{\\small\n\1", appendix).replace(r"\end{longtable}", "\\end{longtable}\n}")
     tex = (PREAMBLE + "\n\\hypersetup{pdftitle={" + escape(title) + "}}\n\n\\title{\\textbf{" + escape(title) + "}}\n\n"
            "\\author{Constantin Ertel \\and Phillip Kerger\\\\ University of California, Berkeley}\n\n"
-           "\\date{Protocol v6, frozen final-analysis amendment 1b42ba59 \\textbar\\ 18 October 2026}\n\n"
+           "\\date{Preprint draft \\textbar\\ 22 October 2026}\n\n"
            "\\begin{document}\n\n\\maketitle\n\n\\begin{abstract}\n\n" + abstract_tex + "\n\n\\noindent Keywords: "
            + escape(keywords) + "\n\n\\noindent\\textit{Evidence boundary:} \\texttt{held\\_out\\_claims\\_eligible = false}. "
            "The final tasks were never used for design, but no claim is made that LIBERO is unseen by the pretrained models.\n\n"

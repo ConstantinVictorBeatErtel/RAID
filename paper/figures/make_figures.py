@@ -1,12 +1,13 @@
-"""Make the four manuscript figures from collected JSON only (no models, no datasets).
+"""Make the six manuscript figures from collected artifacts only (no models, no datasets).
 
 Inputs (all under artifacts/raid_hybrid_libero_goal_v6/):
   compute_bench_final_20261017/final_analysis.json            mean curves, frozen P1/P2 comparisons
   compute_bench_final_20261017/collection/bench/unit_*.json    per-setting and per-demo errors (final)
   compute_bench_baselines_20261017/collection/bench/unit_*.json per-demo errors (development)
+  vpp2_pilot_v5_20261014/collection/pilot/.../episodes/*_plan_vs_rollout.mp4  pilot frames (Figures 1, 6)
 
 Run from the repository root:  python3 paper/figures/make_figures.py
-Writes fig1..fig4 as PDF and PNG next to this script.
+Writes fig1..fig6 as PDF and PNG next to this script.
 """
 from __future__ import annotations
 
@@ -22,6 +23,11 @@ import matplotlib.pyplot as plt  # noqa: E402
 HERE = Path(__file__).resolve().parent
 ART = HERE.parent.parent / "artifacts/raid_hybrid_libero_goal_v6"
 FINAL = ART / "compute_bench_final_20261017"
+PILOT = ART / "vpp2_pilot_v5_20261014/collection/pilot"
+# Fixed example rule for pilot frames: the earliest success of the pilot (cream cheese, start 18, RAID+LoRA v6) and
+# the frozen source controller on the same start, which shares the first VPP2 plan.
+PILOT_TASK = "put_the_cream_cheese_in_the_bowl"
+PILOT_CASE = "put_the_cream_cheese_in_the_bowl_d18_s42"
 
 # Reference categorical palette (light mode), validated with the dataviz validator:
 # slots 1-5 pass the adjacent-pair gates; slots 1-3 pass all-pairs. Low-contrast slots carry direct labels.
@@ -63,46 +69,59 @@ def save(fig, name: str):
     plt.close(fig)
 
 
-def fig3_error_vs_compute(analysis: dict):
-    """Mean chunk MSE against cumulative adaptation GPU-seconds (symlog x; 0 = no training)."""
+def fig3_learning_curves(analysis: dict):
+    """Mean chunk MSE against target updates (left) and cumulative adaptation GPU-seconds (right, symlog)."""
     curves, zero = analysis["mean_curve"], {k: m for k, m, _ in analysis["zero"]}
     styled = [("raid_lora_v7", BLUE, "o"), ("raid_v7_head", ORANGE, "s"), ("lora_mlp", AQUA, "^"),
               ("head_only", YELLOW, "D"), ("full_finetune", MAGENTA, "v")]
     others = ["probe_fresh", "scratch_lora", "strap_style", "raid_lora_mlp"]
-    fig, ax = plt.subplots(figsize=(6.6, 3.8))
     gray_styles = {"probe_fresh": (":", "."), "scratch_lora": ("-.", "."), "strap_style": ("--", "."),
                    "raid_lora_mlp": ("-", "x")}
-    for key in others:
-        xs, ys = zip(*[(s, m) for s, m, _, _ in curves[key]])
-        ls, mk = gray_styles[key]
-        ax.plot(xs, ys, color=GRAY, lw=1.1, ls=ls, marker=mk, ms=4, zorder=1, label=NAMES[key])
-    for key, color, marker in styled:
-        xs, ys = zip(*[(s, m) for s, m, _, _ in curves[key]])
-        ax.plot(xs, ys, color=color, marker=marker, ms=5.5, mec=SURFACE, mew=1.0, label=NAMES[key], zorder=3)
-    ax.axhline(zero["support_knn_average"], color=INK2, lw=1.0, ls="--", zorder=2)
-    ax.annotate("VINN-style k-NN, no training (0.376)", (0.06, zero["support_knn_average"]), xytext=(0, 3),
-                textcoords="offset points", fontsize=7, color=INK2)
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.6), sharey=True, gridspec_kw={"wspace": 0.08})
     target = curves["lora_mlp"][-1][1]
-    ax.axhline(target, color=INK2, lw=0.8, ls=":", zorder=2)
-    ax.annotate(f"LoRA, 500 updates ({target:.3f})", (0.002, target), xytext=(0, -9), textcoords="offset points",
-                fontsize=7, color=INK2, ha="left")
-    ax.set_xscale("symlog", linthresh=0.05)
-    ax.set_xlim(-0.005, 1500)
-    ax.set_ylim(0.25, 0.56)
-    ax.set_xticks([0, 0.1, 1, 10, 100, 1000])
-    ax.set_xticklabels(["0", "0.1", "1", "10", "100", "1000"])
-    ax.set_xlabel("Cumulative adaptation GPU-seconds (symmetric log scale; A100-SXM4-80GB)")
-    ax.set_ylabel("Chunk MSE, normalized actions (lower is better)")
-    ax.set_title("Final tasks: action error vs adaptation compute (mean of 6 task × seed settings)",
-                 fontsize=9, color=INK, loc="left")
-    ax.legend(loc="upper right", fontsize=7, ncol=2, handlelength=2.6)
-    ax.text(0.0, -0.22, "Untrained starting points above 0.56 are clipped (1.055 source head; 1.339 fresh head). "
-            "Checkpoints at 0, 25, 50, 100, 200, 350, 500 updates.", transform=ax.transAxes, fontsize=6.5,
-            color=INK2)
-    save(fig, "fig3_error_vs_gpu_seconds")
+    for ax, xi in ((axes[0], 3), (axes[1], 0)):
+        for key in others:
+            xs, ys = zip(*[(p[xi], p[1]) for p in curves[key]])
+            ls, mk = gray_styles[key]
+            ax.plot(xs, ys, color=GRAY, lw=1.1, ls=ls, marker=mk, ms=4, zorder=1, label=NAMES[key])
+        for key, color, marker in styled:
+            xs, ys = zip(*[(p[xi], p[1]) for p in curves[key]])
+            ax.plot(xs, ys, color=color, marker=marker, ms=5.5, mec=SURFACE, mew=1.0, label=NAMES[key], zorder=3)
+        ax.axhline(zero["support_knn_average"], color=INK2, lw=1.0, ls="--", zorder=2)
+        ax.axhline(target, color=INK2, lw=0.8, ls=":", zorder=2)
+        ax.set_ylim(0.25, 0.56)
+    a0, a1 = axes
+    a0.set_xlim(-15, 515)
+    a0.set_xticks([0, 100, 200, 350, 500])
+    a0.set_xlabel("Target updates (batch 64)")
+    a0.set_ylabel("Chunk MSE, normalized actions (lower is better)")
+    a0.set_title("(a) Error per update", fontsize=8.5, color=INK, loc="left")
+    a0.axvline(25, color=INK2, lw=0.8, ls=(0, (1, 2)), zorder=0)
+    a0.annotate("25 updates (P2)", (25, 0.545), xytext=(3, 0), textcoords="offset points", fontsize=6.8,
+                color=INK2, va="top")
+    a0.annotate("VINN-style k-NN, no training (0.376)", (40, zero["support_knn_average"]), xytext=(0, 3),
+                textcoords="offset points", fontsize=6.8, color=INK2)
+    a1.annotate(f"LoRA after 500 updates ({target:.3f})", (0.002, target), xytext=(0, -9),
+                textcoords="offset points", fontsize=6.8, color=INK2)
+    a1.set_xscale("symlog", linthresh=0.05)
+    a1.set_xlim(-0.005, 1500)
+    a1.set_xticks([0, 0.1, 1, 10, 100, 1000])
+    a1.set_xticklabels(["0", "0.1", "1", "10", "100", "1000"])
+    a1.set_xlabel("Cumulative adaptation GPU-seconds (symlog; A100)")
+    a1.set_title("(b) Error per GPU-second", fontsize=8.5, color=INK, loc="left")
+    handles, labels = a1.get_legend_handles_labels()
+    order = list(range(len(others), len(labels))) + list(range(len(others)))
+    fig.legend([handles[i] for i in order], [labels[i] for i in order], loc="lower center", ncol=5, fontsize=6.8,
+               bbox_to_anchor=(0.5, -0.13), handlelength=2.4, columnspacing=1.2)
+    fig.suptitle("Final tasks: action error during target adaptation (mean of 6 task × seed settings)",
+                 fontsize=9, x=0.07, y=1.0, ha="left", color=INK)
+    fig.text(0.07, -0.19, "Untrained starting points above 0.56 are clipped (1.055 source head; 1.339 fresh head). "
+             "Checkpoints at 0, 25, 50, 100, 200, 350, 500 updates.", fontsize=6.5,
+             color=INK2)
+    save(fig, "fig3_learning_curves")
 
 
-def fig2_frozen_comparisons(analysis: dict):
+def fig4_frozen_comparisons(analysis: dict):
     """Forest plot of the frozen P1 and P2 comparisons with cluster bootstrap intervals and settings won."""
     rows = analysis["primary"]
     verdict_color = {"better": BLUE, "worse": ORANGE, "no clear difference": GRAY}
@@ -137,10 +156,10 @@ def fig2_frozen_comparisons(analysis: dict):
     ax.set_title("Frozen comparisons on the final tasks (P2 uses RAID+LoRA v7)", fontsize=9, color=INK, loc="left")
     ax.text(1.02, 0.25, "mean      won   verdict", fontsize=7, color=INK2, transform=ax.get_yaxis_transform(),
             clip_on=False)
-    save(fig, "fig2_frozen_comparisons")
+    save(fig, "fig4_frozen_comparisons")
 
 
-def fig1_per_setting(final_units: list[dict]):
+def fig2_per_setting(final_units: list[dict]):
     """Per-setting chunk MSE: two facets (no training; 25 updates), three series each."""
     def at25(u, key):
         return next(p["mse_macro"] for p in u["curves"][key] if p["updates"] == 25)
@@ -169,10 +188,10 @@ def fig1_per_setting(final_units: list[dict]):
     axes[0].set_yticklabels(labels, fontsize=7.5)
     axes[0].invert_yaxis()
     fig.suptitle("Final tasks, per task × seed setting", fontsize=9, x=0.02, y=1.06, ha="left", color=INK)
-    save(fig, "fig1_per_setting")
+    save(fig, "fig2_per_setting")
 
 
-def fig4_posthoc(final_units: list[dict], dev_units: list[dict]):
+def fig5_posthoc(final_units: list[dict], dev_units: list[dict]):
     """POST HOC: per-demo RAID v7 error against frozen-source error and against k-NN error (no training)."""
     pts = []
     for u in final_units + dev_units:
@@ -201,17 +220,154 @@ def fig4_posthoc(final_units: list[dict], dev_units: list[dict]):
     axes[1].legend(loc="lower right", fontsize=6.8)
     fig.suptitle("POST HOC: per-demonstration errors without training (6 final + 6 development settings)",
                  fontsize=9, x=0.02, ha="left", color=INK)
-    save(fig, "fig4_posthoc_scatter")
+    save(fig, "fig5_posthoc_scatter")
+
+
+def pilot_frames(condition: str) -> list:
+    """RGB frames of a pilot plan_vs_rollout video: (plan, executed) pairs, one per executed step."""
+    import cv2
+
+    path = PILOT / PILOT_TASK / "rollout/episodes" / f"{PILOT_CASE}_{condition}_plan_vs_rollout.mp4"
+    cap, out = cv2.VideoCapture(str(path)), []
+    while True:
+        ok, frame = cap.read()
+        if not ok:
+            break
+        rgb = frame[:, :, ::-1]
+        out.append((rgb[:, :128], rgb[:, 128:]))
+    assert out, path
+    return out
+
+
+def _box(ax, xy, w, h, text, fc, ec=INK2, fs=7.2, bold=False, ls="-"):
+    from matplotlib.patches import FancyBboxPatch
+
+    ax.add_patch(FancyBboxPatch(xy, w, h, boxstyle="round,pad=0.006,rounding_size=0.012", fc=fc, ec=ec, lw=0.9,
+                                ls=ls, transform=ax.transAxes, zorder=2))
+    ax.text(xy[0] + w / 2, xy[1] + h / 2, text, ha="center", va="center", fontsize=fs, color=INK,
+            fontweight="bold" if bold else "normal", transform=ax.transAxes, zorder=3, linespacing=1.25)
+
+
+def _arrow(ax, a, b, color=INK2, ls="-"):
+    ax.annotate("", xy=b, xytext=a, xycoords="axes fraction", textcoords="axes fraction",
+                arrowprops=dict(arrowstyle="-|>", color=color, lw=1.0, ls=ls, shrinkA=0, shrinkB=0,
+                                mutation_scale=8), zorder=4)
+
+
+def fig1_overview():
+    """Schematic: (a) pipeline with RAID v7 IDM, using real pilot frames; (b) development / freeze / final protocol."""
+    frames = pilot_frames("raid_lora_mlp")
+    current, future = frames[0][1], frames[8][0]
+    fig = plt.figure(figsize=(7.2, 4.6))
+    ax = fig.add_axes([0, 0.30, 1, 0.70])
+    ax.set_axis_off()
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.text(0.005, 0.975, "(a) Pipeline and RAID v7 inverse-dynamics model", fontsize=8.5, color=INK, va="top")
+    # left column: current frame -> frozen generator -> future frame; both frames feed the IDM through a bus
+    ia = fig.add_axes([0.015, 0.30 + 0.70 * 0.60, 0.112, 0.175])
+    ia.imshow(current)
+    ia.set_axis_off()
+    ib = fig.add_axes([0.015, 0.30 + 0.70 * 0.08, 0.112, 0.175])
+    ib.imshow(future)
+    ib.set_axis_off()
+    ax.text(0.071, 0.875, "current frame oₜ, state qₜ", ha="center", fontsize=6.3, color=INK2)
+    ax.text(0.071, 0.065, "future oₜ₊₈: VPP2 plan (pilot)\nor recorded frame (offline)", ha="center", va="top",
+            fontsize=6.3, color=INK2)
+    _box(ax, (0.015, 0.375), 0.112, 0.17, "frozen video\ngenerator (VPP2)\n+ instruction", "#eef3fb", fs=6.2)
+    _arrow(ax, (0.071, 0.60), (0.071, 0.545))
+    _arrow(ax, (0.071, 0.375), (0.071, 0.33))
+    bus = 0.215
+    ax.plot([0.13, bus], [0.72, 0.72], color=INK2, lw=1.0, transform=ax.transAxes)
+    ax.plot([0.13, bus], [0.20, 0.20], color=INK2, lw=1.0, transform=ax.transAxes)
+    ax.plot([bus, bus], [0.20, 0.72], color=INK2, lw=1.0, transform=ax.transAxes)
+    ax.text(bus + 0.006, 0.46, "oₜ, oₜ₊₈, qₜ", fontsize=6.3, color=INK2, rotation=90, va="center")
+    # IDM container
+    _box(ax, (0.305, 0.04), 0.56, 0.88, "", SURFACE, ec=INK2, ls="--")
+    ax.text(0.318, 0.895, "RAID v7 IDM (adapted from K = 5 target demonstrations)", fontsize=7, color=INK2,
+            va="top")
+    _box(ax, (0.33, 0.60), 0.15, 0.20, "controller encoder φ\nMAE ViT-B/16\n(frozen or LoRA)", "#fdf0ea", fs=6.6)
+    _box(ax, (0.33, 0.17), 0.15, 0.20, "frozen reference\nencoder φ_ref\n(retrieval keys)", "#e8f6f0", fs=6.6)
+    _arrow(ax, (bus, 0.70), (0.33, 0.70))
+    _arrow(ax, (bus, 0.27), (0.33, 0.27))
+    _box(ax, (0.51, 0.60), 0.13, 0.20, "direct head\nf_θ(s)\nMLP 512–256", "#fdf0ea", fs=6.6)
+    _box(ax, (0.51, 0.17), 0.13, 0.20, "support bank\ntop-k = 16\ncandidates (φ_ref, aⁱ)", "#e8f6f0", fs=6.6)
+    _arrow(ax, (0.48, 0.70), (0.51, 0.70))
+    _arrow(ax, (0.48, 0.27), (0.51, 0.27))
+    _box(ax, (0.67, 0.17), 0.17, 0.20, "attention over\ncandidates → prior\n(selection loss)", "#e8f6f0", fs=6.6)
+    _arrow(ax, (0.64, 0.27), (0.67, 0.27))
+    _arrow(ax, (0.575, 0.60), (0.73, 0.37), color=INK2, ls=":")
+    ax.text(0.665, 0.475, "query s", fontsize=6.2, color=INK2, rotation=0)
+    _box(ax, (0.67, 0.60), 0.17, 0.20, "per-dimension gate g\nâ = g ⊙ direct\n+ (1 − g) ⊙ prior", "#fff6dc", fs=6.6,
+         bold=False)
+    _arrow(ax, (0.64, 0.70), (0.67, 0.70))
+    _arrow(ax, (0.755, 0.37), (0.755, 0.60))
+    _box(ax, (0.89, 0.60), 0.10, 0.20, "action chunk\n8 × 7\n→ simulator", "#eef3fb", fs=6.6)
+    _arrow(ax, (0.84, 0.70), (0.89, 0.70))
+    # protocol strip
+    bx = fig.add_axes([0, 0, 1, 0.29])
+    bx.set_axis_off()
+    bx.set_xlim(0, 1)
+    bx.set_ylim(0, 1)
+    bx.text(0.005, 0.97, "(b) Protocol: design on development tasks, freeze, then one run on sealed final tasks",
+            fontsize=8.5, color=INK, va="top")
+    steps = [("6 source tasks\nsource controller training\n(2,000 updates per head and seed)", "#eef3fb"),
+             ("2 development tasks\nmethod design, 3 benchmarks\n(v6/v7, 9 baselines, v7 head-only)", "#fdf0ea"),
+             ("Frozen amendment\n17 Oct 2026, 20:15 UTC\nmethods, comparisons P1–P3, rule", "#fff6dc"),
+             ("2 sealed final tasks × 3 seeds\nrun once, nothing tuned after\n15 methods, 7 checkpoints", "#e8f6f0")]
+    w, gap, x = 0.225, 0.023, 0.01
+    for i, (t, fc) in enumerate(steps):
+        _box(bx, (x, 0.12), w, 0.62, t, fc, fs=6.4)
+        if i < len(steps) - 1:
+            _arrow(bx, (x + w, 0.43), (x + w + gap, 0.43))
+        x += w + gap
+    save(fig, "fig1_overview")
+
+
+def fig6_pilot_filmstrip():
+    """Closed-loop pilot frames: VPP2 plan targets vs executed frames for a success and a failure on one start."""
+    cases = [("raid_lora_mlp", "RAID+LoRA v6: success at step 84"),
+             ("source_frozen", "Frozen source controller, same start: timeout at 300 steps")]
+    ncol = 6
+    fig, grid = plt.subplots(5, ncol, figsize=(7.2, 5.9),
+                             gridspec_kw={"hspace": 0.18, "wspace": 0.04, "height_ratios": [1, 1, 0.42, 1, 1]})
+    for a in grid[2]:
+        a.set_axis_off()
+    axes = grid[[0, 1, 3, 4]]
+    for c, (cond, title) in enumerate(cases):
+        frames = pilot_frames(cond)
+        n = len(frames)
+        idx = [round(i * (n - 1) / (ncol - 1)) for i in range(ncol)]
+        for j, t in enumerate(idx):
+            for r, (img, rowname) in enumerate(((frames[t][0], "VPP2 plan"), (frames[t][1], "executed"))):
+                a = axes[2 * c + r, j]
+                a.imshow(img, interpolation="bilinear")
+                a.set_xticks([])
+                a.set_yticks([])
+                for sp in a.spines.values():
+                    sp.set_visible(False)
+                if j == 0:
+                    a.set_ylabel(rowname, fontsize=7.5, color=INK)
+                if r == 0:
+                    a.set_title(f"step {t}", fontsize=7, color=INK2, pad=2)
+        axes[2 * c, 0].text(0, 1.22, f"({'ab'[c]}) {title}", transform=axes[2 * c, 0].transAxes, fontsize=8.5,
+                            color=INK, va="bottom")
+    fig.text(0.125, 0.075, "Task: put the cream cheese in the bowl (development task), start 18, seed 42. "
+             "Both conditions share the first VPP2 plan.\nTop row of each panel: generated target frame used "
+             "at that step; bottom row: simulator frame actually reached.", fontsize=6.5, color=INK2, va="top")
+    save(fig, "fig6_pilot_filmstrip")
 
 
 def main():
     analysis = load(FINAL / "final_analysis.json")
     final_units = units("compute_bench_final_20261017")
     dev_units = units("compute_bench_baselines_20261017")
-    fig3_error_vs_compute(analysis)
-    fig2_frozen_comparisons(analysis)
-    fig1_per_setting(final_units)
-    fig4_posthoc(final_units, dev_units)
+    fig1_overview()
+    fig2_per_setting(final_units)
+    fig3_learning_curves(analysis)
+    fig4_frozen_comparisons(analysis)
+    fig5_posthoc(final_units, dev_units)
+    fig6_pilot_filmstrip()
 
 
 if __name__ == "__main__":

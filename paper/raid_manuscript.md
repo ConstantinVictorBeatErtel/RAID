@@ -1,16 +1,16 @@
 # Retrieval Accelerates but Does Not Replace Few-Shot Adaptation of Visual Inverse Dynamics: An Action-Error–Compute Benchmark on LIBERO-Goal
 
-> Status: results manuscript, 18 October 2026. Written from collected artifacts only; no new experiments. Reconciled with the [Google Doc](https://docs.google.com/document/d/11QDjW49qwxiZFJGYxMB5_dELf5keka6Qeh3ijXpW10s) on 18 October 2026: its content matched the 11 October version, so no user edits had to be merged. The Google Doc was then replaced in place with this text (same link) and verified by readback; figure images still have to be inserted there by hand. `held_out_claims_eligible = false`: the final tasks were never used for design, but we cannot verify that the video generator used in the closed-loop pilot (VPP2) never saw LIBERO data, so no claim of generator-unseen tasks is made.
+> Status: results manuscript, revised 22 October 2026 from collected artifacts only; no new experiments. Changes from the 18 October version: tighter abstract with the compute claim qualified against plain head-only fine-tuning; six figures (new: pipeline/protocol overview, error-per-update curves, closed-loop filmstrip); internal file names and digests moved from the body to the reproducibility section; discussion of offline error versus closed-loop success and of next steps. The Google Doc was confirmed unchanged since the 18 October sync before this revision (same revision ID).
 
 Constantin Ertel¹, Phillip Kerger¹
 
 ¹ University of California, Berkeley
 
-*Working manuscript | Protocol v6 with frozen final-analysis amendment 1b42ba59 | Revised 18 October 2026*
+*Preprint draft | Revised 22 October 2026*
 
 ## Abstract
 
-Video-planning robot controllers translate a predicted future frame into actions with an inverse-dynamics model (IDM). When a new task supplies only a few demonstrations, the IDM must adapt, and the cost of that adaptation matters alongside its accuracy. We study few-shot IDM adaptation on held-out LIBERO-Goal tasks and measure action error (chunk mean-squared error on normalized actions, and R²) against adaptation compute (GPU-seconds and FLOPs per update). Our method, RAID, is a retrieval-augmented IDM whose head attends over 16 support transitions retrieved in a frozen reference space and gates the resulting prior against a direct prediction. We compare it with nine re-implemented baselines covering nearest-neighbour action regression, retrieve-and-blend prediction, retrieved training data, head-only and full fine-tuning, LoRA, and frozen-encoder probes. After development on two tasks, we froze the method set, comparisons and decision rule, and then ran once on two sealed tasks with three seeds. Without target training, RAID was worse than VINN-style k-nearest-neighbour regression (MSE 0.500 vs 0.376), so the first frozen comparison failed. After 25 updates, RAID with LoRA (0.272) had lower error than all nine baselines in all six task–seed settings. After 500 updates it showed no clear difference from head-only, LoRA and probe baselines and was worse than full fine-tuning (0.268). An exploratory frozen-encoder variant of RAID reached LoRA's 500-update error after about 0.14 GPU-seconds, whereas LoRA needed about 190. A post hoc analysis links the zero-training failure to one task on which the source-trained direct prediction is far outside its usual error range and the learned gate does not fall back to retrieval. A 40-episode closed-loop pilot with a frozen video generator yields low success for all conditions (0–2 of 10) and is reported only as secondary evidence. Retrieval therefore accelerates, but does not replace, few-shot IDM adaptation.
+Video-planning robot controllers turn a predicted future frame into actions with an inverse-dynamics model (IDM). When a new task supplies only a few demonstrations, the IDM must adapt, and the compute that adaptation needs matters alongside the accuracy it reaches. We study five-demonstration IDM adaptation on held-out LIBERO-Goal tasks and measure action error (chunk mean-squared error on normalized actions, and R²) as a function of adaptation compute (GPU-seconds and FLOPs per update). Our method, RAID, is a retrieval-augmented IDM whose head attends over 16 support transitions retrieved in a frozen reference space and gates the resulting prior against a direct prediction. We compare it with nine re-implemented baselines spanning nearest-neighbour action regression, retrieve-and-blend prediction, retrieved training data, head-only and full fine-tuning, LoRA and frozen-encoder probes. After developing all methods on two tasks, we froze the method set, comparisons and decision rule, and ran the benchmark once on two sealed tasks with three seeds. Without target training, RAID was worse than VINN-style k-nearest-neighbour regression (MSE 0.500 vs 0.376), so the first frozen comparison failed. After 25 updates, RAID with LoRA (0.272) had lower error than all nine baselines in all six task–seed settings, by 0.04–0.05 against the strongest of them. By 500 updates the advantage was gone: RAID with LoRA showed no clear difference from head-only, LoRA and probe baselines and was worse than full fine-tuning (0.268). Measured in GPU-seconds, most of the saving comes from keeping the encoder frozen: an exploratory frozen-encoder RAID variant reached LoRA's 500-update error after 0.14 GPU-seconds, against about 190 for LoRA, but plain head-only fine-tuning reached it after about 1 GPU-second. A post hoc analysis traces the zero-training failure to one task on which the source-trained direct prediction is far out of range and the learned gate does not fall back to retrieval. A 40-episode closed-loop pilot with a frozen video generator gives low success for every condition (at most 2 of 10). Retrieval therefore accelerates, but does not replace, few-shot IDM adaptation.
 
 Keywords: inverse dynamics; few-shot adaptation; retrieval; LoRA; adaptation compute; visual planning; robot learning.
 
@@ -18,21 +18,29 @@ Keywords: inverse dynamics; few-shot adaptation; retrieval; LoRA; adaptation com
 
 Visual world models make possible futures available as images or video, but a visual proposal must still be translated into executable robot actions. UniPi connects text-conditioned video planning with a separately trained inverse-dynamics model [1](https://arxiv.org/abs/2302.00111). More recent systems retain this decomposition: π0.7 conditions a generalist controller on visual subgoals [2](https://arxiv.org/abs/2604.15483), OpenWAM supports composable visual-prediction and inverse-dynamics components [3](https://arxiv.org/abs/2610.07922), and GE-Act 2.0 and VPP2 couple a visual planner with an action module [4](https://arxiv.org/abs/2609.05588),[5](https://arxiv.org/abs/2610.10270). When the visual predictor stays fixed, task-specific knowledge must enter through the action-inference component. This paper studies how that component, an inverse-dynamics model (IDM) that maps the current observation, robot state and a target future frame to an action chunk, should adapt to a new task from five demonstrations.
 
-With few target demonstrations, an IDM can use the demonstrations at prediction time, as in nearest-neighbour regression and retrieval-augmented policies [6](https://arxiv.org/abs/2112.01511),[7](https://arxiv.org/abs/2412.04759); it can use them to select additional training data [8](https://arxiv.org/abs/2304.08742),[9](https://arxiv.org/abs/2412.15182); or it can update parameters, from an action head alone to low-rank adapters [10](https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html),[11](https://arxiv.org/abs/2606.28476v1),[12](https://arxiv.org/abs/2106.09685) and full fine-tuning. These options differ sharply in cost. Retrieval needs no target training but adds lookup at inference. Head-only training on cached frozen features is cheap. LoRA and full fine-tuning run the image encoder at every update. Comparisons that report only accuracy after a fixed number of updates hide this difference.
+With few target demonstrations, an IDM can use the demonstrations at prediction time, as in nearest-neighbour regression and retrieval-augmented policies [6](https://arxiv.org/abs/2112.01511),[7](https://arxiv.org/abs/2412.04759); it can use them to select additional training data [8](https://arxiv.org/abs/2304.08742),[9](https://arxiv.org/abs/2412.15182); or it can update parameters, from an action head alone to low-rank adapters [10](https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html),[11](https://arxiv.org/abs/2606.28476v1),[12](https://arxiv.org/abs/2106.09685) and full fine-tuning. These options differ sharply in cost. Retrieval needs no target training but adds lookup at inference. Head-only training on cached frozen features is cheap. LoRA and full fine-tuning run the image encoder at every update. Comparisons that report only accuracy after a fixed number of updates hide this difference. The difference matters when a modular controller is specialized to many tasks or adapted on the robot's own hardware: an adaptation that costs about a GPU-second can be repeated for every task or scene, whereas one that costs minutes of encoder training cannot run inside a short deployment loop.
 
 We therefore treat few-shot IDM adaptation as a measurement problem: action error on held-out recorded transitions as a function of adaptation compute. The primary metric is chunk mean-squared error on normalized actions, averaged over query demonstrations, together with R²; compute is measured in adaptation GPU-seconds, FLOPs per update, trainable parameters and per-decision cost. Task success is secondary evidence. End-to-end few-shot policies are much stronger on success: in DISC's five-demonstration LIBERO-Goal evaluation, reported success at the best checkpoint is 55.0% for Octo, 68.5% for VQ-BeT and 73.0% for DISC [13](https://arxiv.org/abs/2605.20856),[14](https://arxiv.org/abs/2405.12213),[15](https://arxiv.org/abs/2403.03181), under a protocol different from ours. Our closed-loop pilot reaches at most 2 of 10 episodes. We do not compete on task success, and offline action error is not a substitute for it.
 
 Our method, RAID (Retrieval-Augmented Inverse Dynamics), retrieves the 16 support transitions closest to the query in a frozen reference representation. A learned head attends over the retrieved action chunks and mixes the resulting prior with a direct prediction through a per-dimension gate. Retrieval keys always come from the frozen reference encoder, so adapting the controller encoder with LoRA never changes the geometry of the support bank. Neither retrieval combined with LoRA nor a new world–action-model architecture is a sufficient novelty claim: ReCAP adds trajectory retrieval to a frozen world–action policy [16](https://arxiv.org/abs/2606.15631), HAND retrieves robot experience and then fine-tunes a policy [17](https://arxiv.org/abs/2505.20455v4), and VLA-Pro retrieves and fuses task-specific LoRA adapters [18](https://arxiv.org/abs/2605.29562v1). Our contribution is a controlled measurement of when retrieval helps an adapting IDM and what it costs.
 
-The protocol separates design from evaluation. All method development used two development tasks. We then froze the method set, comparisons, interval method and decision rule in a digest-bound amendment before any final-task file was read, and ran the frozen benchmark once on two sealed final tasks with three seeds. Two of our variants were designed after development results were known; development data were therefore used for design, but final-task data were not. Throughout, `held_out_claims_eligible = false`: the final tasks are held out from our training and design, but we make no claim that LIBERO is unseen by the pretrained models in the pipeline.
+The protocol separates design from evaluation. All method development used two development tasks. We then froze the method set, comparisons, interval method and decision rule in a digest-bound amendment before any final-task file was read, and ran the frozen benchmark once on two sealed final tasks with three seeds. Two of our variants were designed after development results were known; development data were therefore used for design, but final-task data were not. The final tasks are held out from our training and design, but we cannot verify that the pretrained models in the pipeline never saw LIBERO data, so we make no claim that the tasks are unseen by those models.
 
 Our contributions are:
 
 1. **A compute-aware few-shot IDM benchmark on LIBERO-Goal.** Fifteen methods, six training-free and nine trained, are evaluated on the same support sets, query transitions, normalizers and update schedule, and each trained method yields an error-versus-GPU-second curve. The nine baselines are re-implementations of established method families in our setting, not reproductions of the published systems.
 2. **The RAID v7 head and a frozen-encoder variant.** Cross-attention over k = 16 retrieved candidates, a per-dimension gate and an auxiliary selection loss; the head can be combined with encoder LoRA or trained alone on cached frozen features.
-3. **A frozen-plan final evaluation that includes a failed comparison.** Without training, RAID is worse than VINN-style k-NN. After 25 updates, RAID with LoRA is better than all nine baselines in 6/6 settings. After 500 updates the advantage disappears, and full fine-tuning is best.
+3. **A frozen-plan final evaluation that includes a failed comparison.** Without training, RAID is worse than VINN-style k-NN. After 25 updates, RAID with LoRA is better than all nine baselines in 6/6 settings. After 500 updates the advantage disappears, and full fine-tuning is best. Per GPU-second, the advantage of the RAID head over plain head-only training is not consistent across stages.
 4. **A post hoc diagnosis of the zero-training failure**, clearly separated from the frozen analysis.
 5. **A small closed-loop pilot** with a frozen video generator, reported as secondary evidence.
+
+Figure 1 summarizes the pipeline, the RAID v7 IDM and the protocol.
+
+<!-- Figures: paper/figures/make_figures.py; Figure 1 frames come from vpp2_pilot_v5_20261014/collection/pilot (cream cheese, start 18, RAID+LoRA v6) -->
+
+![Figure 1](figures/fig1_overview.png)
+
+Figure 1. (a) Pipeline. A frozen video generator turns the current frame and the instruction into a future frame; the RAID v7 IDM maps the current frame, the proprioceptive state and that future to an 8 × 7 action chunk. A controller encoder (frozen, or adapted with LoRA) feeds a direct head; a separate frozen reference encoder retrieves 16 candidates from the support bank of the five target demonstrations; attention over the candidates forms a retrieval prior, and a per-dimension gate mixes the direct prediction with that prior. In the offline benchmark the future is the recorded frame; in the closed-loop pilot it is generated by VPP2. The two example frames are from the pilot. (b) Protocol: source training on six tasks, method design on two development tasks, a frozen analysis amendment, and a single run on two sealed final tasks.
 
 ## 2. Related Work
 
@@ -76,7 +84,7 @@ End-to-end policies adapt an entire visuomotor policy and report task success. D
 
 ### 4.1 Pipeline
 
-The pipeline has a frozen visual generator and an IDM. The generator is conditioned only on the current RGB frame and the instruction; recorded futures, logged actions, privileged simulator state and native generator actions are excluded from the controller input. In the offline benchmark the generator is not used. In the closed-loop pilot it is the standalone Stage-1 video model of VPP2 [5](https://arxiv.org/abs/2610.10270), pinned to a fixed repository commit; earlier feasibility tests with Cosmos3-Edge [44](https://huggingface.co/nvidia/Cosmos3-Edge) are not part of the reported results.
+The pipeline has a frozen visual generator and an IDM (Figure 1a). The generator is conditioned only on the current RGB frame and the instruction; recorded futures, logged actions, privileged simulator state and native generator actions are excluded from the controller input. In the offline benchmark the generator is not used. In the closed-loop pilot it is the standalone Stage-1 video model of VPP2 [5](https://arxiv.org/abs/2610.10270), pinned to a fixed repository commit; earlier feasibility tests with Cosmos3-Edge [44](https://huggingface.co/nvidia/Cosmos3-Edge) are not part of the reported results.
 
 ### 4.2 Controller, frozen reference retrieval and source training
 
@@ -158,7 +166,7 @@ All methods of a run share one GPU and 16 CPU threads. Adaptation GPU-seconds ex
 
 ### 5.4 Development, frozen plan and final run
 
-Development used only the two development tasks: a compute-aware benchmark of v6 and v7 (16–17 October 2026), the nine-baseline benchmark (17 October), and the exploratory RAID v7 head-only run (17 October). On 17 October 2026 at 20:15 UTC, before any final-task data were hashed, packaged or read, we froze an analysis amendment (SHA-256 digest 1b42ba59…) that fixes the method set, metrics, checkpoints and the following comparisons:
+Development used only the two development tasks: a compute-aware benchmark of v6 and v7 (16–17 October 2026), the nine-baseline benchmark (17 October), and the exploratory RAID v7 head-only run (17 October). On 17 October 2026 at 20:15 UTC, before any final-task data were hashed, packaged or read, we froze an analysis amendment (Figure 1b; its digest is given under Reproducibility) that fixes the method set, metrics, checkpoints and the following comparisons:
 
 - **P1:** RAID v7 without training versus the best training-free baseline on development data (VINN-style k-NN, development MSE 0.426).
 - **P2:** the RAID variant with the lowest development error at each budget versus each of the nine baselines, at 25 and at 500 updates. The rule selected RAID+LoRA v7 at both budgets (development MSE 0.308 and 0.290).
@@ -189,13 +197,13 @@ Table 2. Training-free methods, final tasks (mean over six settings) and develop
 | RAID v6 (ours) | 0.535 | 0.153 | 0.424 |
 | Frozen source controller | 1.055 | −1.116 | 0.756 |
 
-On development tasks RAID v7 had the lowest training-free error. On the final tasks it ranked fourth, and P1 failed: RAID v7 minus VINN-style k-NN was +0.123 (cluster 95% CI [+0.007, +0.250]; demonstration-level CI [+0.086, +0.161]; 3/6 settings won), verdict *worse*. The aggregate hides a split by task (Table 3). Figure 1 shows the same split for each setting. On the bowl task RAID v7 had lower error than k-NN for all three seeds (0.306–0.324 vs 0.319–0.374). On the wine-bottle task it was much worse for all three seeds (0.617–0.716 vs 0.353–0.456), and the frozen source controller was also far worse there (1.382–1.521) than on the bowl task (0.598–0.736). The secondary comparisons of RAID v7 with REGENT retrieve-and-play (+0.051, cluster CI [−0.054, +0.174]) and the REGENT-style blend (+0.064, [−0.040, +0.186]) showed no clear difference.
+On development tasks RAID v7 had the lowest training-free error. On the final tasks it ranked fourth, and P1 failed: RAID v7 minus VINN-style k-NN was +0.123 (cluster 95% CI [+0.007, +0.250]; demonstration-level CI [+0.086, +0.161]; 3/6 settings won), verdict *worse*. The aggregate hides a split by task (Table 3). Figure 2 shows the same split for each setting. On the bowl task RAID v7 had lower error than k-NN for all three seeds (0.306–0.324 vs 0.319–0.374). On the wine-bottle task it was much worse for all three seeds (0.617–0.716 vs 0.353–0.456), and the frozen source controller was also far worse there (1.382–1.521) than on the bowl task (0.598–0.736). The secondary comparisons of RAID v7 with REGENT retrieve-and-play (+0.051, cluster CI [−0.054, +0.174]) and the REGENT-style blend (+0.064, [−0.040, +0.186]) showed no clear difference.
 
 <!-- Figures: paper/figures/make_figures.py, which reads only compute_bench_final_20261017/final_analysis.json and the collected unit_*.json files -->
 
-![Figure 1](figures/fig1_per_setting.png)
+![Figure 2](figures/fig2_per_setting.png)
 
-Figure 1. Per-setting chunk MSE on the final tasks without training (left) and after 25 updates (right). RAID v7 is worse than k-NN only on the wine-bottle task; after 25 updates RAID+LoRA v7 and RAID v7 head-only have lower error than LoRA in every setting.
+Figure 2. Per-setting chunk MSE on the final tasks without training (left) and after 25 updates (right). RAID v7 is worse than k-NN only on the wine-bottle task; after 25 updates RAID+LoRA v7 and RAID v7 head-only have lower error than LoRA in every setting.
 
 <!-- Source: artifacts/raid_hybrid_libero_goal_v6/compute_bench_final_20261017/FINAL_RESULTS.md, "Per setting (descriptive)" -->
 
@@ -244,17 +252,23 @@ Table 5. Frozen comparison P2: RAID+LoRA v7 minus each baseline (negative favour
 | REGENT retrieve-and-play | −0.177 [−0.219, −0.134] | 6/6 | better | −0.167 [−0.202, −0.133] | 6/6 | better |
 | REGENT-style blend | −0.164 [−0.206, −0.121] | 6/6 | better | −0.154 [−0.190, −0.120] | 6/6 | better |
 
-After 25 updates, RAID+LoRA v7 reached 0.272 and was better than all nine baselines in all six settings, with every cluster interval below zero (Table 5; Figure 2). The margins over the strongest trained baselines were moderate: −0.049 against head-only fine-tuning, −0.044 against LoRA and −0.042 against full fine-tuning. The development result at this budget (better than every baseline in 6/6 settings) therefore transferred to the final tasks.
+After 25 updates, RAID+LoRA v7 reached 0.272 and was better than all nine baselines in all six settings, with every cluster interval below zero. Figure 3a shows the error curves by update; Table 5 and Figure 4 give the frozen comparisons. The margins over the strongest trained baselines were moderate: −0.049 against head-only fine-tuning, −0.044 against LoRA and −0.042 against full fine-tuning. The development result at this budget (better than every baseline in 6/6 settings) therefore transferred to the final tasks.
 
 <!-- Figures: paper/figures/make_figures.py, which reads only compute_bench_final_20261017/final_analysis.json and the collected unit_*.json files -->
 
-![Figure 2](figures/fig2_frozen_comparisons.png)
+![Figure 3](figures/fig3_learning_curves.png)
 
-Figure 2. Frozen comparisons on the final tasks: paired difference in chunk MSE (ours minus baseline) with 95% percentile-bootstrap intervals over the six task × seed clusters, settings won and the pre-registered verdict.
+Figure 3. Mean chunk MSE on the final tasks (a) against target updates and (b) against cumulative adaptation GPU-seconds (symmetric log scale; zero means no training). Markers are the checkpoints at 0, 25, 50, 100, 200, 350 and 500 updates. The dashed line is VINN-style k-NN without training and the dotted line LoRA's 500-update error. Shared one-time costs (feature cache, source training) are excluded.
+
+<!-- Figures: paper/figures/make_figures.py, which reads only compute_bench_final_20261017/final_analysis.json and the collected unit_*.json files -->
+
+![Figure 4](figures/fig4_frozen_comparisons.png)
+
+Figure 4. Frozen comparisons on the final tasks: paired difference in chunk MSE (ours minus baseline) with 95% percentile-bootstrap intervals over the six task × seed clusters, settings won and the pre-registered verdict.
 
 After 500 updates, the advantage disappeared. RAID+LoRA v7 (0.281) showed no clear difference from head-only fine-tuning, LoRA, LoRA without source training and the frozen-encoder probe; it was worse than full fine-tuning (+0.013, [+0.004, +0.021], 1/6), which had the lowest error of all methods (0.268); and it remained better than the STRAP-style baseline and all training-free baselines. Its error curve was not monotone: the minimum occurred at 25 updates, and later checkpoints were between 0.280 and 0.291. The frozen protocol used a fixed schedule without early stopping, because selecting a checkpoint on final-task error was not allowed.
 
-Two secondary comparisons support the role of the v7 head (FINAL_RESULTS.md, "Secondary comparisons"). RAID+LoRA v6 had no clear advantage over LoRA at 25 updates (−0.018, [−0.042, +0.001], 3/6) and was worse at 500 updates (+0.052, [+0.043, +0.063], 0/6). The exploratory RAID v7 head-only was better than LoRA at 25 updates (−0.042, [−0.059, −0.027], 6/6) and showed no clear difference at 500 updates (+0.004, [−0.002, +0.011], 2/6).
+Two secondary comparisons support the role of the v7 head (Appendix B, Table B2). RAID+LoRA v6 had no clear advantage over LoRA at 25 updates (−0.018, [−0.042, +0.001], 3/6) and was worse at 500 updates (+0.052, [+0.043, +0.063], 0/6). The exploratory RAID v7 head-only was better than LoRA at 25 updates (−0.042, [−0.059, −0.027], 6/6) and showed no clear difference at 500 updates (+0.004, [−0.002, +0.011], 2/6).
 
 ### 6.3 Adaptation compute
 
@@ -274,15 +288,9 @@ Table 6. Error at fixed adaptation budgets and compute to reach LoRA's 500-updat
 | STRAP-style retrieved data | 0.325 | 0.326 | 0.326 | not reached | 1.7 | 0.3 |
 | VINN-style k-NN (no training) | 0.376 | 0.376 | 0.376 | not reached | 0 | — |
 
-Figure 3 plots error against adaptation GPU-seconds. Methods that keep the encoder frozen reach low error within about one GPU-second, because each update touches only the head on cached features (0.3–1.2 GFLOP per update). LoRA-based methods run the image encoder at every update (about 5.2 TFLOP per update) and need tens to hundreds of seconds; full fine-tuning needs 13.6 TFLOP per update but reaches the lowest error at 100 s (0.266). The exploratory RAID v7 head-only reached 0.273 at its first checkpoint (25 updates, 0.14 GPU-s), below LoRA's 500-update error of 0.283; LoRA itself reaches that error only at its last checkpoint, after about 187 GPU-seconds. Retrieval therefore buys a large reduction in the compute needed for a given error at small budgets.
+Figure 3 plots error against updates (a) and against adaptation GPU-seconds (b). Methods that keep the encoder frozen reach low error within about one GPU-second, because each update touches only the head on cached features (0.3–1.2 GFLOP per update). LoRA-based methods run the image encoder at every update (about 5.2 TFLOP per update) and need tens to hundreds of seconds; full fine-tuning costs 13.6 TFLOP per update but reaches the lowest error at 100 s (0.266). The exploratory RAID v7 head-only reached 0.273 at its first checkpoint (25 updates, 0.14 GPU-s), below LoRA's 500-update error of 0.283, which LoRA reaches only at its last checkpoint after about 187 GPU-seconds. Most of this gap, however, comes from keeping the encoder frozen rather than from retrieval: plain head-only fine-tuning reached the same target after about 1.0 GPU-second.
 
-<!-- Figures: paper/figures/make_figures.py, which reads only compute_bench_final_20261017/final_analysis.json and the collected unit_*.json files -->
-
-![Figure 3](figures/fig3_error_vs_gpu_seconds.png)
-
-Figure 3. Mean chunk MSE on the final tasks against cumulative adaptation GPU-seconds (symmetric log scale; zero means no training). Markers are the checkpoints at 0, 25, 50, 100, 200, 350 and 500 updates. Shared one-time costs (feature cache, source training) are excluded.
-
-This per-second advantage is not consistent across stages. On development tasks, plain head-only fine-tuning was better than RAID v7 head-only at every fixed budget, because one head-only update costs about 2.4 ms and one RAID v7 head update about 6 ms (V7HEAD_RESULTS.md); neither reached LoRA's development 500-update error. The robust statement is that the RAID head improves error per update; per GPU-second it is comparable to plain head-only training.
+Against plain head-only training, the per-second advantage of the RAID head is not consistent across stages. On the final tasks RAID v7 head-only had lower error at 0.5 GPU-s (0.277 vs 0.292) but higher error at 10 and 100 GPU-s (0.287 vs 0.280). On development tasks, plain head-only fine-tuning was better than RAID v7 head-only at every fixed budget, because one head-only update costs about 2.4 ms and one RAID v7 head update about 6 ms; neither reached LoRA's development 500-update error. The robust statement is that the RAID head improves error per update; per GPU-second it is comparable to plain head-only training.
 
 <!-- Source: artifacts/raid_hybrid_libero_goal_v6/compute_bench_final_20261017/FINAL_RESULTS.md, "Cost per control decision (batch 1)" -->
 
@@ -296,7 +304,7 @@ Retrieval has an inference cost. At batch size 1, every method except RAID+LoRA 
 
 The failure is specific to one task. On the wine-bottle task, VINN-style k-NN over the same support bank still performed as on other tasks (0.406), whereas both learned RAID heads failed (RAID v6 0.692, RAID v7 0.682; R² of RAID v7 −0.51). The frozen source controller's error on this task (1.453) was far above its error on the other three held-out tasks (0.630–0.882).
 
-On this task, RAID v7 errors followed the source controller rather than retrieval (Figure 4). Across its 60 query demonstrations (3 seeds × 20), the Pearson correlation between RAID v7 and frozen-source errors was 0.97 (Spearman 0.95), whereas the correlation with k-NN errors was 0.31 (Spearman 0.26), and RAID v7 was worse than k-NN on 92% of the demonstrations. Figure 4 shows the per-demonstration errors. On the other three tasks, RAID v7 errors correlated more strongly with k-NN errors (Pearson 0.77–0.91) than with source errors (0.62–0.78), and RAID v7 was worse than k-NN on 38–50% of demonstrations.
+On this task, RAID v7 errors followed the source controller rather than retrieval (Figure 5). Across its 60 query demonstrations (3 seeds × 20), the Pearson correlation between RAID v7 and frozen-source errors was 0.97 (Spearman 0.95), whereas the correlation with k-NN errors was 0.31 (Spearman 0.26), and RAID v7 was worse than k-NN on 92% of the demonstrations. Figure 5 shows the per-demonstration errors. On the other three tasks, RAID v7 errors correlated more strongly with k-NN errors (Pearson 0.77–0.91) than with source errors (0.62–0.78), and RAID v7 was worse than k-NN on 38–50% of demonstrations.
 
 The failure appeared only when the source controller was far outside its usual range. In the nine other settings, frozen-source error ranged from 0.56 to 0.96 and RAID v7 minus k-NN from −0.074 to +0.016; in the three wine-bottle settings, frozen-source error ranged from 1.38 to 1.52 and RAID v7 minus k-NN from +0.208 to +0.363. With one failing task, this pattern cannot establish a threshold rule.
 
@@ -306,9 +314,9 @@ Our interpretation is that the zero-training RAID heads depend on the source-tra
 
 <!-- Figures: paper/figures/make_figures.py, which reads only compute_bench_final_20261017/final_analysis.json and the collected unit_*.json files -->
 
-![Figure 4](figures/fig4_posthoc_scatter.png)
+![Figure 5](figures/fig5_posthoc_scatter.png)
 
-Figure 4. Post hoc: per-demonstration RAID v7 error without training against the frozen source controller's error (left) and against VINN-style k-NN error (right), over the six final and six development settings (240 query demonstrations). Dashed line: equal error.
+Figure 5. Post hoc: per-demonstration RAID v7 error without training against the frozen source controller's error (left) and against VINN-style k-NN error (right), over the six final and six development settings (240 query demonstrations). Dashed line: equal error.
 
 ### 6.5 Closed-loop pilot (secondary evidence)
 
@@ -323,7 +331,13 @@ Table 7. Closed-loop success on the development tasks with VPP2-generated future
 | LoRA | 0/5 | 1/5 | 1/10 | 180 |
 | RAID+LoRA v6 | 1/5 | 1/5 | 2/10 | 171 |
 
-Success was low for all conditions: 3 successes in 40 episodes, all other episodes timing out at 300 steps. The registered descriptive contrasts were +0.2 for RAID+LoRA over RAID, +0.1 over LoRA, and an interaction of +0.1. The two RAID+LoRA successes and the single LoRA success occurred on different starts, so the paired difference between them was +1 on two cases and −1 on one. With this sample, no difference is statistically meaningful. Offline, on the same pilot support sets, LoRA had the lowest action error (0.341 and 0.225 on the two tasks) and RAID+LoRA v6 the second lowest (0.420 and 0.285), so the offline and closed-loop rankings did not agree. Generated and executed videos are retained (Appendix C).
+Success was low for all conditions: 3 successes in 40 episodes, all other episodes timing out at 300 steps. The registered descriptive contrasts were +0.2 for RAID+LoRA over RAID, +0.1 over LoRA, and an interaction of +0.1. The two RAID+LoRA successes and the single LoRA success occurred on different starts, so the paired difference between them was +1 on two cases and −1 on one. With this sample, no difference is statistically meaningful. Offline, on the same pilot support sets, LoRA had the lowest action error (0.341 and 0.225 on the two tasks) and RAID+LoRA v6 the second lowest (0.420 and 0.285), so the offline and closed-loop rankings did not agree. Figure 6 shows generated plan frames next to the frames actually reached for the earliest success and for the frozen source controller on the same start; generated and executed videos for all 40 episodes are retained (Appendix C).
+
+<!-- Figures: paper/figures/make_figures.py; frames from vpp2_pilot_v5_20261014/collection/pilot/put_the_cream_cheese_in_the_bowl/rollout/episodes/*_d18_s42_{raid_lora_mlp,source_frozen}_plan_vs_rollout.mp4 -->
+
+![Figure 6](figures/fig6_pilot_filmstrip.png)
+
+Figure 6. Closed-loop pilot on the development task "put the cream cheese in the bowl" (start 18, seed 42). Each panel shows, at six evenly spaced steps, the VPP2-generated target frame in use (top) and the simulator frame reached (bottom). (a) RAID+LoRA v6 succeeds at step 84. (b) The frozen source controller, which shares the first plan, times out at 300 steps. Examples follow a fixed rule (earliest success and the frozen controller on the same start) and are not representative of the 37 failures in general.
 
 ## 7. Discussion and Limitations
 
@@ -331,7 +345,11 @@ Success was low for all conditions: 3 successes in 40 episodes, all other episod
 
 **Why learned retrieval failed without training.** The training-free result reversed between development and final tasks. The post hoc analysis suggests that a learned gate inherits the failures of the source-trained direct path, whereas plain k-NN does not. A gate that depends on retrieval confidence or on the disagreement between the direct prediction and the retrieved actions could allow a fallback to retrieval. Such a change must be designed on development tasks and tested on new held-out tasks under a new frozen plan, because the current final tasks have been used.
 
+**Offline error and closed-loop success.** In the pilot the offline ranking (LoRA lowest error) and the closed-loop ranking (RAID+LoRA v6 with 2 of 10) disagreed, and success was too rare to rank conditions. In the failure of Figure 6b, the generated plans and the executed frames move away from the cream cheese together, so a single episode cannot separate IDM errors from generator errors. Whether lower offline error yields higher success therefore remains untested. Executing each IDM on recorded and on generated futures from the same starts would measure that link and is a prerequisite for treating offline error as a proxy for control.
+
 **Cost trade-offs.** Frozen-encoder methods are the cheapest to adapt, by two orders of magnitude, but depend on a one-time feature cache and source training that cost several minutes. RAID+LoRA doubles the per-decision cost through its second encoding. A deployment that adapts once and acts many times may prefer a different trade-off from one that adapts for every new task.
+
+**What would strengthen the evidence.** In order of expected value: (i) more held-out tasks under a new frozen plan, for example from the other LIBERO suites or LIBERO-90, so that conclusions rest on more than two final tasks; (ii) a gate that can fall back to retrieval, designed on development tasks only; (iii) closed-loop evaluation of the v7 heads with enough episodes to estimate success differences; and (iv) a second, more recent image encoder.
 
 **Limitations.**
 - The primary evidence is offline action error with recorded futures. It does not measure task success, and it does not measure robustness to imperfect generated futures.
@@ -340,7 +358,7 @@ Success was low for all conditions: 3 successes in 40 episodes, all other episod
 - The baselines are re-implementations with our encoder, inputs and schedule. They do not represent the published systems, and other hyperparameters could change their ranking.
 - A single encoder (MAE ViT-B/16), one LoRA configuration, one benchmark suite and one support size (K = 5) were evaluated.
 - The closed-loop pilot is small (40 episodes, one seed), evaluates the v6 heads only, used a generator whose timing calibration was weak, and ran after we waived a human-rating gate on the basis of a five-case panel.
-- We cannot verify that the pretrained models in the pipeline never saw LIBERO; `held_out_claims_eligible = false`.
+- We cannot verify that the pretrained models in the pipeline never saw LIBERO, so no claim of tasks unseen by those models is made.
 - GPU-seconds depend on hardware and implementation; the comparisons are valid within a run on one GPU.
 
 ## 8. Conclusion
@@ -359,6 +377,7 @@ All numbers in this paper come from collected, SHA-256-verified artifacts under 
 - Development runs: `compute_bench_v7_20261016/`, `compute_bench_baselines_20261017/`, `compute_bench_v7head_20261017/`.
 - Post hoc analysis: `posthoc_wine_bottle_20261018/` (computed from collected per-demonstration errors; no model was run).
 - Closed-loop pilot: `vpp2_pilot_v5_20261014/` (1,144 collected files, generated and executed videos).
+- Figures: `paper/figures/make_figures.py` regenerates all six figures from the collected JSON files and pilot videos listed above.
 - Code: `raid_experiments/hybrid_v7.py` (RAID v7 head and selection loss), `hybrid_baselines.py` (baselines and RAID v7 head-only), `hybrid_compute_bench.py` (benchmark driver), `hybrid_bench_analysis.py` (paired bootstrap and settings won), `hybrid_study.py` (source training, adaptation, final-access control).
 
 The protocol, support and query identities, seeds and normalizers are recorded in `protocol_v6.json`. The final stage was executed once and must not be rerun. Cloud storage used for the runs was deleted after verified collection; model weights are not retained in the repository and must be downloaded again from their pinned sources.
@@ -502,9 +521,9 @@ Table B1. Development tasks: chunk MSE after n updates (mean over six settings).
 | RAID v7 head-only (ours, exploratory) | 0.409 | 0.312 | 0.307 | 0.304 | 0.298 | 0.291 | 0.300 |
 | RAID+LoRA v6 (ours) | 0.424 | 0.342 | 0.350 | 0.358 | 0.361 | 0.346 | 0.342 |
 
-On development tasks, RAID v7 without training was the best training-free method (0.409 vs 0.426 for VINN-style k-NN; −0.017, CI [−0.035, +0.000], 3/6 settings), RAID+LoRA v7 was better than every baseline at 25 updates in 6/6 settings, and full fine-tuning was best at 500 updates (0.260). RAID v7 head-only was better than all baselines at 25 updates in 6/6 settings and worse than head-only, LoRA and full fine-tuning at 500 updates. Development intervals in BASELINE_RESULTS.md treat demonstrations as independent and are optimistic; V7HEAD_RESULTS.md reports cluster intervals.
+On development tasks, RAID v7 without training was the best training-free method (0.409 vs 0.426 for VINN-style k-NN; −0.017, CI [−0.035, +0.000], 3/6 settings), RAID+LoRA v7 was better than every baseline at 25 updates in 6/6 settings, and full fine-tuning was best at 500 updates (0.260). RAID v7 head-only was better than all baselines at 25 updates in 6/6 settings and worse than head-only, LoRA and full fine-tuning at 500 updates. Development intervals from the baseline benchmark treat demonstrations as independent and are optimistic; the RAID v7 head-only development report uses cluster intervals.
 
-Table B2. Final tasks: secondary comparisons (descriptive; FINAL_RESULTS.md).
+Table B2. Final tasks: secondary comparisons (descriptive).
 
 | Comparison (ours minus baseline) | Mean | Cluster 95% CI | Demo 95% CI | Settings won |
 | --- | --- | --- | --- | --- |
@@ -515,7 +534,7 @@ Table B2. Final tasks: secondary comparisons (descriptive; FINAL_RESULTS.md).
 | RAID+LoRA v6 vs LoRA, 500 updates | +0.052 | [+0.043, +0.063] | [+0.039, +0.065] | 0/6 |
 | RAID v7 head-only vs LoRA, 500 updates | +0.004 | [−0.002, +0.011] | [−0.001, +0.010] | 2/6 |
 
-Table B3. Final tasks: cost per control decision at batch size 1 (FINAL_RESULTS.md).
+Table B3. Final tasks: cost per control decision at batch size 1.
 
 | Method | ms | GFLOP |
 | --- | --- | --- |
@@ -559,7 +578,7 @@ Table C2. Pilot offline recorded-transition error (seed 42 support sets).
 
 The pilot ran on one A100-SXM4-80GB from 16 October 05:56 UTC to about 00:35 UTC on 17 October 2026; VPP2 generation took 4.1–4.4 hours per condition. Generated and executed videos for all 40 episodes are retained under `vpp2_pilot_v5_20261014/collection/pilot/`. Example selection for a gallery must follow a fixed rule (for example, all successes plus the first start of each task) and must include failures.
 
-Table C3. Per-task errors used in the post hoc analysis (RAID v7 and k-NN without training; POSTHOC_WINE_BOTTLE.md).
+Table C3. Per-task errors used in the post hoc analysis (RAID v7 and k-NN without training).
 
 | Task | Frozen source | RAID v6 | RAID v7 | k-NN | Retrieve-and-play | REGENT blend | Pearson r (RAID v7, frozen) | Pearson r (RAID v7, k-NN) | Demos where RAID v7 > k-NN |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
