@@ -352,6 +352,7 @@ Figure 6. Closed-loop pilot on the development task "put the cream cheese in the
 **What would strengthen the evidence.** In order of expected value: (i) more held-out tasks under a new frozen plan, for example from the other LIBERO suites or LIBERO-90, so that conclusions rest on more than two final tasks; (ii) a gate that can fall back to retrieval, designed on development tasks only; (iii) closed-loop evaluation of the v7 heads with enough episodes to estimate success differences; and (iv) a second, more recent image encoder.
 
 **Limitations.**
+
 - The primary evidence is offline action error with recorded futures. It does not measure task success, and it does not measure robustness to imperfect generated futures.
 - The final evaluation has two tasks and three seeds. The cluster bootstrap rests on six clusters and can be too narrow; no multiplicity correction is applied across the 19 frozen comparisons.
 - RAID v7 and RAID v7 head-only were designed after development results were known. The final tasks were not used for design, but the design is not independent of the development tasks.

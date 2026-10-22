@@ -1,0 +1,34 @@
+{
+ "date": "2026-10-22",
+ "scope": "Manuscript revision + six figures from collected artifacts only; no experiments, no Runpod",
+ "google_document_url": "https://docs.google.com/document/d/11QDjW49qwxiZFJGYxMB5_dELf5keka6Qeh3ijXpW10s",
+ "doc_unchanged_before_sync": "revisionId equal to the 18 October post-sync revision (no user edits to merge)",
+ "commit": "3627e12430666cf0a09f4075641c61b7ba9faea0 (pushed to origin/claude/raid-fewshot-idm-final-20261018; user-approved)",
+ "image_source": "raw.githubusercontent.com URLs pinned to commit 3627e12 (public repo)",
+ "google_doc_update": {
+  "method": "build_doc_requests.py (v8, inline images) -> 13 revision-guarded batchUpdate chunks; then 9 pt table text",
+  "readback": "verify_doc.py: 221/221 blocks match raid_manuscript.md; 15 tables; 6 inline images at 468 pt width"
+ },
+ "latex": {
+  "compiled": true,
+  "engine": "Tectonic 0.17.0 (XeTeX), official aarch64-apple-darwin release binary at ~/.local/bin/tectonic",
+  "command": "cd paper && python3 md_to_tex.py && ~/.local/bin/tectonic raid_manuscript.tex",
+  "pages": 25,
+  "checks": "44/44 citations resolve; 6 figures placed in order (pp. 3-17); remaining overfull boxes <= 10.5 pt inside table cells",
+  "generator_fixes": "dashes as TeX ligatures; table font by column count/width; file paths and digests as breakable \\nolinkurl; figures [!htbp]; removed hard-coded evidence-boundary line from abstract"
+ },
+ "sha256": {
+  "raid_manuscript.md": "c1cdc6b3245c91ba153369fc2ad3122a439483f475022e55dd457545826808da",
+  "raid_manuscript.tex": "56779788d8f08c0208f41d9bffb06210e0fecd688c696c92b9eda3da29d99f16",
+  "md_to_tex.py": "90bc235711ba5d57324725b83de9e9d9d674da4d540e0b10173e0c425e696b7e",
+  "figures/make_figures.py": "6d7921646a78c6d1ee53ecca9773c47e5c315b07e8a28864dca359d4f915561f",
+  "figures/fig1_overview.png": "ee7d09ec7e7aa5e2021cabd53d74ce06c849b8ce46c812b593c61610efa670d5",
+  "figures/fig2_per_setting.png": "8e79807d734702341b342378d4e16cadc6276586e3d7369eb30c76b1b2a0a72e",
+  "figures/fig3_learning_curves.png": "b99505eeee6532bc23551bc47cd4aafce10233142a350992b51f411c4158ced8",
+  "figures/fig4_frozen_comparisons.png": "1f3675e1a43fc6da180bd1a65c8f1d96ef7c5c2004da7512c3f98b64625ce280",
+  "figures/fig5_posthoc_scatter.png": "6c2fcfeca26c6f063ad4a3f377768e7f121355a5cf872ba18a561e81f990577a",
+  "figures/fig6_pilot_filmstrip.png": "817d941ad416e4d5b7cf81bb9ddc590f02308d05d169ddc776ef735cc622f4c8",
+  "raid_manuscript.pdf": "777cc989a3d5c8e5e063f5c772c82c1a83bd90234720232d9c2d603b9b061a12"
+ },
+ "markdown_after_sync": "one blank line added before the Limitations list (pandoc list parsing); Doc blocks unchanged"
+}

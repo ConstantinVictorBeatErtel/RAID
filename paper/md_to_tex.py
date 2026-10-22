@@ -67,7 +67,7 @@ def to_markdown_for_pandoc(text: str) -> str:
     text = "\n\n".join(paras)
     # figures: image + "Figure N. caption" paragraph -> one captioned figure
     text = re.sub(r"!\[Figure \d+\]\((figures/[^)]+)\.png\)\n\nFigure \d+\. ([^\n]+)",
-                  lambda m: "```{=latex}\n\\begin{figure}[t]\\centering\n\\includegraphics[width=\\linewidth]{"
+                  lambda m: "```{=latex}\n\\begin{figure}[!htbp]\\centering\n\\includegraphics[width=\\linewidth]{"
                             + m.group(1) + ".pdf}\n\\caption{" + escape(m.group(2)) + "}\n\\end{figure}\n```", text)
     # citations
     text = re.sub(r"\[(\d+)\]\((?:https?://[^)]+)\)", r"`\\cite{ref\1}`{=latex}", text)
@@ -111,6 +111,33 @@ def unicode_to_latex(tex: str) -> str:
     return tex
 
 
+def finish(tex: str) -> str:
+    """Layout fixes: table font by column count, breakable file paths and digests."""
+    def table(m):
+        rows = [line for line in m.group(0).splitlines() if " & " in line]
+        ncol = max((line.count(" & ") + 1 for line in rows), default=1)
+        width = max((len(re.sub(r"\\[a-zA-Z]+|[{}]", "", line)) for line in rows), default=0)
+        if ncol >= 9:
+            size = r"\scriptsize\setlength{\tabcolsep}{3pt}"
+        elif ncol >= 7 or width > 90:
+            size = r"\footnotesize\setlength{\tabcolsep}{3.5pt}"
+        else:
+            size = r"\small"
+        return "{" + size + "\n" + m.group(0) + "\n}"
+    tex = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", table, tex, flags=re.S)
+
+    def path(m):
+        inner = m.group(1)
+        if "/" in inner or (len(inner) > 24 and r"\_" in inner):
+            return r"\nolinkurl{" + inner.replace(r"\_", "_") + "}"
+        return m.group(0)
+    tex = re.sub(r"\\texttt\{([^{}]*)\}", path, tex)
+    # artifact file names in running text cannot hyphenate; let that section break loosely
+    tex = tex.replace("\\section*{Reproducibility and Artifact Availability}",
+                      "\\section*{Reproducibility and Artifact Availability}\\sloppy")
+    return re.sub(r"\b([0-9a-f]{40,})\b", r"\\nolinkurl{\1}", tex)
+
+
 def bibliography(refs: str) -> str:
     items = []
     for n, body in re.findall(r"^\[(\d+)\] (.*)$", refs, flags=re.M):
@@ -147,18 +174,16 @@ def main():
     body = unicode_to_latex(pandoc(to_markdown_for_pandoc(main_md)))
     appendix = unicode_to_latex(pandoc(to_markdown_for_pandoc(appendix_md)))
     abstract_tex = unicode_to_latex(pandoc(abstract))
-    # tables: smaller font
-    body = re.sub(r"(\\begin\{longtable\})", r"{\\small\n\1", body).replace(r"\end{longtable}", "\\end{longtable}\n}")
-    appendix = re.sub(r"(\\begin\{longtable\})", r"{\\small\n\1", appendix).replace(r"\end{longtable}", "\\end{longtable}\n}")
+    body, appendix = finish(body), finish(appendix)
     tex = (PREAMBLE + "\n\\hypersetup{pdftitle={" + escape(title) + "}}\n\n\\title{\\textbf{" + escape(title) + "}}\n\n"
            "\\author{Constantin Ertel \\and Phillip Kerger\\\\ University of California, Berkeley}\n\n"
            "\\date{Preprint draft \\textbar\\ 22 October 2026}\n\n"
            "\\begin{document}\n\n\\maketitle\n\n\\begin{abstract}\n\n" + abstract_tex + "\n\n\\noindent Keywords: "
-           + escape(keywords) + "\n\n\\noindent\\textit{Evidence boundary:} \\texttt{held\\_out\\_claims\\_eligible = false}. "
-           "The final tasks were never used for design, but no claim is made that LIBERO is unseen by the pretrained models.\n\n"
-           "\\end{abstract}\n\n" + body + "\n\n" + unicode_to_latex(bibliography(refs)) + "\n\n\\appendix\n\n" + appendix
+           + escape(keywords) + "\n\n\\end{abstract}\n\n" + body + "\n\n\\fussy\n\n" + unicode_to_latex(bibliography(refs)) + "\n\n\\appendix\n\n" + appendix
            + "\n\n\\end{document}\n")
-    leftover = sorted({c for c in tex if ord(c) > 127 and c not in "—–"})
+    # TeX dash ligatures render in every engine (XeTeX/Tectonic has no T1 glyph for a literal U+2013 in bold)
+    tex = tex.replace("—", "---").replace("–", "--")
+    leftover = sorted({c for c in tex if ord(c) > 127})
     if leftover:
         raise SystemExit(f"unmapped characters: {leftover}")
     TEX.write_text(tex)
