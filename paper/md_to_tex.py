@@ -15,11 +15,11 @@ PAPER = Path(__file__).resolve().parent
 MD, TEX = PAPER / "raid_manuscript.md", PAPER / "raid_manuscript.tex"
 
 DISPLAY = {
-    "d = 0.5 (1 − cos(": r"""\[
-d = 0.5\,\bigl(1-\cos(\varphi(o_t),\varphi(o'_t))\bigr)
-  + 0.5\,\bigl(1-\cos(\varphi(o_{t+H}),\varphi(o'_{t+H}))\bigr)
-  + 0.1\cdot\operatorname{mean}\bigl((q_t-q'_t)^2\bigr),
-\]""",
+    "d = 0.5 (1 − cos(": r"""\begin{align*}
+d &= 0.5\,\bigl(1-\cos(\varphi(o_t),\varphi(o'_t))\bigr)\\
+  &\quad + 0.5\,\bigl(1-\cos(\varphi(o_{t+H}),\varphi(o'_{t+H}))\bigr)\\
+  &\quad + 0.1\cdot\operatorname{mean}\bigl((q_t-q'_t)^2\bigr),
+\end{align*}""",
     "direct = f_θ(s), prior": r"""\[
 \mathrm{direct} = f_\theta(s),\qquad \mathrm{prior} = \textstyle\sum_i \alpha_i a^i,
 \]""",
@@ -27,6 +27,20 @@ d = 0.5\,\bigl(1-\cos(\varphi(o_t),\varphi(o'_t))\bigr)
 c = \bigl[\,\mathrm{sim}_{(1)},\ \overline{\mathrm{sim}},\ \tilde H(\alpha),\ |\mathrm{direct}-\mathrm{prior}|\,\bigr],
 \]""",
 }
+
+# full-width figures; the narrower ones would otherwise be taller than they need to be
+FIG_WIDTH = {"figures/fig2_zero_per_task": "0.72\\textwidth", "figures/fig3_hypotheses": "0.9\\textwidth",
+             "figures/fig4_dev_ablation": "column", "figures/fig5_compute": "0.8\\textwidth",
+             "figures/fig6_closed_loop": "column"}
+
+
+
+def figure(path: str, caption: str) -> str:
+    width = FIG_WIDTH.get(path, "\\textwidth")
+    env, width = ("figure", "\\linewidth") if width == "column" else ("figure*", width)
+    return ("```{=latex}\n\\begin{" + env + "}[t]\\centering\n\\includegraphics[width=" + width + "]{" + path
+            + ".pdf}\n\\caption{" + caption + "}\n\\end{" + env + "}\n```")
+
 
 UNICODE = [
     ("φ̂", r"\ensuremath{\hat{\varphi}}"), ("â", r"\ensuremath{\hat{a}}"), ("−", r"\ensuremath{-}"),
@@ -63,8 +77,7 @@ def to_markdown_for_pandoc(text: str) -> str:
     text = "\n\n".join(paras)
     # figures: image + "Figure N. caption" paragraph -> one captioned figure
     text = re.sub(r"!\[Figure \d+\]\((figures/[^)]+)\.png\)\n\nFigure \d+\. ([^\n]+)",
-                  lambda m: "```{=latex}\n\\begin{figure}[tbp]\\centering\n\\includegraphics[width=\\linewidth]{"
-                            + m.group(1) + ".pdf}\n\\caption{" + escape(m.group(2)) + "}\n\\end{figure}\n```", text)
+                  lambda m: figure(m.group(1), escape(m.group(2))), text)
     # citations
     text = re.sub(r"\[(\d+)\]\((?:https?://[^)]+)\)", r"`\\cite{ref\1}`{=latex}", text)
 
@@ -135,8 +148,18 @@ def finish(tex: str) -> str:
             return r"\nolinkurl{" + inner.replace(r"\_", "_") + "}"
         return m.group(0)
     tex = re.sub(r"\\texttt\{([^{}]*)\}", path, tex)
-    # keep a table caption with its first rows: start a new page when less than 12 lines remain
-    tex = re.sub(r"^(Table [A-Z]?\d+\. )", r"\\needspace{12\\baselineskip}\n\1", tex, flags=re.M)
+    # "Table N. caption" + table -> a float with the caption on top; wide tables span both columns
+    def float_table(m):
+        rows = [line for line in m.group(4).splitlines() if " & " in line]
+        ncol = max((line.count(" & ") + 1 for line in rows), default=1)
+        width = max((len(re.sub(r"\\[a-zA-Z]+|[{}]", "", line)) for line in rows), default=0)
+        env = "table*" if ncol >= 6 or width > 50 else "table"
+        return ("\\begin{" + env + "}[t]\\centering" + m.group(3) + "\n\\caption*{\\textbf{\\sffamily " + m.group(1)
+                + ".} " + m.group(2) + "}\n\\begin{adjustbox}{max width=\\linewidth}\n" + m.group(4)
+                + "\n\\end{adjustbox}\n\\end{" + env + "}")
+    tex = re.sub(r"^(Table [A-Z]?\d+)\. ([^\n]*)\n\n\{\\def\\LTcaptype\{none\} % do not increment counter\n"
+                 r"\{(\\[^\n]*)\n\\begin\{center\}\n(\\begin\{tabular\}.*?\\end\{tabular\})\n\\end\{center\}\n\}\n\}",
+                 float_table, tex, flags=re.M | re.S)
     # artifact file names in running text cannot hyphenate; let that section break loosely
     tex = tex.replace("\\section*{Reproducibility and Artifact Availability}",
                       "\\section*{Reproducibility and Artifact Availability}\\sloppy")
@@ -156,21 +179,65 @@ def bibliography(refs: str) -> str:
     return "\\begin{thebibliography}{99}\n\n" + "\n\n".join(items) + "\n\n\\end{thebibliography}"
 
 
-PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
-\usepackage[margin=25mm]{geometry}
+PREAMBLE = r"""\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[letterpaper,top=0.8in,bottom=0.85in,left=0.68in,right=0.68in,columnsep=0.26in,headsep=12pt]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern,microtype,amsmath,amssymb}
-\usepackage{booktabs,tabularx,array,longtable,calc,enumitem,xcolor,xurl,graphicx,needspace}
-\usepackage[colorlinks=true,linkcolor=black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage{newtxtext,newtxmath}
+\usepackage{iftex}
+\ifXeTeX  % Tectonic/XeLaTeX: newtxtext loads fontspec, so the sans face is set through it
+  \setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Scale=0.9]
+\else
+  \usepackage[scaled=0.9]{helvet}
+\fi
+\usepackage{microtype,amsmath}
+\usepackage{booktabs,array,calc,enumitem,xcolor,xurl,graphicx,adjustbox,needspace,fancyhdr,titlesec}
+\usepackage[font=small,labelfont={bf,sf},labelsep=period,skip=5pt]{caption}
+\definecolor{accent}{RGB}{20,82,160}
+\definecolor{muted}{RGB}{105,105,105}
+\usepackage[colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent]{hyperref}
+\titleformat{\section}{\sffamily\bfseries\large}{\textcolor{accent}{\thesection}}{0.6em}{}
+\titleformat{\subsection}{\sffamily\bfseries\normalsize}{\textcolor{accent}{\thesubsection}}{0.5em}{}
+\definecolor{panel}{RGB}{243,246,250}
+\titlespacing*{\section}{0pt}{1.6ex plus .6ex minus .2ex}{0.7ex}
+\titlespacing*{\subsection}{0pt}{1.2ex plus .4ex minus .2ex}{0.5ex}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted}Learning When to Trust Retrieval}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}Ertel and Kerger \textbar\ Preprint}
+\fancyfoot[C]{\sffamily\footnotesize\thepage}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\sffamily\footnotesize\thepage}}
 \setlength{\parindent}{1em}
-\setlength{\parskip}{0.2em}
+\setlength{\parskip}{0.15em}
 \setlength{\emergencystretch}{2em}
-\setlist[itemize]{leftmargin=1.5em,itemsep=0.25em,topsep=0.4em}
+\setlength{\textfloatsep}{12pt plus 2pt minus 4pt}
+\setlength{\dbltextfloatsep}{12pt plus 2pt minus 4pt}
+\renewcommand{\topfraction}{0.9}\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\textfraction}{0.1}\renewcommand{\floatpagefraction}{0.75}\renewcommand{\dblfloatpagefraction}{0.75}
+\setlist{leftmargin=1.2em,itemsep=0.15em,topsep=0.3em}
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \renewcommand{\arraystretch}{1.1}
 % Generated by paper/md_to_tex.py from paper/raid_manuscript.md; edit the Markdown, then regenerate.
 """
+
+TEASER = re.compile(r"\\begin\{figure\*\}\[t\]\\centering\n\\includegraphics\[width=[^\]]*\]\{(figures/fig1_overview\.pdf)\}\n"
+                    r"\\caption\{(.*?)\}\n\\end\{figure\*\}", re.S)
+
+
+def title_block(title: str, teaser_pdf: str, teaser_caption: str, abstract_tex: str, keywords: str) -> str:
+    """Lab-report front page: title, authors and the overview figure across both columns."""
+    head, _, tail = title.partition(": ")
+    title_tex = escape(head) + (":\\\\[3pt]" + escape(tail) if tail else "")
+    return ("\\twocolumn[{%\n\\begin{center}\n"
+            "{\\sffamily\\bfseries\\fontsize{19}{23}\\selectfont " + title_tex + "\\par}\n\\vspace{12pt}\n"
+            "{\\sffamily\\large Constantin Ertel \\qquad Phillip Kerger\\par}\n\\vspace{3pt}\n"
+            "{\\sffamily\\small University of California, Berkeley\\par}\n\\vspace{2pt}\n"
+            "{\\sffamily\\small\\color{muted} Preprint \\textbar\\ 24 October 2026\\par}\n\\end{center}\n\\vspace{6pt}\n"
+            "\\noindent\\colorbox{panel}{\\parbox{\\dimexpr\\textwidth-2\\fboxsep\\relax}{\\vspace{5pt}"
+            "\\setlength{\\parindent}{0pt}\\small{\\sffamily\\bfseries Abstract.}\\ " + abstract_tex.strip()
+            + "\\par\\smallskip{\\footnotesize\\textit{Keywords:} " + escape(keywords) + "}\\vspace{4pt}}}\n\\vspace{10pt}\n"
+            "\\centering\\includegraphics[width=0.8\\textwidth]{" + teaser_pdf + "}\n"
+            "\\captionof{figure}{" + teaser_caption + "}\n\\vspace{14pt}\n}]\n")
 
 
 def main():
@@ -180,12 +247,16 @@ def main():
     appendix = unicode_to_latex(pandoc(to_markdown_for_pandoc(appendix_md)))
     abstract_tex = unicode_to_latex(pandoc(abstract))
     body, appendix = finish(body), finish(appendix)
-    tex = (PREAMBLE + "\n\\hypersetup{pdftitle={" + escape(title) + "}}\n\n\\title{\\textbf{" + escape(title) + "}}\n\n"
-           "\\author{Constantin Ertel \\and Phillip Kerger\\\\ University of California, Berkeley}\n\n"
-           "\\date{Preprint draft \\textbar\\ 24 October 2026}\n\n"
-           "\\begin{document}\n\n\\maketitle\n\n\\begin{abstract}\n\n" + abstract_tex + "\n\n\\noindent Keywords: "
-           + escape(keywords) + "\n\n\\end{abstract}\n\n" + body + "\n\n\\fussy\n\n" + unicode_to_latex(bibliography(refs)) + "\n\n\\appendix\n\n" + appendix
-           + "\n\n\\end{document}\n")
+    teaser = TEASER.search(body)
+    if not teaser:
+        raise SystemExit("overview figure not found")
+    body = body[:teaser.start()] + body[teaser.end():]
+    tex = (PREAMBLE + "\n\\hypersetup{pdftitle={" + escape(title) + "}}\n\n\\begin{document}\n\n"
+           + title_block(title, teaser.group(1), teaser.group(2), abstract_tex, keywords)
+           + "\n\\thispagestyle{plain}\n\n" + body
+           + "\n\n\\fussy\n\n\\clearpage  % all result figures before the references\n\n{\\footnotesize\\setlength{\\itemsep}{1pt}\n" + unicode_to_latex(bibliography(refs))
+           + "\n}\n\n\\clearpage\\onecolumn\n\\appendix\n\n"
+           + re.sub(r"\\begin\{(table\*?)\}\[t\]", r"\\begin{\1}[h!]", appendix) + "\n\n\\end{document}\n")
     # TeX dash ligatures render in every engine (XeTeX/Tectonic has no T1 glyph for a literal U+2013 in bold)
     tex = tex.replace("—", "---").replace("–", "--")
     leftover = sorted({c for c in tex if ord(c) > 127})

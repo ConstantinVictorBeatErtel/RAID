@@ -28,7 +28,7 @@ ENC_COLOR = {"mae": BLUE, "dinov2": ORANGE, "siglip": AQUA}
 ENC_MARK = {"mae": "o", "dinov2": "s", "siglip": "^"}
 
 plt.rcParams.update({
-    "font.family": "DejaVu Sans", "font.size": 8.5, "axes.edgecolor": INK2, "axes.labelcolor": INK,
+    "font.family": ["Helvetica", "DejaVu Sans"], "font.size": 8.5, "axes.edgecolor": INK2, "axes.labelcolor": INK,
     "xtick.color": INK2, "ytick.color": INK2, "axes.spines.top": False, "axes.spines.right": False,
     "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.6, "axes.axisbelow": True,
     "figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,

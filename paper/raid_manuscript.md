@@ -10,25 +10,25 @@ Constantin Ertel¹, Phillip Kerger¹
 
 ## Abstract
 
-A visual planner proposes a future camera image, and an inverse-dynamics model (IDM) turns the current image, the robot state and that target image into actions. When a new task comes with only a few demonstrations, retrieving their actions is an attractive way to adapt the IDM. A learned head can combine the retrieved actions with its own prediction, but the gate that decides between the two only sees the robot's state. On a new task where the source-trained prediction is badly wrong, such a gate keeps trusting it, and the learned retrieval head becomes worse than plain nearest-neighbour regression. We give the gate two extra inputs: how confident the retrieval is and how strongly the head's own prediction disagrees with the retrieved actions. During source training we also replace a quarter of the head's predictions with predictions for other inputs, so the gate learns to fall back to retrieval when the two disagree. We designed the method on the ten LIBERO-Goal tasks, froze all methods, settings and three hypotheses, and then evaluated once on 30 sealed tasks from LIBERO-10, LIBERO-Spatial and LIBERO-Object, with three frozen image encoders (MAE, DINOv2, SigLIP), five demonstrations per task and three seeds. Without any target training, the disagreement-aware head had lower action error than k-nearest-neighbour regression on all 30 tasks for every encoder (MAE 0.378 vs 0.528 chunk MSE) and lower error than the same head without the new inputs (0.378 vs 0.425); both pre-registered comparisons held for all three encoders. After 25 head updates it beat head-only fine-tuning for DINOv2 and SigLIP but not for MAE. Fine-tuning the encoder reached lower error (0.287 with full fine-tuning) at 7 to 17 times the compute per update. In closed-loop simulation with recorded target frames, the head adapted for 25 updates succeeded in 38% of episodes against 16% for head-only fine-tuning and 31% for LoRA, but plain k-nearest-neighbour regression succeeded in 44%, and lower offline error did not predict higher success.
+Video-based robot policies increasingly split control in two: a video model predicts the future, and an inverse-dynamics model (IDM) turns that predicted future into actions. When a new task arrives with only five demonstrations, the IDM is the part that must adapt. Retrieving the demonstrations' actions is a natural way to adapt it, and a learned gate can mix them with the IDM's own prediction. Such a gate fails exactly when it matters: if it sees only the robot's state, it keeps trusting a source-trained prediction that is wrong for the new task. We introduce a disagreement-aware gate that also sees how confident the retrieval is and how far the two predictions disagree, and we train it on deliberately corrupted predictions so that it learns when to defer to retrieval. We froze every design choice on LIBERO-Goal and then ran once on 30 sealed tasks from three other LIBERO suites, with three frozen image encoders, five demonstrations per task and three seeds. We find that, without any training on the new task, the gate beats nearest-neighbour regression on all 30 tasks for every encoder (chunk MSE 0.378 vs 0.528 with MAE) and beats the same head without the new inputs (0.378 vs 0.425). We also find where it falls short: encoder fine-tuning reaches lower error at 7 to 17 times the compute per update, and in closed-loop simulation plain nearest-neighbour regression completes the most tasks (44% vs 38%), while lower offline error does not predict success.
 
 Keywords: inverse dynamics; retrieval; gating; few-shot adaptation; robot manipulation; LIBERO.
 
 ## 1. Introduction
 
-Visual planning splits robot control into two parts: a generative model proposes what the scene should look like next, and an inverse-dynamics model (IDM) infers the actions that produce that change. UniPi introduced this split for text-conditioned video planning [1](https://arxiv.org/abs/2302.00111), and recent systems keep it, from visual subgoals in π0.7 [2](https://arxiv.org/abs/2604.15483) to the action modules of GE-Act 2.0 and VPP2 [3](https://arxiv.org/abs/2609.05588),[4](https://arxiv.org/abs/2610.10270). When the planner is fixed, adapting to a new task means adapting the IDM, and a new task usually comes with only a few demonstrations.
+Give a robot five demonstrations of a task it has never seen, such as putting a bowl on a plate, and ask it to do the task again from a new start. Systems built on video models approach this in two steps. A generative model predicts what the scene should look like next, and an inverse-dynamics model (IDM) infers the actions that produce that change: frames in, actions out. UniPi introduced this split for text-conditioned video planning [1](https://arxiv.org/abs/2302.00111), and it now appears across recent systems, from visual subgoals in π0.7 [2](https://arxiv.org/abs/2604.15483) and the action modules of GE-Act 2.0 and VPP2 [3](https://arxiv.org/abs/2609.05588),[4](https://arxiv.org/abs/2610.10270) to the separate inverse-dynamics model of Rhoda AI's Direct Video-Action system [5](https://www.rhoda.ai/research/direct-video-action). When the video model is fixed, adapting to a new task means adapting the IDM, and a new task rarely comes with more than a few demonstrations.
 
-The simplest way to use a few demonstrations is to look up the closest recorded transition and copy its actions, as in VINN [5](https://arxiv.org/abs/2112.01511). A learned head can do better by attending over several retrieved candidates and mixing the result with its own prediction through a gate [6](https://arxiv.org/abs/2412.04759),[7](https://arxiv.org/abs/1911.00172). We found a failure of this design in an earlier study. Our attention-and-gate head (RAID v7) was better than nearest-neighbour regression on average, but on one held-out LIBERO-Goal task its error was 1.7 times that of nearest-neighbour regression (0.682 vs 0.406). Its errors followed the source-trained prediction closely (Pearson 0.97 across query demonstrations), not the retrieved actions. The gate only saw the robot's state, so it had no way to notice that the source-trained prediction was wrong for this task.
+The simplest way to use those demonstrations is to look up the closest recorded moment and copy its actions, as VINN does [6](https://arxiv.org/abs/2112.01511). A learned head should do better: it can attend over several retrieved candidates and blend them with its own prediction through a gate [7](https://arxiv.org/abs/2412.04759),[8](https://arxiv.org/abs/1911.00172). In an earlier study, we found that it can also do much worse. Our attention-and-gate head (RAID v7) beat nearest-neighbour regression on average, but on one held-out LIBERO-Goal task its error was 1.7 times that of nearest-neighbour regression (0.682 vs 0.406). Its errors tracked the source-trained prediction (Pearson 0.97 across query demonstrations), not the retrieved actions. The gate saw only the robot's state. It had no way to notice that the source-trained prediction was wrong for this task.
 
-This paper fixes that failure and tests the fix at scale. RAID v8 gives the gate the information it was missing: the confidence of the retrieval and the per-dimension disagreement between the direct prediction and the retrieved prior. A disagreement input alone is not enough, because during source training the direct prediction is rarely far off, so the gate never learns what to do when it is. We therefore corrupt the direct prediction during training: for a quarter of the rows, the mix receives another input's prediction. The gate is then trained on exactly the situation it must handle on a new task: the direct prediction disagrees with confident retrieval.
+This raises a simple question: when should a learned model trust retrieved actions over its own prediction? Our answer is that the gate making this choice must see when the two disagree. RAID v8 gives the gate two kinds of input it was missing, the confidence of the retrieval and the per-dimension disagreement between the direct prediction and the retrieved prior. The inputs alone are not enough. During source training the direct prediction is rarely far off, so the gate never learns what to do when it is. We therefore corrupt the direct prediction on purpose: for a quarter of the training rows, the mix receives another input's prediction. The gate then trains on exactly the situation it will face on a new task, a direct prediction that disagrees with confident retrieval.
 
-We evaluate the fix with a protocol that separates design from evaluation. All design choices, including the gate variant, learning rates and the closed-loop gripper rule, were made on the ten LIBERO-Goal tasks. We then froze the method set, settings, analysis code and three hypotheses in a digest-bound amendment, and ran the frozen benchmark once on 30 sealed tasks from three other LIBERO suites [8](https://arxiv.org/abs/2306.03310), with three image encoders: MAE [9](https://arxiv.org/abs/2111.06377), DINOv2 [10](https://arxiv.org/abs/2304.07193) and SigLIP [11](https://arxiv.org/abs/2303.15343).
+We test this idea with a protocol built for statistical confidence, and we keep design and evaluation apart. Every design choice, including the gate variant, the learning rates and the closed-loop gripper rule, was made on the ten LIBERO-Goal tasks. We then froze the methods, settings, analysis code and three hypotheses in a digest-bound amendment and ran the benchmark once on 30 sealed tasks from three other LIBERO suites, with paired task-level bootstrap intervals and Holm-corrected tests, [9](https://arxiv.org/abs/2306.03310), with three image encoders: MAE [10](https://arxiv.org/abs/2111.06377), DINOv2 [11](https://arxiv.org/abs/2304.07193) and SigLIP [12](https://arxiv.org/abs/2303.15343).
 
 Our contributions:
 
-1. **A disagreement-aware retrieval gate, trained with direct-path corruption.** Without target training it has lower action error than nearest-neighbour regression on all 30 sealed tasks for each of three encoders, and lower error than the same head without the new inputs (Section 6.1). On development tasks, the gate inputs without corruption training make the head worse, not better (Section 6.2).
-2. **A compute-aware comparison with fine-tuning.** Head updates on frozen features cost 4 to 7 ms each; LoRA and full fine-tuning cost 52 and 128 ms. The disagreement-aware head reaches its best error within 25 updates, but encoder fine-tuning reaches lower error with more compute (Section 6.3).
-3. **A closed-loop test without a generator,** which replays recorded target frames in the LIBERO simulator. It shows that the adapted disagreement-aware head finishes more tasks than head-only fine-tuning, LoRA and full fine-tuning, that nearest-neighbour regression still finishes the most, and that lower offline error does not predict success (Section 6.4).
+1. **A disagreement-aware retrieval gate, trained with direct-path corruption.** Without target training, it has lower action error than nearest-neighbour regression on all 30 sealed tasks for each of three encoders, and lower error than the same head without the new inputs (Section 6.1). The corruption is essential: on development tasks, the new inputs without it make the head worse, not better (Section 6.2).
+2. **A compute-aware comparison with fine-tuning.** A head update on frozen features costs 4 to 7 ms; a LoRA or full fine-tuning update costs 52 or 128 ms. The gated head reaches its best error within 25 updates, but encoder fine-tuning reaches lower error with more compute (Section 6.3).
+3. **A closed-loop test without a video generator,** which replays recorded target frames in the LIBERO simulator. The adapted gated head completes more tasks than head-only fine-tuning, LoRA and full fine-tuning; nearest-neighbour regression still completes the most, and lower offline error does not predict success (Sections 6.4 and 6.5).
 
 Figure 1 summarizes the model and the protocol.
 
@@ -36,19 +36,29 @@ Figure 1 summarizes the model and the protocol.
 
 Figure 1. (a) RAID v8. A frozen encoder gives the controller state and the retrieval keys; a direct head predicts an action chunk, attention over the 16 nearest support windows forms a retrieval prior, and a gate mixes the two using the retrieval confidence and the disagreement between them. The gate is trained with corrupted direct predictions. Example frames are from a LIBERO-Goal demonstration. (b) Protocol: source heads on LIBERO-90, design on LIBERO-Goal, a frozen amendment, and one run on 30 sealed tasks.
 
-## 2. Related Work
+## 2. Related work
 
-**Video planning with inverse dynamics.** UniPi trains a separate inverse model to execute generated videos [1](https://arxiv.org/abs/2302.00111). π0.7 conditions a generalist policy on visual subgoals [2](https://arxiv.org/abs/2604.15483), and GE-Act 2.0 and VPP2 pair a visual predictor with an action module [3](https://arxiv.org/abs/2609.05588),[4](https://arxiv.org/abs/2610.10270). Predictive inverse-dynamics models scale this idea [12](https://arxiv.org/abs/2412.15109v1), and the label efficiency of IDMs depends strongly on the setting [13](https://arxiv.org/abs/2602.02762). We keep the planner out of the evaluation and study only how the IDM adapts to a new task.
+**Video planning with inverse dynamics.** UniPi trains a separate inverse model to execute generated videos [1](https://arxiv.org/abs/2302.00111). SuSIE proposes subgoal images with an image-editing model and reaches them with a goal-conditioned low-level policy [13](https://arxiv.org/abs/2310.10639), and AVDC recovers actions from generated videos through dense correspondences [14](https://arxiv.org/abs/2310.08576). π0.7 conditions a generalist policy on visual subgoals [2](https://arxiv.org/abs/2604.15483), GE-Act 2.0 and VPP2 pair a visual predictor with an action module [3](https://arxiv.org/abs/2609.05588),[4](https://arxiv.org/abs/2610.10270), and Rhoda AI's Direct Video-Action model converts predicted video into robot actions with a separate inverse-dynamics model [5](https://www.rhoda.ai/research/direct-video-action). Predictive inverse-dynamics models scale this idea [15](https://arxiv.org/abs/2412.15109v1). In all of these systems, the component that maps a predicted future to actions must work on each new task. We keep the planner out of the evaluation and study only how this component adapts from five demonstrations.
 
-**Retrieval for action prediction.** VINN predicts actions by locally weighted nearest-neighbour regression on frozen features [5](https://arxiv.org/abs/2112.01511). REGENT retrieves demonstrations and blends the nearest action with a learned policy through a distance-based weight [6](https://arxiv.org/abs/2412.04759); nearest-neighbour language models interpolate a parametric and a retrieval distribution in the same way [7](https://arxiv.org/abs/1911.00172). ReCAP adds trajectory retrieval to a frozen policy to cover new tasks [14](https://arxiv.org/abs/2606.15631). These methods fix the mixing rule or tie it to distance; our gate is learned and sees the disagreement between the two predictions.
+**Inverse dynamics with many labels.** VPT trains an IDM on a small labeled set and uses it to label large amounts of online video [16](https://arxiv.org/abs/2206.11795), and DreamGen labels generated robot videos with an IDM [17](https://arxiv.org/abs/2505.12705v2). The label efficiency of IDMs depends strongly on the setting [18](https://arxiv.org/abs/2602.02762), and in gameplay, aggregate IDM accuracy can hide failures on rare actions [19](https://arxiv.org/abs/2609.37907). These works train an IDM once on many labels. We study the opposite case: the IDM is already trained, and a new task brings five labeled demonstrations.
 
-**Retrieval for training data and lightweight adaptation.** Behavior Retrieval and STRAP retrieve prior data to train few-shot policies [15](https://arxiv.org/abs/2304.08742),[16](https://arxiv.org/abs/2412.15182); HAND retrieves and then fine-tunes [17](https://arxiv.org/abs/2505.20455v4). LoRA [18](https://arxiv.org/abs/2106.09685) and task-specific adapters [19](https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html) adapt large encoders cheaply, and VLA-Pro retrieves and fuses task-specific adapters [20](https://arxiv.org/abs/2605.29562v1). We compare against head-only, LoRA and full fine-tuning on the same support sets and report their compute.
+**Retrieval for action prediction.** VINN predicts actions by locally weighted nearest-neighbour regression on frozen features [6](https://arxiv.org/abs/2112.01511). REGENT retrieves demonstrations and blends the nearest action with a learned policy through a distance-based weight [7](https://arxiv.org/abs/2412.04759). RT-Cache acts without training by retrieving stored trajectory segments [20](https://arxiv.org/abs/2505.09040v3), and ReCAP adds trajectory retrieval to a frozen policy to cover new tasks [21](https://arxiv.org/abs/2606.15631). These methods fix the mixing rule or tie it to distance; our gate is learned and sees the disagreement between the two predictions.
 
-**Learning when to defer.** Learning to defer trains a model to hand a decision to another predictor when it is likely to be wrong [21](https://arxiv.org/abs/1711.06664). Our gate makes a soft, per-dimension version of this decision between a parametric head and retrieval, and our corruption training supplies the examples of a wrong parametric prediction that ordinary training lacks.
+**Learned interpolation between a model and retrieval.** Nearest-neighbour language models interpolate a parametric and a retrieval distribution with a fixed weight [8](https://arxiv.org/abs/1911.00172). Adaptive kNN machine translation learns the number of neighbours and the interpolation weight from retrieval distances and the number of distinct retrieved values [22](https://arxiv.org/abs/2105.13022), and efficient kNN language models learn when retrieval helps and how much weight to give it [23](https://arxiv.org/abs/2109.04212). Our retrieval-confidence inputs follow the same idea. To our knowledge, these gates do not receive the difference between the parametric and the retrieved prediction, and they are not trained on examples where the parametric prediction is wrong. For continuous actions, this difference is defined per action dimension, and our corruption training supplies those examples.
 
-**End-to-end few-shot policies.** Policies such as Octo and DISC adapt an entire visuomotor policy and report task success; in DISC's five-demonstration LIBERO-Goal evaluation, success reaches 55% for Octo and 73% for DISC [22](https://arxiv.org/abs/2605.20856),[23](https://arxiv.org/abs/2405.12213), under a protocol different from ours. We study a component of a modular pipeline and do not compete with these systems on task success.
+**Learning when to defer.** Learning to defer trains a model to hand a decision to another predictor when it is likely to be wrong [24](https://arxiv.org/abs/1711.06664),[25](https://arxiv.org/abs/2006.01862). Our gate makes a soft, per-dimension version of this decision between a parametric head and retrieval.
 
-## 3. Problem Setting
+**Few-shot data retrieval and lightweight adaptation.** Behavior Retrieval, STRAP, FlowRetrieval and importance-weighted retrieval select prior data to train few-shot policies [26](https://arxiv.org/abs/2304.08742),[27](https://arxiv.org/abs/2412.15182),[28](https://proceedings.mlr.press/v270/lin25a.html),[29](https://arxiv.org/abs/2509.01657v1); HAND retrieves and then fine-tunes [30](https://arxiv.org/abs/2505.20455v4). LoRA [31](https://arxiv.org/abs/2106.09685) and task-specific adapters [32](https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html) adapt large encoders cheaply, VLA-Pro retrieves and fuses task-specific adapters [33](https://arxiv.org/abs/2605.29562v1), and the fine-tuning recipe strongly changes the LIBERO success of large policies [34](https://arxiv.org/abs/2502.19645). We compare against head-only, LoRA and full fine-tuning on the same support sets, tune their learning rates on development tasks, and report their compute.
+
+**Visual representations for control.** R3M and VC-1 study which pretrained image encoders serve robot learning, and VC-1 finds that no single encoder is best on all tasks [35](https://arxiv.org/abs/2203.12601),[36](https://arxiv.org/abs/2303.18240). We therefore test every hypothesis with three encoders trained with different objectives: MAE, DINOv2 and SigLIP.
+
+**Offline metrics and task success.** In robomimic, the checkpoint with the lowest validation loss was often not the most successful one [37](https://arxiv.org/abs/2108.03298), and SIMPLER reports that validation action error is a poor proxy for real-world success [38](https://arxiv.org/abs/2405.05941). Our closed-loop test checks this for few-shot inverse dynamics.
+
+**End-to-end few-shot policies.** Generalist policies such as Octo and π0 are adapted as a whole and report task success [39](https://arxiv.org/abs/2405.12213),[40](https://arxiv.org/abs/2410.24164); in DISC's five-demonstration LIBERO-Goal evaluation, success reaches 55% for Octo and 73% for DISC [41](https://arxiv.org/abs/2605.20856), under a protocol different from ours. We study a component of a modular pipeline and do not compete with these systems on task success.
+
+## 3. Problem setting
+
+We isolate one question: given five demonstrations of a new task, how well can an inverse-dynamics model infer the right actions?
 
 **Inverse dynamics.** At time t the IDM receives the current RGB image oₜ, the target image oₜ₊₈, the robot state qₜ (7 joint and 2 gripper positions) and predicts the next 8 actions âₜ:ₜ₊₇ ∈ ℝ^{8×7} in LIBERO's action space. Actions and states are normalized with statistics of the source training data.
 
@@ -62,6 +72,8 @@ Figure 1. (a) RAID v8. A frozen encoder gives the controller state and the retri
 
 ## 4. Method
 
+RAID v8 has three parts: a direct head that predicts actions from the current state, a retrieval path that proposes actions from the support demonstrations, and a gate that decides, for each action dimension, how much to trust each. We first describe the shared retrieval, then why the earlier gate fails, then the fix.
+
 ### 4.1 Retrieval-augmented inverse dynamics
 
 A frozen image encoder φ maps each image to a 768-dimensional feature. The controller state is s = [φ(oₜ), φ(oₜ₊₈), qₜ, H]. A support bank stores, for every window of the support demonstrations, the frozen features of its current and target images, its state, its normalized action chunk and its demonstration. Retrieval uses the distance
@@ -70,11 +82,11 @@ d = 0.5 (1 − cos(φ(oₜ), φ(o′ₜ))) + 0.5 (1 − cos(φ(oₜ₊ₕ), φ(o
 
 and returns the k = 16 closest windows. Because the encoder stays frozen in all head methods, the retrieval geometry never changes during adaptation.
 
-### 4.2 The attention head and its failure
+### 4.2 Why a state-only gate fails
 
 The RAID v7 head computes a direct prediction from an MLP trunk, an attention-weighted prior over the 16 retrieved action chunks, and a per-dimension gate g = σ(W_g s) that mixes them; an auxiliary loss pulls attention towards candidates whose actions match the target. The gate is a function of the state s only. If the source-trained trunk is wrong for a new task, nothing in s reveals it, so the gate cannot move towards the prior. This is the failure we observed.
 
-### 4.3 The disagreement-aware gate
+### 4.3 A gate that sees disagreement
 
 RAID v8 keeps the trunk, the attention and the selection loss of v7 and changes the gate:
 
@@ -86,7 +98,7 @@ c = [top-1 similarity, mean similarity of valid candidates, normalized attention
 
 with the absolute disagreement taken per action element and detached from the gradient, and computes g = σ(MLP_g([s, c])) ∈ (0, 1)⁵⁶, with a 256-unit hidden layer, and â = g ⊙ direct + (1 − g) ⊙ prior. Without any valid candidate the gate is fixed at 1.
 
-### 4.4 Direct-path corruption
+### 4.4 Teaching the gate with wrong predictions
 
 The new inputs only help if the gate has seen large disagreements during training. On source tasks the trunk is usually right, so we create disagreements on purpose: in each training batch, each row's direct prediction is replaced, with probability 0.25 and inside the mix only, by the detached direct prediction of a random other row. For these rows the correct action is closer to the prior, and the loss teaches the gate to take it when the disagreement is large and retrieval is confident. The trunk receives no gradient from corrupted rows. Corruption stays on during target adaptation.
 
@@ -98,11 +110,11 @@ One head per type, encoder and seed is trained on the 90 LIBERO-90 tasks (45 tra
 
 Head methods update the whole head on frozen features with batch 64 for up to 200 updates. Retrieval-based heads retrieve from the five support demonstrations; during adaptation each support window excludes its own demonstration from the bank, and at evaluation the full bank is used.
 
-## 5. Experimental Protocol
+## 5. Experimental protocol
 
 ### 5.1 Data and splits
 
-We use the LIBERO datasets [8](https://arxiv.org/abs/2306.03310) from their public mirror. Source: all 90 LIBERO-90 tasks. Development: the 10 LIBERO-Goal tasks, which our earlier work had already used and which we therefore used only for design. Final: the 30 tasks of LIBERO-10, LIBERO-Spatial and LIBERO-Object, all of them, none selected; their files were downloaded and read only in the final run. LIBERO-10 shares scenes with LIBERO-90 but has different tasks; LIBERO-Spatial and LIBERO-Object use other layouts and objects. For each target task, a seeded permutation of its 50 demonstrations gives a support pool of 30 and a query set of 20, and support seeds 42, 43 and 44 each draw K = 5 support demonstrations.
+We use the LIBERO datasets [9](https://arxiv.org/abs/2306.03310) from their public mirror. Source: all 90 LIBERO-90 tasks. Development: the 10 LIBERO-Goal tasks, which our earlier work had already used and which we therefore used only for design. Final: the 30 tasks of LIBERO-10, LIBERO-Spatial and LIBERO-Object, all of them, none selected; their files were downloaded and read only in the final run. LIBERO-10 shares scenes with LIBERO-90 but has different tasks; LIBERO-Spatial and LIBERO-Object use other layouts and objects. For each target task, a seeded permutation of its 50 demonstrations gives a support pool of 30 and a query set of 20, and support seeds 42, 43 and 44 each draw K = 5 support demonstrations.
 
 ### 5.2 Methods
 
@@ -136,7 +148,7 @@ The closed-loop test runs 20 query episodes per final task for k-NN, RAID v7 and
 
 ## 6. Results
 
-### 6.1 Without target training, the disagreement-aware gate beats nearest-neighbour regression on every task
+### 6.1 Without target training, the gate beats nearest-neighbour regression on every task
 
 Table 2. Final tasks, no target training: chunk MSE (mean over 30 tasks × 3 seeds) and R². Lower MSE and higher R² are better.
 
@@ -166,7 +178,7 @@ The development tasks contained the ablation that motivated the design (Figure 4
 
 Figure 4. Development tasks, no target training: chunk MSE of k-NN, RAID v7, the v8 gate without corruption training and the v8 gate with corruption training (10 tasks × 3 seeds per encoder). These are design data, not held-out results.
 
-### 6.3 With a few updates: a small advantage, and a compute trade-off
+### 6.3 With a few updates, the advantage shrinks and compute decides
 
 Table 3. Final tasks: chunk MSE after n target updates (mean over 30 tasks × 3 seeds; encoder tuning: MAE, seed 42) and the time per update on an NVIDIA A100 80GB PCIe.
 
@@ -182,7 +194,7 @@ Table 3. Final tasks: chunk MSE after n target updates (mean over 30 tasks × 3 
 | Head-only fine-tuning | SigLIP | 0.763 | 0.361 | 0.346 | 0.342 | — |
 | RAID v8 head (ours) | SigLIP | 0.364 | 0.339 | 0.352 | 0.366 | — |
 
-H3 was supported for DINOv2 (−0.015 [−0.021, −0.011], 28 of 30 tasks) and SigLIP (−0.021 [−0.029, −0.015], 28 of 30) but not for MAE (+0.001 [−0.005, +0.007], 16 of 30). Two further observations are descriptive. First, after updates RAID v7 had slightly lower error than RAID v8 for all three encoders (MAE 0.323 vs 0.341 at 25 updates): the gate's preference for retrieval, which helps without training, limits what head updates can add. Second, RAID v8 reached its lowest error within 25 to 100 updates and then rose slightly, while head-only fine-tuning changed little after 100 updates.
+The gate helps most before any update. With updates, the picture is mixed. H3 was supported for DINOv2 (−0.015 [−0.021, −0.011], 28 of 30 tasks) and SigLIP (−0.021 [−0.029, −0.015], 28 of 30) but not for MAE (+0.001 [−0.005, +0.007], 16 of 30). Two further observations are descriptive. First, after updates RAID v7 had slightly lower error than RAID v8 for all three encoders (MAE 0.323 vs 0.341 at 25 updates): the gate's preference for retrieval, which helps without training, limits what head updates can add. Second, RAID v8 reached its lowest error within 25 to 100 updates and then rose slightly, while head-only fine-tuning changed little after 100 updates.
 
 Encoder tuning reached the lowest error: full fine-tuning 0.287 and LoRA 0.293 after 200 updates, against 0.316 for the best head method. It also costs more. One update cost 7.3 ms for the RAID v8 head, 52 ms for LoRA and 128 ms for full fine-tuning, and 200 updates took 1.3, 10.5 and 25.8 GPU-seconds (Figure 5). At 25 updates the three reached similar error (0.341, 0.335 and 0.341) after 0.17, 1.3 and 3.2 GPU-seconds. The one-time costs are shared by all methods: encoding all frames of the 30 final tasks with three encoders took 7.6 minutes, and training one source head took about 2.8 minutes on an A100.
 
@@ -190,7 +202,7 @@ Encoder tuning reached the lowest error: full fine-tuning 0.287 and LoRA 0.293 a
 
 Figure 5. Final tasks, MAE: chunk MSE against cumulative adaptation GPU-seconds. RAID v8 starts lowest; encoder tuning reaches the lowest error with one to two orders of magnitude more GPU-seconds.
 
-### 6.4 Closed loop: the adapted head finishes more tasks than fine-tuning, but k-NN finishes the most
+### 6.4 In closed loop, the adapted head beats fine-tuning, but k-NN completes the most tasks
 
 Table 4. Closed-loop success with recorded target frames (20 episodes per task, seed 42, MAE, rounded gripper), with a 95% bootstrap interval over the 30 tasks.
 
@@ -212,15 +224,15 @@ Figure 6. Closed-loop success per suite and over all 30 tasks for the seven cond
 
 ### 6.5 Offline error does not predict closed-loop success
 
-k-NN had the highest offline error of the seven closed-loop conditions (0.526, MAE, seed 42) and the highest success; LoRA and full fine-tuning had the lowest offline error (0.293 and 0.287) and lower success than the adapted RAID v8 head (offline 0.337). Across the 210 task–method pairs, the rank correlation between lower offline error and higher success was −0.06, that is, none; within a task it averaged 0.16. Copying recorded actions keeps them physically consistent, and grasping depends on a few decisive steps that an average-error metric weights like any other.
+k-NN had the highest offline error of the seven closed-loop conditions (0.526, MAE, seed 42) and the highest success; LoRA and full fine-tuning had the lowest offline error (0.293 and 0.287) and lower success than the adapted RAID v8 head (offline 0.337). Across the 210 task–method pairs, the rank correlation between lower offline error and higher success was −0.06, that is, none; within a task it averaged 0.16. Copying recorded actions keeps them physically consistent, and grasping depends on a few decisive steps that an average-error metric weights like any other. Earlier imitation-learning studies report the same gap between validation loss and success [37](https://arxiv.org/abs/2108.03298),[38](https://arxiv.org/abs/2405.05941).
 
-## 7. Discussion and Limitations
+## 7. Discussion
 
-**What the fix achieves.** A learned retrieval head can be worse than the nearest neighbour it is built on, because its gate cannot tell when its own prediction is wrong. Showing the gate the disagreement, and training it on cases where the prediction is wrong, removes this failure: without any training on the target task, the head was never worse than k-NN on any of 90 task–encoder combinations. The method adds 339,000 parameters to the head and 0.4 ms per update.
+**When should a model trust retrieval?** A learned retrieval head can be worse than the nearest neighbour it is built on, because its gate cannot tell when its own prediction is wrong. Showing the gate the disagreement, and training it on cases where the prediction is wrong, removes this failure: without any training on the target task, the head was never worse than k-NN on any of 90 task–encoder combinations. The method adds 339,000 parameters to the head and 0.4 ms per update.
 
-**What it does not achieve.** The fix improves the starting point of adaptation more than its end point. After updates, the head without the new inputs was slightly better, and fine-tuning the encoder reached the lowest error with 7 to 17 times the compute per update. Whether a schedule that turns corruption off during adaptation keeps both advantages is an open question for a new frozen study.
+**What the gate does not fix.** The gate improves the starting point of adaptation more than its end point. After updates, the head without the new inputs was slightly better, and fine-tuning the encoder reached the lowest error with 7 to 17 times the compute per update.
 
-**Offline error and success.** Lower action error did not mean more finished tasks. Offline error remains useful to compare inverse-dynamics models under a fixed target, but claims about control need closed-loop evidence, and the closed loop favoured copying recorded actions.
+**Offline error is not control.** Lower action error did not mean more completed tasks. Offline error remains useful to compare inverse-dynamics models under a fixed target, but claims about control need closed-loop evidence, and the closed loop favoured copying recorded actions.
 
 **Limitations.**
 
@@ -231,9 +243,12 @@ k-NN had the highest offline error of the seven closed-loop conditions (0.526, M
 - We cannot verify that the pretrained encoders never saw LIBERO images, so we make no claim that the tasks are unseen by them.
 - The bootstrap treats the 30 tasks as exchangeable; the three suites differ, and Table 4 reports them separately.
 
+**Where do we go from here?** Three questions follow directly from these results. First, whether a schedule that turns corruption off during adaptation keeps both the strong start and the end point of the head without the new inputs; this needs a new frozen study. Second, why copying recorded actions completes more tasks than predictions with lower error, which calls for a closed-loop metric that weights the few decisive steps of a grasp. Third, whether the gate keeps its advantage behind a real video planner, whose predicted frames are imperfect, and on a physical robot.
+
+
 ## 8. Conclusion
 
-A learned gate between a parametric inverse-dynamics model and retrieved actions should know when the parametric prediction is wrong. Giving the gate the disagreement between the two predictions, and training it with corrupted predictions, made a retrieval-augmented inverse-dynamics model better than nearest-neighbour regression and than the same head without these inputs on all 30 sealed LIBERO tasks, for three different frozen encoders, without any training on the new task. With a few updates the head kept a small advantage over head-only fine-tuning for two of three encoders and finished more simulated tasks than head-only, LoRA and full fine-tuning, while encoder fine-tuning reached lower offline error and plain nearest-neighbour regression finished the most tasks.
+A gate that mixes a learned prediction with retrieved actions needs to know when the learned prediction is wrong. Showing the gate the disagreement between the two, and training it on predictions that are wrong on purpose, made a retrieval-augmented inverse-dynamics model better than nearest-neighbour regression and better than the same head without these inputs on all 30 sealed LIBERO tasks, with three different frozen encoders and no training on the new task. The gain is largest at the start of adaptation. Encoder fine-tuning still reaches lower offline error with more compute, and in closed loop plain nearest-neighbour regression completed the most tasks. For few-shot inverse dynamics, the next step is to measure, and then optimize, what makes actions succeed rather than what makes them close.
 
 ## Acknowledgments and Declarations
 
@@ -260,43 +275,79 @@ The data are the public LIBERO datasets; every downloaded file's SHA-256 is reco
 
 [4] Guo et al. Video Prediction Policy 2: Predict Better, Act Better. arXiv preprint, 2026. [arXiv:2610.10270](https://arxiv.org/abs/2610.10270).
 
-[5] Pari et al. The Surprising Effectiveness of Representation Learning for Visual Imitation. Robotics: Science and Systems, 2022. [arXiv:2112.01511](https://arxiv.org/abs/2112.01511).
+[5] Rhoda AI Team. Causal Video Models Are Data-Efficient Robot Policy Learners. Rhoda AI research blog, 10 March 2026. [rhoda.ai/research/direct-video-action](https://www.rhoda.ai/research/direct-video-action).
 
-[6] Sridhar et al. REGENT: A Retrieval-Augmented Generalist Agent That Can Act In-Context in New Environments. International Conference on Learning Representations, 2025. [arXiv:2412.04759](https://arxiv.org/abs/2412.04759).
+[6] Pari et al. The Surprising Effectiveness of Representation Learning for Visual Imitation. Robotics: Science and Systems, 2022. [arXiv:2112.01511](https://arxiv.org/abs/2112.01511).
 
-[7] Khandelwal et al. Generalization through Memorization: Nearest Neighbor Language Models. International Conference on Learning Representations, 2020. [arXiv:1911.00172](https://arxiv.org/abs/1911.00172).
+[7] Sridhar et al. REGENT: A Retrieval-Augmented Generalist Agent That Can Act In-Context in New Environments. International Conference on Learning Representations, 2025. [arXiv:2412.04759](https://arxiv.org/abs/2412.04759).
 
-[8] Liu et al. LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning. Advances in Neural Information Processing Systems, Datasets and Benchmarks, 2023. [arXiv:2306.03310](https://arxiv.org/abs/2306.03310).
+[8] Khandelwal et al. Generalization through Memorization: Nearest Neighbor Language Models. International Conference on Learning Representations, 2020. [arXiv:1911.00172](https://arxiv.org/abs/1911.00172).
 
-[9] He et al. Masked Autoencoders Are Scalable Vision Learners. IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. [arXiv:2111.06377](https://arxiv.org/abs/2111.06377).
+[9] Liu et al. LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning. Advances in Neural Information Processing Systems, Datasets and Benchmarks, 2023. [arXiv:2306.03310](https://arxiv.org/abs/2306.03310).
 
-[10] Oquab et al. DINOv2: Learning Robust Visual Features without Supervision. Transactions on Machine Learning Research, 2024. [arXiv:2304.07193](https://arxiv.org/abs/2304.07193).
+[10] He et al. Masked Autoencoders Are Scalable Vision Learners. IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022. [arXiv:2111.06377](https://arxiv.org/abs/2111.06377).
 
-[11] Zhai et al. Sigmoid Loss for Language Image Pre-Training. IEEE/CVF International Conference on Computer Vision, 2023. [arXiv:2303.15343](https://arxiv.org/abs/2303.15343).
+[11] Oquab et al. DINOv2: Learning Robust Visual Features without Supervision. Transactions on Machine Learning Research, 2024. [arXiv:2304.07193](https://arxiv.org/abs/2304.07193).
 
-[12] Tian et al. Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation. arXiv preprint, 2024. [arXiv:2412.15109v1](https://arxiv.org/abs/2412.15109v1).
+[12] Zhai et al. Sigmoid Loss for Language Image Pre-Training. IEEE/CVF International Conference on Computer Vision, 2023. [arXiv:2303.15343](https://arxiv.org/abs/2303.15343).
 
-[13] Morin et al. On the Sample Efficiency of Inverse Dynamics Models for Semi-Supervised Imitation Learning. Proceedings of the 43rd International Conference on Machine Learning, 2026. [arXiv:2602.02762](https://arxiv.org/abs/2602.02762).
+[13] Black et al. Zero-Shot Robotic Manipulation with Pretrained Image-Editing Diffusion Models. International Conference on Learning Representations, 2024. [arXiv:2310.10639](https://arxiv.org/abs/2310.10639).
 
-[14] Park et al. Retrieve, Don't Retrain: Extending Vision Language Action Models to New Tasks at Test Time (ReCAP). 2026. [arXiv:2606.15631](https://arxiv.org/abs/2606.15631).
+[14] Ko et al. Learning to Act from Actionless Videos through Dense Correspondences. International Conference on Learning Representations, 2024. [arXiv:2310.08576](https://arxiv.org/abs/2310.08576).
 
-[15] Du et al. Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets. arXiv preprint, 2023. [arXiv:2304.08742](https://arxiv.org/abs/2304.08742).
+[15] Tian et al. Predictive Inverse Dynamics Models are Scalable Learners for Robotic Manipulation. arXiv preprint, 2024. [arXiv:2412.15109v1](https://arxiv.org/abs/2412.15109v1).
 
-[16] Memmel et al. STRAP: Robot Sub-Trajectory Retrieval for Augmented Policy Learning. International Conference on Learning Representations, 2025. [arXiv:2412.15182](https://arxiv.org/abs/2412.15182).
+[16] Baker et al. Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos. Advances in Neural Information Processing Systems, 2022. [arXiv:2206.11795](https://arxiv.org/abs/2206.11795).
 
-[17] Hong et al. HAND Me the Data: Fast Robot Adaptation via Hand Path Retrieval. arXiv preprint, 2025. [arXiv:2505.20455v4](https://arxiv.org/abs/2505.20455v4).
+[17] Jang et al. DreamGen: Unlocking Generalization in Robot Learning through Video World Models. arXiv preprint, 2025. [arXiv:2505.12705](https://arxiv.org/abs/2505.12705v2).
 
-[18] Hu et al. LoRA: Low-Rank Adaptation of Large Language Models. International Conference on Learning Representations, 2022. [arXiv:2106.09685](https://arxiv.org/abs/2106.09685).
+[18] Morin et al. On the Sample Efficiency of Inverse Dynamics Models for Semi-Supervised Imitation Learning. Proceedings of the 43rd International Conference on Machine Learning, 2026. [arXiv:2602.02762](https://arxiv.org/abs/2602.02762).
 
-[19] Liu et al. TAIL: Task-specific Adapters for Imitation Learning with Large Pretrained Models. International Conference on Learning Representations, 2024. [Paper](https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html).
+[19] Pillai et al. Pixels to Keys: Exploring Spatial and Motion Cues in Gameplay Inverse Dynamics. arXiv preprint, 2026. [arXiv:2609.37907](https://arxiv.org/abs/2609.37907).
 
-[20] Si et al. VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models. arXiv preprint, 2026. [arXiv:2605.29562v1](https://arxiv.org/abs/2605.29562v1).
+[20] Kwon et al. RT-Cache: Training-Free Retrieval for Real-Time Manipulation. arXiv preprint, 2025. [arXiv:2505.09040](https://arxiv.org/abs/2505.09040v3).
 
-[21] Madras et al. Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer. Advances in Neural Information Processing Systems, 2018. [arXiv:1711.06664](https://arxiv.org/abs/1711.06664).
+[21] Park et al. Retrieve, Don't Retrain: Extending Vision Language Action Models to New Tasks at Test Time (ReCAP). 2026. [arXiv:2606.15631](https://arxiv.org/abs/2606.15631).
 
-[22] Ren et al. DISC: Decoupling Instruction from State-Conditioned Control via Policy Generation. arXiv preprint, 2026. [arXiv:2605.20856](https://arxiv.org/abs/2605.20856).
+[22] Zheng et al. Adaptive Nearest Neighbor Machine Translation. Annual Meeting of the Association for Computational Linguistics, 2021. [arXiv:2105.13022](https://arxiv.org/abs/2105.13022).
 
-[23] Octo Model Team et al. Octo: An Open-Source Generalist Robot Policy. arXiv preprint, 2024. [arXiv:2405.12213](https://arxiv.org/abs/2405.12213).
+[23] He et al. Efficient Nearest Neighbor Language Models. Conference on Empirical Methods in Natural Language Processing, 2021. [arXiv:2109.04212](https://arxiv.org/abs/2109.04212).
+
+[24] Madras et al. Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer. Advances in Neural Information Processing Systems, 2018. [arXiv:1711.06664](https://arxiv.org/abs/1711.06664).
+
+[25] Mozannar and Sontag. Consistent Estimators for Learning to Defer to an Expert. International Conference on Machine Learning, 2020. [arXiv:2006.01862](https://arxiv.org/abs/2006.01862).
+
+[26] Du et al. Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets. arXiv preprint, 2023. [arXiv:2304.08742](https://arxiv.org/abs/2304.08742).
+
+[27] Memmel et al. STRAP: Robot Sub-Trajectory Retrieval for Augmented Policy Learning. International Conference on Learning Representations, 2025. [arXiv:2412.15182](https://arxiv.org/abs/2412.15182).
+
+[28] Lin et al. FlowRetrieval: Flow-Guided Data Retrieval for Few-Shot Imitation Learning. Conference on Robot Learning, 2024. [PMLR v270](https://proceedings.mlr.press/v270/lin25a.html).
+
+[29] Xie et al. Data Retrieval with Importance Weights for Few-Shot Imitation Learning. Conference on Robot Learning, 2025. [arXiv:2509.01657](https://arxiv.org/abs/2509.01657v1).
+
+[30] Hong et al. HAND Me the Data: Fast Robot Adaptation via Hand Path Retrieval. arXiv preprint, 2025. [arXiv:2505.20455v4](https://arxiv.org/abs/2505.20455v4).
+
+[31] Hu et al. LoRA: Low-Rank Adaptation of Large Language Models. International Conference on Learning Representations, 2022. [arXiv:2106.09685](https://arxiv.org/abs/2106.09685).
+
+[32] Liu et al. TAIL: Task-specific Adapters for Imitation Learning with Large Pretrained Models. International Conference on Learning Representations, 2024. [Paper](https://proceedings.iclr.cc/paper_files/paper/2024/hash/46e2b525da536030ec1589dddea01feb-Abstract-Conference.html).
+
+[33] Si et al. VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models. arXiv preprint, 2026. [arXiv:2605.29562v1](https://arxiv.org/abs/2605.29562v1).
+
+[34] Kim et al. Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success. arXiv preprint, 2025. [arXiv:2502.19645](https://arxiv.org/abs/2502.19645).
+
+[35] Nair et al. R3M: A Universal Visual Representation for Robot Manipulation. Conference on Robot Learning, 2022. [arXiv:2203.12601](https://arxiv.org/abs/2203.12601).
+
+[36] Majumdar et al. Where are we in the search for an Artificial Visual Cortex for Embodied Intelligence? Advances in Neural Information Processing Systems, 2023. [arXiv:2303.18240](https://arxiv.org/abs/2303.18240).
+
+[37] Mandlekar et al. What Matters in Learning from Offline Human Demonstrations for Robot Manipulation. Conference on Robot Learning, 2021. [arXiv:2108.03298](https://arxiv.org/abs/2108.03298).
+
+[38] Li et al. Evaluating Real-World Robot Manipulation Policies in Simulation. Conference on Robot Learning, 2024. [arXiv:2405.05941](https://arxiv.org/abs/2405.05941).
+
+[39] Octo Model Team et al. Octo: An Open-Source Generalist Robot Policy. arXiv preprint, 2024. [arXiv:2405.12213](https://arxiv.org/abs/2405.12213).
+
+[40] Black et al. π0: A Vision-Language-Action Flow Model for General Robot Control. arXiv preprint, 2024. [arXiv:2410.24164](https://arxiv.org/abs/2410.24164).
+
+[41] Ren et al. DISC: Decoupling Instruction from State-Conditioned Control via Policy Generation. arXiv preprint, 2026. [arXiv:2605.20856](https://arxiv.org/abs/2605.20856).
 
 ## A. Settings
 
