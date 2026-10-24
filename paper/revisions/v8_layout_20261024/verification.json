@@ -1,0 +1,12 @@
+{
+  "document_id": "11QDjW49qwxiZFJGYxMB5_dELf5keka6Qeh3ijXpW10s",
+  "synced": "2026-10-24",
+  "source": "paper/raid_manuscript.md at commit 2960dac",
+  "image_base": "https://raw.githubusercontent.com/ConstantinVictorBeatErtel/RAID/84e380715ea4bbb698c07e7ada226ac0857a5a74/paper",
+  "revision_before": "AHj4eMR0HWadShKq (text identical to the previous sync; no user edits)",
+  "chunks_applied": 7,
+  "requests": 493,
+  "revision_after_body": "AHj4eMTv4_Z1hTZc",
+  "readback": {"expected_blocks": 175, "matching_prefix": 175, "inline_images": 6, "extra": "mandatory final empty paragraph"},
+  "post_step": "table text set to 9 pt (7 tables)"
+}
