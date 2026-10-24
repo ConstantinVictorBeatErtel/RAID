@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "archive_sha256": "f1e5d13d0681a4dc7dcf7eea8a7bfe7b1fa1d6f9e4af1a3008445b1c3686a3cd",
+  "stages": [
+    "archive_verify",
+    "package_preflight",
+    "bootstrap",
+    "v8_download_cache",
+    "v8_source",
+    "v8_offline",
+    "v8_encoder",
+    "v8_closed_loop",
+    "v8_timing",
+    "v8_select"
+  ],
+  "tiny_amendment_digest": "629840769bdc226d9fb5a751bf286d60dacb7f58ae31fd62675faa8641dee3ed",
+  "final_stage_refused": true,
+  "closed_loop_methods": [
+    "knn",
+    "lora@2",
+    "raid_v8_c25@5",
+    "v7_zero",
+    "v8_c0_zero",
+    "v8_c25_zero"
+  ],
+  "closed_loop_knn_success": 1.0,
+  "closed_loop_flip": false,
+  "final_suites_read": false
+}

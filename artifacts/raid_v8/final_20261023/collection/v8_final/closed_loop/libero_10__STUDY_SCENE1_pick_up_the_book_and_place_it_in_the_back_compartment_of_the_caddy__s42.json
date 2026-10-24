@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 167,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 354,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 287,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 183,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 332,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 173,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 199,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.4,
+   "success_rate": 0.2,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 175,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 354,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 213,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 287,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 216,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 223,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 332,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 228,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.7,
+   "success_rate": 0.25,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 190,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 261,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 196,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 210,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 169,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 199,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 287,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 187,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 197,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 170,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 214,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 204,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 186,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 215,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 174,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 241,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.2,
+   "success_rate": 0.75,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 251,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 209,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 354,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 201,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 206,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 332,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 174,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 177,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.8,
+   "success_rate": 0.35,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 232,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 178,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 168,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 298,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 238,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 204,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 171,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 246,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 198,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 182,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.6,
+   "success_rate": 0.6,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 183,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 179,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 287,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 226,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 168,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 212,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 164,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 281,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.5,
+   "success_rate": 0.4,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 303,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 223,
+     "max_steps": 354,
+     "steps": 354,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 178,
+     "max_steps": 287,
+     "steps": 287,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 189,
+     "max_steps": 303,
+     "steps": 205,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 208,
+     "max_steps": 332,
+     "steps": 327,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 199,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 192,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.6,
+   "success_rate": 0.25,
+   "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+}

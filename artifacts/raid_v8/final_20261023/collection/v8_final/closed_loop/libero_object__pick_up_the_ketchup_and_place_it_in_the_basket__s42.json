@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 207,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 149,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 151,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.4,
+   "success_rate": 0.2,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.5,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 174,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.9,
+   "success_rate": 0.45,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 163,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 186,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 147,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 136,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.1,
+   "success_rate": 0.35,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 198,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 154,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.4,
+   "success_rate": 0.6,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.3,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 172,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.3,
+   "success_rate": 0.1,
+   "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_ketchup_and_place_it_in_the_basket"
+}

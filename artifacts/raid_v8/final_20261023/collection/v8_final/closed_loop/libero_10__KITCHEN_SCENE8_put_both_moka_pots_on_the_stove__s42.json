@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 678,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 779,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 707,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 31.0,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 678,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 779,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 707,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 30.0,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 482,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 498,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 506,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 28.0,
+   "success_rate": 0.15,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 678,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 779,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 707,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 31.1,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 678,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 779,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 707,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 29.9,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 678,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 779,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 707,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 29.4,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 439,
+     "max_steps": 678,
+     "steps": 678,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 367,
+     "max_steps": 570,
+     "steps": 570,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 407,
+     "max_steps": 630,
+     "steps": 630,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 359,
+     "max_steps": 558,
+     "steps": 558,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 377,
+     "max_steps": 585,
+     "steps": 585,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 403,
+     "max_steps": 624,
+     "steps": 624,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 389,
+     "max_steps": 603,
+     "steps": 603,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 429,
+     "max_steps": 663,
+     "steps": 663,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 459,
+     "max_steps": 708,
+     "steps": 708,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 410,
+     "max_steps": 635,
+     "steps": 635,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 409,
+     "max_steps": 633,
+     "steps": 633,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 455,
+     "max_steps": 702,
+     "steps": 702,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 477,
+     "max_steps": 735,
+     "steps": 735,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 417,
+     "max_steps": 645,
+     "steps": 645,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 506,
+     "max_steps": 779,
+     "steps": 779,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 378,
+     "max_steps": 587,
+     "steps": 587,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 458,
+     "max_steps": 707,
+     "steps": 707,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 368,
+     "max_steps": 572,
+     "steps": 572,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 454,
+     "max_steps": 701,
+     "steps": 701,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 29.2,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/KITCHEN_SCENE8_put_both_moka_pots_on_the_stove"
+}

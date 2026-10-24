@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 118,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.6,
+   "success_rate": 0.25,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 236,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.4,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 149,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 221,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 172,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 117,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 128,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.6,
+   "success_rate": 0.65,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 236,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.8,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 236,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 275,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.8,
+   "success_rate": 0.1,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 236,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.0,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 238,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 144,
+     "max_steps": 236,
+     "steps": 236,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.1,
+   "success_rate": 0.05,
+   "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_orange_juice_and_place_it_in_the_basket"
+}

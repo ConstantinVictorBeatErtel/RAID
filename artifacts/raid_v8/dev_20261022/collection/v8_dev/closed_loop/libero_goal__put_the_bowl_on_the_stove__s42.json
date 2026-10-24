@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 89,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 86,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 88,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 85,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 174,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 156,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 100,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 97,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 16.0,
+   "success_rate": 0.75,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 102,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 102,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 114,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 111,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 108,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 105,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 113,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 174,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 156,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 105,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 15.5,
+   "success_rate": 0.8,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 84,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 91,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 104,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 85,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 182,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 88,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 100,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 16.4,
+   "success_rate": 0.9,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 93,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 97,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 97,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 93,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 97,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 98,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 13.5,
+   "success_rate": 1.0,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 165,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 165,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 198,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 182,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 174,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 156,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 167,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 16.2,
+   "success_rate": 0.05,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 165,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 116,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 165,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 198,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 182,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 174,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 156,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 167,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 16.0,
+   "success_rate": 0.05,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 112,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 115,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 116,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 119,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 119,
+     "max_steps": 198,
+     "steps": 198,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 105,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 119,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 108,
+     "max_steps": 182,
+     "steps": 182,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 103,
+     "max_steps": 174,
+     "steps": 117,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 91,
+     "max_steps": 156,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 167,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 120,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 16.3,
+   "success_rate": 0.6,
+   "task": "libero_goal/put_the_bowl_on_the_stove"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/put_the_bowl_on_the_stove"
+}

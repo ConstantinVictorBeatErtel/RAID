@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 203,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 194,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 186,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 168,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.1,
+   "success_rate": 0.5,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 165,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.8,
+   "success_rate": 0.35,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 147,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 175,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.5,
+   "success_rate": 0.55,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 131,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.4,
+   "success_rate": 0.3,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 178,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 144,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.3,
+   "success_rate": 0.3,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.3,
+   "success_rate": 0.0,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 159,
+     "max_steps": 258,
+     "steps": 258,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.9,
+   "success_rate": 0.0,
+   "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  }
+ },
+ "seed": 42,
+ "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+}

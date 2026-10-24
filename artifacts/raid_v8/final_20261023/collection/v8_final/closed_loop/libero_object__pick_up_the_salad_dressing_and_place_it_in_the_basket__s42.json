@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 116,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 111,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 108,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.6,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 203,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 109,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.3,
+   "success_rate": 0.1,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 192,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 184,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 128,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 117,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 124,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.1,
+   "success_rate": 0.9,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 116,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.2,
+   "success_rate": 0.35,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 110,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 112,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 117,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 128,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.6,
+   "success_rate": 0.7,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 203,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 203,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.4,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 138,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 203,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 122,
+     "max_steps": 203,
+     "steps": 128,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 129,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.3,
+   "success_rate": 0.8,
+   "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+}

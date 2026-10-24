@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 353,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 28.1,
+   "success_rate": 0.05,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.4,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 331,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.2,
+   "success_rate": 0.05,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 397,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 28.7,
+   "success_rate": 0.05,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 352,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.3,
+   "success_rate": 0.05,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.3,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 415,
+     "max_steps": 642,
+     "steps": 642,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 364,
+     "max_steps": 566,
+     "steps": 566,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 301,
+     "max_steps": 471,
+     "steps": 471,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 310,
+     "max_steps": 485,
+     "steps": 485,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 329,
+     "max_steps": 513,
+     "steps": 513,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 279,
+     "max_steps": 438,
+     "steps": 438,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 256,
+     "max_steps": 404,
+     "steps": 404,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 395,
+     "max_steps": 612,
+     "steps": 612,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 269,
+     "max_steps": 423,
+     "steps": 423,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 375,
+     "max_steps": 582,
+     "steps": 582,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 248,
+     "max_steps": 392,
+     "steps": 392,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.3,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/KITCHEN_SCENE6_put_the_yellow_and_white_mug_in_the_microwave_and_close_it"
+}

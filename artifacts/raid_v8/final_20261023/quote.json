@@ -1,0 +1,42 @@
+{
+  "all_liabilities_known": true,
+  "billing_digest": "fe6205638d2f8f4ef214ebf203ec5aaf64da185434ec980f2f20097e2ab99b7a",
+  "billing_refreshed_at": "2026-10-24T09:13:06.502942+00:00",
+  "container_disk_gb": 60,
+  "container_disk_gb_month_usd": "0.10",
+  "currency": "USD",
+  "cutoff_service_cost_reserve_usd": "0.10",
+  "data_center_id": "EU-RO-1",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_hourly_usd": "1.79",
+  "gross_prepaid_balance_usd": "16.8253060035",
+  "inventory_refreshed_at": "2026-10-24T09:13:12.561324+00:00",
+  "network_volume_gb_month_usd": "0.07",
+  "network_volume_size_gb": 80,
+  "placement_evidence": {
+    "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+    "live_gpu_stock_checked": true,
+    "refreshed_at": "2026-10-24T09:13:12.561324+00:00",
+    "sha256": "2d42899d32a7a436965a4ccd21ad7e8a1d4b107ce33fcaf0063942358d465265",
+    "storage_tier": "STANDARD"
+  },
+  "prepaid_available_usd": "15.8153060035",
+  "project_ceiling_usd": "250",
+  "project_reserve_usd": "25",
+  "projected_source_cost_usd": "11.12333333333333333333333333",
+  "provider_inventory_checked": true,
+  "quote_provenance": {
+    "container_disk_billing_unit": "second",
+    "gpu": "runpodctl gpu list",
+    "monthly_hour_denominator": 720,
+    "network_volume_billing_unit": "hour, conservatively rounded up",
+    "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+    "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+  },
+  "refreshed_at": "2026-10-24T09:13:12.561324+00:00",
+  "remaining_project_allowance_usd": "75.6422503179876338136",
+  "source_cap_usd": "14.83",
+  "status": "passed",
+  "total_study_spend_usd": "149.3577496820123661864",
+  "transfer_reserve_usd": "0"
+}

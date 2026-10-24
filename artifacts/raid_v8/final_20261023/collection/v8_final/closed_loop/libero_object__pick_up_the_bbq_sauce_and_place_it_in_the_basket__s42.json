@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 169,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 117,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 215,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 172,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.8,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 110,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 215,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 112,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 110,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 171,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.0,
+   "success_rate": 0.55,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 149,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 139,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.0,
+   "success_rate": 0.85,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 167,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 215,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 110,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.6,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 215,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 162,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.5,
+   "success_rate": 0.1,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 215,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 221,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.7,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 166,
+     "max_steps": 269,
+     "steps": 269,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 130,
+     "max_steps": 215,
+     "steps": 215,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 134,
+     "max_steps": 221,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.1,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+}

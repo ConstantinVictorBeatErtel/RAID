@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 113,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 88,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.5,
+   "success_rate": 0.15,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 147,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.3,
+   "success_rate": 0.15,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 117,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 128,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 100,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.0,
+   "success_rate": 0.35,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 100,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 114,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 104,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 102,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 107,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 114,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 125,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.2,
+   "success_rate": 0.55,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 100,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 104,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 102,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 102,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 108,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 108,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 112,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.5,
+   "success_rate": 0.5,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.0,
+   "success_rate": 0.0,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 125,
+     "max_steps": 207,
+     "steps": 207,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 111,
+     "max_steps": 186,
+     "steps": 186,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 114,
+     "max_steps": 191,
+     "steps": 191,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.1,
+   "success_rate": 0.05,
+   "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  }
+ },
+ "seed": 42,
+ "task": "libero_spatial/pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+}

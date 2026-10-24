@@ -1,0 +1,2 @@
+b4e77b74ffdb67f5ba53eddace0d36fc7625844db908ff527101b1b3236e44ac  src/managed.ts
+d95fb0025c12c6aed36efb2c45e4cca7c238f6298679e362e897840b2672951d  test/managed.test.ts

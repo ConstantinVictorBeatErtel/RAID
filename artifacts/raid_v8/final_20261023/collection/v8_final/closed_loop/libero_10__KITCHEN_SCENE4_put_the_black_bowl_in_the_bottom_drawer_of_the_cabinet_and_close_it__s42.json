@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 297,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 191,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 360,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 414,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 234,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 244,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 366,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 405,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 479,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.5,
+   "success_rate": 0.2,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 360,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 414,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 366,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 405,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 479,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.6,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 248,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 231,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 219,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 273,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 290,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 249,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 199,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 236,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 290,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 230,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 405,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 232,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.5,
+   "success_rate": 0.55,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 223,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 233,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 285,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 414,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 228,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 289,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 366,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 260,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 479,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.7,
+   "success_rate": 0.3,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 360,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 414,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 366,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 405,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 479,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 22.3,
+   "success_rate": 0.0,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 360,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 361,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 345,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 405,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 479,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.7,
+   "success_rate": 0.1,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 234,
+     "max_steps": 371,
+     "steps": 371,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 268,
+     "max_steps": 422,
+     "steps": 422,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 227,
+     "max_steps": 360,
+     "steps": 360,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 263,
+     "max_steps": 414,
+     "steps": 414,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 241,
+     "max_steps": 381,
+     "steps": 381,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 244,
+     "max_steps": 386,
+     "steps": 386,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 336,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 271,
+     "max_steps": 426,
+     "steps": 426,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 231,
+     "max_steps": 366,
+     "steps": 366,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 257,
+     "max_steps": 405,
+     "steps": 405,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 216,
+     "max_steps": 344,
+     "steps": 344,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 306,
+     "max_steps": 479,
+     "steps": 479,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.7,
+   "success_rate": 0.05,
+   "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/KITCHEN_SCENE4_put_the_black_bowl_in_the_bottom_drawer_of_the_cabinet_and_close_it"
+}

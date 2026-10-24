@@ -1,0 +1,122 @@
+{
+  "alarmAt": 1792854193452,
+  "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+  "events": [
+    {
+      "at": 1792833194400,
+      "detail": "{\"collectBy\":1792854193452,\"deadlineAt\":1792854793452,\"deleteStorageAt\":1792941193452}",
+      "seq": 1,
+      "type": "registered_with_immutable_deadlines"
+    }
+  ],
+  "eventsTotal": 1,
+  "fingerprint": "93e98320a1ec47987b2ccfdfd76ffc346d957fbdc8ebcaccdc85ba539523acb5",
+  "jobs": [
+    {
+      "due": 1792854193452,
+      "name": "terminate"
+    },
+    {
+      "due": 1792854194452,
+      "name": "recover"
+    },
+    {
+      "due": 1792941193452,
+      "name": "expire"
+    }
+  ],
+  "registeredAt": 1792833194132,
+  "request": {
+    "acceptanceSessionId": "v6-accept-20261024T080443-b399fbcc",
+    "bindings": {
+      "code": "3a3012c3ca83f2580df21722045c97c58f92616c1f7655b037623ac9cb1feed3",
+      "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+      "protocol": "c59a638ea15e51ba996807a13e165e8bbcaf8f0f7d9adec06e7b616b83892350",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "capUsd": "14.83",
+    "collectBy": 1792854193452,
+    "deadlineAt": 1792854793452,
+    "deleteStorageAt": 1792941193452,
+    "maxHourlyUsd": "1.79",
+    "packageSha256": "8c32e37864c87a95ef2ac2a9e6abf9cd97c81ae999563a973b341e5c5c6948ee",
+    "podSpec": {
+      "cloudType": "SECURE",
+      "computeType": "GPU",
+      "containerDiskInGb": 60,
+      "dataCenterIds": [
+        "EU-RO-1"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "PYTHONHASHSEED": "42",
+        "RAID_CONTAINER_IMAGE_DIGEST": "sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f"
+      },
+      "gpuCount": 1,
+      "gpuTypeIds": [
+        "NVIDIA A100 80GB PCIe"
+      ],
+      "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+      "ports": [
+        "22/tcp"
+      ],
+      "supportPublicIp": true,
+      "volumeInGb": 0,
+      "volumeMountPath": "/workspace"
+    },
+    "quoteStartAt": 1792833193452,
+    "sentinel": {
+      "key": "results/v8-final-20261023T185911-17b386b4/collection/outputs_sha256.json",
+      "sha256": "b194763501557c55f05c386b3f4ce82afeba11830ceba371040f832a6922b789"
+    },
+    "sessionId": "v8-final-20261023T185911-17b386b4",
+    "spendAdmission": {
+      "all_liabilities_known": true,
+      "billing_digest": "fe6205638d2f8f4ef214ebf203ec5aaf64da185434ec980f2f20097e2ab99b7a",
+      "billing_refreshed_at": "2026-10-24T09:13:06.502942+00:00",
+      "container_disk_gb": 60,
+      "container_disk_gb_month_usd": "0.10",
+      "currency": "USD",
+      "cutoff_service_cost_reserve_usd": "0.10",
+      "data_center_id": "EU-RO-1",
+      "gpu": "NVIDIA A100 80GB PCIe",
+      "gpu_hourly_usd": "1.79",
+      "gross_prepaid_balance_usd": "16.8253060035",
+      "inventory_refreshed_at": "2026-10-24T09:13:12.561324+00:00",
+      "network_volume_gb_month_usd": "0.07",
+      "network_volume_size_gb": 80,
+      "placement_evidence": {
+        "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+        "live_gpu_stock_checked": true,
+        "refreshed_at": "2026-10-24T09:13:12.561324+00:00",
+        "sha256": "2d42899d32a7a436965a4ccd21ad7e8a1d4b107ce33fcaf0063942358d465265",
+        "storage_tier": "STANDARD"
+      },
+      "prepaid_available_usd": "15.8153060035",
+      "project_ceiling_usd": "250",
+      "project_reserve_usd": "25",
+      "projected_source_cost_usd": "11.12333333333333333333333333",
+      "provider_inventory_checked": true,
+      "quote_provenance": {
+        "container_disk_billing_unit": "second",
+        "gpu": "runpodctl gpu list",
+        "monthly_hour_denominator": 720,
+        "network_volume_billing_unit": "hour, conservatively rounded up",
+        "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+        "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+      },
+      "refreshed_at": "2026-10-24T09:13:12.561324+00:00",
+      "remaining_project_allowance_usd": "75.6422503179876338136",
+      "source_cap_usd": "14.83",
+      "status": "passed",
+      "total_study_spend_usd": "149.3577496820123661864",
+      "transfer_reserve_usd": "0"
+    },
+    "stage": "source_panel",
+    "volumeSpec": {
+      "dataCenterId": "EU-RO-1",
+      "size": 80
+    }
+  },
+  "revision": 1
+}

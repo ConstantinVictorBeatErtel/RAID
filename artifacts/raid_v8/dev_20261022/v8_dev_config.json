@@ -1,0 +1,22 @@
+{
+ "stage": "development",
+ "encoders": ["mae", "dinov2", "siglip"],
+ "seeds": [42, 43, 44],
+ "source_updates": 4000,
+ "source_val_every": 250,
+ "source_heads": [["v7", 0.0], ["v8_c0", 0.0], ["v8_c25", 0.25]],
+ "base_head": "v8_c25",
+ "head_methods": [["head_only", "v8_c25", false], ["raid_v7", "v7", true], ["raid_v8_c0", "v8_c0", true],
+                  ["raid_v8_c25", "v8_c25", true]],
+ "head_lrs": {"head_only": [0.0001, 0.0003, 0.001], "raid_v7": [0.0001, 0.0003, 0.001],
+              "raid_v8_c0": [0.0001, 0.0003, 0.001], "raid_v8_c25": [0.0001, 0.0003, 0.001]},
+ "encoder_seed": 42,
+ "encoder_tasks": ["libero_goal/open_the_top_drawer_and_put_the_bowl_inside", "libero_goal/put_the_cream_cheese_in_the_bowl",
+                   "libero_goal/put_the_bowl_on_top_of_the_cabinet", "libero_goal/put_the_wine_bottle_on_top_of_the_cabinet",
+                   "libero_goal/turn_on_the_stove"],
+ "encoder_lrs": {"lora": [3e-05, 0.0001, 0.0003], "full": [3e-06, 1e-05, 3e-05]},
+ "encoder_head_lr": 0.0003,
+ "closed_loop": {"seed": 42, "episodes": 20,
+                 "adapted": [["head_only", "v8_c25", false, 0.0003, 25], ["raid_v8_c25", "v8_c25", true, 0.0003, 25]],
+                 "encoder": [["lora", 0.0001, 200]]}
+}

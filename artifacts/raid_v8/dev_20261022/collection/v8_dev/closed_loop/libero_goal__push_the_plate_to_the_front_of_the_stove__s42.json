@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 293,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 197,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.2,
+   "success_rate": 0.0,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 128,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 199,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 119,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 175,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 197,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.3,
+   "success_rate": 0.55,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 168,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 167,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 147,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 156,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 138,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 166,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 23.2,
+   "success_rate": 0.6,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 293,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 197,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 23.3,
+   "success_rate": 0.1,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 293,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 197,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.8,
+   "success_rate": 0.0,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 195,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 204,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 192,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 293,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 197,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.1,
+   "success_rate": 0.0,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 117,
+     "max_steps": 195,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 123,
+     "max_steps": 204,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 171,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 115,
+     "max_steps": 192,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 182,
+     "max_steps": 293,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 118,
+     "max_steps": 197,
+     "steps": 197,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.0,
+   "success_rate": 0.45,
+   "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/push_the_plate_to_the_front_of_the_stove"
+}

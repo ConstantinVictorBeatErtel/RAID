@@ -1,0 +1,10 @@
+{
+  "authorizationId": "v8-window-20261022",
+  "authorizationSha256": "f752204abd5ce6ac5d4fd326bcdf78c6da726b168c1ea950e5957e9829b0fd6d",
+  "cumulativeCapUsd": "225",
+  "deferredSessions": [
+    "v6-accept-20261011T151015-98eb3077"
+  ],
+  "previousDeadlineAt": 1792610737224,
+  "windowSeconds": 432000
+}

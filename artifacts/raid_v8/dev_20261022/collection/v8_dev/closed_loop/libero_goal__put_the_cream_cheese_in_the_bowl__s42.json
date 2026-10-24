@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 94,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 118,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 114,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 89,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 89,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 138,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 102,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.7,
+   "success_rate": 0.35,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 91,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 177,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 107,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 89,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 104,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.9,
+   "success_rate": 0.5,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 105,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.1,
+   "success_rate": 0.3,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 93,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 111,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 95,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 109,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 112,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 90,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 107,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 20.9,
+   "success_rate": 0.75,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 167,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 177,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.7,
+   "success_rate": 0.05,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 167,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 177,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 216,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 20.6,
+   "success_rate": 0.0,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 3,
+     "demo_length": 104,
+     "max_steps": 176,
+     "steps": 176,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 98,
+     "max_steps": 167,
+     "steps": 167,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 106,
+     "max_steps": 179,
+     "steps": 179,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 105,
+     "max_steps": 177,
+     "steps": 177,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 109,
+     "max_steps": 183,
+     "steps": 183,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 147,
+     "max_steps": 240,
+     "steps": 240,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 107,
+     "max_steps": 180,
+     "steps": 180,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 131,
+     "max_steps": 216,
+     "steps": 99,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 113,
+     "max_steps": 189,
+     "steps": 189,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 102,
+     "max_steps": 173,
+     "steps": 173,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 20.7,
+   "success_rate": 0.05,
+   "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/put_the_cream_cheese_in_the_bowl"
+}

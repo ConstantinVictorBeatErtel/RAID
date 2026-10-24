@@ -1,0 +1,667 @@
+{
+  "binding": {
+    "bucket": "go9myqkvh6",
+    "deadline_ms": 1792765267050,
+    "key": "results/v8-dev-20261023T063431-ef8781f7/transport/source_panel_package.tar.gz",
+    "part_bytes": 8388608,
+    "sha256": "99a513874e42410d9c1c670b614b017395dd707add3d77e71bc21987079d8357",
+    "size": 565082078
+  },
+  "creation_attempted": true,
+  "errors": [
+    {
+      "at": 1792738382.547016,
+      "attempt": 1,
+      "part": 6,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738400.362148,
+      "attempt": 2,
+      "part": 6,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738445.2161422,
+      "attempt": 1,
+      "part": 3,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738464.771762,
+      "attempt": 3,
+      "part": 6,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738478.638176,
+      "attempt": 1,
+      "part": 8,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738480.4630919,
+      "attempt": 1,
+      "part": 9,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738487.912995,
+      "attempt": 2,
+      "part": 3,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738581.509448,
+      "attempt": 3,
+      "part": 3,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738635.8908072,
+      "attempt": 1,
+      "part": 15,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738637.563513,
+      "attempt": 1,
+      "part": 18,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738674.839305,
+      "attempt": 1,
+      "part": 16,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738736.964659,
+      "attempt": 2,
+      "part": 16,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738903.163641,
+      "attempt": 1,
+      "part": 23,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738904.924448,
+      "attempt": 1,
+      "part": 21,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738911.914093,
+      "attempt": 1,
+      "part": 22,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738915.744988,
+      "attempt": 1,
+      "part": 9,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738921.515935,
+      "attempt": 1,
+      "part": 24,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738923.431966,
+      "attempt": 1,
+      "part": 25,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738927.050827,
+      "attempt": 2,
+      "part": 21,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738931.472676,
+      "attempt": 2,
+      "part": 9,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792738936.5716228,
+      "attempt": 2,
+      "part": 24,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739269.909986,
+      "attempt": 1,
+      "part": 40,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739279.380527,
+      "attempt": 1,
+      "part": 39,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739295.763948,
+      "attempt": 1,
+      "part": 38,
+      "type": "ReadTimeoutError"
+    },
+    {
+      "at": 1792739307.650903,
+      "attempt": 1,
+      "part": 42,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739313.2013671,
+      "attempt": 1,
+      "part": 44,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739321.601633,
+      "attempt": 2,
+      "part": 42,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739325.8217468,
+      "attempt": 2,
+      "part": 44,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739341.605371,
+      "attempt": 3,
+      "part": 44,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739364.0305989,
+      "attempt": 3,
+      "part": 42,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739420.501106,
+      "attempt": 1,
+      "part": 47,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739422.9078588,
+      "attempt": 2,
+      "part": 39,
+      "type": "ClientError"
+    },
+    {
+      "at": 1792739423.0302668,
+      "attempt": 1,
+      "part": 46,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739743.1493518,
+      "attempt": 1,
+      "part": 57,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739758.806128,
+      "attempt": 2,
+      "part": 57,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739770.055618,
+      "attempt": 1,
+      "part": 40,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739777.956087,
+      "attempt": 1,
+      "part": 58,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739780.590403,
+      "attempt": 3,
+      "part": 57,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739834.965844,
+      "attempt": 1,
+      "part": 56,
+      "type": "ConnectionClosedError"
+    },
+    {
+      "at": 1792739872.9015129,
+      "attempt": 1,
+      "part": 62,
+      "type": "ConnectionClosedError"
+    }
+  ],
+  "parts": {
+    "1": {
+      "ETag": "\"7bb3b1d3c90dc901dbea1587f5a09ea1\"",
+      "PartNumber": 1,
+      "sha256": "15cf76aafe0ea9c7791494a999d07e1f2f2a34fe077b4aa53ff9a7d88656a45b",
+      "size": 8388608
+    },
+    "10": {
+      "ETag": "\"f754b2c4f0b3ef01357187fc80d2e262\"",
+      "PartNumber": 10,
+      "sha256": "2bcee6ab2965daac8012ebce09f9147d042e3efd43023b37898c009f78548e1f",
+      "size": 8388608
+    },
+    "11": {
+      "ETag": "\"74bca7262fdfd77b9f7a57899ebb3d3d\"",
+      "PartNumber": 11,
+      "sha256": "25e11f2f85e5d4f24005a60ce6fde78b62086fbb5392683a9f1c73741f926c4a",
+      "size": 8388608
+    },
+    "12": {
+      "ETag": "\"c99559c30d0e33ad2f93e09b9c768729\"",
+      "PartNumber": 12,
+      "sha256": "c4b7b7f404ac5048d8fb1a7f69e20e5b405946600b90f5adfe176c525fb259a1",
+      "size": 8388608
+    },
+    "13": {
+      "ETag": "\"b34f39f102b31dcc62a8d4d85e28a2bf\"",
+      "PartNumber": 13,
+      "sha256": "60066c237cee8e835ce2e594060eff616039551a7a314dfa20e9b63e7e1f301b",
+      "size": 8388608
+    },
+    "14": {
+      "ETag": "\"c82709dfc54c62de149124410a333601\"",
+      "PartNumber": 14,
+      "sha256": "318b4159ffdcbb142e93190f66900862fe5994968847a2dc297c98ac50ad3cea",
+      "size": 8388608
+    },
+    "15": {
+      "ETag": "\"5a278839f900db3da7f9f4ce3b5f17f1\"",
+      "PartNumber": 15,
+      "sha256": "514d4ddc1db58175713289ea982ad7670c9f49cef126843cf4f14301b2a33c58",
+      "size": 8388608
+    },
+    "16": {
+      "ETag": "\"7ca103579369781f56c739023e6647e4\"",
+      "PartNumber": 16,
+      "sha256": "580460f4c8b8dee3e06fa3129408c55dc86134a63bed54c7560fff7e3b0a3179",
+      "size": 8388608
+    },
+    "17": {
+      "ETag": "\"ae8b4b49f440238f48fd2e7c45fe526d\"",
+      "PartNumber": 17,
+      "sha256": "7aec353125405d8a5dbb798b385556e5b6f115a628d304465b7efba38413cafa",
+      "size": 8388608
+    },
+    "18": {
+      "ETag": "\"be338cdb73aa83338a485ad8771f87f6\"",
+      "PartNumber": 18,
+      "sha256": "7559605d97f42170d709c7e97932a59e17c95e3f756650ca2b9dd70b4f058986",
+      "size": 8388608
+    },
+    "19": {
+      "ETag": "\"99b9ffd38b007f9fab782639471799a2\"",
+      "PartNumber": 19,
+      "sha256": "66612bc48e08e810ea67c93e49530aa828b9f2f4ea102f0476beca7a8bfe38bf",
+      "size": 8388608
+    },
+    "2": {
+      "ETag": "\"77ef9dbec2df431edf1156934a0e343c\"",
+      "PartNumber": 2,
+      "sha256": "994c8412538c79ee289fb8d063bb7d0d7154c38a9375e08f90a67d9261991835",
+      "size": 8388608
+    },
+    "20": {
+      "ETag": "\"78ac06ad9add37a8f1759030157bb715\"",
+      "PartNumber": 20,
+      "sha256": "6eee13df9c84aefcf66cb416b46742f4d1db899cd78bbc39781a66835b171efd",
+      "size": 8388608
+    },
+    "21": {
+      "ETag": "\"b08534f1f35966a69ba7e31592e7bf76\"",
+      "PartNumber": 21,
+      "sha256": "9262f09e52f9f7427adcc3be09bffbede889124e9a40d5d4582747d5d8b88fe4",
+      "size": 8388608
+    },
+    "22": {
+      "ETag": "\"68dc0899b8f40b73450d3180dd024737\"",
+      "PartNumber": 22,
+      "sha256": "53a23d9ab2591d7cdf4f5c6b813efbea74b12a7729a8e4dfa52c9b0cb92000ed",
+      "size": 8388608
+    },
+    "23": {
+      "ETag": "\"7eb87a58c06f8102d97fe8f1afafdf72\"",
+      "PartNumber": 23,
+      "sha256": "9b114f7ec8a31462942944b74c79e1281492b5f79d0ee1ca1f5bf3e53d3a688f",
+      "size": 8388608
+    },
+    "24": {
+      "ETag": "\"80fd2b7986f857efc837cd44a0daaf31\"",
+      "PartNumber": 24,
+      "sha256": "10e4dbdd30ff9d2eda88b93efba75145135c29896f4383b7d705a34b05c19f27",
+      "size": 8388608
+    },
+    "25": {
+      "ETag": "\"037613ade60599a7d6710bf460600fef\"",
+      "PartNumber": 25,
+      "sha256": "e4ccebc0ad2ec3ed02434325de16c6f53dd6e1941a883a2605ed65b7e01aa3ca",
+      "size": 8388608
+    },
+    "26": {
+      "ETag": "\"1880d2b12f3d57c1f29a7be60d8473e9\"",
+      "PartNumber": 26,
+      "sha256": "8ea251d06aca0b2019b9d0cf8336c4cb85f40cc3c967312dbc277e63db56929b",
+      "size": 8388608
+    },
+    "27": {
+      "ETag": "\"d81a2cb79db35968eba9d839e4770a05\"",
+      "PartNumber": 27,
+      "sha256": "a47f002ef2f9909ede4dd5a26b9a6c9544e38ec94ea9536563936c3be9fbe25c",
+      "size": 8388608
+    },
+    "28": {
+      "ETag": "\"ca16049253197de642a39725ea463df8\"",
+      "PartNumber": 28,
+      "sha256": "98be1dac8209fb0a0ec98405111634102ca6688ee92bc0ccd171551663c56138",
+      "size": 8388608
+    },
+    "29": {
+      "ETag": "\"45fdc72060c663766332934edebdc5ca\"",
+      "PartNumber": 29,
+      "sha256": "d1d9a0b105989eb9a57ec5e2a68d447427f97a18c17d9532524309bdc32f03c5",
+      "size": 8388608
+    },
+    "3": {
+      "ETag": "\"4f649dc1f5245ef6354ab49e181d2b55\"",
+      "PartNumber": 3,
+      "sha256": "b15b49b2d3b8d72a6759da4e7c7f385765d26d2750d64788d8247f6218a78646",
+      "size": 8388608
+    },
+    "30": {
+      "ETag": "\"8077921da010e880faf8ea131557392a\"",
+      "PartNumber": 30,
+      "sha256": "bf42e09249a88486f0c6cbbc0062e41fcc69de3259d215a0ba351a65d60a260d",
+      "size": 8388608
+    },
+    "31": {
+      "ETag": "\"51d75c33fa706ee4b205d08d7d735f81\"",
+      "PartNumber": 31,
+      "sha256": "d995611e763683913ee7e83ecbc2595d7d4101616ae1d654c73e3e53c9bbf94e",
+      "size": 8388608
+    },
+    "32": {
+      "ETag": "\"501ca96ce8f5a9d39fc28371477ce475\"",
+      "PartNumber": 32,
+      "sha256": "9391138c1f187075004d892755951344930e261676aa618a71a2e94fd07ea077",
+      "size": 8388608
+    },
+    "33": {
+      "ETag": "\"8af04bc67b0366a9ab89ddb676c04f0d\"",
+      "PartNumber": 33,
+      "sha256": "06ccb87aba80c07dc03c6b53799fa28f60a92734b4a6939e93f6ac8f9369c531",
+      "size": 8388608
+    },
+    "34": {
+      "ETag": "\"ea72862d5adb97e15f59f52ba8138e72\"",
+      "PartNumber": 34,
+      "sha256": "1aed29f6b5bd1997d328380c2f9226bb5179dce5bedec871b7c50800a6ae89c1",
+      "size": 8388608
+    },
+    "35": {
+      "ETag": "\"439bf24ab5c703fcb41b7223ec0b84be\"",
+      "PartNumber": 35,
+      "sha256": "0e9d294ddf9b1bdb8540571863a870de0a0ac8fc619bf7b761c72c3835e2c5cc",
+      "size": 8388608
+    },
+    "36": {
+      "ETag": "\"74ac22e5b619229e74c50a06b6f57f9b\"",
+      "PartNumber": 36,
+      "sha256": "dbd2073c3dbfc21e0eddb819e21fde3efda4f2d6141a9041b4412d02575e3623",
+      "size": 8388608
+    },
+    "37": {
+      "ETag": "\"7528b94de561f0548c1053b48818c70a\"",
+      "PartNumber": 37,
+      "sha256": "e1114a9cdaa9c2fbbbc0210a8544232e4b68f4b2e93ea917df0c2a40c77333f2",
+      "size": 8388608
+    },
+    "38": {
+      "ETag": "\"ca0ca82438f90e0a73092afb38432ee2\"",
+      "PartNumber": 38,
+      "sha256": "96c8b767e9347ed600288c2cc44e5f9ad812a5e602964bfa858dd056858e60f7",
+      "size": 8388608
+    },
+    "39": {
+      "ETag": "\"a391153725863bee170f0c004c70d440\"",
+      "PartNumber": 39,
+      "sha256": "5e4c13ce6df59888608bfa7e5cb6ca1d5d2caddaf3203faafcf7b4e82ff05fbf",
+      "size": 8388608
+    },
+    "4": {
+      "ETag": "\"1f6703aef6ecbd4f8c792dd2683f57f1\"",
+      "PartNumber": 4,
+      "sha256": "f91b438d57699e3e54e99ab5119e8fa46c52d204508c1bd19cd25674eda12d20",
+      "size": 8388608
+    },
+    "40": {
+      "ETag": "\"2ea09f249135342eb9d64b1aaf4df436\"",
+      "PartNumber": 40,
+      "sha256": "71ac541e6d89e1c7a9abce97ee1882365fc4a33ff1b1a153a59ddeb4705ebd3f",
+      "size": 8388608
+    },
+    "41": {
+      "ETag": "\"07f25bb5d25e8d8d91833e4f16199f8c\"",
+      "PartNumber": 41,
+      "sha256": "52707aada8a40741786695e21054000e83b69a6f1c04ba3647a717ff86329a6f",
+      "size": 8388608
+    },
+    "42": {
+      "ETag": "\"13091c8d557c1b7613bf170e419c0b8e\"",
+      "PartNumber": 42,
+      "sha256": "baca67ed59e5d55760f32da585f3f4e8e4e4e7d3df9e1ca76c1d8e0f2066c0c6",
+      "size": 8388608
+    },
+    "43": {
+      "ETag": "\"aae754233fd7f710041cea93c3b65233\"",
+      "PartNumber": 43,
+      "sha256": "08fc1deaf10808b5f6f537c8fe787a15ee2b139fe734e2e37f5897edfe2dd3f9",
+      "size": 8388608
+    },
+    "44": {
+      "ETag": "\"9b8c55ce5a9e5f096191a23b6b801788\"",
+      "PartNumber": 44,
+      "sha256": "5a365c42110a5b93c71fba3ec2d2971135820ad3fb338a097c031ee93c120dcb",
+      "size": 8388608
+    },
+    "45": {
+      "ETag": "\"38757c17c338bdac0981284beef31527\"",
+      "PartNumber": 45,
+      "sha256": "e55022a76ec0cef5b0eae194adcfb9e64f08e78a218e180c82e876bf9b13d9e4",
+      "size": 8388608
+    },
+    "46": {
+      "ETag": "\"2531f7e3a82fe6894b4ffd016459253f\"",
+      "PartNumber": 46,
+      "sha256": "a1663e5a7bb489a951f0af89aa54e98c8dfda3e285787eb5cbe5a0457804921b",
+      "size": 8388608
+    },
+    "47": {
+      "ETag": "\"b2dbf4ffe52e72c4f0ec7d3a1d88f227\"",
+      "PartNumber": 47,
+      "sha256": "677a5011f0d8dc89aee6f73eb1970d8b7d1aaf8ae2720ad41253b1e5687caa78",
+      "size": 8388608
+    },
+    "48": {
+      "ETag": "\"002e629df6cf5462646d093db6bcab44\"",
+      "PartNumber": 48,
+      "sha256": "d1c7078886dd2ebd66c3cca1d4b3e14b3dcf766d0e9b53c7694bf45ae3162c79",
+      "size": 8388608
+    },
+    "49": {
+      "ETag": "\"7d80f6d24b2a7ed5c0157588fd61f74a\"",
+      "PartNumber": 49,
+      "sha256": "6c6a25f3ea90536dbeb6105d804471cfd81d08f4b0cc1c241f9a4c522583398e",
+      "size": 8388608
+    },
+    "5": {
+      "ETag": "\"51b57adbf22aad97dcf3d1014ef95e4f\"",
+      "PartNumber": 5,
+      "sha256": "29d5d201d18e6dad5d813eb3da205b99a7a47b47eb95a60f4db645f122e0031b",
+      "size": 8388608
+    },
+    "50": {
+      "ETag": "\"d1060f0b6ed99c27d754bf088b564bb4\"",
+      "PartNumber": 50,
+      "sha256": "a3415f67922be700e2e57aa88de317cbb76891f44dc34e5a3d8fea24ef9f2414",
+      "size": 8388608
+    },
+    "51": {
+      "ETag": "\"20ffa7b71dd9b04958d45e9535362af9\"",
+      "PartNumber": 51,
+      "sha256": "d1bfa5f2d0c11ed4600377b110bc69202b4f96bb3b14aac786b75a46fb4c4b09",
+      "size": 8388608
+    },
+    "52": {
+      "ETag": "\"8d67d9b86e6af16e0c12d46356cd848a\"",
+      "PartNumber": 52,
+      "sha256": "32d89efeb08a9348dc6f3e20f8f7b1f2f6ea67178072074e56287d8aa6b89a8a",
+      "size": 8388608
+    },
+    "53": {
+      "ETag": "\"3fd5ea27341217d9e96e532b3851a75c\"",
+      "PartNumber": 53,
+      "sha256": "1135c511154938b6e86adb6928026ecbe7757d3281e76c2f419f901a83144a11",
+      "size": 8388608
+    },
+    "54": {
+      "ETag": "\"793d7bba259e810702d12289d9a1e1e8\"",
+      "PartNumber": 54,
+      "sha256": "b6756e9b96aa4b9165420ed6a26927cc61b6d9a7928428a7e67521c44c3bc5ea",
+      "size": 8388608
+    },
+    "55": {
+      "ETag": "\"d3daffcf5cdc461f2f67efc1db0f5164\"",
+      "PartNumber": 55,
+      "sha256": "ac978dbb096881c1eb6cc62f52a0b8f7e2cdac3c9d5837f2f84e2b0c25f39897",
+      "size": 8388608
+    },
+    "56": {
+      "ETag": "\"4db340ede84076c9690479991fce2841\"",
+      "PartNumber": 56,
+      "sha256": "de85ce6e4b35be2ed3212701fcffc3626f0e9c7af9bc1433e2556699a86b6eb2",
+      "size": 8388608
+    },
+    "57": {
+      "ETag": "\"e4bb7389382b234744f12dab97165f04\"",
+      "PartNumber": 57,
+      "sha256": "268fc4701522ca332d76fe2c49e33139f658aa649a06745beb4e51201196e6ef",
+      "size": 8388608
+    },
+    "58": {
+      "ETag": "\"3105d22c8aad4865eae290dc5d712134\"",
+      "PartNumber": 58,
+      "sha256": "60c1ae4ab0b42f703ceb60c7c93c8fbbed0e506c075114de28ffbf14def23167",
+      "size": 8388608
+    },
+    "59": {
+      "ETag": "\"d78e15d568aa422b56e12d54dd9849da\"",
+      "PartNumber": 59,
+      "sha256": "3a3c0d976c09c1d8f92b6099726e87ee3554415cd5052b8a4c2412fe10bde50a",
+      "size": 8388608
+    },
+    "6": {
+      "ETag": "\"e86e36c82547ace94b5798eea1e88334\"",
+      "PartNumber": 6,
+      "sha256": "e5cc9c83269efba2cd7f0be0edf60074d25780fe2adb3ff73a67c812cbe88e07",
+      "size": 8388608
+    },
+    "60": {
+      "ETag": "\"f8a2537cb8e0a4b8639456688e22f4fb\"",
+      "PartNumber": 60,
+      "sha256": "f4f3efa2e0be2a3d1c984db6defb199b7585ca7568a81773760b75f34db4e8f6",
+      "size": 8388608
+    },
+    "61": {
+      "ETag": "\"fed2b21a11174433a00ddd3194061e16\"",
+      "PartNumber": 61,
+      "sha256": "1a0581cff440a4f01dad321afdaf29d668a237a5bafbbc6f30c2cb031f8ad67b",
+      "size": 8388608
+    },
+    "62": {
+      "ETag": "\"768f0e4a283b72a04131187f69557929\"",
+      "PartNumber": 62,
+      "sha256": "3561f38aea6e0c13f7701fc9b4e14621874b979bc510309c29e5af7d2cc055d1",
+      "size": 8388608
+    },
+    "63": {
+      "ETag": "\"3ae47ae24daf607e5406941713b3a564\"",
+      "PartNumber": 63,
+      "sha256": "2097af6ef7f2452eba76e8be56b500654f65b05f3419049bfcf96cffb6190b1b",
+      "size": 8388608
+    },
+    "64": {
+      "ETag": "\"4907bc8bada03e65530d62ea7f834789\"",
+      "PartNumber": 64,
+      "sha256": "75e266c603852a944b149a0823e0b646a27741983acf6558dc5b39bda75e17d4",
+      "size": 8388608
+    },
+    "65": {
+      "ETag": "\"842cb883068e628c15efbea2552e67e4\"",
+      "PartNumber": 65,
+      "sha256": "e8fe245dc56d298ba546b72441b29d8b65d4d5c7c42fe3aa478f0a34b2470f2f",
+      "size": 8388608
+    },
+    "66": {
+      "ETag": "\"cfa53f23e3b771c1e5eae2eec4be57f4\"",
+      "PartNumber": 66,
+      "sha256": "fa9b07b68bf29e8801b75f9ae5af35712182adb1bc713c121923b9f183dbbf81",
+      "size": 8388608
+    },
+    "67": {
+      "ETag": "\"84e8532ec81e7ebffd295e720d229207\"",
+      "PartNumber": 67,
+      "sha256": "713316c2731339c5820b242bcc766955054d3e7c0808b3da375d35fc66e59e98",
+      "size": 8388608
+    },
+    "68": {
+      "ETag": "\"1735277ab6c42d86d28b487ffd66cd36\"",
+      "PartNumber": 68,
+      "sha256": "ab62f3d7a8d46de4a27ec9f74174e2f6b682b4c427ed023ed843f0a0e206971e",
+      "size": 3045342
+    },
+    "7": {
+      "ETag": "\"1a247fa9b152278254f07522615f9111\"",
+      "PartNumber": 7,
+      "sha256": "27153694715877ba8fb78eca7282d1f0ce70c6cface6d36e4c1bb3036fab34a0",
+      "size": 8388608
+    },
+    "8": {
+      "ETag": "\"fcbd3ede3caea38aac22954e28fd3542\"",
+      "PartNumber": 8,
+      "sha256": "7fd8d099cd381cb45b15d2c26bdcbfd3b45d42bb25d818d8986f8fbfe98f2af0",
+      "size": 8388608
+    },
+    "9": {
+      "ETag": "\"4a8b2a601301253b0109c43b61a083bc\"",
+      "PartNumber": 9,
+      "sha256": "a28445ed87829bfb546b223540b798bb482f690d112cef180015aaf468f9fcd0",
+      "size": 8388608
+    }
+  },
+  "started_at": 1792738333.835188,
+  "state": "completed",
+  "updated_at": 1792740017.918092,
+  "upload_id": "1792738335051840808_go9myqkvh6__results_v8-dev-20261023T063431-ef8781f7_transport_source_panel_package.tar.gz"
+}

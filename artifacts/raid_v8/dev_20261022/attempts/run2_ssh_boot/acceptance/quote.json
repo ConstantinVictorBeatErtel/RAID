@@ -1,0 +1,42 @@
+{
+  "all_liabilities_known": true,
+  "billing_digest": "34354caacc255159d3f2f7717e92098b3d3e3204d6d3e9f2b66dad24b92d642a",
+  "billing_refreshed_at": "2026-10-22T15:50:09.275446+00:00",
+  "container_disk_gb": 60,
+  "container_disk_gb_month_usd": "0.10",
+  "currency": "USD",
+  "cutoff_service_cost_reserve_usd": "0.10",
+  "data_center_id": "US-WA-1",
+  "gpu": "NVIDIA RTX 6000 Ada Generation",
+  "gpu_hourly_usd": "0.99",
+  "gross_prepaid_balance_usd": "36.896020088",
+  "inventory_refreshed_at": "2026-10-22T15:50:14.923727+00:00",
+  "network_volume_gb_month_usd": "0.07",
+  "network_volume_size_gb": 20,
+  "placement_evidence": {
+    "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+    "live_gpu_stock_checked": true,
+    "refreshed_at": "2026-10-22T15:50:14.923727+00:00",
+    "sha256": "d797e7c9f6396622fbce2323a666b0351c314d09af645035de72839c3d3f8d0c",
+    "storage_tier": "STANDARD"
+  },
+  "prepaid_available_usd": "35.886020088",
+  "project_ceiling_usd": "250",
+  "project_reserve_usd": "25",
+  "projected_source_cost_usd": "0.2350555555555555555555555555",
+  "provider_inventory_checked": true,
+  "quote_provenance": {
+    "container_disk_billing_unit": "second",
+    "gpu": "runpodctl gpu list",
+    "monthly_hour_denominator": 720,
+    "network_volume_billing_unit": "hour, conservatively rounded up",
+    "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+    "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+  },
+  "refreshed_at": "2026-10-22T15:50:14.923727+00:00",
+  "remaining_project_allowance_usd": "95.7907421350775956486",
+  "source_cap_usd": "1",
+  "status": "passed",
+  "total_study_spend_usd": "129.2092578649224043514",
+  "transfer_reserve_usd": "0"
+}

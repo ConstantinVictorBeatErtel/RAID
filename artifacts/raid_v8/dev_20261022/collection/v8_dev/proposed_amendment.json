@@ -1,0 +1,198 @@
+{
+ "analysis": {
+  "alpha": 0.05,
+  "bootstrap": 10000,
+  "correction": "Holm over H1-H3",
+  "primary_encoder": "mae",
+  "seed": 0,
+  "unit": "task (mean over seeds)"
+ },
+ "base_head": "v8_c25",
+ "closed_loop": {
+  "adapted": [
+   [
+    "head_only",
+    "v8_c25",
+    false,
+    0.0003,
+    25
+   ],
+   [
+    "raid_v8",
+    "v8_c25",
+    true,
+    0.0001,
+    25
+   ]
+  ],
+  "encoder": [
+   [
+    "lora",
+    0.0003,
+    200
+   ],
+   [
+    "full",
+    1e-05,
+    200
+   ]
+  ],
+  "episodes": 20,
+  "seed": 42
+ },
+ "code_sha256": {
+  "__init__.py": "eccd98464a70a6be7d082585d357ebf0e5492cbe6f735be1e182de5b34300bd6",
+  "analysis.py": "c491e289cccc3225d56e6ba5ca4840ac9b8fadb452c1272acff98771fe177200",
+  "bench.py": "3651e9c2780f72f70d8b8471d1edba695c7d1d975b5c202d0ad355ce4a0f578a",
+  "cache.py": "1ee4aa1b2bbb309714b5f742c8ee99041a87fb906f7989d008d0c7f9a0ac8a33",
+  "closed_loop.py": "f2e5b8cf8685cd570b5f9f737bec7f2d1edcf1e66cbb9202dfd4bdb649112af9",
+  "data.py": "209849d490967c14a837dd36d3fe564d2f0dbe512583cd63ecd93554a0ebefd4",
+  "encoders.py": "3c68fe591cdd4dee1c6a7a3c38b3ee974a7729067e929247ddf4df6944de5def",
+  "heads.py": "9c4c30442aab39b780581bfc2b62bdf31062625a1a21bfeedd4d93522e5d259e",
+  "source.py": "c79c23e67f4f8474a77716bf6ef7450385a1162edad7aa518e17397c17554a81",
+  "target.py": "af6e8d8528b9d3476cd704c9b469c84b9df0b3f78c7144d4165048fd67c8c3cf"
+ },
+ "digest": "55fd8aa8b55b6c38680f21f97bfe061b153dcf5df736e4d0c009d0bfcb86f345",
+ "encoder_head_lr": 0.0003,
+ "encoder_lrs": {
+  "full": [
+   1e-05
+  ],
+  "lora": [
+   0.0003
+  ]
+ },
+ "encoder_seed": 42,
+ "encoders": [
+  "mae",
+  "dinov2",
+  "siglip"
+ ],
+ "frozen_at": "2026-10-23T18:52:26Z",
+ "head_lrs": {
+  "dinov2": {
+   "head_only": [
+    0.0003
+   ],
+   "raid_v7": [
+    0.0001
+   ],
+   "raid_v8": [
+    0.0001
+   ]
+  },
+  "mae": {
+   "head_only": [
+    0.0003
+   ],
+   "raid_v7": [
+    0.0001
+   ],
+   "raid_v8": [
+    0.0001
+   ]
+  },
+  "siglip": {
+   "head_only": [
+    0.0003
+   ],
+   "raid_v7": [
+    0.0001
+   ],
+   "raid_v8": [
+    0.0001
+   ]
+  }
+ },
+ "head_methods": [
+  [
+   "head_only",
+   "v8_c25",
+   false
+  ],
+  [
+   "raid_v7",
+   "v7",
+   true
+  ],
+  [
+   "raid_v8",
+   "v8_c25",
+   true
+  ]
+ ],
+ "hypotheses": {
+  "H1": [
+   "zero",
+   "v8_c25",
+   "zero",
+   "v7"
+  ],
+  "H2": [
+   "zero",
+   "v8_c25",
+   "zero",
+   "knn"
+  ],
+  "H3": [
+   "adapted",
+   "raid_v8@25",
+   "adapted",
+   "head_only@25"
+  ]
+ },
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "selection": {
+  "dev_zero_mse_mae": {
+   "head_only": 1.0411094565328873,
+   "knn": 0.5922468741905831,
+   "regent_blend": 0.6330978699817627,
+   "v7": 0.6373595356298403,
+   "v8_c0": 0.7567477773722134,
+   "v8_c25": 0.49359901734410583
+  },
+  "encoder_lrs": {
+   "full": 1e-05,
+   "lora": 0.0003
+  },
+  "head_lrs": {
+   "dinov2": {
+    "head_only": 0.0003,
+    "raid_v7": 0.0001,
+    "raid_v8_c0": 0.0001,
+    "raid_v8_c25": 0.0001
+   },
+   "mae": {
+    "head_only": 0.0003,
+    "raid_v7": 0.0001,
+    "raid_v8_c0": 0.0001,
+    "raid_v8_c25": 0.0001
+   },
+   "siglip": {
+    "head_only": 0.0003,
+    "raid_v7": 0.0001,
+    "raid_v8_c0": 0.0001,
+    "raid_v8_c25": 0.0001
+   }
+  },
+  "training_free_baseline": "knn",
+  "v8_variant": "v8_c25"
+ },
+ "source_heads": [
+  [
+   "v7",
+   0.0
+  ],
+  [
+   "v8_c25",
+   0.25
+  ]
+ ],
+ "source_updates": 4000,
+ "stage": "final",
+ "status": "frozen"
+}

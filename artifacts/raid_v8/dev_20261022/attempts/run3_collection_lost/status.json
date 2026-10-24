@@ -1,0 +1,221 @@
+{
+  "alarmAt": null,
+  "closed": true,
+  "computeEndedAt": 1792766468938,
+  "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+  "events": [
+    {
+      "at": 1792738268152,
+      "detail": "{\"collectBy\":1792766467050,\"deadlineAt\":1792767067050,\"deleteStorageAt\":1792768867050}",
+      "seq": 1,
+      "type": "registered_with_immutable_deadlines"
+    },
+    {
+      "at": 1792738268488,
+      "detail": "{}",
+      "seq": 2,
+      "type": "paid_creation_intent"
+    },
+    {
+      "at": 1792738268766,
+      "detail": "{\"region\":\"US-KS-2\",\"storageTier\":\"STANDARD\",\"checkedAt\":1792738268766}",
+      "seq": 3,
+      "type": "live_storage_placement_verified"
+    },
+    {
+      "at": 1792738268797,
+      "detail": "{}",
+      "seq": 4,
+      "type": "volume_creation_request"
+    },
+    {
+      "at": 1792738269538,
+      "detail": "{\"id\":\"go9myqkvh6\"}",
+      "seq": 5,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792738269574,
+      "detail": "{}",
+      "seq": 6,
+      "type": "pod_creation_request"
+    },
+    {
+      "at": 1792738269862,
+      "detail": "{\"id\":\"go9myqkvh6\"}",
+      "seq": 7,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792738270900,
+      "detail": "{\"id\":\"r6ig0ygm1dplj4\"}",
+      "seq": 8,
+      "type": "pod_ownership_recorded"
+    },
+    {
+      "at": 1792738270900,
+      "detail": "{\"hourlyUsd\":\"1.79\",\"region\":\"US-KS-2\",\"volumeId\":\"go9myqkvh6\"}",
+      "seq": 9,
+      "type": "provider_allocation_verified"
+    },
+    {
+      "at": 1792766467258,
+      "detail": "{}",
+      "seq": 10,
+      "type": "independent_cutoff_fired"
+    },
+    {
+      "at": 1792766468938,
+      "detail": "{\"method\":\"GET\",\"path\":\"/pods/r6ig0ygm1dplj4\",\"status\":404,\"requestId\":\"req_fc8f7eb4-304d-40ba-9ee0-282e0308a537\",\"bodySha256\":\"237a2f835ded1509dea751107b60d362b3b778fe252e80f7afca6478685e1d93\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"pod not found\\\",\\\"status\\\":404}\\n\"}",
+      "seq": 11,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792766468938,
+      "detail": "{\"id\":\"r6ig0ygm1dplj4\"}",
+      "seq": 12,
+      "type": "pod_deletion_verified"
+    },
+    {
+      "at": 1792766469829,
+      "detail": "{\"sha256\":\"88e0fa471120e59df9ea961c47605e4f15592d0903c257674dbce59bef537147\"}",
+      "seq": 13,
+      "type": "post_termination_s3_recovery_verified"
+    },
+    {
+      "at": 1792768867423,
+      "detail": "{\"artifacts\":[\"logs/archive_verify.exit.json\",\"logs/archive_verify.log\",\"logs/bootstrap.exit.json\",\"logs/bootstrap.log\",\"logs/package_preflight.exit.json\",\"logs/package_preflight.log\",\"logs/v8_closed_loop.exit.json\",\"logs/v8_closed_loop.log\",\"logs/v8_download_cache.exit.json\",\"logs/v8_download_cache.log\",\"logs/v8_encoder.exit.json\",\"logs/v8_encoder.log\",\"logs/v8_offline.exit.json\",\"logs/v8_offline.log\",\"logs/v8_source.exit.json\",\"logs/v8_source.log\",\"release_identity.json\",\"v8_dev/DONE.json\",\"v8_dev/FAILED.json\",\"v8_dev/data_sha256_development.json\",\"v8_dev/encoder/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\",\"v8_dev/encoder/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\",\"v8_dev/encoder/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\",\"v8_dev/encoder/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\",\"v8_dev/encoder/libero_goal__turn_on_the_stove__s42.json\",\"v8_dev/encoders/dinov2.json\",\"v8_dev/encoders/mae.json\",\"v8_dev/encoders/siglip.json\",\"v8_dev/offline/dinov2/libero_goal__open_the_middle_drawer_of_the_cabinet__s42.json\",\"v8_dev/offline/dinov2/libero_goal__open_the_middle_drawer_of_the_cabinet__s43.json\",\"v8_dev/offline/dinov2/libero_goal__open_the_middle_drawer_of_the_cabinet__s44.json\",\"v8_dev/offline/dinov2/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\",\"v8_dev/offline/dinov2/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s43.json\",\"v8_dev/offline/dinov2/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s44.json\",\"v8_dev/offline/dinov2/libero_goal__push_the_plate_to_the_front_of_the_stove__s42.json\",\"v8_dev/offline/dinov2/libero_goal__push_the_plate_to_the_front_of_the_stove__s43.json\",\"v8_dev/offline/dinov2/libero_goal__push_the_plate_to_the_front_of_the_stove__s44.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_plate__s42.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_plate__s43.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_plate__s44.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_stove__s42.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_stove__s43.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_stove__s44.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_top_of_the_cabinet__s43.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_top_of_the_cabinet__s44.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_cream_cheese_in_the_bowl__s43.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_cream_cheese_in_the_bowl__s44.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_the_rack__s42.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_the_rack__s43.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_the_rack__s44.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s43.json\",\"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s44.json\",\"v8_dev/offline/dinov2/libero_goal__turn_on_the_stove__s42.json\",\"v8_dev/offline/dinov2/libero_goal__turn_on_the_stove__s43.json\",\"v8_dev/offline/dinov2/libero_goal__turn_on_the_stove__s44.json\",\"v8_dev/offline/mae/libero_goal__open_the_middle_drawer_of_the_cabinet__s42.json\",\"v8_dev/offline/mae/libero_goal__open_the_middle_drawer_of_the_cabinet__s43.json\",\"v8_dev/offline/mae/libero_goal__open_the_middle_drawer_of_the_cabinet__s44.json\",\"v8_dev/offline/mae/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\",\"v8_dev/offline/mae/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s43.json\",\"v8_dev/offline/mae/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s44.json\",\"v8_dev/offline/mae/libero_goal__push_the_plate_to_the_front_of_the_stove__s42.json\",\"v8_dev/offline/mae/libero_goal__push_the_plate_to_the_front_of_the_stove__s43.json\",\"v8_dev/offline/mae/libero_goal__push_the_plate_to_the_front_of_the_stove__s44.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_plate__s42.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_plate__s43.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_plate__s44.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_stove__s42.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_stove__s43.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_stove__s44.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_top_of_the_cabinet__s43.json\",\"v8_dev/offline/mae/libero_goal__put_the_bowl_on_top_of_the_cabinet__s44.json\",\"v8_dev/offline/mae/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\",\"v8_dev/offline/mae/libero_goal__put_the_cream_cheese_in_the_bowl__s43.json\",\"v8_dev/offline/mae/libero_goal__put_the_cream_cheese_in_the_bowl__s44.json\",\"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_the_rack__s42.json\",\"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_the_rack__s43.json\",\"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_the_rack__s44.json\",\"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\",\"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s43.json\",\"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s44.json\",\"v8_dev/offline/mae/libero_goal__turn_on_the_stove__s42.json\",\"v8_dev/offline/mae/libero_goal__turn_on_the_stove__s43.json\",\"v8_dev/offline/mae/libero_goal__turn_on_the_stove__s44.json\",\"v8_dev/offline/siglip/libero_goal__open_the_middle_drawer_of_the_cabinet__s42.json\",\"v8_dev/offline/siglip/libero_goal__open_the_middle_drawer_of_the_cabinet__s43.json\",\"v8_dev/offline/siglip/libero_goal__open_the_middle_drawer_of_the_cabinet__s44.json\",\"v8_dev/offline/siglip/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\",\"v8_dev/offline/siglip/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s43.json\",\"v8_dev/offline/siglip/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s44.json\",\"v8_dev/offline/siglip/libero_goal__push_the_plate_to_the_front_of_the_stove__s42.json\",\"v8_dev/offline/siglip/libero_goal__push_the_plate_to_the_front_of_the_stove__s43.json\",\"v8_dev/offline/siglip/libero_goal__push_the_plate_to_the_front_of_the_stove__s44.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_plate__s42.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_plate__s43.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_plate__s44.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_stove__s42.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_stove__s43.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_stove__s44.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_top_of_the_cabinet__s43.json\",\"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_top_of_the_cabinet__s44.json\",\"v8_dev/offline/siglip/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\",\"v8_dev/offline/siglip/libero_goal__put_the_cream_cheese_in_the_bowl__s43.json\",\"v8_dev/offline/siglip/libero_goal__put_the_cream_cheese_in_the_bowl__s44.json\",\"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_the_rack__s42.json\",\"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_the_rack__s43.json\",\"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_the_rack__s44.json\",\"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\",\"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s43.json\",\"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s44.json\",\"v8_dev/offline/siglip/libero_goal__turn_on_the_stove__s42.json\",\"v8_dev/offline/siglip/libero_goal__turn_on_the_stove__s43.json\",\"v8_dev/offline/siglip/libero_goal__turn_on_the_stove__s44.json\",\"v8_dev/sources/dinov2/v7_s42.json\",\"v8_dev/sources/dinov2/v7_s42.pt\",\"v8_dev/sources/dinov2/v7_s43.json\",\"v8_dev/sources/dinov2/v7_s43.pt\",\"v8_dev/sources/dinov2/v7_s44.json\",\"v8_dev/sources/dinov2/v7_s44.pt\",\"v8_dev/sources/dinov2/v8_c0_s42.json\",\"v8_dev/sources/dinov2/v8_c0_s42.pt\",\"v8_dev/sources/dinov2/v8_c0_s43.json\",\"v8_dev/sources/dinov2/v8_c0_s43.pt\",\"v8_dev/sources/dinov2/v8_c0_s44.json\",\"v8_dev/sources/dinov2/v8_c0_s44.pt\",\"v8_dev/sources/dinov2/v8_c25_s42.json\",\"v8_dev/sources/dinov2/v8_c25_s42.pt\",\"v8_dev/sources/dinov2/v8_c25_s43.json\",\"v8_dev/sources/dinov2/v8_c25_s43.pt\",\"v8_dev/sources/dinov2/v8_c25_s44.json\",\"v8_dev/sources/dinov2/v8_c25_s44.pt\",\"v8_dev/sources/mae/v7_s42.json\",\"v8_dev/sources/mae/v7_s42.pt\",\"v8_dev/sources/mae/v7_s43.json\",\"v8_dev/sources/mae/v7_s43.pt\",\"v8_dev/sources/mae/v7_s44.json\",\"v8_dev/sources/mae/v7_s44.pt\",\"v8_dev/sources/mae/v8_c0_s42.json\",\"v8_dev/sources/mae/v8_c0_s42.pt\",\"v8_dev/sources/mae/v8_c0_s43.json\",\"v8_dev/sources/mae/v8_c0_s43.pt\",\"v8_dev/sources/mae/v8_c0_s44.json\",\"v8_dev/sources/mae/v8_c0_s44.pt\",\"v8_dev/sources/mae/v8_c25_s42.json\",\"v8_dev/sources/mae/v8_c25_s42.pt\",\"v8_dev/sources/mae/v8_c25_s43.json\",\"v8_dev/sources/mae/v8_c25_s43.pt\",\"v8_dev/sources/mae/v8_c25_s44.json\",\"v8_dev/sources/mae/v8_c25_s44.pt\",\"v8_dev/sources/normalizers.pt\",\"v8_dev/sources/siglip/v7_s42.json\",\"v8_dev/sources/siglip/v7_s42.pt\",\"v8_dev/sources/siglip/v7_s43.json\",\"v8_dev/sources/siglip/v7_s43.pt\",\"v8_dev/sources/siglip/v7_s44.json\",\"v8_dev/sources/siglip/v7_s44.pt\",\"v8_dev/sources/siglip/v8_c0_s42.json\",\"v8_dev/sources/siglip/v8_c0_s42.pt\",\"v8_dev/sources/siglip/v8_c0_s43.json\",\"v8_dev/sources/siglip/v8_c0_s43.pt\",\"v8_dev/sources/siglip/v8_c0_s44.json\",\"v8_dev/sources/siglip/v8_c0_s44.pt\",\"v8_dev/sources/siglip/v8_c25_s42.json\",\"v8_dev/sources/siglip/v8_c25_s42.pt\",\"v8_dev/sources/siglip/v8_c25_s43.json\",\"v8_dev/sources/siglip/v8_c25_s43.pt\",\"v8_dev/sources/siglip/v8_c25_s44.json\",\"v8_dev/sources/siglip/v8_c25_s44.pt\",\"v8_dev/timing/cache_development.json\",\"v8_dev/timing/step_development_cache.json\",\"v8_dev/timing/step_development_download.json\",\"v8_dev/timing/step_development_encoder.json\",\"v8_dev/timing/step_development_offline.json\",\"v8_dev/timing/step_development_source.json\"],\"failure\":\"local collection unverified\"}",
+      "seq": 14,
+      "type": "forced_expiry_unrecovered"
+    },
+    {
+      "at": 1792768868769,
+      "detail": "{\"method\":\"GET\",\"path\":\"/networkvolumes/go9myqkvh6\",\"status\":404,\"requestId\":\"req_c9b0d43e-4471-43e2-8257-565715f2d0fd\",\"bodySha256\":\"2dd26ac4ea80d945e072a12a8a46fbbc046c6839856926007e77b8dbd46bb042\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"network volume not found\\\",\\\"status\\\":404}\\n\"}",
+      "seq": 15,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792768868769,
+      "detail": "{\"id\":\"go9myqkvh6\"}",
+      "seq": 16,
+      "type": "volume_deletion_verified"
+    },
+    {
+      "at": 1792768869428,
+      "detail": "{}",
+      "seq": 17,
+      "type": "session_incomplete_cleaned"
+    }
+  ],
+  "eventsTotal": 17,
+  "fingerprint": "8f466dbe3587da0b2f044b6e04cc40e353b026ad86ee263ed7c50132628d94f4",
+  "jobs": [],
+  "launchAt": 1792738268488,
+  "podDeleted": true,
+  "podId": "r6ig0ygm1dplj4",
+  "podRequested": true,
+  "recovered": {
+    "at": 1792766469829,
+    "body": "{\n  \"logs/archive_verify.exit.json\": \"72acc1dd4ebb08fa660bc5bed0b234ecc9325651f4df5dc53a715a2e3f7d2684\",\n  \"logs/archive_verify.log\": \"c9dcead48bad0dc32695bf36c8509771e6b858d050fce64b2d4d1c792773d64a\",\n  \"logs/bootstrap.exit.json\": \"f6d9eba6223c5cdf2f45c5576355b6728d34d6bb0924f12dddccf52fb38e7739\",\n  \"logs/bootstrap.log\": \"796fcca0b51d2b3e2a3504eb293ca80b661b63a19e7c1a32e442462777c05dc1\",\n  \"logs/package_preflight.exit.json\": \"2bb4beeeb7d5dfb0b9d705fa38116087bac5cc090592445ff05e296fbe276b0e\",\n  \"logs/package_preflight.log\": \"b75b8c2e060bbb2afefb3d96ffcc8259f411b91d760938c4666cdb899c9dbacf\",\n  \"logs/v8_closed_loop.exit.json\": \"afe0b04f502a0b2a332fece619a0a59bfc6999e4f47af2104a98d3f10c8333f6\",\n  \"logs/v8_closed_loop.log\": \"ac3bf052b67dbe3d3c18b09fd9ca06d574051e9375704fde581d66e617828b77\",\n  \"logs/v8_download_cache.exit.json\": \"692e28d7657f802683b8c933bb53864f5eb6dd9fca7706bd50c167207446baf1\",\n  \"logs/v8_download_cache.log\": \"e907ca6b26c818d3202e298d7b6888c70cc438adc604f08fd8496a2d31a3b47e\",\n  \"logs/v8_encoder.exit.json\": \"0239d2d78c64b9fa7ce24b17493dce6e282b9ba4f1325391e57a9d9c2b38d969\",\n  \"logs/v8_encoder.log\": \"8ab073fe24160e5ba1596f2ddb3804556689e705e16d55c3f0209a439806c021\",\n  \"logs/v8_offline.exit.json\": \"fae143e73c3efcfb2514892487d7db8b49be7c92d50222cf71a4a3220790d19e\",\n  \"logs/v8_offline.log\": \"4964a555ecc23297de55e0cddc7aa29488cf63ecdb1276be92b39504244305d3\",\n  \"logs/v8_source.exit.json\": \"0daaba95a10e3be8ea28cd4fe2cd9d6f88deca4bad28321f38524ee43f48d55b\",\n  \"logs/v8_source.log\": \"62a0111d765d7ff14d12e38a635a52f383593a6510eb27eba1b46d45f7fa3dbb\",\n  \"release_identity.json\": \"26d94391c5909cec858f59ba917f4b436b7aeb4429fcb1c49de8abe0a93a3a4e\",\n  \"v8_dev/DONE.json\": \"a033145e34806fce8111cfc352ff99d5e8cef28448f0c677785baec102da1c28\",\n  \"v8_dev/FAILED.json\": \"a1534aebd1ad5f0c393755b6ba3a9167d68f621c8ab9ca0448dfb891b0576ef6\",\n  \"v8_dev/data_sha256_development.json\": \"328f3afb5a0ad5d2c45a206977c68bb69b2e0079ab091aad419a4d7ebf2eae40\",\n  \"v8_dev/encoder/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\": \"f9292880d72e4b29128cacb96d16ee3d7a6e25a2357d74132f690b270775b42f\",\n  \"v8_dev/encoder/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\": \"bb8ff9b9137af2359b3a8d2e353d48f4026a4bc06338dbc30bac16ad103bb7ae\",\n  \"v8_dev/encoder/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\": \"5b0d02e5373970cc098c2e8117e078a06dfaefb483998058a1e3f4a7eada3514\",\n  \"v8_dev/encoder/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\": \"5629d2b282810f9a6e6d6c4a2828cc9881e7a2de8952cbe53ca3f051a1f26536\",\n  \"v8_dev/encoder/libero_goal__turn_on_the_stove__s42.json\": \"0d41ee1c8a9e0becf757ad5512970ebc50357cc64b9aa5f99235c757ee935449\",\n  \"v8_dev/encoders/dinov2.json\": \"cce43706a0b230335c145e23aff9244e083a1f28be01ba448bcdf67951ce5a96\",\n  \"v8_dev/encoders/mae.json\": \"7945df1faaf70322e62eb65b0c4dec5c05832e390e7a7dd07abf46795b1ad938\",\n  \"v8_dev/encoders/siglip.json\": \"f55195798a719f2ec8eb1d732135d0f8b8a7bc12260b946be6dd0e19ff4614e1\",\n  \"v8_dev/offline/dinov2/libero_goal__open_the_middle_drawer_of_the_cabinet__s42.json\": \"abd9d5ecd28f5a38de8f78862260cd2d01f73dee4ecf1fdd1c078e553754e2af\",\n  \"v8_dev/offline/dinov2/libero_goal__open_the_middle_drawer_of_the_cabinet__s43.json\": \"363824d42dd673c5e6598c6878585d1a298fe1972f925c133c4833f9cb60553a\",\n  \"v8_dev/offline/dinov2/libero_goal__open_the_middle_drawer_of_the_cabinet__s44.json\": \"c425c754e7519352dd9f896a3f6a7fbe04b8a6fc27cdcb2cb319980719236374\",\n  \"v8_dev/offline/dinov2/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\": \"3203e3a06a935fc3b8a9d9ddf73c374feff4e933345292dcb1160af5a344e357\",\n  \"v8_dev/offline/dinov2/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s43.json\": \"4307209679f6664d72162a1e14c5ae007140c25c55b3153410a908c66e9cd8d9\",\n  \"v8_dev/offline/dinov2/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s44.json\": \"fba487ebbc612b1d50e3f9d2ed2701f7164383a3d22ce3ed88772f50919ed811\",\n  \"v8_dev/offline/dinov2/libero_goal__push_the_plate_to_the_front_of_the_stove__s42.json\": \"d10f4c83037ce99500bce635c8ce198382b71728bb030ef28d0215ae6308408b\",\n  \"v8_dev/offline/dinov2/libero_goal__push_the_plate_to_the_front_of_the_stove__s43.json\": \"246a2ff7a5047bec883c7ac1c2116daf1284f6d88561a493ef19c06a711c9d71\",\n  \"v8_dev/offline/dinov2/libero_goal__push_the_plate_to_the_front_of_the_stove__s44.json\": \"ee68b5d5546512cc219df52af88b6500df8087897677a4edf61c42dc0f16d8c9\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_plate__s42.json\": \"b0419a75b00be398ea3ef4dcf7c517e96a103c8cbd3f93e78482fc5cf655c56a\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_plate__s43.json\": \"0e89d0cfc797f84a151f80dee10703924834cc5871b8369ee2807b9382ee7220\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_plate__s44.json\": \"a0165eefdcdd130a9663c33e7d4b1b81c2ac65685440f881abbf2b33de5801a3\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_stove__s42.json\": \"e8253707e0ff2d0809bfcdfb61c95b8d581a7c939d1defb1767e4a63ebfbad5c\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_stove__s43.json\": \"13c41c3bf1bb7a40085185f8c6dd9c46d9f8bc8180020415e3a977829f7f15d9\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_the_stove__s44.json\": \"3af76550da28b9dbdb38b85daf8c5f6ebe9b762e23a9c0bb86e55ed6be2d3d1b\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\": \"9a542e9fd89b593a16cfa7c1f8771531281560187adc0fe08a612622960878ba\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_top_of_the_cabinet__s43.json\": \"be34b5d7986200e134b043ca70b4996cf7c23d8c6fb9bd5a31d6714dfda00ef3\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_bowl_on_top_of_the_cabinet__s44.json\": \"2e853c655aa97243d24cf41c4e083bf173768634ec2a1d61b09ca1c1b9821412\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\": \"99096c3f657cee8709e50db1687d81a2ebefedbb84f08aec5bd5d505defaddc3\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_cream_cheese_in_the_bowl__s43.json\": \"9552af9dacf0ab8a06e39a96459c1a1f7ccd93c83f63d843ebb47e298b55da02\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_cream_cheese_in_the_bowl__s44.json\": \"d66ef446a07de06b37e94e460e0f95d04172abff37aa0dfb0b6493b561bcf255\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_the_rack__s42.json\": \"435bafe5526cecd707b82ffe6d81ed53d0ecc37c5ea6c7581bbd07d3a74198c0\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_the_rack__s43.json\": \"61918ae59a518881961620feabc17343e304a178105ce0b4a8ee5c22ccb26b07\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_the_rack__s44.json\": \"61ae73a073ceb0091d83aca7f8cf8d73ea72c3f305c614ea1bccfa3f026fe232\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\": \"d5ab8973023078c8328d41f7bc0c0222506488c44412bb9ad3371919203b1460\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s43.json\": \"cc78a11c5bdcf616fe0208f4536d205ca866d2e086ac516ca667a44e9c2d5f01\",\n  \"v8_dev/offline/dinov2/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s44.json\": \"ead84c5e476e06e237acd8704a5c9b871d6a1440463e2257e883036759f8509f\",\n  \"v8_dev/offline/dinov2/libero_goal__turn_on_the_stove__s42.json\": \"753813272a3cef830f4eb534c51a617d5affb9e2cf46d3abfe13e5cbea62197b\",\n  \"v8_dev/offline/dinov2/libero_goal__turn_on_the_stove__s43.json\": \"db4d664ae6833747ab6cef985513b55546a6bffc9dc193062563d7d12d5a12da\",\n  \"v8_dev/offline/dinov2/libero_goal__turn_on_the_stove__s44.json\": \"6e479f5197abec76a4b65a10d46fa1da2d7f2f5fbd52ff4a6b3263e3ad43e284\",\n  \"v8_dev/offline/mae/libero_goal__open_the_middle_drawer_of_the_cabinet__s42.json\": \"67ebd7bd1f7d0daabd0382ef374567da99c082f104200e5a578443842a1797d2\",\n  \"v8_dev/offline/mae/libero_goal__open_the_middle_drawer_of_the_cabinet__s43.json\": \"e36ffbde983d81ac92f35275fd64cd1a6d42dbd7dbe14a5ca25c1e90b6c3dbbe\",\n  \"v8_dev/offline/mae/libero_goal__open_the_middle_drawer_of_the_cabinet__s44.json\": \"4a0a15367f481cc806dc4ba432e4f9d5b78e81791d14b0813a58dd55df50a632\",\n  \"v8_dev/offline/mae/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\": \"cd22c617f2eb2854f5a5c1c8227359fdd9b1fe2056279465a7c2a6dc9e6718ea\",\n  \"v8_dev/offline/mae/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s43.json\": \"a64d78abb526942fbcdd02e5bb619c8f24a5cb3df23a480ba511965b0f6224c5\",\n  \"v8_dev/offline/mae/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s44.json\": \"d6a08d9242c957f7fd0cb36014eb1c7f2fcca2a2f2c540835623f37f5743b905\",\n  \"v8_dev/offline/mae/libero_goal__push_the_plate_to_the_front_of_the_stove__s42.json\": \"82249de69c931fbf990e98367d775d8306ac1cc430f339186b6cdf2f40c12956\",\n  \"v8_dev/offline/mae/libero_goal__push_the_plate_to_the_front_of_the_stove__s43.json\": \"4d265bafdd1f510f7d4f774928bce37bd57677f8f690370b6c24991cae64456a\",\n  \"v8_dev/offline/mae/libero_goal__push_the_plate_to_the_front_of_the_stove__s44.json\": \"1fa4842f738b6430706afa36aed2fe4ad509cf74e7320abdf2eb059ee2f93c3c\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_plate__s42.json\": \"b0851c0c6b7a30f5f2c5f4bb9b76e5d0e81a287ce401b348e5d9be34c36e35ba\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_plate__s43.json\": \"c81003f0f1d3ec836236e435000ea03f0714f81238a748ceabd45ebc21b1bf68\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_plate__s44.json\": \"08da3493cf19e3892a9f79991601095144862ca4b2ca8232ea310da73242bc3a\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_stove__s42.json\": \"0b05923833423c823c51fefebc22147ff61a2cb1cbd1a23a2359db0077a031ca\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_stove__s43.json\": \"6ee34d17eefddc618460058438fb8a9c9d6e2b53fb7cee098614d73932e9a194\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_the_stove__s44.json\": \"5b9a9a118ec18f52c25f90224089353dcb769f39b7e59df5a9c36bb94d4c6f37\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\": \"6a362c3df57ffb07f909b7c737f0286267301c3e9461009f81935a1d94f89598\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_top_of_the_cabinet__s43.json\": \"2666ef42a764eac3f28135db7d57c97f8d59822c5a9252c00db761b9b1f93156\",\n  \"v8_dev/offline/mae/libero_goal__put_the_bowl_on_top_of_the_cabinet__s44.json\": \"faddc31511e30e313136b96ad772158759495a12ca23a7093ac9d7ff3382d34e\",\n  \"v8_dev/offline/mae/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\": \"b7dbaaf6ab5649e7ddc1a9da8d5d40fb414e3f8bf4f9dc30f9f2034b99370cab\",\n  \"v8_dev/offline/mae/libero_goal__put_the_cream_cheese_in_the_bowl__s43.json\": \"09cc7e65e59862547167ae17ec5e8e889a0d94f24f5833814b2ba874847a228a\",\n  \"v8_dev/offline/mae/libero_goal__put_the_cream_cheese_in_the_bowl__s44.json\": \"65f6d7cef61c28e76af12c130fd0519bc8f23ecaeeb59d143c424ee276752a58\",\n  \"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_the_rack__s42.json\": \"a188852d150f670aa735d236bc41159ce6d2ffa1c5737f362316a20e646f39f0\",\n  \"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_the_rack__s43.json\": \"57553e2c1c50e5aff3ee59b347359ba0fc10010177e57ed4a5c8e41e5e251550\",\n  \"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_the_rack__s44.json\": \"b578b4d8d2f754d1b458d1223d03e4b42ab9d94756f6ecb90d8c37a3eafc46c0\",\n  \"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\": \"4eecdf564c8e7cc15cdb4386818b908f93599015a176cc0627e23b246f705a92\",\n  \"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s43.json\": \"a983e0adf92ef853a9d17f2a0df5960c6d8ad2da3b5d9491d9acd4f411b6df5d\",\n  \"v8_dev/offline/mae/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s44.json\": \"5322b0979080ae2d24b4ff2d4dfc3f0598cd9f6c4a7bad40f82cbbdfe41741ea\",\n  \"v8_dev/offline/mae/libero_goal__turn_on_the_stove__s42.json\": \"251881ff35c25fa76089f77bee268759544902cb4e420f4514128a3ffadc8f5d\",\n  \"v8_dev/offline/mae/libero_goal__turn_on_the_stove__s43.json\": \"3797fe12994f6050b328dbddcee91ea8eeb2386cff27126c35edbbf104065381\",\n  \"v8_dev/offline/mae/libero_goal__turn_on_the_stove__s44.json\": \"1f38d2c4a13d270591049ff417c18a7a12dc7b76a7e8461df7cc78b8a79b8df7\",\n  \"v8_dev/offline/siglip/libero_goal__open_the_middle_drawer_of_the_cabinet__s42.json\": \"5c3b54da14b8d6d9c29aaf7b5446fffa7f58189bb18d014f6db7444addb6a973\",\n  \"v8_dev/offline/siglip/libero_goal__open_the_middle_drawer_of_the_cabinet__s43.json\": \"93c6a30cfe7311c5d87ec7f77a5ab476dc91abfbac3bb44bd610ab0d23a6b7da\",\n  \"v8_dev/offline/siglip/libero_goal__open_the_middle_drawer_of_the_cabinet__s44.json\": \"0cfe73937b00d71b351a2bedccc5bdc0a3de03d48666958e2d18f75bf141e52e\",\n  \"v8_dev/offline/siglip/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s42.json\": \"8407cb84930f420d7ac40761b1bcf96ab4fdfbba6c6448c51abcc31058a22d76\",\n  \"v8_dev/offline/siglip/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s43.json\": \"82ddebc925265ebd7e13f62e9aae38c70ac4afd5354291a673a440c4d1125a9b\",\n  \"v8_dev/offline/siglip/libero_goal__open_the_top_drawer_and_put_the_bowl_inside__s44.json\": \"f63726c2a85778c9c9fddb530300e26f0f9008bc9a66f03b11185f76f3dd4754\",\n  \"v8_dev/offline/siglip/libero_goal__push_the_plate_to_the_front_of_the_stove__s42.json\": \"dc638916e19c16ca9ba870cd811541fbeadc1b5cced1d5ef5b660f9983c919ee\",\n  \"v8_dev/offline/siglip/libero_goal__push_the_plate_to_the_front_of_the_stove__s43.json\": \"a3c3a300a990af358e94fa4e05fd05bdf8fb41422c6c968457a5e99ddf91a3da\",\n  \"v8_dev/offline/siglip/libero_goal__push_the_plate_to_the_front_of_the_stove__s44.json\": \"9b7f25eaaceed3391bc640454d61671f8d34f228c11f0fdc8ae8b9a5dd339f95\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_plate__s42.json\": \"d93e1229be326ffc13bfa83670b0bd11887c45f260e4b2c80e3e6c89fe46a822\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_plate__s43.json\": \"2489853bef8ff790af324768c60d68444bb589410573a2876ad8c2bbd3ae5f6b\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_plate__s44.json\": \"949c824b47fe3e0a167ef6388a80c762d9295f3d3b28e4a7062d28822aae4e73\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_stove__s42.json\": \"0b6581bb646f4fcee5c02e207e37cdcd3f7b5061a3877138bd0e4022b4f2813e\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_stove__s43.json\": \"69dcd54b7b3bbffce0dfc8e765dce0b002dadc3b379cf24f9d8fdf1e6e4d8a19\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_the_stove__s44.json\": \"a6f3f530fd963095a95f1429ca564dbfe4e41d3fb45d7163bd4186a847420992\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_top_of_the_cabinet__s42.json\": \"1e1a407972ff9e785437acd87beafa9f201b7668a1bd0a68ea3e73179cc7fec4\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_top_of_the_cabinet__s43.json\": \"e23db192fbdbc39bb4c540985caf0cc88a14d7389d4d5bf776fa208137d8871a\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_bowl_on_top_of_the_cabinet__s44.json\": \"3de3b2bde4636ab0376b14b7a108eaebfc8ee43a78a404152698cf53d2400200\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_cream_cheese_in_the_bowl__s42.json\": \"1728d1c506c9b676db248006d908399119b2382fe925d254063e9056d266c7b1\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_cream_cheese_in_the_bowl__s43.json\": \"dcf8da9711a5d32ebda7bdfc7c90d254b33e2039ef587e8f645ded8527991dfa\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_cream_cheese_in_the_bowl__s44.json\": \"e470cd5e3abe0d6593d3d8efafd4d6f3c3b988ec6d4775699bde36de802c8dfd\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_the_rack__s42.json\": \"628e4e861f0ba192707c9e8d22061fcf0a3a4e17f0c01954bfe4b23be352c688\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_the_rack__s43.json\": \"9f01c2d2c86360b40d16b72bae53a15b3e7aa6bdada51440528b6f2ac4441766\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_the_rack__s44.json\": \"3b34bf7a509b36229ec05562def37f63d42d1fcad3404243dd1e1ce31328b77a\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s42.json\": \"756ffad2f93ac071491d0e973e9698fe0ab57edaecd57bc5770467b727fc9c3c\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s43.json\": \"8548f633335dd9606e3c330cc6a08d2c0eebf69cfdbcf9164e835fa6f104cf31\",\n  \"v8_dev/offline/siglip/libero_goal__put_the_wine_bottle_on_top_of_the_cabinet__s44.json\": \"24cf2d3998054a4b13aa3afa6eb7696063d80a4ff26977b16194f3490c107c85\",\n  \"v8_dev/offline/siglip/libero_goal__turn_on_the_stove__s42.json\": \"e4cbdf7f196b3a51f34f5c734bc6fdfcf928afa4dca377a6f4423fcea33293de\",\n  \"v8_dev/offline/siglip/libero_goal__turn_on_the_stove__s43.json\": \"d262aa61562ef08c16214ebadfab3e26b80a2fc55cc35c69ebf4b36255875fe8\",\n  \"v8_dev/offline/siglip/libero_goal__turn_on_the_stove__s44.json\": \"3042186e2842a8b8b1b0973fe12ddeebd4f46a626733d0f8e225c836eac85331\",\n  \"v8_dev/sources/dinov2/v7_s42.json\": \"61d06c40d1700c0765bd0f1292d3655f1c300ad386a5561f85f9673796ea2835\",\n  \"v8_dev/sources/dinov2/v7_s42.pt\": \"10cafd73b26eb311f438844556609a665eca73255b83b9ff37acb6c501f49a5d\",\n  \"v8_dev/sources/dinov2/v7_s43.json\": \"96cbdc8628737daa9245940e9ccdcdad1d3e36da8b26444d4e511c391afe49aa\",\n  \"v8_dev/sources/dinov2/v7_s43.pt\": \"932338e2278298858a3fd87ec0a48a0b9e74b0b55cc5e0be68286ab67981487c\",\n  \"v8_dev/sources/dinov2/v7_s44.json\": \"1964fc756ff1cc07e80891ab1d312f6f7c7afbdedd509367128f781de9865337\",\n  \"v8_dev/sources/dinov2/v7_s44.pt\": \"b002fc8a7fdaffae2b9ff6cff33bda1ca4b4b587a5b90099287ff9164506f3d6\",\n  \"v8_dev/sources/dinov2/v8_c0_s42.json\": \"b4bcdde5ebd74f50548eb25a65793e227c32f2a9b2713abc48e79cb6d2a30125\",\n  \"v8_dev/sources/dinov2/v8_c0_s42.pt\": \"829fae3532e6194443dfad15b164a75cd906f6b2dc86655ff7cb30d681699201\",\n  \"v8_dev/sources/dinov2/v8_c0_s43.json\": \"9df9a033eee6c1d3d9f385e2e9c7347f624cd5b1d5b53a5077e778850aca9112\",\n  \"v8_dev/sources/dinov2/v8_c0_s43.pt\": \"c2632224d102a0e3c6d7f77683b5c15bca2d134674073f6a1fd06e87fa3e797b\",\n  \"v8_dev/sources/dinov2/v8_c0_s44.json\": \"dbe98287dc8d43a4ccebfb8591fb33d8e56346925d8212ea6dbf7edec7eb383f\",\n  \"v8_dev/sources/dinov2/v8_c0_s44.pt\": \"bb253bb22e91bcf2b3e5d9aa1d4d859a672df5188ccdab108e3fc65d6f553eed\",\n  \"v8_dev/sources/dinov2/v8_c25_s42.json\": \"a88178600a7272dbb49eb1a93f4e82dcf8250fcc413e517bed4220385da03f18\",\n  \"v8_dev/sources/dinov2/v8_c25_s42.pt\": \"de99809dab32ede0e2b26375e4abe3d59d4c1707607b98135bbee88a2ba9bb2f\",\n  \"v8_dev/sources/dinov2/v8_c25_s43.json\": \"eaa210aaf6df38b7cea77706de5b2f55c0ea9bbedda96fdcb285df4522b09942\",\n  \"v8_dev/sources/dinov2/v8_c25_s43.pt\": \"7c540286d088fbf34e313d6e7d63c272d0a6b2882985dcea343d80f19e35f971\",\n  \"v8_dev/sources/dinov2/v8_c25_s44.json\": \"eaafadfef67ca213242e0be417cd702da5cb60ccb0b57e19d798f5b0b4f50d6e\",\n  \"v8_dev/sources/dinov2/v8_c25_s44.pt\": \"348680bd2085f5e59540e5e624dd796d57eb17836cc7f271edf71bcdf0ccfeae\",\n  \"v8_dev/sources/mae/v7_s42.json\": \"29214b5f1a9c8387cf130f90f4360583cab61deded360db1dcec956ea8e75dc9\",\n  \"v8_dev/sources/mae/v7_s42.pt\": \"8110fd7efe946f60f812da0586aa1345d5444a1fd419175bc1e55a554cef6b10\",\n  \"v8_dev/sources/mae/v7_s43.json\": \"d64f8bbd5438f603b80893b8db7e2f7b5f156c29b62ff3526d2ccb2c75f9358c\",\n  \"v8_dev/sources/mae/v7_s43.pt\": \"9b47e441c8df551ef91c5b5a356ed50c801a86d643f097702f9fb1eeaf4889fd\",\n  \"v8_dev/sources/mae/v7_s44.json\": \"ebacb842d09d835bc80f4c13df826a88cebce0c29e82104bfbf3b7ff71888908\",\n  \"v8_dev/sources/mae/v7_s44.pt\": \"1d1674e2f9cf544ee49e8c48872be961ff9dccb4ecfd81ec751b8e50d7e47303\",\n  \"v8_dev/sources/mae/v8_c0_s42.json\": \"b43f59aedb38383412318a85557e6aa080f728958c4f9bb897e255ae8d7062f2\",\n  \"v8_dev/sources/mae/v8_c0_s42.pt\": \"596809bbffe950e16a503a94540f15e0fbedbfd3ffc045a6c9f3f0f33b820826\",\n  \"v8_dev/sources/mae/v8_c0_s43.json\": \"98f1596bda7dbadc1ea5c7b629a6d3a0509de9fff511d1631404baacd3c5b404\",\n  \"v8_dev/sources/mae/v8_c0_s43.pt\": \"1b3fcaab1cc721f9c7d70dbf2dffc8497feee3862e453a6f99bd10e2b238344c\",\n  \"v8_dev/sources/mae/v8_c0_s44.json\": \"7667fa90cf1efed24a1e7ddcc998e09f39817cffed79f430f37fbad30ff5ce12\",\n  \"v8_dev/sources/mae/v8_c0_s44.pt\": \"7d89cf554ff81bb84dbdfc43efc8d40da5ca5ddc7f2636baabb798d87969159e\",\n  \"v8_dev/sources/mae/v8_c25_s42.json\": \"46a09c793cdaf91f2bd952d344eafe8f8ad0fcbc3d1ef2983f452683dfe4414b\",\n  \"v8_dev/sources/mae/v8_c25_s42.pt\": \"55774c3b051a82f86234357d9a69f09767bf3744d1c82c3330f52ac3091ff947\",\n  \"v8_dev/sources/mae/v8_c25_s43.json\": \"e1b3bd91cbab8c9339cf3632cd6f962429e155fbb146ec2d817dfa9f6eb07890\",\n  \"v8_dev/sources/mae/v8_c25_s43.pt\": \"d2b43a65b6e10436132f77565c021eb69d0a38ca477c737263e319c2d0336ea6\",\n  \"v8_dev/sources/mae/v8_c25_s44.json\": \"378b00bcfd6af1c58c5bca9db79680b87c36b3c85e7806a94752edec13c7a8f9\",\n  \"v8_dev/sources/mae/v8_c25_s44.pt\": \"d4028d5657cedf01d2238097fdba97d14bc41718132b5e7d476e58ed9a3aae8d\",\n  \"v8_dev/sources/normalizers.pt\": \"836365671979a4bac86421682a570b2853f948b0379908745c3b6dec298194a9\",\n  \"v8_dev/sources/siglip/v7_s42.json\": \"098e004e0066c6cc10fc13315984bb23033093677f7dfcfb3e8cb7cd7d5eb339\",\n  \"v8_dev/sources/siglip/v7_s42.pt\": \"2b2f28edcb2f0ee3f988d96c629b818738e20c9565d1d4463e80c8526ba4dce0\",\n  \"v8_dev/sources/siglip/v7_s43.json\": \"e6d683c78054e062b0315b3a0070a55af1fc7d12cec30a213a2bfe61d0656582\",\n  \"v8_dev/sources/siglip/v7_s43.pt\": \"e503cfdf939a0a2e04c8c9dde13476132ec46325b69732d739943380574a2c2d\",\n  \"v8_dev/sources/siglip/v7_s44.json\": \"84cb11ef25a46c07a1ff7cc681827c15124609e758ea00b48d62616de20a4cc7\",\n  \"v8_dev/sources/siglip/v7_s44.pt\": \"fc087c85da74c80499ebdb912fd005422cb077b4441c7ee6c567393d702d02f6\",\n  \"v8_dev/sources/siglip/v8_c0_s42.json\": \"be1d509f692ec2ebfb7811ef1d5b140fb297e87db26d9d82a46a3661f0141a48\",\n  \"v8_dev/sources/siglip/v8_c0_s42.pt\": \"6ff63c4eac7c7e6c4fbde07a39135ccaabe14eb94db9125913753637f832f4f6\",\n  \"v8_dev/sources/siglip/v8_c0_s43.json\": \"d4b4522d96626dbeb9aa510b779eef5527492eec18a67e6b0e237ef6015067c1\",\n  \"v8_dev/sources/siglip/v8_c0_s43.pt\": \"285c5a0c48566f805823ee3e7edc1b07cd1d775f5f9985bb0eb086aaee141887\",\n  \"v8_dev/sources/siglip/v8_c0_s44.json\": \"6813a5cb066c51aa42214d3ea8bdd9b7b6641de6a1b5ab37d9a2df35747b57b9\",\n  \"v8_dev/sources/siglip/v8_c0_s44.pt\": \"20de574dbe48fc35baa7430c0df93fd16320be2fc9bc304d1013ccd4019ad80f\",\n  \"v8_dev/sources/siglip/v8_c25_s42.json\": \"d5f393cb1068ef523e78f87dfcdc1885e02f2b6660d6f1aa7367a919a8fef4b8\",\n  \"v8_dev/sources/siglip/v8_c25_s42.pt\": \"b9151bca10bb5cd1df9848cad755e18ec0fa03fb27c9f2a031bd1f3a4bfc4b67\",\n  \"v8_dev/sources/siglip/v8_c25_s43.json\": \"c7e9bbe5f2f6aaa23d7300581f2f1db07be6903cf926e48014fcb2728ff79a04\",\n  \"v8_dev/sources/siglip/v8_c25_s43.pt\": \"82bfdacb5305d57df472ac02e946b8d969a8953283a4b981e66c2e10b8da51e1\",\n  \"v8_dev/sources/siglip/v8_c25_s44.json\": \"3e7e36ab1ba449c01da78d3c523f76668e93573afbcb971e054935401c0cc4c8\",\n  \"v8_dev/sources/siglip/v8_c25_s44.pt\": \"0637e26f7dbd19297fc009d3b0ce41ad0d006ea7c8aaa8c99a8fe161c4ad1572\",\n  \"v8_dev/timing/cache_development.json\": \"e6580f2401b5eab3b72ed9d3ecdcae38a4ef8d42c34d762514d1951be2361632\",\n  \"v8_dev/timing/step_development_cache.json\": \"fb3241b6a0dfe1a3271efb7944908e7bc8c02d1301eca9e423cf614c8c66b728\",\n  \"v8_dev/timing/step_development_download.json\": \"f8fb66d328dfcdbedb2830053de4e0776c608faccef4794a9a115934fa06df3e\",\n  \"v8_dev/timing/step_development_encoder.json\": \"bae757565f47de69d2cbc9b95e486859fff9c75d03e7655dfef6e2750805820b\",\n  \"v8_dev/timing/step_development_offline.json\": \"b51d8ca5af457867968f8deb2336464ec72ccd7e2f93764e29b29c3ead166edd\",\n  \"v8_dev/timing/step_development_source.json\": \"23cc9bfc8123ca7902c92c13b99b8a64d77ba739cec5a541f4aa25055b8af682\"\n}\n",
+    "sha256": "88e0fa471120e59df9ea961c47605e4f15592d0903c257674dbce59bef537147"
+  },
+  "registeredAt": 1792738267941,
+  "request": {
+    "acceptanceSessionId": "v6-accept-20261023T064728-2d02de45",
+    "bindings": {
+      "code": "66c93e339d3edc2e8224e7dd4d667e92e82153adaef73b61683a718409cbce65",
+      "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+      "protocol": "78f7ebf3cd7118fd896d899674c69435aae3edd678d51d675554ef63e3a4cd0c",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "capUsd": "34.51",
+    "collectBy": 1792766467050,
+    "deadlineAt": 1792767067050,
+    "deleteStorageAt": 1792768867050,
+    "maxHourlyUsd": "1.79",
+    "packageSha256": "bab747035985d3a624251a620a0b17b3660d7ba3ac1fdd071802aaaa63f7b7f9",
+    "podSpec": {
+      "cloudType": "SECURE",
+      "computeType": "GPU",
+      "containerDiskInGb": 60,
+      "dataCenterIds": [
+        "US-KS-2"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "PYTHONHASHSEED": "42",
+        "RAID_CONTAINER_IMAGE_DIGEST": "sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f"
+      },
+      "gpuCount": 1,
+      "gpuTypeIds": [
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+      "ports": [
+        "22/tcp"
+      ],
+      "supportPublicIp": true,
+      "volumeInGb": 0,
+      "volumeMountPath": "/workspace"
+    },
+    "quoteStartAt": 1792738267050,
+    "sentinel": {
+      "key": "results/v8-dev-20261023T063431-ef8781f7/collection/outputs_sha256.json",
+      "sha256": "26d94391c5909cec858f59ba917f4b436b7aeb4429fcb1c49de8abe0a93a3a4e"
+    },
+    "sessionId": "v8-dev-20261023T063431-ef8781f7",
+    "spendAdmission": {
+      "all_liabilities_known": true,
+      "billing_digest": "b2b8b4be7a378b3070263a77080bf325335aa64c5a29bd3d5a9a3b0185db6dfd",
+      "billing_refreshed_at": "2026-10-23T06:50:59.108238+00:00",
+      "container_disk_gb": 60,
+      "container_disk_gb_month_usd": "0.10",
+      "currency": "USD",
+      "cutoff_service_cost_reserve_usd": "0.10",
+      "data_center_id": "US-KS-2",
+      "gpu": "NVIDIA A100-SXM4-80GB",
+      "gpu_hourly_usd": "1.79",
+      "gross_prepaid_balance_usd": "36.5124584376",
+      "inventory_refreshed_at": "2026-10-23T06:51:05.983742+00:00",
+      "network_volume_gb_month_usd": "0.07",
+      "network_volume_size_gb": 160,
+      "placement_evidence": {
+        "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+        "live_gpu_stock_checked": true,
+        "refreshed_at": "2026-10-23T06:51:05.983742+00:00",
+        "sha256": "3fbe749b2f03a97828648f857ca9394c73d810744c2f06dac7b80b568b7deb5e",
+        "storage_tier": "STANDARD"
+      },
+      "prepaid_available_usd": "35.5024584376",
+      "project_ceiling_usd": "250",
+      "project_reserve_usd": "25",
+      "projected_source_cost_usd": "14.62666666666666666666666667",
+      "provider_inventory_checked": true,
+      "quote_provenance": {
+        "container_disk_billing_unit": "second",
+        "gpu": "runpodctl gpu list",
+        "monthly_hour_denominator": 720,
+        "network_volume_billing_unit": "hour, conservatively rounded up",
+        "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+        "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+      },
+      "refreshed_at": "2026-10-23T06:51:05.983742+00:00",
+      "remaining_project_allowance_usd": "95.3605138148943632116",
+      "source_cap_usd": "34.51",
+      "status": "passed",
+      "total_study_spend_usd": "129.6394861851056367884",
+      "transfer_reserve_usd": "0"
+    },
+    "stage": "source_panel",
+    "volumeSpec": {
+      "dataCenterId": "US-KS-2",
+      "size": 160
+    }
+  },
+  "revision": 12,
+  "terminating": true,
+  "terminationReason": "independent_alarm",
+  "volumeDeleted": true,
+  "volumeId": "go9myqkvh6",
+  "volumeRequested": true
+}

@@ -1,0 +1,14 @@
+{
+  "authorization_sha256": "f752204abd5ce6ac5d4fd326bcdf78c6da726b168c1ea950e5957e9829b0fd6d",
+  "cumulative_source_cap_usd": "225",
+  "deposit_added_usd": "30",
+  "no_automatic_topups": true,
+  "prior_spending_counts": true,
+  "project_study_max_usd": "225",
+  "recorded_at": "2026-10-22T14:36:27.932034+00:00",
+  "service_fix": "authorize-retry counts cleaned sessions at their recorded cost (same rule as /reserve)",
+  "service_version": "a4692a6a-095f-4204-b60c-76bb0c88bc9b",
+  "total_deposits_usd": "165",
+  "user_quote": "I just added $30. I approve the service fix and a new 5 day window. Deploy the fix and authorize a 5-day window.",
+  "window_seconds": 432000
+}

@@ -1,0 +1,132 @@
+{
+  "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+  "events": [
+    {
+      "at": 1792684419700,
+      "detail": "{\"collectBy\":1792712618340,\"deadlineAt\":1792713218340,\"deleteStorageAt\":1792715018340}",
+      "seq": 1,
+      "type": "registered_with_immutable_deadlines"
+    },
+    {
+      "at": 1792684419912,
+      "detail": "{}",
+      "seq": 2,
+      "type": "paid_creation_intent"
+    }
+  ],
+  "eventsTotal": 2,
+  "fingerprint": "65cdac16a4f7a88b956b1cad1d9324daeaaa8fb5ea9d73aad9ede9f35fa1a5e8",
+  "jobs": [
+    {
+      "due": 1792684420912,
+      "name": "reconcile"
+    },
+    {
+      "due": 1792712618340,
+      "name": "terminate"
+    },
+    {
+      "due": 1792712619340,
+      "name": "recover"
+    },
+    {
+      "due": 1792715018340,
+      "name": "expire"
+    }
+  ],
+  "launchAt": 1792684419912,
+  "registeredAt": 1792684418883,
+  "request": {
+    "acceptanceSessionId": "v6-accept-20261022T155016-cbf2e6dd",
+    "bindings": {
+      "code": "66c93e339d3edc2e8224e7dd4d667e92e82153adaef73b61683a718409cbce65",
+      "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+      "protocol": "78f7ebf3cd7118fd896d899674c69435aae3edd678d51d675554ef63e3a4cd0c",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "capUsd": "34.85",
+    "collectBy": 1792712618340,
+    "deadlineAt": 1792713218340,
+    "deleteStorageAt": 1792715018340,
+    "maxHourlyUsd": "1.79",
+    "packageSha256": "da65293bbcbc1450f03e2ce7f8c67447354ac5143ba1f40870a4b1314e2c935d",
+    "podSpec": {
+      "cloudType": "SECURE",
+      "computeType": "GPU",
+      "containerDiskInGb": 60,
+      "dataCenterIds": [
+        "US-KS-2"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "PYTHONHASHSEED": "42",
+        "RAID_CONTAINER_IMAGE_DIGEST": "sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f"
+      },
+      "gpuCount": 1,
+      "gpuTypeIds": [
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+      "ports": [
+        "22/tcp"
+      ],
+      "supportPublicIp": true,
+      "volumeInGb": 0,
+      "volumeMountPath": "/workspace"
+    },
+    "quoteStartAt": 1792684418340,
+    "sentinel": {
+      "key": "results/v8-dev-20261022T154110-dc8dd86c/collection/outputs_sha256.json",
+      "sha256": "959c442b222afc097066484c092de2024074ab96d1d5450c5e38aa835f17a7a1"
+    },
+    "sessionId": "v8-dev-20261022T154110-dc8dd86c",
+    "spendAdmission": {
+      "all_liabilities_known": true,
+      "billing_digest": "6deb997877ab5cbc6b77c6ff5cb8f5e9bd77cdb1b43b0c10a93b4f8c8985db80",
+      "billing_refreshed_at": "2026-10-22T15:53:33.322280+00:00",
+      "container_disk_gb": 60,
+      "container_disk_gb_month_usd": "0.10",
+      "currency": "USD",
+      "cutoff_service_cost_reserve_usd": "0.10",
+      "data_center_id": "US-KS-2",
+      "gpu": "NVIDIA A100-SXM4-80GB",
+      "gpu_hourly_usd": "1.79",
+      "gross_prepaid_balance_usd": "36.8537384936",
+      "inventory_refreshed_at": "2026-10-22T15:53:37.276883+00:00",
+      "network_volume_gb_month_usd": "0.07",
+      "network_volume_size_gb": 160,
+      "placement_evidence": {
+        "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+        "live_gpu_stock_checked": true,
+        "refreshed_at": "2026-10-22T15:53:37.276883+00:00",
+        "sha256": "a21c7eae6e79f187205ad0654cf787c83fe6e31e03f37368e199aee090e1a770",
+        "storage_tier": "STANDARD"
+      },
+      "prepaid_available_usd": "35.8437384936",
+      "project_ceiling_usd": "250",
+      "project_reserve_usd": "25",
+      "projected_source_cost_usd": "14.62666666666666666666666667",
+      "provider_inventory_checked": true,
+      "quote_provenance": {
+        "container_disk_billing_unit": "second",
+        "gpu": "runpodctl gpu list",
+        "monthly_hour_denominator": 720,
+        "network_volume_billing_unit": "hour, conservatively rounded up",
+        "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+        "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+      },
+      "refreshed_at": "2026-10-22T15:53:37.276883+00:00",
+      "remaining_project_allowance_usd": "95.7907421350775956486",
+      "source_cap_usd": "34.85",
+      "status": "passed",
+      "total_study_spend_usd": "129.2092578649224043514",
+      "transfer_reserve_usd": "0"
+    },
+    "stage": "source_panel",
+    "volumeSpec": {
+      "dataCenterId": "US-KS-2",
+      "size": 160
+    }
+  },
+  "revision": 2
+}

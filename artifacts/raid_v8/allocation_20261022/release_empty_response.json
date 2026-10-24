@@ -1,0 +1,377 @@
+{
+  "deployment": "a4692a6a-095f-4204-b60c-76bb0c88bc9b",
+  "emptyRelease": {
+    "at": 1792683605345,
+    "authorizationSha256": "a990d6a86fe023a8cefc937f6c06b26423d885898d637eb079b7c12e72221d38"
+  },
+  "events": [
+    {
+      "at": 1792680013169,
+      "detail": "{\"collectBy\":1792708211797,\"deadlineAt\":1792708811797,\"deleteStorageAt\":1792710611797}",
+      "seq": 1,
+      "type": "registered_with_immutable_deadlines"
+    },
+    {
+      "at": 1792680013509,
+      "detail": "{}",
+      "seq": 2,
+      "type": "paid_creation_intent"
+    },
+    {
+      "at": 1792680013892,
+      "detail": "{\"region\":\"EUR-IS-1\",\"storageTier\":\"STANDARD\",\"checkedAt\":1792680013892}",
+      "seq": 3,
+      "type": "live_storage_placement_verified"
+    },
+    {
+      "at": 1792680013928,
+      "detail": "{}",
+      "seq": 4,
+      "type": "volume_creation_request"
+    },
+    {
+      "at": 1792680014801,
+      "detail": "{\"id\":\"864hqj2n2e\"}",
+      "seq": 5,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792680014848,
+      "detail": "{}",
+      "seq": 6,
+      "type": "pod_creation_request"
+    },
+    {
+      "at": 1792680014872,
+      "detail": "{\"id\":\"864hqj2n2e\"}",
+      "seq": 7,
+      "type": "volume_ownership_recorded"
+    },
+    {
+      "at": 1792680015646,
+      "detail": "{\"method\":\"POST\",\"path\":\"/pods\",\"status\":500,\"requestId\":\"req_4ec7e84d-f302-4902-ac65-ec36e4eebb6a\",\"bodySha256\":\"c3d1f509bed82fb34026b9c5477ddd7b30f6e9db5d97a1ecbaa19bdc8293b002\",\"bodyExcerpt\":\"{\\\"error\\\":\\\"create pod: There are no instances currently available\\\",\\\"status\\\":500}\\n\"}",
+      "seq": 8,
+      "type": "provider_http_error"
+    },
+    {
+      "at": 1792680015646,
+      "detail": "{\"error\":\"Error: pod creation failed 500\"}",
+      "seq": 9,
+      "type": "creation_incomplete"
+    },
+    {
+      "at": 1792680016142,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 10,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680136523,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 11,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680256895,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 12,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680377307,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 13,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680497669,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 14,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680618035,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 15,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680738407,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 16,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680858809,
+      "detail": "{\"job\":\"terminate\",\"error\":\"Error: pod creation still uncertain\"}",
+      "seq": 17,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792680919170,
+      "detail": "{\"rootFailure\":\"Error: pod creation failed 500\",\"absentMinutes\":15}",
+      "seq": 18,
+      "type": "pod_creation_presumed_failed"
+    },
+    {
+      "at": 1792680978810,
+      "detail": "{}",
+      "seq": 19,
+      "type": "pod_never_created"
+    },
+    {
+      "at": 1792680979536,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 20,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681100160,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 21,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681220838,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 22,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681341436,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 23,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681462123,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 24,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681582713,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 25,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681703313,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 26,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681823923,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 27,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792681944594,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 28,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682065244,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 29,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682185901,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 30,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682306530,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 31,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682427437,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 32,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682548180,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 33,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682668942,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 34,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682789809,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 35,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792682910553,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 36,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792683031284,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 37,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792683152024,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 38,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792683272783,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 39,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792683393501,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 40,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792683514211,
+      "detail": "{\"job\":\"recover\",\"error\":\"Error: S3 recovery HTTP 404\"}",
+      "seq": 41,
+      "type": "job_failed"
+    },
+    {
+      "at": 1792683605345,
+      "detail": "{}",
+      "seq": 42,
+      "type": "operator_released_empty_session"
+    }
+  ],
+  "eventsTotal": 42,
+  "failure": "Error: S3 recovery HTTP 404",
+  "fingerprint": "f3a8eb1395762706d3b5c0e74859106231e70295fa2da145f0b0619afa001135",
+  "jobs": [
+    {
+      "due": 1792683605345,
+      "name": "expire"
+    },
+    {
+      "due": 1792683634211,
+      "name": "recover"
+    }
+  ],
+  "launchAt": 1792680013509,
+  "podDeleted": true,
+  "podRejected": true,
+  "podRequested": true,
+  "registeredAt": 1792680012371,
+  "request": {
+    "acceptanceSessionId": "v6-accept-20261022T143648-a8f9cb1c",
+    "bindings": {
+      "code": "66c93e339d3edc2e8224e7dd4d667e92e82153adaef73b61683a718409cbce65",
+      "deployment": "a4692a6a-095f-4204-b60c-76bb0c88bc9b",
+      "protocol": "78f7ebf3cd7118fd896d899674c69435aae3edd678d51d675554ef63e3a4cd0c",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "capUsd": "34.96",
+    "collectBy": 1792708211797,
+    "deadlineAt": 1792708811797,
+    "deleteStorageAt": 1792710611797,
+    "maxHourlyUsd": "1.79",
+    "packageSha256": "ebce2c6f6fa5f710a0b20c4d5a54957f531b77fec05942c768d2bd8afc82e37f",
+    "podSpec": {
+      "cloudType": "SECURE",
+      "computeType": "GPU",
+      "containerDiskInGb": 60,
+      "dataCenterIds": [
+        "EUR-IS-1"
+      ],
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+        "PYTHONHASHSEED": "42",
+        "RAID_CONTAINER_IMAGE_DIGEST": "sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f"
+      },
+      "gpuCount": 1,
+      "gpuTypeIds": [
+        "NVIDIA A100-SXM4-80GB"
+      ],
+      "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+      "ports": [
+        "22/tcp"
+      ],
+      "supportPublicIp": true,
+      "volumeInGb": 0,
+      "volumeMountPath": "/workspace"
+    },
+    "quoteStartAt": 1792680011797,
+    "sentinel": {
+      "key": "results/v8-dev-20261022T135546-6bf511f0/collection/outputs_sha256.json",
+      "sha256": "382f8082ecb520db5056304f8b93dcea9aca05995691cda2fc84cc2c225804cc"
+    },
+    "sessionId": "v8-dev-20261022T135546-6bf511f0",
+    "spendAdmission": {
+      "all_liabilities_known": true,
+      "billing_digest": "2090625a535acc0efcedcb2ef1ebddea5f3c518b78d3a991db0577032d995920",
+      "billing_refreshed_at": "2026-10-22T14:40:06.470377+00:00",
+      "container_disk_gb": 60,
+      "container_disk_gb_month_usd": "0.10",
+      "currency": "USD",
+      "cutoff_service_cost_reserve_usd": "0.10",
+      "data_center_id": "EUR-IS-1",
+      "gpu": "NVIDIA A100-SXM4-80GB",
+      "gpu_hourly_usd": "1.79",
+      "gross_prepaid_balance_usd": "36.9604560686",
+      "inventory_refreshed_at": "2026-10-22T14:40:10.758157+00:00",
+      "network_volume_gb_month_usd": "0.07",
+      "network_volume_size_gb": 160,
+      "placement_evidence": {
+        "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+        "live_gpu_stock_checked": true,
+        "refreshed_at": "2026-10-22T14:40:10.758157+00:00",
+        "sha256": "ee3010cc21e9ff4655328e763536b026e5159e056b962a38ec5b4d2c981468d9",
+        "storage_tier": "STANDARD"
+      },
+      "prepaid_available_usd": "35.9504560686",
+      "project_ceiling_usd": "250",
+      "project_reserve_usd": "25",
+      "projected_source_cost_usd": "14.62666666666666666666666667",
+      "provider_inventory_checked": true,
+      "quote_provenance": {
+        "container_disk_billing_unit": "second",
+        "gpu": "runpodctl gpu list",
+        "monthly_hour_denominator": 720,
+        "network_volume_billing_unit": "hour, conservatively rounded up",
+        "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+        "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+      },
+      "refreshed_at": "2026-10-22T14:40:10.758157+00:00",
+      "remaining_project_allowance_usd": "95.8396225594280957586",
+      "source_cap_usd": "34.96",
+      "status": "passed",
+      "total_study_spend_usd": "129.1603774405719042414",
+      "transfer_reserve_usd": "0"
+    },
+    "stage": "source_panel",
+    "volumeSpec": {
+      "dataCenterId": "EUR-IS-1",
+      "size": 160
+    }
+  },
+  "revision": 40,
+  "rootFailure": "Error: pod creation failed 500",
+  "terminating": true,
+  "terminationReason": "creation_failure",
+  "volumeId": "864hqj2n2e",
+  "volumeRequested": true
+}

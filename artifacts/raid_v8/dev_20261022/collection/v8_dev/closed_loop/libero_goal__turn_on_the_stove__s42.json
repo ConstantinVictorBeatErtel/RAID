@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 79,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 83,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 90,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 88,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 87,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 105,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 83,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 87,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 91,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 74,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 104,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 77,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 152,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 15.1,
+   "success_rate": 0.95,
+   "task": "libero_goal/turn_on_the_stove"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 80,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 80,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 83,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 80,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 75,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 72,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 72,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 78,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 79,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 75,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 71,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 77,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 82,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 74,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 91,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 79,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 12.6,
+   "success_rate": 1.0,
+   "task": "libero_goal/turn_on_the_stove"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 66,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 68,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 84,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 70,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 103,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 74,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 77,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 92,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 74,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 78,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 101,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 80,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 98,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 71,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 66,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 79,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 79,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 110,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 13.9,
+   "success_rate": 1.0,
+   "task": "libero_goal/turn_on_the_stove"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 72,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 72,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 71,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 72,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 70,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 68,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 74,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 72,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 70,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 70,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 75,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 73,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 73,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 11.9,
+   "success_rate": 1.0,
+   "task": "libero_goal/turn_on_the_stove"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 153,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 165,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 152,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 153,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 135,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 155,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 147,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 147,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 138,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 132,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 15.0,
+   "success_rate": 0.0,
+   "task": "libero_goal/turn_on_the_stove"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 153,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 161,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 165,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 152,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 153,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 168,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 135,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 158,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 155,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 147,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 162,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 147,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 138,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 132,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 149,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 164,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 15.4,
+   "success_rate": 0.05,
+   "task": "libero_goal/turn_on_the_stove"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 153,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 88,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 94,
+     "max_steps": 161,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 97,
+     "max_steps": 165,
+     "steps": 90,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 88,
+     "max_steps": 152,
+     "steps": 90,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 89,
+     "max_steps": 153,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 99,
+     "max_steps": 168,
+     "steps": 82,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 77,
+     "max_steps": 135,
+     "steps": 96,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 92,
+     "max_steps": 158,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 90,
+     "max_steps": 155,
+     "steps": 97,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 147,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 88,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 95,
+     "max_steps": 162,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 85,
+     "max_steps": 147,
+     "steps": 76,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 79,
+     "max_steps": 138,
+     "steps": 80,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 75,
+     "max_steps": 132,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 86,
+     "max_steps": 149,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 81,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 96,
+     "max_steps": 164,
+     "steps": 83,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 14.6,
+   "success_rate": 0.9,
+   "task": "libero_goal/turn_on_the_stove"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/turn_on_the_stove"
+}

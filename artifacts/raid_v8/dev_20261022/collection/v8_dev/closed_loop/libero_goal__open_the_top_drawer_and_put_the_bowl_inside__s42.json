@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 167,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 203,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 333,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 27.7,
+   "success_rate": 0.1,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 242,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 333,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 27.9,
+   "success_rate": 0.05,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 174,
+     "success": true
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 210,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 216,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 202,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 256,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 28.6,
+   "success_rate": 0.3,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 199,
+     "success": true
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 174,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 198,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 192,
+     "success": true
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 170,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 333,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 27.5,
+   "success_rate": 0.25,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 333,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 27.2,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 333,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 27.5,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 299,
+     "max_steps": 468,
+     "steps": 468,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 200,
+     "max_steps": 320,
+     "steps": 320,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 229,
+     "max_steps": 363,
+     "steps": 363,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 199,
+     "max_steps": 318,
+     "steps": 318,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 195,
+     "max_steps": 312,
+     "steps": 312,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 206,
+     "max_steps": 329,
+     "steps": 329,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 209,
+     "max_steps": 333,
+     "steps": 333,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 27.8,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+}

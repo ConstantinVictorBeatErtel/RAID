@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 189,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 138,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 356,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 163,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 156,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.8,
+   "success_rate": 0.35,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 356,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.6,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 149,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 165,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 163,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.5,
+   "success_rate": 0.5,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 356,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.4,
+   "success_rate": 0.45,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 175,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 167,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 154,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 14.8,
+   "success_rate": 1.0,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 356,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 272,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.3,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 4,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 227,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 165,
+     "max_steps": 267,
+     "steps": 267,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 224,
+     "max_steps": 356,
+     "steps": 172,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 23,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 168,
+     "max_steps": 272,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 179,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 169,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 170,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 171,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.8,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+}

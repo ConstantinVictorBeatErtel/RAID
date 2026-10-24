@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 281,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 143,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 183,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 143,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 21.7,
+   "success_rate": 0.45,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 164,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 165,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 401,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 133,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "seconds": 25.1,
+   "success_rate": 0.7,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 281,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 148,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 401,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 25.4,
+   "success_rate": 0.15,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 281,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 401,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 24.8,
+   "success_rate": 0.0,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 281,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 401,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 25.5,
+   "success_rate": 0.0,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 281,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 401,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 26.2,
+   "success_rate": 0.0,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 1,
+     "demo_length": 174,
+     "max_steps": 281,
+     "steps": 281,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 201,
+     "max_steps": 321,
+     "steps": 321,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 163,
+     "max_steps": 264,
+     "steps": 264,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 184,
+     "max_steps": 296,
+     "steps": 296,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 172,
+     "max_steps": 278,
+     "steps": 278,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 170,
+     "max_steps": 275,
+     "steps": 275,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 153,
+     "max_steps": 249,
+     "steps": 249,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 254,
+     "max_steps": 401,
+     "steps": 401,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 26.3,
+   "success_rate": 0.0,
+   "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/put_the_wine_bottle_on_the_rack"
+}

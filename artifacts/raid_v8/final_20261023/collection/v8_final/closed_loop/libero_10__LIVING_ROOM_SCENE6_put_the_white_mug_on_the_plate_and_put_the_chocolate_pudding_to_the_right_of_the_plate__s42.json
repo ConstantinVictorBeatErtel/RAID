@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 286,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.9,
+   "success_rate": 0.05,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 347,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.1,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 347,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.5,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 347,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.7,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 347,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.4,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 347,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 28.1,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 203,
+     "max_steps": 324,
+     "steps": 324,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 253,
+     "max_steps": 399,
+     "steps": 399,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 240,
+     "max_steps": 380,
+     "steps": 380,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 228,
+     "max_steps": 362,
+     "steps": 362,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 218,
+     "max_steps": 347,
+     "steps": 347,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 289,
+     "max_steps": 453,
+     "steps": 453,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 275,
+     "max_steps": 432,
+     "steps": 432,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 237,
+     "max_steps": 375,
+     "steps": 375,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 246,
+     "max_steps": 389,
+     "steps": 389,
+     "success": false
+    },
+    {
+     "demo": 32,
+     "demo_length": 232,
+     "max_steps": 368,
+     "steps": 368,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 286,
+     "max_steps": 449,
+     "steps": 449,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 235,
+     "max_steps": 372,
+     "steps": 372,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 249,
+     "max_steps": 393,
+     "steps": 393,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 251,
+     "max_steps": 396,
+     "steps": 396,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 27.1,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+}

@@ -1,0 +1,99 @@
+{
+  "bindings": {
+    "code": "98bf8679f8affb9e1128512830cc75f06b48510a66304aa6c25c0f42c2887fde",
+    "deployment": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+    "protocol": "4e959633d32dc2e9407fb69e34ee549b03f1bd1a088b4ddc7725d7b8cdd66dbf",
+    "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+  },
+  "capUsd": "1",
+  "collectBy": 1792738228040,
+  "deadlineAt": 1792738528040,
+  "deleteStorageAt": 1792738648040,
+  "maxHourlyUsd": "0.99",
+  "packageSha256": "f3519153b40b89d3e61babecd3cce034b0a1b0393689e0458fe54637ae946987",
+  "podSpec": {
+    "cloudType": "SECURE",
+    "computeType": "GPU",
+    "containerDiskInGb": 60,
+    "dataCenterIds": [
+      "US-WA-1"
+    ],
+    "dockerEntrypoint": [
+      "/bin/bash",
+      "-lc"
+    ],
+    "dockerStartCmd": [
+      "set -eu\npython3 - <<'SENTINEL'\nimport base64, pathlib, os\np=pathlib.Path('/workspace/acceptance/v6-accept-20261023T064728-2d02de45/sentinel.json')\np.parent.mkdir(parents=True,exist_ok=True)\nf=p.with_suffix('.tmp')\nwith f.open('wb') as h:\n h.write(base64.b64decode('eyJraW5kIjogInJlYWxfcnVucG9kX29wZXJhdGlvbmFsX3NlbnRpbmVsIiwgInBhY2thZ2Vfc2hhMjU2IjogImYzNTE5MTUzYjQwYjg5ZDNlNjFiYWJlY2QzY2NlMDM0YjBhMWIwMzkzNjg5ZTA0NThmZTU0NjM3YWU5NDY5ODciLCAic2NpZW50aWZpY19yZXN1bHQiOiBmYWxzZSwgInNlc3Npb25faWQiOiAidjYtYWNjZXB0LTIwMjYxMDIzVDA2NDcyOC0yZDAyZGU0NSJ9Cg=='));h.flush();os.fsync(h.fileno())\nf.replace(p)\nd=os.open(p.parent,os.O_RDONLY);os.fsync(d);os.close(d)\nprint('RAID_ACCEPTANCE_SENTINEL_COMMITTED',flush=True)\nSENTINEL\nexec sleep 7200\n"
+    ],
+    "env": {},
+    "gpuCount": 1,
+    "gpuTypeIds": [
+      "NVIDIA RTX 6000 Ada Generation"
+    ],
+    "imageName": "runpod/pytorch@sha256:60baa36d3fb6b98fd4f4ece6b96776c83c01a8b7c540e54460ab4d496816141f",
+    "volumeInGb": 0,
+    "volumeMountPath": "/workspace"
+  },
+  "quoteStartAt": 1792738048040,
+  "scientificRelease": {
+    "bindings": {
+      "code": "66c93e339d3edc2e8224e7dd4d667e92e82153adaef73b61683a718409cbce65",
+      "protocol": "78f7ebf3cd7118fd896d899674c69435aae3edd678d51d675554ef63e3a4cd0c",
+      "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+    },
+    "identitySha256": "26d94391c5909cec858f59ba917f4b436b7aeb4429fcb1c49de8abe0a93a3a4e",
+    "packageSha256": "bab747035985d3a624251a620a0b17b3660d7ba3ac1fdd071802aaaa63f7b7f9"
+  },
+  "sentinel": {
+    "key": "acceptance/v6-accept-20261023T064728-2d02de45/sentinel.json",
+    "sha256": "2f3165a84764bb22787f856559a41541bb5c5b800a26b14b4ea6e2b1f907808f"
+  },
+  "sessionId": "v6-accept-20261023T064728-2d02de45",
+  "spendAdmission": {
+    "all_liabilities_known": true,
+    "billing_digest": "c87411f6e489406849d55f34ff0a742dc69cfbc765361090eed244bf7f496696",
+    "billing_refreshed_at": "2026-10-23T06:47:15.249830+00:00",
+    "container_disk_gb": 60,
+    "container_disk_gb_month_usd": "0.10",
+    "currency": "USD",
+    "cutoff_service_cost_reserve_usd": "0.10",
+    "data_center_id": "US-WA-1",
+    "gpu": "NVIDIA RTX 6000 Ada Generation",
+    "gpu_hourly_usd": "0.99",
+    "gross_prepaid_balance_usd": "36.5124584376",
+    "inventory_refreshed_at": "2026-10-23T06:47:26.728609+00:00",
+    "network_volume_gb_month_usd": "0.07",
+    "network_volume_size_gb": 20,
+    "placement_evidence": {
+      "catalog_url": "https://api.runpod.io/v2/catalog/datacenters?include=GPU_AVAILABILITY",
+      "live_gpu_stock_checked": true,
+      "refreshed_at": "2026-10-23T06:47:26.728609+00:00",
+      "sha256": "63656f790e59950a747fca1cf1baae57b5bcf4ea0ffd309d33f7efd3b9ef9adf",
+      "storage_tier": "STANDARD"
+    },
+    "prepaid_available_usd": "35.5024584376",
+    "project_ceiling_usd": "250",
+    "project_reserve_usd": "25",
+    "projected_source_cost_usd": "0.2350555555555555555555555555",
+    "provider_inventory_checked": true,
+    "quote_provenance": {
+      "container_disk_billing_unit": "second",
+      "gpu": "runpodctl gpu list",
+      "monthly_hour_denominator": 720,
+      "network_volume_billing_unit": "hour, conservatively rounded up",
+      "service": "Cloudflare authorized account Workers Free, verified in dashboard; $0.10 contingency reserved",
+      "storage_and_transfer": "https://docs.runpod.io/pods/pricing"
+    },
+    "refreshed_at": "2026-10-23T06:47:26.728609+00:00",
+    "remaining_project_allowance_usd": "95.3605138148943632116",
+    "source_cap_usd": "1",
+    "status": "passed",
+    "total_study_spend_usd": "129.6394861851056367884",
+    "transfer_reserve_usd": "0"
+  },
+  "stage": "operational_acceptance",
+  "volumeSpec": {
+    "dataCenterId": "US-WA-1",
+    "size": 20
+  }
+}

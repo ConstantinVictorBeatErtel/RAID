@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 213,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 282,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 171,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 330,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.1,
+   "success_rate": 0.1,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 282,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 330,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 20.2,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 178,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 231,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 282,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 216,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 171,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.5,
+   "success_rate": 0.5,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 175,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 282,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 330,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.1,
+   "success_rate": 0.05,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 164,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 193,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 172,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 162,
+     "success": true
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 202,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 163,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.8,
+   "success_rate": 0.95,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 241,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 282,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 330,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 21.0,
+   "success_rate": 0.05,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 169,
+     "max_steps": 273,
+     "steps": 273,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 148,
+     "max_steps": 242,
+     "steps": 242,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 173,
+     "max_steps": 279,
+     "steps": 279,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 167,
+     "max_steps": 270,
+     "steps": 270,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 162,
+     "max_steps": 263,
+     "steps": 263,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 175,
+     "max_steps": 282,
+     "steps": 282,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 41,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 207,
+     "max_steps": 330,
+     "steps": 149,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.2,
+   "success_rate": 0.05,
+   "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+}

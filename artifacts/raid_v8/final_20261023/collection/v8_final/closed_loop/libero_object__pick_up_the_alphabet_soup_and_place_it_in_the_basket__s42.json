@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 200,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 138,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 173,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 191,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 225,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.5,
+   "success_rate": 0.55,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.5,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 136,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 201,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 156,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.2,
+   "success_rate": 0.35,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.8,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 181,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 17.8,
+   "success_rate": 0.5,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 254,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 311,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 243,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 276,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 246,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.6,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 2,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 3,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 245,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 156,
+     "max_steps": 254,
+     "steps": 162,
+     "success": true
+    },
+    {
+     "demo": 8,
+     "demo_length": 194,
+     "max_steps": 311,
+     "steps": 162,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 149,
+     "max_steps": 243,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 18,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 162,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 39,
+     "demo_length": 171,
+     "max_steps": 276,
+     "steps": 166,
+     "success": true
+    },
+    {
+     "demo": 40,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 156,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 151,
+     "max_steps": 246,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 150,
+     "max_steps": 245,
+     "steps": 164,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.0,
+   "success_rate": 0.9,
+   "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+}

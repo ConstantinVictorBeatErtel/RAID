@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 521,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 477,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 455,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 411,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.9,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 521,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 477,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 455,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 411,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.4,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 521,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 477,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 263,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 250,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 247,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 411,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.1,
+   "success_rate": 0.15,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 248,
+     "success": true
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 298,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 488,
+     "success": true
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 477,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 287,
+     "success": true
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 455,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 411,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.9,
+   "success_rate": 0.2,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 249,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 521,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 257,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 303,
+     "success": true
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 226,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 455,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 280,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 267,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.9,
+   "success_rate": 0.3,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 521,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 477,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 455,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 411,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.8,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 334,
+     "max_steps": 521,
+     "steps": 521,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 305,
+     "max_steps": 477,
+     "steps": 477,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 252,
+     "max_steps": 398,
+     "steps": 398,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 236,
+     "max_steps": 374,
+     "steps": 374,
+     "success": false
+    },
+    {
+     "demo": 18,
+     "demo_length": 285,
+     "max_steps": 447,
+     "steps": 447,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 267,
+     "max_steps": 420,
+     "steps": 420,
+     "success": false
+    },
+    {
+     "demo": 24,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 242,
+     "max_steps": 383,
+     "steps": 383,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 290,
+     "max_steps": 455,
+     "steps": 455,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 247,
+     "max_steps": 390,
+     "steps": 390,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 328,
+     "max_steps": 512,
+     "steps": 512,
+     "success": false
+    },
+    {
+     "demo": 46,
+     "demo_length": 284,
+     "max_steps": 446,
+     "steps": 446,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 250,
+     "max_steps": 395,
+     "steps": 395,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 261,
+     "max_steps": 411,
+     "steps": 411,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 292,
+     "max_steps": 458,
+     "steps": 458,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 26.6,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+}

@@ -1,0 +1,1042 @@
+{
+ "methods": {
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.1,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 131,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 119,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 134,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 140,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 128,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 25.4,
+   "success_rate": 0.7,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 115,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.8,
+   "success_rate": 0.1,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  },
+  "raid_v8_c25@25": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 21.5,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.2,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  },
+  "v8_c0_zero": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.4,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 5,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 121,
+     "max_steps": 201,
+     "steps": 201,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 158,
+     "max_steps": 257,
+     "steps": 257,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 15,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 185,
+     "max_steps": 297,
+     "steps": 297,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 116,
+     "max_steps": 194,
+     "steps": 194,
+     "success": false
+    },
+    {
+     "demo": 23,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 187,
+     "max_steps": 300,
+     "steps": 300,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 196,
+     "max_steps": 314,
+     "steps": 314,
+     "success": false
+    },
+    {
+     "demo": 34,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 126,
+     "max_steps": 209,
+     "steps": 209,
+     "success": false
+    },
+    {
+     "demo": 37,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 143,
+     "max_steps": 234,
+     "steps": 234,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "seconds": 22.9,
+   "success_rate": 0.0,
+   "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+  }
+ },
+ "seed": 42,
+ "task": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+}

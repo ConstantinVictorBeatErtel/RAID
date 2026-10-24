@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 233,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 294,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 202,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 191,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.9,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 176,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 294,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.6,
+   "success_rate": 0.05,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 294,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 186,
+     "success": true
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 144,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 151,
+     "success": true
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 152,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 146,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.7,
+   "success_rate": 0.4,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 145,
+     "success": true
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 156,
+     "success": true
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.5,
+   "success_rate": 0.35,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 294,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 149,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 122,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.3,
+   "success_rate": 0.15,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 294,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 19.5,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 132,
+     "max_steps": 218,
+     "steps": 218,
+     "success": false
+    },
+    {
+     "demo": 1,
+     "demo_length": 160,
+     "max_steps": 260,
+     "steps": 260,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 127,
+     "max_steps": 210,
+     "steps": 210,
+     "success": false
+    },
+    {
+     "demo": 4,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 6,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 183,
+     "max_steps": 294,
+     "steps": 294,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 21,
+     "demo_length": 137,
+     "max_steps": 225,
+     "steps": 225,
+     "success": false
+    },
+    {
+     "demo": 26,
+     "demo_length": 161,
+     "max_steps": 261,
+     "steps": 261,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 146,
+     "max_steps": 239,
+     "steps": 239,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 139,
+     "max_steps": 228,
+     "steps": 228,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 157,
+     "max_steps": 255,
+     "steps": 255,
+     "success": false
+    },
+    {
+     "demo": 43,
+     "demo_length": 177,
+     "max_steps": 285,
+     "steps": 285,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 18.5,
+   "success_rate": 0.0,
+   "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+}

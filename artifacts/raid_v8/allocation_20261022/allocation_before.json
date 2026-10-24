@@ -1,0 +1,631 @@
+{
+  "allocationId": "limit-lift-20261013",
+  "cumulativeCapUsd": "225",
+  "deadlineAt": 1792610737224,
+  "history": [
+    {
+      "allocationId": "initial",
+      "deadlineAt": 1791734798430,
+      "retryAuthorization": null,
+      "startedAt": 1791727598430
+    },
+    {
+      "allocationId": "source-retry-20261011T1625Z",
+      "cumulativeCapUsd": "10",
+      "deadlineAt": 1791743302956,
+      "retryAuthorization": {
+        "at": 1791736039961,
+        "authorizationSha256": "11e6b120e57d4e03fc1f84d2e8a986460ca81eae9a23b73a3481c13cff8074a1",
+        "deferredSessions": [
+          "v6-accept-20261011T151015-98eb3077"
+        ],
+        "fingerprint": "706acbc2f32eb4bec032ddc43196399389a24f899c4f62ddbd0ee7286930dc17",
+        "id": "source-retry-20261011T1625Z"
+      },
+      "startedAt": 1791736102956,
+      "windowSeconds": 7200
+    },
+    {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cumulativeCapUsd": "100",
+      "deadlineAt": 1792178737224,
+      "retryAuthorization": {
+        "at": 1791746728640,
+        "authorizationSha256": "680d0d83ab18b61512f625ef0db84d5f8fb2c7000fd9d1143c1c507acce2bf89",
+        "deferredSessions": [
+          "v6-accept-20261011T151015-98eb3077"
+        ],
+        "fingerprint": "8e98906b820c44ce2171844a9ac50a7e99b7fe25ab66fb40d1ecd184ca12cc7e",
+        "id": "source-cap-increase-20261011T1923Z"
+      },
+      "startedAt": 1791746737224,
+      "windowSeconds": 432000
+    },
+    {
+      "allocationId": "limit-lift-20261013",
+      "cumulativeCapUsd": "225",
+      "deadlineAt": 1792178737224,
+      "retryAuthorization": {
+        "at": 1791902085402,
+        "authorizationSha256": "6ee8c169b0f8bc20b09086532bca8d9c267c106b780102a985fc5abee0e59dfa",
+        "deferredSessions": [
+          "v6-accept-20261011T151015-98eb3077"
+        ],
+        "fingerprint": "db05b0111c131b87cfa410473eec5252bb760c3968616b3082379703fe2af358",
+        "id": "limit-lift-20261013"
+      },
+      "startedAt": 1791746737224,
+      "windowSeconds": 432000
+    },
+    {
+      "backfill": {
+        "at": 1792076808265,
+        "authorizationId": "backfill-20261015",
+        "authorizationSha256": "0d577bb44cfe0435b359e3dfb96dec91e2b7d9642181111a9a96148111cb67af",
+        "sessions": [
+          "v6-source-20261012T114315-c09fd52e",
+          "v6-accept-20261013T095818-1b89be08",
+          "v6-source-20261013T095631-244eb01c",
+          "v6-accept-20261013T103858-5093ea68",
+          "v6-accept-20261013T104140-058c15a0",
+          "v6-accept-20261013T105403-8f732457",
+          "v6-source-20261013T105333-6caf01ca",
+          "v6-accept-20261013T111144-c2a78f4f",
+          "v6-source-20261013T111047-0f6707a9",
+          "v6-accept-20261013T130748-8e9d4c8c",
+          "v6-source-20261013T130717-b2d2d908",
+          "v6-accept-20261013T143512-228fc3a0",
+          "v6-source-20261013T131750-b16da46d",
+          "v6-accept-20261013T144817-652e5d61",
+          "v6-source-20261013T144800-9323dd5c",
+          "v6-accept-20261013T174917-6b42cab8",
+          "v6-source-20261013T174850-eeb21eac",
+          "v6-accept-20261013T180256-52b69d6a",
+          "v6-accept-20261013T181337-a315998f",
+          "v6-source-20261013T181316-142eaad4",
+          "v6-accept-20261013T184657-1f8e4149",
+          "v6-source-20261013T184636-0a9a2099",
+          "v6-accept-20261013T192349-ec493f53",
+          "v6-source-20261013T192259-6bac24f8",
+          "v6-accept-20261013T205949-f7d2d56e",
+          "v6-source-20261013T205915-56b68195",
+          "v6-accept-20261014T082423-39aba509",
+          "v6-source-20261014T082327-474f0049",
+          "v6-accept-20261014T091742-47db580e",
+          "v6-source-20261014T091709-6848412f",
+          "v6-accept-20261014T111438-38bd7920"
+        ]
+      }
+    }
+  ],
+  "reservations": {
+    "v6-accept-20261011T140637-4097f11c": {
+      "cap": "2",
+      "clean": true,
+      "fingerprint": "f70db38105907142576632c70bed1640abcdc6045a3793c445a6219b0c95e0d3",
+      "started": true
+    },
+    "v6-accept-20261011T151015-98eb3077": {
+      "cap": "1",
+      "clean": false,
+      "fingerprint": "9d8a7b7b152aa77c5284fadf84a4f60be0f933c31411053a1fa80931f855c811",
+      "started": true
+    },
+    "v6-accept-20261011T162822-f4ab4244": {
+      "allocationId": "source-retry-20261011T1625Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "48c7fcb020846bc44a00b10cf1314d5f869ab095a0368ba252fddcd504ecc773",
+      "started": true
+    },
+    "v6-accept-20261011T192536-9469c386": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "ea8e29f90b600308738fd24677944bc1a8eeda696af8d3a95cfb1c05bea62032",
+      "started": true
+    },
+    "v6-accept-20261011T212427-78eb50d6": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "8f32d5bb6f3c8c76d226a7a76e89cacf54b3efd4fdb3954b03870e9b39bb541d",
+      "started": true
+    },
+    "v6-accept-20261012T114517-de87ce4b": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "7ccb33ba7d060cda5f0a7d8e13eb5d4f70ce42df6d4c0d7d41c0c231fcc7c9fa",
+      "started": true
+    },
+    "v6-accept-20261013T095818-1b89be08": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "0f87ec954ca055ece02682731c33c13c067ab28875ba07572bc8e6ebe7d6df84",
+      "spentUsd": "0.3418351175925925925925925927",
+      "started": true
+    },
+    "v6-accept-20261013T103858-5093ea68": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "d384e940bde188d3c9a751944dcc30c2adb8b66b3c4fed91c4cbb94b6200b7e4",
+      "spentUsd": "0.157181751388888888888888889",
+      "started": true
+    },
+    "v6-accept-20261013T104140-058c15a0": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "b0768013fc7b7739cd7a1dfe55a114677e57e8e34cde6aef4d9bfe071a8d3dad",
+      "spentUsd": "0.3421473282407407407407407409",
+      "started": true
+    },
+    "v6-accept-20261013T105403-8f732457": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "99fcbb99a1542bde511a87b26c04b3b51b6373dee94da58fd9ff0459968150ae",
+      "spentUsd": "0.1923321745370370370370370371",
+      "started": true
+    },
+    "v6-accept-20261013T111144-c2a78f4f": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "b7d4d836ae1a0b2fdf9932e563c0e64eab69231add12551e25ce7f107edf366e",
+      "spentUsd": "0.1921398527777777777777777779",
+      "started": true
+    },
+    "v6-accept-20261013T130748-8e9d4c8c": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "7e5d22602cd2c614e931ae415938ef97024ea2122c1d9884babc8f57d44a243c",
+      "spentUsd": "0.1921353569444444444444444446",
+      "started": true
+    },
+    "v6-accept-20261013T143512-228fc3a0": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "8d8ea5be0e790ba228d2db338f9825350bd86ea942059cd9b348c8d5c8f2461d",
+      "spentUsd": "0.1572165439814814814814814816",
+      "started": true
+    },
+    "v6-accept-20261013T144817-652e5d61": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "6fed5e94fdd2f3dfe80567facd0457fa31756421089474dda630050f5d82d3a1",
+      "spentUsd": "0.1922877157407407407407407408",
+      "started": true
+    },
+    "v6-accept-20261013T174917-6b42cab8": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "3663b064af2818ecbb625389dc10c6e249bc3b57af9226d1de8d9b6bb41f7037",
+      "spentUsd": "0.1922677342592592592592592594",
+      "started": true
+    },
+    "v6-accept-20261013T180256-52b69d6a": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "89ccdad139db2eae368b44abcb44c8cb8fefd69c9a9d1dce773c06371a49e780",
+      "spentUsd": "0.192127364351851851851851852",
+      "started": true
+    },
+    "v6-accept-20261013T181337-a315998f": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "08792c23aa4e1c70ab5f260db283fac149b65b7557c65df65e804fdaf2b59daa",
+      "spentUsd": "0.1921448481481481481481481483",
+      "started": true
+    },
+    "v6-accept-20261013T184657-1f8e4149": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "2d5e7634d7d11414ca76594f3a356fdc631633d9115e58836e865fef668f4ab5",
+      "spentUsd": "0.192168326388888888888888889",
+      "started": true
+    },
+    "v6-accept-20261013T192349-ec493f53": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "7772f6a5779125b14cb44e60b9e44340e7fad91e8be249db0cf2f310cb1ac5bf",
+      "spentUsd": "0.1571042699074074074074074075",
+      "started": true
+    },
+    "v6-accept-20261013T205949-f7d2d56e": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "ed6a7677bba6e439f19ed928573744e57813d79b2fcb6a6751e3752f3fe892af",
+      "spentUsd": "0.1922867166666666666666666668",
+      "started": true
+    },
+    "v6-accept-20261014T082423-39aba509": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "8f7866ddf7a6a22372cbb7d67462d83a02939bb5320d119fa91c0301021bf77f",
+      "spentUsd": "0.1921868092592592592592592594",
+      "started": true
+    },
+    "v6-accept-20261014T091742-47db580e": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "e573af401c3839cf83a11c5fb0340153e11949075f86574509fef7e0938c31b5",
+      "spentUsd": "0.157084438888888888888888889",
+      "started": true
+    },
+    "v6-accept-20261014T111438-38bd7920": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "cf982f6e9a04158381f9f7dfeb74b2a7c690569d59b5af88275538502352400a",
+      "spentUsd": "0.1520280546296296296296296297",
+      "started": true
+    },
+    "v6-accept-20261014T113819-a8694ac5": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "bddad09cb36d1976faa7c5337274c9cd18ca8f77984714a97093271372a4cd0c",
+      "spentUsd": "0.1520194578703703703703703705",
+      "started": true
+    },
+    "v6-accept-20261015T095141-b71e1723": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "17a6b8879ab1d78a4b00207c77a55e6b12841cc5a6c04f2dc1f15f57ba47b3b3",
+      "spentUsd": "0.1519387592592592592592592594",
+      "started": true
+    },
+    "v6-accept-20261015T095850-93b93981": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "eaad59635ea01bc179a47961d332c85e2b216fcb5d6645b753e43e6191f76f2a",
+      "spentUsd": "0.1920384467592592592592592594",
+      "started": true
+    },
+    "v6-accept-20261015T100507-fe84143d": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "50060b8ffe6140583b336d097326ab98d0ae6a5e9da661b4273f8edcc7755c79",
+      "spentUsd": "0.632467763888888888888888889",
+      "started": true
+    },
+    "v6-accept-20261015T102443-cec13420": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "a917d69f25270a147b273c84a33dda6ded1e301ddca32d73c0e9fe0df8abfa1a",
+      "spentUsd": "0.1921992976851851851851851853",
+      "started": true
+    },
+    "v6-accept-20261015T151038-9547143d": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "c5055052932277708196a2246129900d60ce2ee430793dbda8f9be29b1c05833",
+      "spentUsd": "0.1920704171296296296296296297",
+      "started": true
+    },
+    "v6-accept-20261015T151836-82b46a67": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "3f3fa5ee77dc5771139a3ba6f8afa76b9c0cedeab6b1a0f0fabb97612fc46e55",
+      "spentUsd": "0.1914035351851851851851851853",
+      "started": true
+    },
+    "v6-accept-20261015T153216-29f4c187": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "bde59300c4b24ab72ad5ab52d67fb6df004c3714b64b886c758cd22bc2cc9f20",
+      "spentUsd": "0.1921703245370370370370370371",
+      "started": true
+    },
+    "v6-accept-20261015T153908-9849578f": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "f1c4c7393d8be17a23b6d258cfa6954d9c99e2ce789358c32e947eeffa6e8442",
+      "spentUsd": "0.1920214625000000000000000001",
+      "started": true
+    },
+    "v6-accept-20261015T161247-d88192ef": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "5d2407175ea168aa18b2d5ea96dc5d8257f0036f26de16db45a3ad03340fe332",
+      "spentUsd": "0.160917788888888888888888889",
+      "started": true
+    },
+    "v6-accept-20261015T162611-11c451b9": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "91417402a75253a7093b8aec0049f0833e887edeefcfee93b8ca2e5c12919a27",
+      "spentUsd": "0.1921188722222222222222222223",
+      "started": true
+    },
+    "v6-accept-20261016T055254-6f0b79e4": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "a4f6e992234463a906e39c23ec6b6d7f5bddc8435824811c20eb8bb3a3aa0a7d",
+      "spentUsd": "0.152032214351851851851851852",
+      "started": true
+    },
+    "v6-accept-20261017T004111-42156a13": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "4ca5da376195d7df89679bafebb4df902617a150408b955cf0c60081e3baea97",
+      "spentUsd": "0.1569831481481481481481481483",
+      "started": true
+    },
+    "v6-accept-20261017T093244-c3fb8530": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "d78f055fea2a2c0cdc807d5d80326739858cc3341c5eb1b2c7f7bfc459389f5e",
+      "spentUsd": "0.1519620537037037037037037038",
+      "started": true
+    },
+    "v6-accept-20261017T122435-9161ae07": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "b19707272943c2ccffa6c4aac3f5ceb8150c47a28c9fa8165f31f51fe405c82e",
+      "spentUsd": "0.1570517939814814814814814816",
+      "started": true
+    },
+    "v6-accept-20261017T185431-4eeb01e5": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "85a1aa06ec0841565013365b61bd2c339a231b16b22c030aa211a1166e52d9a6",
+      "spentUsd": "0.1570389800925925925925925927",
+      "started": true
+    },
+    "v6-accept-20261017T201640-365b3d67": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "1",
+      "clean": true,
+      "fingerprint": "0b9e7b84bf38bf5c24e49f1577a573a6c2a9c0032f6b17de20cdcc1fc4772fc3",
+      "spentUsd": "0.1922397601851851851851851853",
+      "started": true
+    },
+    "v6-source-20261011T162547-7fa32d64": {
+      "allocationId": "source-retry-20261011T1625Z",
+      "cap": "6",
+      "clean": true,
+      "fingerprint": "f1fb49e841fdcc196276d03ec2d1ad6c7607d981699707dcbc31bf4818c1bae8",
+      "started": true
+    },
+    "v6-source-20261011T192429-c48c9361": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "9.50",
+      "clean": true,
+      "fingerprint": "b72275a9308839d10ce533169c4d017b2320167338252fce62b7bea21e74d393",
+      "started": true
+    },
+    "v6-source-20261011T211154-8c66f392": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "6287d1dc8107d5dd19954e082bd6913e7912ebf48fe32478720584ed36206059",
+      "started": true
+    },
+    "v6-source-20261012T114315-c09fd52e": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "37.4259823698259259259259259262",
+      "clean": true,
+      "fingerprint": "623c5c39a314b2c5c20c7594f64a2ea46f290da248b8ebabefaad88814aa4638",
+      "spentUsd": "10.9683557837962962962962962969",
+      "started": true
+    },
+    "v6-source-20261013T095631-244eb01c": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "c1a8be6137d1e4ac3a0bb81feaceeedb550ea9e46196b2175c6503ddf83e1d57",
+      "spentUsd": "0.3596033898148148148148148149",
+      "started": true
+    },
+    "v6-source-20261013T105333-6caf01ca": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "dd1e701f50df2b4a7d7e08dc9b761e96fcb09891cfae3996b7f8df0c0ff98d7a",
+      "spentUsd": "0.283210175925925925925925926",
+      "started": true
+    },
+    "v6-source-20261013T111047-0f6707a9": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "eee4c4a4158290d63268d3b95b6cf33fc6c117df883599ea9c7404935f877756",
+      "spentUsd": "1.5445706671296296296296296298",
+      "started": true
+    },
+    "v6-source-20261013T130717-b2d2d908": {
+      "allocationId": "source-cap-increase-20261011T1923Z",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "8b6261380445f186d5ef06a03d5d8d0cabdb5523dab4068e29361bc1430efd9c",
+      "spentUsd": "0.2696447481481481481481481482",
+      "started": true
+    },
+    "v6-source-20261013T131750-b16da46d": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "5bfd6a2e5ad758a1e312d9f85abea576c719953c83ea4d59c8ef8aee2bf555ce",
+      "spentUsd": "0.3563888550925925925925925927",
+      "started": true
+    },
+    "v6-source-20261013T144800-9323dd5c": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "e0989bf4a3a56f8b1bd70348efa775271147a56b4a7c006889e0c3014873a102",
+      "spentUsd": "1.731780164351851851851851852",
+      "started": true
+    },
+    "v6-source-20261013T174850-eeb21eac": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "7",
+      "clean": true,
+      "fingerprint": "d1751c5f2521beadcb46f7e725fee56fb34bb415b1decb922d40fbef34429294",
+      "spentUsd": "0.3862291995370370370370370371",
+      "started": true
+    },
+    "v6-source-20261013T181316-142eaad4": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "7",
+      "clean": true,
+      "fingerprint": "f97929d47dad66d0a2e63a809ca9b0ea39e9c789c78b364d2295085df056b873",
+      "spentUsd": "0.9623747370370370370370370372",
+      "started": true
+    },
+    "v6-source-20261013T184636-0a9a2099": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "7",
+      "clean": true,
+      "fingerprint": "78c8e9f25bae2d289317ae5144fc24de4ce80013892be86c4abcb483f9266ce0",
+      "spentUsd": "1.0506639120370370370370370372",
+      "started": true
+    },
+    "v6-source-20261013T192259-6bac24f8": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "7",
+      "clean": true,
+      "fingerprint": "61f7c0a594fab9b57299c362f6560cc9b5684f6d9460d67a13dab1c7937e24d4",
+      "spentUsd": "1.2478691453703703703703703705",
+      "started": true
+    },
+    "v6-source-20261013T205915-56b68195": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "5.50",
+      "clean": true,
+      "fingerprint": "1ce25f8f24ad4430cd3b7c29ed33d8b8556a4f19ce0b850f70584712a7b47c8a",
+      "spentUsd": "2.2179795347222222222222222224",
+      "started": true
+    },
+    "v6-source-20261014T082327-474f0049": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "7",
+      "clean": true,
+      "fingerprint": "f24fd8e535bc0d84cb670722bbd3d6e721f6ce8c8aaf0f426cc1dc631e52b1d0",
+      "spentUsd": "0.1406098356481481481481481482",
+      "started": true
+    },
+    "v6-source-20261014T091709-6848412f": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "5",
+      "clean": true,
+      "fingerprint": "812057bf892a8398b166638f29f5caed9f633b9646334453b35a52d33211972d",
+      "spentUsd": "1.317390713888888888888888889",
+      "started": true
+    },
+    "v6-source-20261014T113742-82b4250c": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "50.39",
+      "clean": true,
+      "fingerprint": "0342ab8486b8540004dc957267d6adba867390b756e75452954f70d8c173176f",
+      "spentUsd": "6.5321152069444444444444444449",
+      "started": true
+    },
+    "v6-source-20261015T153806-80efec73": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "64.76",
+      "clean": true,
+      "fingerprint": "9b8aa2d987c03a5cc95772ab432aa837c679b2c5cdbf9d237b49adda480568fd",
+      "spentUsd": "0.7569676050925925925925925927",
+      "started": true
+    },
+    "v6-source-20261015T162501-e24b9e50": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "63.17",
+      "clean": true,
+      "fingerprint": "436cd994a8861fc83d4d015026311030c970a38268dae004ea75a63f2490d133",
+      "spentUsd": "24.0909766560185185185185185201",
+      "started": true
+    },
+    "v6-source-20261016T055238-f4629c61": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "61.84",
+      "clean": true,
+      "fingerprint": "accd9c4f65cb8af04df748b4fb611ddd7327b90f68b8376631c3d79e84c069b2",
+      "spentUsd": "33.9373040976851851851851851873",
+      "started": true
+    },
+    "v6-source-20261016T144350-1a2ef61d": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "28.44",
+      "clean": true,
+      "fingerprint": "72de45c498abb4b82a2d568e223fe645dd6b581ae7b9d23129b684805592e0a4",
+      "spentUsd": "4.0360530870370370370370370373",
+      "started": true
+    },
+    "v6-source-20261017T093054-d45eae42": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "24.47",
+      "clean": true,
+      "fingerprint": "63994d87ddc667af7038f1b8136feaf6969bd7b86e714502e07c4b02b168d37d",
+      "spentUsd": "5.0331994476851851851851851855",
+      "started": true
+    },
+    "v6-source-20261017T122400-c79f4833": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "19.49",
+      "clean": true,
+      "fingerprint": "5464b5107f5c5d99b25f3828027ef3750c8ff82bcaf0df1f25c64433c96138ea",
+      "spentUsd": "6.3221113907407407407407407411",
+      "started": true
+    },
+    "v6-source-20261017T185329-81a5b8f1": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "13.17",
+      "clean": true,
+      "fingerprint": "54b7a5d58efd5badeb29666de0448855677aa13054a5191590275ca8e076970b",
+      "spentUsd": "2.2749552583333333333333333335",
+      "started": true
+    },
+    "v6-source-20261017T201548-575c48b5": {
+      "allocationId": "limit-lift-20261013",
+      "cap": "10.96",
+      "clean": true,
+      "fingerprint": "28669d042736d285c3e6fbdb0abc46bf8be53e3c352ee1980f1f450e02d888e6",
+      "spentUsd": "6.0513658134259259259259259263",
+      "started": true
+    }
+  },
+  "retryAuthorization": {
+    "at": 1792059805269,
+    "authorizationSha256": "a3a482149ac32b4715f6424c74492c98e6f6e51c4d5419174728a5d9f5126471",
+    "deferredSessions": [
+      "v6-accept-20261011T151015-98eb3077"
+    ],
+    "fingerprint": "5735f5c693cbf7a2f82871eb825b54722ae13d7852816b2d0de41240e8226048",
+    "id": "extend-5d-20261015"
+  },
+  "startedAt": 1791746737224,
+  "windowSeconds": 864000
+}

@@ -1,0 +1,10 @@
+{
+  "authorization_sha256": "a990d6a86fe023a8cefc937f6c06b26423d885898d637eb079b7c12e72221d38",
+  "pod_id": null,
+  "pod_rejected": true,
+  "recorded_at": "2026-10-22T15:40:05.129528+00:00",
+  "root_failure": "Error: pod creation failed 500",
+  "service_version": "18dfb17b-6cb2-48c5-a503-192338f9352d",
+  "session": "v8-dev-20261022T135546-6bf511f0",
+  "user_choice": "Second service fix (Recommended): when the pod was never created, skip result recovery and delete the volume at once"
+}

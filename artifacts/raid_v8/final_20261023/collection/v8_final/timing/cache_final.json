@@ -1,0 +1,10 @@
+{
+ "encoders": [
+  "mae",
+  "dinov2",
+  "siglip"
+ ],
+ "frames": 274847,
+ "seconds": 456.6412105560303,
+ "tasks": 30
+}

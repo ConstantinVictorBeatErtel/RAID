@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 416,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 33.4,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 416,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 32.4,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 416,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 286,
+     "success": true
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 32.2,
+   "success_rate": 0.05,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 416,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 33.1,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 416,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 31.9,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 416,
+     "success": false
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 495,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 32.5,
+   "success_rate": 0.0,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 388,
+     "max_steps": 602,
+     "steps": 602,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 255,
+     "max_steps": 402,
+     "steps": 402,
+     "success": false
+    },
+    {
+     "demo": 7,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    },
+    {
+     "demo": 8,
+     "demo_length": 296,
+     "max_steps": 464,
+     "steps": 464,
+     "success": false
+    },
+    {
+     "demo": 12,
+     "demo_length": 259,
+     "max_steps": 408,
+     "steps": 408,
+     "success": false
+    },
+    {
+     "demo": 13,
+     "demo_length": 288,
+     "max_steps": 452,
+     "steps": 452,
+     "success": false
+    },
+    {
+     "demo": 16,
+     "demo_length": 274,
+     "max_steps": 431,
+     "steps": 431,
+     "success": false
+    },
+    {
+     "demo": 20,
+     "demo_length": 339,
+     "max_steps": 528,
+     "steps": 528,
+     "success": false
+    },
+    {
+     "demo": 22,
+     "demo_length": 278,
+     "max_steps": 437,
+     "steps": 437,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 330,
+     "max_steps": 515,
+     "steps": 515,
+     "success": false
+    },
+    {
+     "demo": 27,
+     "demo_length": 264,
+     "max_steps": 416,
+     "steps": 363,
+     "success": true
+    },
+    {
+     "demo": 28,
+     "demo_length": 300,
+     "max_steps": 470,
+     "steps": 470,
+     "success": false
+    },
+    {
+     "demo": 31,
+     "demo_length": 280,
+     "max_steps": 440,
+     "steps": 440,
+     "success": false
+    },
+    {
+     "demo": 35,
+     "demo_length": 276,
+     "max_steps": 434,
+     "steps": 434,
+     "success": false
+    },
+    {
+     "demo": 36,
+     "demo_length": 345,
+     "max_steps": 537,
+     "steps": 537,
+     "success": false
+    },
+    {
+     "demo": 40,
+     "demo_length": 265,
+     "max_steps": 417,
+     "steps": 417,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 297,
+     "max_steps": 465,
+     "steps": 465,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 317,
+     "max_steps": 495,
+     "steps": 467,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 343,
+     "max_steps": 534,
+     "steps": 534,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 312,
+     "max_steps": 488,
+     "steps": 488,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 33.1,
+   "success_rate": 0.1,
+   "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  }
+ },
+ "seed": 42,
+ "task": "libero_10/LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+}

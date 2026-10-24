@@ -1,0 +1,19 @@
+{
+  "logs/archive_verify.exit.json": "72acc1dd4ebb08fa660bc5bed0b234ecc9325651f4df5dc53a715a2e3f7d2684",
+  "logs/archive_verify.log": "c9dcead48bad0dc32695bf36c8509771e6b858d050fce64b2d4d1c792773d64a",
+  "logs/bootstrap.exit.json": "f6d9eba6223c5cdf2f45c5576355b6728d34d6bb0924f12dddccf52fb38e7739",
+  "logs/bootstrap.log": "796fcca0b51d2b3e2a3504eb293ca80b661b63a19e7c1a32e442462777c05dc1",
+  "logs/package_preflight.exit.json": "2bb4beeeb7d5dfb0b9d705fa38116087bac5cc090592445ff05e296fbe276b0e",
+  "logs/package_preflight.log": "b75b8c2e060bbb2afefb3d96ffcc8259f411b91d760938c4666cdb899c9dbacf",
+  "logs/v8_download_cache.exit.json": "692e28d7657f802683b8c933bb53864f5eb6dd9fca7706bd50c167207446baf1",
+  "logs/v8_download_cache.log": "e907ca6b26c818d3202e298d7b6888c70cc438adc604f08fd8496a2d31a3b47e",
+  "release_identity.json": "26d94391c5909cec858f59ba917f4b436b7aeb4429fcb1c49de8abe0a93a3a4e",
+  "v8_dev/DONE.json": "d12e59d0346a4da37682c02308f1431ad68b5460ac2887deccd569a32cc6cb63",
+  "v8_dev/data_sha256_development.json": "328f3afb5a0ad5d2c45a206977c68bb69b2e0079ab091aad419a4d7ebf2eae40",
+  "v8_dev/encoders/dinov2.json": "cce43706a0b230335c145e23aff9244e083a1f28be01ba448bcdf67951ce5a96",
+  "v8_dev/encoders/mae.json": "7945df1faaf70322e62eb65b0c4dec5c05832e390e7a7dd07abf46795b1ad938",
+  "v8_dev/encoders/siglip.json": "f55195798a719f2ec8eb1d732135d0f8b8a7bc12260b946be6dd0e19ff4614e1",
+  "v8_dev/timing/cache_development.json": "e6580f2401b5eab3b72ed9d3ecdcae38a4ef8d42c34d762514d1951be2361632",
+  "v8_dev/timing/step_development_cache.json": "fb3241b6a0dfe1a3271efb7944908e7bc8c02d1301eca9e423cf614c8c66b728",
+  "v8_dev/timing/step_development_download.json": "f8fb66d328dfcdbedb2830053de4e0776c608faccef4794a9a115934fa06df3e"
+}

@@ -1,0 +1,43 @@
+{
+  "dataset_access": "none",
+  "files": {
+    "artifacts/raid_hybrid_libero_goal_v6/protocol_v6.json": {
+      "sha256": "4e959633d32dc2e9407fb69e34ee549b03f1bd1a088b4ddc7725d7b8cdd66dbf",
+      "size": 40966
+    },
+    "raid_experiments/operational_acceptance.py": {
+      "sha256": "7c5b61c54dafdedb4dd96db8cb119e6e9f6decaa1a01e0ad5c13e1fe67518fd6",
+      "size": 19755
+    },
+    "requirements-wm-cosmos.lock": {
+      "sha256": "5ee838b7265295497b0010f2b739d8af96d5c8c265c772b61c5ee96a9dfe50fb",
+      "size": 107117
+    },
+    "requirements-wm-sim.lock": {
+      "sha256": "92ad493650eb04e5a1bdc36563d9bba9ae91d03afdf2b61221818bb865f56de3",
+      "size": 84788
+    },
+    "scripts/pod_wm_session.py": {
+      "sha256": "136087ca1208b0b8ab6e0fede45a1e4db4648899812440aa430a8fb5e99aa37d",
+      "size": 6180
+    },
+    "services/runpod-cutoff/package-lock.json": {
+      "sha256": "9510204a2a6ce6867dfa8b7a5cbecd5ed3ba0070febcc53e7b7fb00a3a78b2b9",
+      "size": 89268
+    },
+    "services/runpod-cutoff/src/index.ts": {
+      "sha256": "798053bc0a7fb0d0114573f9d53469ff874113762da3cedef0564c6fd41324fc",
+      "size": 25817
+    },
+    "services/runpod-cutoff/src/managed.ts": {
+      "sha256": "b4e77b74ffdb67f5ba53eddace0d36fc7625844db908ff527101b1b3236e44ac",
+      "size": 45038
+    },
+    "services/runpod-cutoff/wrangler.jsonc": {
+      "sha256": "30329b93b1be4c9ba1222c870823b0eecd832b0f4cd38cbd67d7889756de3288",
+      "size": 857
+    }
+  },
+  "sha256": "e84c64f93473b81ffd13c35f80ed952c169b999289f55d01cd023bd8d3be9021",
+  "stage": "operational_acceptance"
+}

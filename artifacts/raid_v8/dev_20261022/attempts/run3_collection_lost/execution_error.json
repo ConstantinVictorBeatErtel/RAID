@@ -1,0 +1,5 @@
+{
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/ConstiX/Downloads/Documents/ChatGPT/RAID/raid-main/artifacts/raid_v8/dev_20261022/execute.py\", line 117, in <module>\n    assert all(o.sha(P / \"collection\" / n) == v for n, v in manifest.items())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "type": "AssertionError"
+}

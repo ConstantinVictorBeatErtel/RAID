@@ -1,0 +1,26 @@
+{
+  "bindings": {
+    "code": "ac110c6e165fb95271b78189552701960bf6772893ab6b4d820460d1a4dcfada",
+    "protocol": "78f7ebf3cd7118fd896d899674c69435aae3edd678d51d675554ef63e3a4cd0c",
+    "runtime": "f7d26a0c099d6b36d4b483f178b9a816d2e692ca12608e9fbb7e0c73cda6c8be"
+  },
+  "config_sha256": "c428642b030c1124a6e98c6d4ed0d99a0d9ba66603071e65e58b16b3fbd8be3d",
+  "final_suites_downloaded": false,
+  "held_out_claims_eligible": false,
+  "package_sha256": "f1e5d13d0681a4dc7dcf7eea8a7bfe7b1fa1d6f9e4af1a3008445b1c3686a3cd",
+  "scientific_result": false,
+  "session_id": "v8-dev-20261023T152918-357db788",
+  "stage": "raid_v8_development",
+  "stage_commands": {
+    "archive_verify": "3ae20ac00d4ffa0023261f7739c19e4fbf7c28f1e655e8784c9c1c37cec171cf",
+    "bootstrap": "12c3fe7ebd19933f770e29ad3520a7979917e2ae5c207feb57fdf5c013f9c0ef",
+    "package_preflight": "680563b25b9b5182cc205839be579d49f13869b905edfe086627faf74bcbc8b7",
+    "v8_closed_loop": "863cfdcb957870db057aa683eb18306ae1e178b1eede2b5afe8ebb1d6b871f86",
+    "v8_download_cache": "b34b4ac1c99e9a3a2abc8672deeb8dc887fdac0db7771b83d9cede20f6e43026",
+    "v8_encoder": "8a9a78c4cf229a3fe73f6368b5495f9ad19470da23882a7640b1442a753ebfe4",
+    "v8_offline": "1665567a51291e715d129be5b982870893fa05ea2980cf1bb2dcc30ab871378f",
+    "v8_select": "1bd926a33f3fbad22c37fbc9189a62b74df4ba53128ecd27aae3540a4e7ec919",
+    "v8_source": "0171e23e2ed6dc67ae059a71c3aa9d3d529de026c1b33d3592024dad60923992",
+    "v8_timing": "8bcb747c95ad0dbb14b66641446d5858b4809fba541ff1c168d1f906608e6f4d"
+  }
+}

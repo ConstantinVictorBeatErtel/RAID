@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "archive_sha256": "8c32e37864c87a95ef2ac2a9e6abf9cd97c81ae999563a973b341e5c5c6948ee",
+  "amendment_digest": "84375c3be0c0ddb953a34ccfa453a15f236aa7ae65ddb6139ed87382a05ee4b8",
+  "sources_loaded": 18,
+  "tampered_refused": true,
+  "standin_offline_units": 3,
+  "final_suites_read": false,
+  "stages": [
+    "archive_verify",
+    "package_preflight",
+    "bootstrap",
+    "v8_download_cache",
+    "v8_offline",
+    "v8_encoder",
+    "v8_closed_loop",
+    "v8_timing",
+    "v8_analysis"
+  ]
+}

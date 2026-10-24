@@ -1,0 +1,1049 @@
+{
+ "methods": {
+  "full@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 116,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 207,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 139,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 121,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 141,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 142,
+     "success": true
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 116,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 137,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 24.5,
+   "success_rate": 0.7,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "head_only@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 146,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 24.9,
+   "success_rate": 0.05,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "knn": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 132,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 130,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 127,
+     "success": true
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 126,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 165,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 123,
+     "success": true
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.9,
+   "success_rate": 0.65,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "lora@200": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 186,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 137,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 123,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 120,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 158,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 124,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 191,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 133,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 129,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 106,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 177,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 200,
+     "success": true
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 24.3,
+   "success_rate": 0.65,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "raid_v8@25": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 154,
+     "success": true
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 170,
+     "success": true
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 147,
+     "success": true
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 160,
+     "success": true
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 202,
+     "success": true
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 155,
+     "success": true
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 168,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 157,
+     "success": true
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 153,
+     "success": true
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 165,
+     "success": true
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 150,
+     "success": true
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 159,
+     "success": true
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 163,
+     "success": true
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 161,
+     "success": true
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 25.0,
+   "success_rate": 0.75,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "v7_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 248,
+     "success": false
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 23.4,
+   "success_rate": 0.0,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "v8_c25_zero": {
+   "episodes": [
+    {
+     "demo": 0,
+     "demo_length": 155,
+     "max_steps": 252,
+     "steps": 252,
+     "success": false
+    },
+    {
+     "demo": 2,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 5,
+     "demo_length": 138,
+     "max_steps": 227,
+     "steps": 227,
+     "success": false
+    },
+    {
+     "demo": 9,
+     "demo_length": 145,
+     "max_steps": 237,
+     "steps": 237,
+     "success": false
+    },
+    {
+     "demo": 10,
+     "demo_length": 140,
+     "max_steps": 230,
+     "steps": 230,
+     "success": false
+    },
+    {
+     "demo": 11,
+     "demo_length": 164,
+     "max_steps": 266,
+     "steps": 266,
+     "success": false
+    },
+    {
+     "demo": 14,
+     "demo_length": 120,
+     "max_steps": 200,
+     "steps": 200,
+     "success": false
+    },
+    {
+     "demo": 17,
+     "demo_length": 152,
+     "max_steps": 248,
+     "steps": 135,
+     "success": true
+    },
+    {
+     "demo": 19,
+     "demo_length": 128,
+     "max_steps": 212,
+     "steps": 212,
+     "success": false
+    },
+    {
+     "demo": 25,
+     "demo_length": 129,
+     "max_steps": 213,
+     "steps": 213,
+     "success": false
+    },
+    {
+     "demo": 29,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 30,
+     "demo_length": 135,
+     "max_steps": 222,
+     "steps": 222,
+     "success": false
+    },
+    {
+     "demo": 33,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 38,
+     "demo_length": 133,
+     "max_steps": 219,
+     "steps": 219,
+     "success": false
+    },
+    {
+     "demo": 42,
+     "demo_length": 176,
+     "max_steps": 284,
+     "steps": 284,
+     "success": false
+    },
+    {
+     "demo": 44,
+     "demo_length": 141,
+     "max_steps": 231,
+     "steps": 231,
+     "success": false
+    },
+    {
+     "demo": 45,
+     "demo_length": 142,
+     "max_steps": 233,
+     "steps": 233,
+     "success": false
+    },
+    {
+     "demo": 47,
+     "demo_length": 124,
+     "max_steps": 206,
+     "steps": 206,
+     "success": false
+    },
+    {
+     "demo": 48,
+     "demo_length": 136,
+     "max_steps": 224,
+     "steps": 224,
+     "success": false
+    },
+    {
+     "demo": 49,
+     "demo_length": 154,
+     "max_steps": 251,
+     "steps": 251,
+     "success": false
+    }
+   ],
+   "flip": false,
+   "gripper": "binary",
+   "seconds": 24.1,
+   "success_rate": 0.05,
+   "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  }
+ },
+ "seed": 42,
+ "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+}
