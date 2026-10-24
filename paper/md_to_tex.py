@@ -16,19 +16,15 @@ MD, TEX = PAPER / "raid_manuscript.md", PAPER / "raid_manuscript.tex"
 
 DISPLAY = {
     "d = 0.5 (1 − cos(": r"""\[
-d = 0.5\,\bigl(1-\cos(\varphi_{\mathrm{ref}}(o_t),\varphi_{\mathrm{ref}}(o'_t))\bigr)
-  + 0.5\,\bigl(1-\cos(\varphi_{\mathrm{ref}}(o_{t+H}),\varphi_{\mathrm{ref}}(o'_{t+H}))\bigr)
+d = 0.5\,\bigl(1-\cos(\varphi(o_t),\varphi(o'_t))\bigr)
+  + 0.5\,\bigl(1-\cos(\varphi(o_{t+H}),\varphi(o'_{t+H}))\bigr)
   + 0.1\cdot\operatorname{mean}\bigl((q_t-q'_t)^2\bigr),
 \]""",
-    "direct = f_θ(s),": r"""\begin{align*}
-\mathrm{direct} &= f_\theta(s),\\
-\alpha_i &= \operatorname{softmax}_i\!\Bigl((W_q s)\cdot W_k\bigl[\hat\varphi_{\mathrm{ref}}(o^i_t),\hat\varphi_{\mathrm{ref}}(o^i_{t+H}),\mathrm{sim}_i\bigr]\big/\sqrt{128}\Bigr)\ \text{over valid candidates},\\
-\mathrm{prior} &= \textstyle\sum_i \alpha_i a^i,\\
-g &= \sigma(W_g s)\in(0,1)^{56},\\
-\hat a &= g\odot\mathrm{direct} + (1-g)\odot\mathrm{prior},
-\end{align*}""",
-    "L_sel = KL(": r"""\[
-\mathcal{L}_{\mathrm{sel}} = \mathrm{KL}(w^\ast\,\|\,\alpha),\qquad w^\ast_i\propto\exp\bigl(-\mathrm{mse}(a^i,a)\bigr)\ \text{restricted to valid candidates},
+    "direct = f_θ(s), prior": r"""\[
+\mathrm{direct} = f_\theta(s),\qquad \mathrm{prior} = \textstyle\sum_i \alpha_i a^i,
+\]""",
+    "c = [top-1 similarity": r"""\[
+c = \bigl[\,\mathrm{sim}_{(1)},\ \overline{\mathrm{sim}},\ \tilde H(\alpha),\ |\mathrm{direct}-\mathrm{prior}|\,\bigr],
 \]""",
 }
 
@@ -67,7 +63,7 @@ def to_markdown_for_pandoc(text: str) -> str:
     text = "\n\n".join(paras)
     # figures: image + "Figure N. caption" paragraph -> one captioned figure
     text = re.sub(r"!\[Figure \d+\]\((figures/[^)]+)\.png\)\n\nFigure \d+\. ([^\n]+)",
-                  lambda m: "```{=latex}\n\\begin{figure}[!htbp]\\centering\n\\includegraphics[width=\\linewidth]{"
+                  lambda m: "```{=latex}\n\\begin{figure}[tbp]\\centering\n\\includegraphics[width=\\linewidth]{"
                             + m.group(1) + ".pdf}\n\\caption{" + escape(m.group(2)) + "}\n\\end{figure}\n```", text)
     # citations
     text = re.sub(r"\[(\d+)\]\((?:https?://[^)]+)\)", r"`\\cite{ref\1}`{=latex}", text)
@@ -119,11 +115,18 @@ def finish(tex: str) -> str:
         width = max((len(re.sub(r"\\[a-zA-Z]+|[{}]", "", line)) for line in rows), default=0)
         if ncol >= 9:
             size = r"\scriptsize\setlength{\tabcolsep}{3pt}"
-        elif ncol >= 7 or width > 90:
+        elif ncol >= 6 or width > 90:
             size = r"\footnotesize\setlength{\tabcolsep}{3.5pt}"
         else:
             size = r"\small"
-        return "{" + size + "\n" + m.group(0) + "\n}"
+        # short tables: an unbreakable tabular moves to the next page as a whole (longtable mis-breaks next to floats)
+        body = m.group(0)
+        spec = re.match(r"\\begin\{longtable\}\[\]\{(.*?)\}\n", body, re.S)
+        inner = body[spec.end():body.rindex("\\end{longtable}")]
+        keep = [line for line in inner.split("\n") if line.strip() not in ("\\endhead", "\\endlastfoot",
+                                                                           "\\bottomrule\\noalign{}", "\\endfirsthead")]
+        tab = "\\begin{tabular}{" + spec.group(1) + "}\n" + "\n".join(keep).rstrip() + "\n\\bottomrule\\noalign{}\n\\end{tabular}"
+        return "{" + size + "\n\\begin{center}\n" + tab + "\n\\end{center}\n}"
     tex = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", table, tex, flags=re.S)
 
     def path(m):
@@ -132,6 +135,8 @@ def finish(tex: str) -> str:
             return r"\nolinkurl{" + inner.replace(r"\_", "_") + "}"
         return m.group(0)
     tex = re.sub(r"\\texttt\{([^{}]*)\}", path, tex)
+    # keep a table caption with its first rows: start a new page when less than 12 lines remain
+    tex = re.sub(r"^(Table [A-Z]?\d+\. )", r"\\needspace{12\\baselineskip}\n\1", tex, flags=re.M)
     # artifact file names in running text cannot hyphenate; let that section break loosely
     tex = tex.replace("\\section*{Reproducibility and Artifact Availability}",
                       "\\section*{Reproducibility and Artifact Availability}\\sloppy")
@@ -156,7 +161,7 @@ PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern,microtype,amsmath,amssymb}
-\usepackage{booktabs,tabularx,array,longtable,calc,enumitem,xcolor,xurl,graphicx}
+\usepackage{booktabs,tabularx,array,longtable,calc,enumitem,xcolor,xurl,graphicx,needspace}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.2em}
@@ -177,7 +182,7 @@ def main():
     body, appendix = finish(body), finish(appendix)
     tex = (PREAMBLE + "\n\\hypersetup{pdftitle={" + escape(title) + "}}\n\n\\title{\\textbf{" + escape(title) + "}}\n\n"
            "\\author{Constantin Ertel \\and Phillip Kerger\\\\ University of California, Berkeley}\n\n"
-           "\\date{Preprint draft \\textbar\\ 22 October 2026}\n\n"
+           "\\date{Preprint draft \\textbar\\ 24 October 2026}\n\n"
            "\\begin{document}\n\n\\maketitle\n\n\\begin{abstract}\n\n" + abstract_tex + "\n\n\\noindent Keywords: "
            + escape(keywords) + "\n\n\\end{abstract}\n\n" + body + "\n\n\\fussy\n\n" + unicode_to_latex(bibliography(refs)) + "\n\n\\appendix\n\n" + appendix
            + "\n\n\\end{document}\n")
